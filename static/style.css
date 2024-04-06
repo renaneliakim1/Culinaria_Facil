@@ -10,7 +10,7 @@
     box-sizing: border-box;
     color: rgb(12, 12, 12);
     font-family: Josefin Sans;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-decoration: none;
     font-weight: 500;
 
@@ -37,64 +37,83 @@ body{
     height: 100%;
 }
 
-header{
+
+
+header {
     display: flex;
     flex-direction: row-reverse;
     text-align: center;
-    justify-content: center;
-    font-size: 20rem;
     width: 100vw;
-    font-size: 20rem;
-    
+    gap: 1rem;
+
+
+   
 
 
 }
 
 
+#acesso{
+    cursor: pointer;
+    width: 10%;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    margin: 8px;
 
-main {
-   /*  overflow: hidden;
     display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    position: relative; */
-    
+    width: 100%;
+
+}
+main {
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
     z-index: -1;
-
 }
-
  main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
     z-index: -1;
+    opacity: 0.6;
 } 
 
-
-nav {
+nav  {
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-   padding: 10rem;
-        
-}
-
-/* nav svg{
-    display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     text-align: center;
     justify-content: right;
+    align-items: center;
+
+    cursor: pointer;
+    width: 15%;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+    height: 2.4rem;  
+    margin: 1rem;
+    gap: 20px;
+
+
+
+        
 }
- */
-
-
  
 
 h1 {
@@ -102,6 +121,9 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
+    margin: 4rem;
+
     
    
 }
@@ -110,8 +132,8 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 20px;
     align-items: center;
+    margin-top: 8rem;
 }
 
 
@@ -123,17 +145,40 @@ form {
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     outline: none;
+    height: 3rem;
+
 }
 
 .text{
+    display: flex;
     text-align: center;
+    margin-right: 5px;
+
+}
+
+label {
+    font-size: 1.4rem;
 
 }
 
 .form-control {
-    width: 32%;
+    width: 22%;
+    height: 3rem;
+}
+
+
+footer{
+   
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    margin-top: 23rem;
 }
 
 ::-webkit-scrollbar {

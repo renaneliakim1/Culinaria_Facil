@@ -43,38 +43,45 @@ header {
     display: flex;
     flex-direction: row-reverse;
     text-align: center;
-    width: 100vw;
-    gap: 1rem;
+    margin-bottom: 3rem;
+
+}
 
 
-   
 
-
+ul {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
 }
 
 
 #acesso{
     cursor: pointer;
-    width: 10%;
+    width: 10rem;
     border: none;
     padding: .6rem 0;
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1rem;
     outline: none;
-    height: 2rem;
+    height: 2.7rem;
+    margin: 15px;
     text-align: center;
-    margin: 8px;
 
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 
 }
+
+
+
+svg{
+    width: 40px;
+    height: 25px;
+}
+
+
+
 main {
     position: absolute;
     object-fit: cover;
@@ -91,29 +98,7 @@ main {
     opacity: 0.6;
 } 
 
-nav  {
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: center;
-    justify-content: right;
-    align-items: center;
 
-    cursor: pointer;
-    width: 15%;
-    border: none;
-    padding: .6rem 0;
-    border-radius: .5rem;
-    color: var(--white);
-    font-size: 1.2rem;
-    outline: none;
-    height: 2.4rem;  
-    margin: 1rem;
-    gap: 20px;
-
-
-
-        
-}
  
 
 h1 {
@@ -121,65 +106,78 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    margin: 4rem;
+    font-size: 1.5rem;
 
     
    
 }
 
-form {
+
+.mb-3{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    margin-top: 8rem;
+    align-items: center; 
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px
+
 }
+
+ label{
+
+    margin: 10px;
+   
+}
+
+
 
 
 #pesquisa{
     cursor: pointer;
-    width: 10%;
+    width: 10rem;
     border: none;
     padding: .6rem 0;
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.4rem;
+    font-size: 1rem;
     outline: none;
     height: 3rem;
 
 }
 
-.text{
-    display: flex;
-    text-align: center;
-    margin-right: 5px;
 
-}
 
 label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
 }
 
 .form-control {
-    width: 22%;
+    width: 55%;
     height: 3rem;
 }
 
 
+#filtro{
+    display: flex;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    margin-top: 3rem;
+
+
+}
+
 footer{
    
 
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: auto;
     bottom: 0;
-    width: 100%;
-    margin-top: 23rem;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    left: 0;
 }
+
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -193,4 +191,165 @@ footer{
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color:var(--primary-color);
+}
+
+
+@media only screen and (max-width: 940px) {
+    .mb-3{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+/*         margin: 20px;
+ */        gap: 20px;
+        width:90%;
+    
+    }
+
+    .form-control {
+        
+        width: 80%;
+        height: 3rem;
+    }
+
+
+    #filtro{
+        display: flex;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 13rem;
+    
+    
+    }
+
+    
+footer{
+   
+
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    left: 0;
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+ #filtro{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 13rem; 
+        margin-left: 10%;
+        margin-right: 10%;
+
+    
+    }
+
+
+    
+
+}
+
+
+
+@media only screen and (max-width: 490px) {
+    .mb-3{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        gap: 20px;
+        width:90%;
+    
+    }
+
+    .form-control {
+        
+        width: 85%;
+        height: 3rem;
+    }
+
+
+    #filtro{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 13rem; 
+        margin-left: 10%;
+        margin-right: 10%;
+
+    
+    }
+
+
+        
+footer{
+   
+
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    left: 0;
+}
+
+}
+
+
+
+
+
+
+
+
+ @media only screen and (max-width: 443px) {
+    .mb-3{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        gap: 20px;
+        width:90%;
+    
+    }
+
+    .form-control {
+        
+        width: 85%;
+        height: 3rem;
+    }
+
+    #filtro{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 13rem; 
+        margin-left: 10%;
+        margin-right: 10%;
+
+    
+    }
+
+
+        
+footer{
+   
+
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    left: 0;
+}
+
+} 
+
 }

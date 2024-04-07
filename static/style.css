@@ -1,15 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    font-family: Josefin Sans;
+    /* font-family: Josefin Sans;*/
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
     font-weight: 500;
@@ -32,7 +34,7 @@
     --insta-color: #E1306C;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
 }
@@ -56,7 +58,7 @@ ul {
 }
 
 
-#acesso{
+#acesso {
     cursor: pointer;
     width: 10rem;
     border: none;
@@ -75,7 +77,7 @@ ul {
 
 
 
-svg{
+svg {
     width: 40px;
     height: 25px;
 }
@@ -89,17 +91,18 @@ main {
     height: 100%;
     z-index: -1;
 }
- main video {
+
+main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
     z-index: -1;
     opacity: 0.6;
-} 
+}
 
 
- 
+
 
 h1 {
     display: flex;
@@ -108,31 +111,30 @@ h1 {
     align-items: center;
     font-size: 1.5rem;
 
-    
-   
+
+
 }
 
 
-.mb-3{
+.mb-3 {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
     margin: 20px;
     gap: 20px
-
 }
 
- label{
+label {
 
     margin: 10px;
-   
+
 }
 
 
 
 
-#pesquisa{
+#pesquisa {
     cursor: pointer;
     width: 10rem;
     border: none;
@@ -159,7 +161,7 @@ label {
 }
 
 
-#filtro{
+#filtro {
     display: flex;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
@@ -168,8 +170,16 @@ label {
 
 }
 
-footer{
-   
+.form-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+footer {
+
 
     bottom: 0;
     position: fixed;
@@ -190,166 +200,168 @@ footer{
 
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 
 @media only screen and (max-width: 940px) {
-    .mb-3{
+    .mb-3 {
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         flex-direction: column;
-/*         margin: 20px;
- */        gap: 20px;
-        width:90%;
-    
+        /*         margin: 20px;
+ */
+        gap: 20px;
+        width: 90%;
+
     }
 
     .form-control {
-        
+
         width: 80%;
         height: 3rem;
     }
 
 
-    #filtro{
+    #filtro {
         display: flex;
         grid-template-columns: 2fr 1fr;
         justify-content: center;
         margin-top: 3rem;
         margin-bottom: 13rem;
-    
-    
-    }
-
-    
-footer{
-   
-
-    bottom: 0;
-    position: fixed;
-    width: 90%;
-    text-align: center;
-    left: 0;
-
-}
 
 
-
-@media only screen and (max-width: 800px) {
-
- #filtro{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        margin-top: 3rem;
-        margin-bottom: 13rem; 
-        margin-left: 10%;
-        margin-right: 10%;
-
-    
     }
 
 
-    
-
-}
+    footer {
 
 
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
+        left: 0;
 
-@media only screen and (max-width: 490px) {
-    .mb-3{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        flex-direction: column;
-        gap: 20px;
-        width:90%;
-    
-    }
-
-    .form-control {
-        
-        width: 85%;
-        height: 3rem;
     }
 
 
-    #filtro{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        margin-top: 3rem;
-        margin-bottom: 13rem; 
-        margin-left: 10%;
-        margin-right: 10%;
 
-    
+    @media only screen and (max-width: 800px) {
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 13rem;
+            margin-left: 10%;
+            margin-right: 10%;
+
+
+        }
+
+
+
+
     }
 
 
-        
-footer{
-   
 
-    bottom: 0;
-    position: fixed;
-    width: 90%;
-    text-align: center;
-    left: 0;
-}
+    @media only screen and (max-width: 490px) {
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
 
-}
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 13rem;
+            margin-left: 10%;
+            margin-right: 10%;
+
+
+        }
 
 
 
+        footer {
 
 
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+        }
 
-
-
- @media only screen and (max-width: 443px) {
-    .mb-3{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        flex-direction: column;
-        gap: 20px;
-        width:90%;
-    
-    }
-
-    .form-control {
-        
-        width: 85%;
-        height: 3rem;
-    }
-
-    #filtro{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        margin-top: 3rem;
-        margin-bottom: 13rem; 
-        margin-left: 10%;
-        margin-right: 10%;
-
-    
     }
 
 
-        
-footer{
-   
 
-    bottom: 0;
-    position: fixed;
-    width: 90%;
-    text-align: center;
-    left: 0;
-}
 
-} 
+
+
+
+
+    @media only screen and (max-width: 443px) {
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 13rem;
+            margin-left: 10%;
+            margin-right: 10%;
+
+
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+    }
 
 }

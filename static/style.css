@@ -14,8 +14,8 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    font-weight: 500;
-
+/*     font-weight: 500;
+ */
 
 }
 
@@ -37,6 +37,7 @@
 body {
     width: 100%;
     height: 100%;
+ 
 }
 
 
@@ -60,7 +61,7 @@ ul {
 
 #acesso {
     cursor: pointer;
-    width: 10rem;
+    width: 9.5rem;
     border: none;
     padding: .6rem 0;
     border-radius: .5rem;
@@ -189,6 +190,12 @@ footer {
 }
 
 
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -229,7 +236,6 @@ footer {
         grid-template-columns: 2fr 1fr;
         justify-content: center;
         margin-top: 3rem;
-        margin-bottom: 13rem;
 
 
     }
@@ -246,28 +252,52 @@ footer {
 
     }
 
+    footer p {
+        font-size: 0.9rem;
+    }
+
+}
 
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 730px) {
 
         #filtro {
             display: grid;
             grid-template-columns: 2fr 2fr;
             justify-content: center;
-            margin-top: 3rem;
-            margin-bottom: 13rem;
+            margin-top: 2rem;
             margin-left: 10%;
             margin-right: 10%;
+            justify-items: start;
+            align-items: center;
+
 
 
         }
 
 
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+    
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+      
+
 
 
     }
-
-
+ 
+/* 
 
     @media only screen and (max-width: 490px) {
         .mb-3 {
@@ -313,7 +343,7 @@ footer {
 
     }
 
-
+ */
 
 
 
@@ -321,6 +351,48 @@ footer {
 
 
     @media only screen and (max-width: 443px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+            height: 2.7rem;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 1rem;
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
         .mb-3 {
             display: flex;
             justify-content: center;
@@ -341,12 +413,26 @@ footer {
             display: grid;
             grid-template-columns: 2fr 2fr;
             justify-content: center;
-            margin-top: 3rem;
-            margin-bottom: 13rem;
             margin-left: 10%;
             margin-right: 10%;
+            font-size: 8px;
 
 
+
+        }
+
+        
+        .form-check {
+            margin: nome;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            
         }
 
 
@@ -362,6 +448,122 @@ footer {
             
         }
 
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
     }
 
-}
+
+
+    
+    @media only screen and (max-width: 376px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+            height: 2.7rem;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 1rem;
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 8px;
+            margin-bottom: 3rem;
+
+
+
+        }
+
+        
+        .form-check {
+            margin: nome;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
+    }
+
+

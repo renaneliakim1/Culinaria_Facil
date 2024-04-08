@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/static/login.css">
 
 </head>
+
 <body>
     <div id="container" class="container">
         <!-- FORM SECTION -->
@@ -85,6 +87,11 @@
             </div>
             <!-- END SIGN IN -->
         </div>
+
+
+        
+
+
         <!-- END FORM SECTION -->
         <!-- CONTENT SECTION -->
         <div class="row content-row">
@@ -131,7 +138,19 @@
         setTimeout(() => {
             container.classList.add('sign-in')
         }, 200)
+
+
+        8
+
+
+        function redirectCadastro() {
+            // Mudar para a visualização de cadastro
+            container.classList.add('sign-up');
+            container.classList.remove('sign-in');
+        }
+
     </script>
-    
+
 </body>
+
 </html>

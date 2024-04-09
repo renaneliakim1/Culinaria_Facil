@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(12, 12, 12);
+    /* font-family: Josefin Sans;*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+/*     font-weight: 500;
+ */
+
+}
+
+
+:root {
+    --primary-color: #d57119;
+    --secondary-color: #57B894;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+ 
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin-bottom: 3rem; 
+
+}
+
+
+
+ul {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    list-style: none;
+}
+
+
+#acesso {
+    cursor: pointer;
+    width: 9.5rem;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1rem;
+    outline: none;
+    height: 2.7rem;
+    margin: 15px;
+    text-align: center;
+
+
+}
+
+
+
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+
+
+main {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+main video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+
+h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+.accordion-item{
+
+    opacity: 40%;
+    border-radius: 15px;
+}
+
+
+
+
+#accordionFlushExample{
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mb-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px
+}
+
+label {
+
+    margin: 10px;
+
+}
+
+
+
+
+#pesquisa {
+    cursor: pointer;
+    width: 10rem;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1rem;
+    outline: none;
+    height: 3rem;
+
+}
+
+
+
+label {
+    font-size: 1.2rem;
+
+}
+
+.form-control {
+    width: 55%;
+    height: 3rem;
+}
+
+
+#filtro {
+    display: flex;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    margin-top: 3rem;
+
+
+}
+
+.form-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+footer {
+
+
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    left: 0;
+}
+
+
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 940px) {
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*         margin: 20px;
+ */
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 80%;
+        height: 3rem;
+    }
+
+
+    #filtro {
+        display: flex;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        margin-top: 3rem;
+
+
+    }
+
+
+    footer {
+
+
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
+        left: 0;
+
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+    @media only screen and (max-width: 730px) {
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-left: 10%;
+            margin-right: 10%;
+            justify-items: start;
+            align-items: center;
+
+
+
+        }
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+    
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+      
+
+
+
+    }
+ 
+    @media only screen and (max-width: 443px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+            height: 2.7rem;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 1rem;
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 8px;
+
+
+
+        }
+
+        
+        .form-check {
+            margin: nome;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
+    }
+
+
+    
+
+    @media only screen and (max-width: 412px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+/*             height: 2.7rem; */
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+/*             margin-bottom: 1rem; */
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 8px;
+
+
+
+        }
+
+        
+        .form-check {
+            margin: 0px;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 90%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
+    }
+
+
+
+
+
+    
+    @media only screen and (max-width: 375px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+            height: 2.7rem;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+/*             margin-bottom: 1rem; */   
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 8px;
+/*             margin-bottom: 3rem;
+ */
+
+
+        }
+
+        
+        .form-check {
+            margin: 0;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+
+            
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
+    }
+
+ 
+    @media only screen and (max-width: 360px) {
+
+
+            
+        #acesso {
+            cursor: pointer;
+            width: 8.5rem;
+            border: none;
+            padding: .6rem 0;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.8rem;
+            outline: none;
+            height: 2.7rem;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+/*             margin-bottom: 1rem; */   
+            flex-wrap: nowrap;           
+            flex-direction: row;
+
+
+        }
+
+        .nav-pills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+
+
+        .mb-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+        }
+
+        .form-control {
+
+            width: 85%;
+            height: 3rem;
+        }
+
+        #filtro {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 8px;
+/*             margin-bottom: 3rem;
+ */
+
+
+        }
+
+        
+        .form-check {
+            margin: 0;
+
+        }
+
+        .form-check label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+
+            
+        }
+
+
+
+        footer {
+
+
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            
+        }
+
+        
+        footer p {
+            font-size: 0.8rem;
+        }
+
+
+    }
+
+
+

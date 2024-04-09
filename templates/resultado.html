@@ -15,11 +15,10 @@
 
 <body>
 
-    <main>
-        <!--<video src="/imgs/fundo.mp4" autoplay muted loop></video>-->
+    <!--    <main>
         <video src="https://videos.pexels.com/video-files/4296854/4296854-hd_1920_1080_25fps.mp4" autoplay loop
             muted></video>
-    </main>
+    </main> -->
 
     <header>
         <ul class="nav nav-pills">
@@ -100,24 +99,27 @@
             </div>
         </div>
 
+    </div>
 
 
 
 
-        <section>
 
-            <h1>Receitas da região '{{ regiao }}'</h1>
-            <ul>
-                {% for receita in receitas %}
-                <li>{{ receita.strMeal }}</li>
-                {% endfor %}
-            </ul>
 
-        </section>
+    <section>
 
-        <footer>
-            <p>Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos reservados</p>
-        </footer>
+        <h1>Receitas da região '{{ regiao }}'</h1>
+        <ul>
+            {% for receita in receitas %}
+            <li>{{ receita.strMeal }}</li>
+            {% endfor %}
+        </ul>
+
+    </section>
+
+    <footer>
+        <p>Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos reservados</p>
+    </footer>
 
 
 

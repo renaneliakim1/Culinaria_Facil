@@ -26,7 +26,7 @@
     --secondary-color: #57B894;
     --black: #000000;
     --white: #ffffff;
-    --gray: #efefef;
+    --gray: #969696;
     --gray-2: #757575;
 
     --facebook-color: #4267B2;
@@ -114,13 +114,6 @@ h1 {
 
 }
 
-.accordion-item {
-    width: 40rem;
-
-    opacity: 60%;
-    border-radius: 15px;
-}
-
 
 
 
@@ -130,10 +123,27 @@ h1 {
     align-items: center;
     flex-direction: column;
     margin: 20px;
-    gap: 20px
+    gap: 20px;
+    background: var(--gray);
 }
 
 
+
+
+.accordion-item {
+    width: 40rem;
+
+    opacity: 60%;
+    border-radius: 15px;
+    background: var(--gray);
+}
+
+
+.accordion-header {
+    --gray-2: #757575;
+
+
+}
 
 
 
@@ -213,9 +223,14 @@ label {
     font-size: 0.8rem;
 }
 
+#flexCheckDefault{
+    border: var(--black);
+    border-style: solid var(--black);
+}
 
 
-#card {
+
+#resultados {
 
     display: flex;
     flex-wrap: wrap;
@@ -224,6 +239,7 @@ label {
     position: center;
     margin-left: 5%;
     margin-right: 5%;
+
     
 }
 
@@ -232,9 +248,14 @@ label {
     margin: 30px;
     border: var(--primary-color);;
     border-radius: 10px;
-    border-style: solid 
+    border-style: solid; 
 }
 
+
+.card-text{
+    font-size: 0.8rem;
+
+}
 
 .card{
     transition: 500ms linear;

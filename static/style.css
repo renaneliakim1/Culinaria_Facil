@@ -44,12 +44,22 @@ body {
 
 header {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content:space-between ;
     text-align: center;
     margin-bottom: 3rem; 
 
 }
 
+
+#logo img{
+    display: flex;
+    width: 6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
 
 
 ul {
@@ -77,6 +87,12 @@ ul {
 }
 
 
+#acesso:hover {
+    background-color: #a33f37; 
+}
+
+
+
 
 svg {
     width: 40px;
@@ -86,6 +102,7 @@ svg {
 
 
 main {
+    display: flex;
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -149,6 +166,10 @@ label {
 
 }
 
+#pesquisa:hover {
+    background-color: #a33f37; 
+
+}
 
 
 label {
@@ -184,7 +205,7 @@ footer {
 
     bottom: 0;
     position: fixed;
-    width: 90%;
+    width: 100%;
     text-align: center;
     left: 0;
 }

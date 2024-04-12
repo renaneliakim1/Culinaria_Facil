@@ -109,6 +109,12 @@ body {
     outline: none;
 }
 
+
+button:hover{
+    background-color: #a33f37; 
+
+}
+
 .form p {
     margin: 1rem 0;
     font-size: .7rem;

@@ -73,17 +73,17 @@ ul {
 }
 
 
+
 #acesso {
     cursor: pointer;
-    width: 9.5rem;
+    width: 8.5rem;
     border: none;
-    padding: .6rem 0;
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1rem;
+    font-size: 0.7rem;
     outline: none;
-    height: 2.7rem;
+    height: 2rem;
     margin: 15px;
     text-align: center;
 
@@ -189,7 +189,7 @@ label {
 
 #pesquisa {
     cursor: pointer;
-    width: 10rem;
+    width: 8.5rem;
     border: none;
     padding: .6rem 0;
     border-radius: .5rem;
@@ -197,7 +197,7 @@ label {
     color: var(--white);
     font-size: 1rem;
     outline: none;
-    height: 3rem;
+    height: 2.5rem;
 
 }
 
@@ -216,7 +216,7 @@ font-size: 0.6rem;
 
 
 label {
-    font-size: 1.1rem;
+    font-size: 1rem;
 
 }
 
@@ -310,7 +310,7 @@ h5{
 #myBtn {
     display: flex;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     right: 30px;
     z-index: 9999;
     border: none;
@@ -324,7 +324,7 @@ h5{
   
  /*  #myBtn:hover {
     background-color: #555;
-  } */
+  }  */
 
 
 footer {

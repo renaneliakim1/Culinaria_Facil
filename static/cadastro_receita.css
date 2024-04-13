@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(12, 12, 12);
+    /* font-family: Josefin Sans;*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    /*     font-weight: 500;
+ */
+
+}
+
+
+
+:root {
+    --primary-color: #d57119;
+    --secondary-color: #57B894;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #969696;
+    --gray-2: #d3d3d3;
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--gray-2 );
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+
+#logo img{
+    display: flex;
+    width: 6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+
+#acesso {
+    cursor: pointer;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+
+}
+
+#acesso:hover {
+    background-color: #a33f37; 
+}
+
+
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+
+textarea{
+    resize: none
+}
+
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    width: 9.5rem;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.9rem;
+    outline: none;
+    height: 2.5rem;
+   
+
+}
+
+
+#cadastrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+label{
+    font-size: 1rem;
+    color: var(--black);
+
+
+}
+
+.receita {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.receita h2 {
+    margin-top: 0;
+}
+
+.receita p {
+    margin: 5px 0;
+}
+
+
+
+#filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.form-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 15px;
+}
+
+
+
+footer {
+
+
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}

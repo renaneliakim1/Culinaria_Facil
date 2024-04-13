@@ -146,6 +146,12 @@ input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+#cancelar:hover{
+    background-color: var(--google-color);
+
 }
 
 input[type="submit"]:hover {
@@ -199,8 +205,14 @@ label{
 
 
 
+h2{
+    font-size: 1.5rem;
+}
 
+p, .message{
+    font-size: 1rem;
 
+}
 
 
 
@@ -222,7 +234,7 @@ label{
 }
 
 .dropzone-area {
-    width: 16rem;
+    width: 100%;
     padding: 1rem;
     position: relative;
     margin-top: 1rem;
@@ -232,7 +244,7 @@ label{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--black);
     border-radius: 1rem;
     color: var(--primary);
     cursor: pointer;
@@ -263,11 +275,13 @@ label{
 .dropzone-actions {
     display: flex;
     justify-content: center;
-    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     margin-top: 1.5rem;
-    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
     gap: 1rem;
     flex-wrap: wrap;
+    width: 100%;
+
 }
 
 .dropzone-actions button {
@@ -297,7 +311,14 @@ label{
     color: var(--white);
     cursor: pointer;
 }
+.dropzone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%
 
+};
 
 
 
@@ -326,6 +347,7 @@ footer {
 
 footer p {
     font-size: 0.8rem;
+    text-align: center;
 }
 
 

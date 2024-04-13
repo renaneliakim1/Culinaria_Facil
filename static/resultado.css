@@ -402,20 +402,65 @@ footer p {
     }
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
+
     footer {
 
 
         bottom: 0;
-        position: fixed;
-        width: 90%;
+        position: static;
+        width: 100%;
         text-align: center;
         left: 0;
 
     }
 
+
     footer p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
+
 
 }
 
@@ -437,27 +482,67 @@ footer p {
     }
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
+
     footer {
 
 
         bottom: 0;
-        position: fixed;
-        width: 90%;
+        position: static;
+        width: 100%;
         text-align: center;
         left: 0;
 
     }
 
+
     footer p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
 
-
-
-
 }
-
 @media only screen and (max-width: 443px) {
 
 
@@ -545,12 +630,55 @@ footer p {
 
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
+
     footer {
 
 
         bottom: 0;
-        position: fixed;
-        width: 90%;
+        position: static;
+        width: 100%;
         text-align: center;
         left: 0;
 
@@ -563,7 +691,6 @@ footer p {
 
 
 }
-
 
 
 
@@ -654,12 +781,55 @@ footer p {
 
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
+
     footer {
 
 
         bottom: 0;
-        position: fixed;
-        width: 90%;
+        position: static;
+        width: 100%;
         text-align: center;
         left: 0;
 
@@ -672,7 +842,6 @@ footer p {
 
 
 }
-
 
 
 
@@ -766,12 +935,54 @@ footer p {
     }
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
 
     footer {
 
 
         bottom: 0;
-        position: fixed;
+        position: static;
         width: 100%;
         text-align: center;
         left: 0;
@@ -785,7 +996,6 @@ footer p {
 
 
 }
-
 
 @media only screen and (max-width: 360px) {
 
@@ -875,12 +1085,54 @@ footer p {
     }
 
 
+    .accordion-item {
+        width: 15rem;
+    
+        opacity: 60%;
+        border-radius: 15px;
+    /*     background: var(--white);
+     */}
+    
+    /* .accordion-header {
+        background: var(--white);
+    
+    
+    } */
+
+
+
+    h5{
+        display: block; 
+        height: 2.7rem;}
+    
+    
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        right: 30px;
+        width: 120px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background:none;
+    /*     color: white;
+     */    cursor: pointer;
+       /*  padding: 15px;
+        border-radius: 10px; */
+      }
+      
+     /*  #myBtn:hover {
+        background-color: #555;
+      }  */
+    
+   
 
     footer {
 
 
         bottom: 0;
-        position: fixed;
+        position: static;
         width: 100%;
         text-align: center;
         left: 0;

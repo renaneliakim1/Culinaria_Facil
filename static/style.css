@@ -407,6 +407,15 @@ footer p {
 }
 
 @media only screen and (max-width: 443px) {
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
 
 
 
@@ -516,9 +525,6 @@ footer p {
 
 
 @media only screen and (max-width: 412px) {
-
-
-
     #acesso {
         cursor: pointer;
         width: 8.5rem;

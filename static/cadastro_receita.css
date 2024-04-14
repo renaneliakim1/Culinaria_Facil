@@ -520,8 +520,15 @@ footer p {
 
 @media only screen and (max-width: 443px) {
 
-
-
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
     #acesso {
         cursor: pointer;
         width: 8.5rem;
@@ -551,8 +558,7 @@ footer p {
         flex-direction: row;
 
 
-    }
-
+    } 
     .nav-pills {
         display: flex;
         flex-direction: row;
@@ -624,7 +630,7 @@ footer p {
 
 
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 435px) {
 
 
 
@@ -645,6 +651,17 @@ footer p {
 
     }
 
+
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
     header {
         display: flex;
         justify-content: center;
@@ -652,12 +669,12 @@ footer p {
         flex-direction: row;
         gap: 20px;
         width: 100%;
-        /*             margin-bottom: 1rem; */
+        margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    }
+    } 
 
 
     .bntacesso{
@@ -718,6 +735,9 @@ footer p {
 
     }
 
+    h2{
+        font-size: 1rem;
+    }
     footer {
 
 
@@ -761,7 +781,6 @@ footer p {
 
 
     }
-
     header {
         display: flex;
         justify-content: center;
@@ -769,12 +788,12 @@ footer p {
         flex-direction: row;
         gap: 20px;
         width: 100%;
-        /*             margin-bottom: 1rem; */
+        margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    }
+    } 
     
 
     .bntacesso{
@@ -884,12 +903,12 @@ footer p {
         flex-direction: row;
         gap: 20px;
         width: 100%;
-        /*             margin-bottom: 1rem; */
+        margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    }
+    } 
 
     .nav-pills {
         display: flex;

@@ -30,6 +30,7 @@
     --gray-2: #d3d3d3;
     --card--: #FCF3E5;
     --check--:#fac08d;
+    --dark--:#222;
 
     
 
@@ -90,7 +91,7 @@ body.modo-escuro .accordion-button:not(.collapsed) {
 
 
 body.modo-escuro .accordion-button{
-    background-color: #222;
+    background-color: var(--dark--);
     color: var(--white);
 }
 

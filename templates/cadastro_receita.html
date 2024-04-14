@@ -21,12 +21,23 @@
 
     <header>
 
+
+
         <div class="logo">
             <a id=logo href="index.html"><img src="/imgs/logo.png" alt="Culinárioteca" title="Culinárioteca"></a>
         </div>
 
 
         <div class="bntacesso">
+
+
+
+            <div class="form-check form-switch" id="toggle-mode">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
+            </div>
+
+
             <a href="/templates/login.html"> <button type="button" id="acesso" class="btn btn-danger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-person-check" viewBox="0 0 16 16">
@@ -175,6 +186,18 @@
             document.getElementById('resultado').insertAdjacentHTML('beforeend', receitaHtml);
             document.getElementById('form-receita').reset();
         });
+
+
+
+
+        // modo escuro
+
+        document.getElementById('flexSwitchCheckDefault').addEventListener('click', function () {
+            document.body.classList.toggle('modo-escuro');
+        });
+
+
+
     </script>
 </body>
 

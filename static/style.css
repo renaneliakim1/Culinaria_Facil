@@ -14,7 +14,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-/*     font-weight: 500;
+    /*     font-weight: 500;
  */
 
 }
@@ -37,7 +37,7 @@
 body {
     width: 100%;
     height: 100%;
- 
+
 }
 
 
@@ -45,14 +45,14 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content:space-between ;
+    justify-content: space-between;
     text-align: center;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
 
 }
 
 
-#logo img{
+#logo img {
     display: flex;
     width: 6rem;
     height: 3rem;
@@ -87,7 +87,7 @@ ul {
 
 
 #acesso:hover {
-    background-color: #a33f37; 
+    background-color: #a33f37;
 }
 
 
@@ -166,7 +166,7 @@ label {
 }
 
 #pesquisa:hover {
-    background-color: #a33f37; 
+    background-color: #a33f37;
 
 }
 
@@ -191,12 +191,101 @@ label {
 
 }
 
-.form-check{
+.form-check {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
+
+
+
+
+
+#myBtn {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    background: none;
+    /*     background: var(--check--); ativar penas para teste */
+
+    /*  color: white; */
+    cursor: pointer;
+    /*     border-radius: 10px; */
+
+
+    /* 
+    box-shadow:  0 0 0 0 var(--check--);
+    border-radius: 50%;
+    animation: alerta 1.5s infinite;
+    transition: background, padding 500ms ease-in-out;   */
+
+}
+
+
+
+@-webkit-keyframes btn-pulsando {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes btn-pulsando {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+
+#myBtn {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+
+
+
+    -webkit-animation-name: btn-pulsando;
+    animation-name: btn-pulsando;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
 
 
 footer {
@@ -279,480 +368,568 @@ footer p {
 }
 
 
-    @media only screen and (max-width: 730px) {
+@media only screen and (max-width: 730px) {
 
-        #filtro {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            justify-content: center;
-            margin-top: 2rem;
-            margin-left: 10%;
-            margin-right: 10%;
-            justify-items: start;
-            align-items: center;
-
-
-
-        }
-
-
-        footer {
-
-
-            bottom: 0;
-            position: fixed;
-            width: 90%;
-            text-align: center;
-            left: 0;
-    
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-      
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-items: start;
+        align-items: center;
 
 
 
     }
- 
-    @media only screen and (max-width: 443px) {
 
 
-            
-        #acesso {
-            cursor: pointer;
-            width: 8.5rem;
-            border: none;
-            padding: .6rem 0;
-            border-radius: .5rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 0.8rem;
-            outline: none;
-            height: 2.7rem;
-            margin: 10px;
-            text-align: center;
+    footer {
 
 
-        }
-
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-            margin-bottom: 1rem;
-            flex-wrap: nowrap;           
-            flex-direction: row;
-
-
-        }
-
-        .nav-pills{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            
-        }
-
-
-        .mb-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            width: 90%;
-
-        }
-
-        .form-control {
-
-            width: 85%;
-            height: 3rem;
-        }
-
-        #filtro {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            justify-content: center;
-            margin-left: 10%;
-            margin-right: 10%;
-            font-size: 8px;
-
-
-
-        }
-
-        
-        .form-check {
-            margin: nome;
-
-        }
-
-        .form-check label{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8rem;
-            
-        }
-
-
-
-        footer {
-
-
-            bottom: 0;
-            position: fixed;
-            width: 90%;
-            text-align: center;
-            left: 0;
-            
-        }
-
-        
-        footer p {
-            font-size: 0.8rem;
-        }
-
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
+        left: 0;
 
     }
 
-
-    
-
-    @media only screen and (max-width: 412px) {
-
-
-            
-        #acesso {
-            cursor: pointer;
-            width: 8.5rem;
-            border: none;
-            padding: .6rem 0;
-            border-radius: .5rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 0.8rem;
-            outline: none;
-/*             height: 2.7rem; */
-            margin: 10px;
-            text-align: center;
-
-
-        }
-
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-/*             margin-bottom: 1rem; */
-            flex-wrap: nowrap;           
-            flex-direction: row;
-
-
-        }
-
-        .nav-pills{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            
-        }
-
-
-        .mb-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            width: 90%;
-
-        }
-
-        .form-control {
-
-            width: 85%;
-            height: 3rem;
-        }
-
-        #filtro {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            justify-content: center;
-            margin-left: 10%;
-            margin-right: 10%;
-            font-size: 8px;
-
-
-
-        }
-
-        
-        .form-check {
-            margin: 0px;
-
-        }
-
-        .form-check label{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8rem;
-            
-        }
-
-
-
-        footer {
-
-
-            bottom: 0;
-            position: fixed;
-            width: 90%;
-            text-align: center;
-            left: 0;
-            
-        }
-
-        
-        footer p {
-            font-size: 0.8rem;
-        }
-
-
+    footer p {
+        font-size: 0.9rem;
     }
 
 
 
 
 
-    
-    @media only screen and (max-width: 375px) {
+}
+
+@media only screen and (max-width: 443px) {
 
 
-            
-        #acesso {
-            cursor: pointer;
-            width: 8.5rem;
-            border: none;
-            padding: .6rem 0;
-            border-radius: .5rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 0.8rem;
-            outline: none;
-            height: 2.7rem;
-            margin: 10px;
-            text-align: center;
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
 
 
-        }
+    }
 
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-/*             margin-bottom: 1rem; */   
-            flex-wrap: nowrap;           
-            flex-direction: row;
-
-
-        }
-
-        .nav-pills{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            
-        }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
 
 
-        .mb-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            width: 90%;
+    }
 
-        }
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
 
-        .form-control {
+    }
 
-            width: 85%;
-            height: 3rem;
-        }
 
-        #filtro {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            justify-content: center;
-            margin-left: 10%;
-            margin-right: 10%;
-            font-size: 8px;
-/*             margin-bottom: 3rem;
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 85%;
+        height: 3rem;
+    }
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8px;
+
+
+
+    }
+
+
+    .form-check {
+        margin: nome;
+
+    }
+
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+
+    }
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 412px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        /*             height: 2.7rem; */
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        /*             margin-bottom: 1rem; */
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    }
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 85%;
+        height: 3rem;
+    }
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8px;
+
+
+
+    }
+
+
+    .form-check {
+        margin: 0px;
+
+    }
+
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+
+    }
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: fixed;
+        width: 90%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        /*             margin-bottom: 1rem; */
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    }
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 85%;
+        height: 3rem;
+    }
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8px;
+        /*             margin-bottom: 3rem;
  */
 
 
-        }
-
-        
-        .form-check {
-            margin: 0;
-
-        }
-
-        .form-check label{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8rem;
-
-            
-        }
+    }
 
 
+    .form-check {
+        margin: 0;
 
-        footer {
+    }
 
-
-            bottom: 0;
-            position: fixed;
-            width: 100%;
-            text-align: center;
-            left: 0;
-            
-        }
-
-        
-        footer p {
-            font-size: 0.8rem;
-        }
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
 
 
     }
 
- 
-    @media only screen and (max-width: 360px) {
 
 
-            
-        #acesso {
-            cursor: pointer;
-            width: 8.5rem;
-            border: none;
-            padding: .6rem 0;
-            border-radius: .5rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 0.8rem;
-            outline: none;
-            height: 2.7rem;
-            margin: 10px;
-            text-align: center;
+    footer {
 
 
-        }
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        left: 0;
 
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-/*             margin-bottom: 1rem; */   
-            flex-wrap: nowrap;           
-            flex-direction: row;
+    }
 
 
-        }
-
-        .nav-pills{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            
-        }
+    footer p {
+        font-size: 0.8rem;
+    }
 
 
-        .mb-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            width: 90%;
+}
 
-        }
 
-        .form-control {
+@media only screen and (max-width: 360px) {
 
-            width: 85%;
-            height: 3rem;
-        }
 
-        #filtro {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            justify-content: center;
-            margin-left: 10%;
-            margin-right: 10%;
-            font-size: 8px;
-/*             margin-bottom: 3rem;
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        /*             margin-bottom: 1rem; */
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    }
+
+
+
+  
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 85%;
+        height: 3rem;
+    }
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8px;
+        /*             margin-bottom: 3rem;
  */
 
 
-        }
-
-        
-        .form-check {
-            margin: 0;
-
-        }
-
-        .form-check label{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8rem;
-
-            
-        }
+    }
 
 
+    .form-check {
+        margin: 0;
 
-        footer {
+    }
 
-
-            bottom: 0;
-            position: fixed;
-            width: 100%;
-            text-align: center;
-            left: 0;
-            
-        }
-
-        
-        footer p {
-            font-size: 0.8rem;
-        }
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
 
 
     }
 
 
 
+
+
+    #myBtn {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 9999;
+        border: none;
+        outline: none;
+        background: none;
+        /*     background: var(--check--); ativar penas para teste */
+
+        /*  color: white; */
+        cursor: pointer;
+        /*     border-radius: 10px; */
+
+
+        /* 
+    box-shadow:  0 0 0 0 var(--check--);
+    border-radius: 50%;
+    animation: alerta 1.5s infinite;
+    transition: background, padding 500ms ease-in-out;   */
+
+    }
+
+
+
+    @-webkit-keyframes btn-pulsando {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        50% {
+            -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes btn-pulsando {
+        0% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        50% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        100% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+
+
+    #myBtn {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+
+
+
+        -webkit-animation-name: btn-pulsando;
+        animation-name: btn-pulsando;
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}

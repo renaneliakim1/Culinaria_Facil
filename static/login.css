@@ -59,6 +59,18 @@ body.modo-escuro label{
 
 }
 
+
+body.modo-escuro form{
+background-color: var(--dark--);
+border: 4px solid var(--check--); 
+}
+
+
+body.modo-escuro p{
+    color: var(--white);
+}
+
+
 .card {
     background-color: #ac2020;
     color: #000000;
@@ -89,6 +101,8 @@ header {
     justify-content: center;
     margin-top: 10px;
 }
+
+
 
 #acesso {
     cursor: pointer;
@@ -122,6 +136,16 @@ svg {
     flex-direction: row;
     justify-content: center;
 }
+
+#toggle-mode{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggle-mode label{
+    font-size: 0.8rem;
+}  
 
 
 /* main {
@@ -178,7 +202,7 @@ main video {
   
   .input-container input, .form button {
     outline: none;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #595b5d;
     margin: 8px 0;
   }
   
@@ -204,9 +228,9 @@ main video {
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     margin: 15px;
 
     text-align: center;

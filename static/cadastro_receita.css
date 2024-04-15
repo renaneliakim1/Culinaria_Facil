@@ -160,6 +160,10 @@ svg {
 }
 
 
+.form-check-label{
+    font-size: 0.8rem;
+}
+
 
 .container {
     max-width: 900px;

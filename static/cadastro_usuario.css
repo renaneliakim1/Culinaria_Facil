@@ -340,7 +340,7 @@ footer p {
         margin-top: 10px;
     }
 
-    
+
     #acesso {
         cursor: pointer;
         width: 8.5rem;
@@ -364,15 +364,115 @@ footer p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 100%;
+        width: 90%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    } 
+    }
 
-  
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 34rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
     footer {
 
 
@@ -415,7 +515,6 @@ footer p {
 
     }
 
-    
 
 
     header {
@@ -424,16 +523,110 @@ footer p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 100%;
+        width: 90%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
+    }
+    
 
-    } 
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
 
 
-   
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 34rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+
+
 
     footer {
 
@@ -485,15 +678,117 @@ footer p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 100%;
+        width: 90%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    } 
+    }
 
-   
+
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 34rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+
     footer {
 
 
@@ -514,6 +809,8 @@ footer p {
 }
 
 @media only screen and (max-width: 360px) {
+   
+
 
 
 
@@ -540,15 +837,117 @@ footer p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 100%;
+        width: 90%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
         flex-direction: row;
 
 
-    } 
+    }
 
- 
+
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 34rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+
     footer {
 
 

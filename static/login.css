@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(12, 12, 12);
+    /* font-family: Josefin Sans;*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    /*     font-weight: 500;
+ */
+
+}
+
+
+
+:root {
+    --primary-color: #d57119;
+    --secondary-color: #57B894;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #969696;
+    --gray-2: #d3d3d3;
+    --card--: #FCF3E5;
+    --check--:#fac08d;
+    --dark--:#222;
+
+    
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--white );
+
+}
+
+body.modo-escuro {
+    background-color: #222;
+    color: #fff;
+}
+
+
+body.modo-escuro label{
+    color: #fff;
+
+}
+
+.card {
+    background-color: #ac2020;
+    color: #000000;
+}
+
+
+body.modo-escuro footer p{
+    color: #fff;
+
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+
+#logo img{
+    display: flex;
+    width: 6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#acesso {
+    cursor: pointer;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+
+}
+
+#acesso:hover {
+    background-color: #a33f37; 
+}
+
+
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+.bntacesso{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* main {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+main video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+} */
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11.9rem;
+    width: 100%;
+}
+
+
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin-top: 4rem;
+    width: 100%;
+    height: 25rem;
+    gap: 1rem;
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container input, .form button {
+    outline: none;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+  }
+  
+  .input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+  }
+  
+  
+  .submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+  
+  }
+  .submit:hover {
+  background-color: #a33f37; 
+  }
+  
+  .signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    text-decoration: underline;
+  }
+
+ p{
+    margin-top: 50px;
+ }
+  
+
+footer {
+
+
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 940px) {
+   
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 730px) {
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-items: start;
+        align-items: center;
+
+
+
+    }
+
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+@media only screen and (max-width: 729px) {
+
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    } 
+
+  
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 435px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        /*             height: 2.7rem; */
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    } 
+
+
+   
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    } 
+
+   
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 360px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    } 
+
+ 
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}

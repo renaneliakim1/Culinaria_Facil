@@ -441,13 +441,73 @@ footer p {
 
 
 @media only screen and (max-width: 940px) {
+   
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        /*             height: 2.7rem; */
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+/* 
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    }  */
+
+
+    .bntacesso{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+
+
     .mb-3 {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        /*         margin: 20px;
- */
         gap: 20px;
         width: 90%;
 
@@ -455,20 +515,39 @@ footer p {
 
     .form-control {
 
-        width: 80%;
+        width: 85%;
         height: 3rem;
     }
 
-
     #filtro {
-        display: flex;
-        grid-template-columns: 2fr 1fr;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
         justify-content: center;
-        margin-top: 3rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8px;
+
 
 
     }
 
+
+    .form-check {
+        margin: 0px;
+
+    }
+
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+
+    }
+
+    h2{
+        font-size: 1rem;
+    }
     footer {
 
 
@@ -491,21 +570,115 @@ footer p {
 
 @media only screen and (max-width: 730px) {
 
+   
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        /*             height: 2.7rem; */
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    } 
+
+
+    .bntacesso{
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+
+    }
+
+    .form-control {
+
+        width: 85%;
+        height: 3rem;
+    }
+
     #filtro {
         display: grid;
         grid-template-columns: 2fr 2fr;
         justify-content: center;
-        margin-top: 2rem;
         margin-left: 10%;
         margin-right: 10%;
-        justify-items: start;
-        align-items: center;
+        font-size: 8px;
 
 
 
     }
 
+
+    .form-check {
+        margin: 0px;
+
+    }
+
+    .form-check label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+
+    }
+
+    h2{
+        font-size: 1rem;
+    }
     footer {
+
+
         bottom: 0;
         position: static;
         width: 100%;
@@ -521,6 +694,7 @@ footer p {
 
 
 }
+
 
 @media only screen and (max-width: 443px) {
 

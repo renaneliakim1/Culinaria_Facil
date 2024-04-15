@@ -246,6 +246,10 @@ label {
 }
 
 
+#flexCheckDefault{
+    border: 1px solid var(--black);
+}
+
 .form-check-label {
     font-size: 0.8rem;
 }

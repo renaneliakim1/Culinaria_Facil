@@ -78,10 +78,9 @@ body.modo-escuro p{
 
 
 body.modo-escuro footer p{
-    color: #fff;
+    color:var(--white);
 
 }
-
 
 header {
     display: flex;

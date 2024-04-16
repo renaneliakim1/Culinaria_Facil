@@ -197,15 +197,22 @@ body.modo-escuro footer p {
 }
 
 
+.logotipo{
+    display: flex;
+    justify-content: center;
+}
 
 #logo img {
     display: flex;
-    width: 6rem;
-    height: 3rem;
+    width: 12rem;
+    height: 5rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
 }
+
+
+
 
 
 /* 

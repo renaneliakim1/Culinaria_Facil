@@ -63,7 +63,6 @@ body.modo-escuro label {
 
 body.modo-escuro form {
     background-color: var(--dark--);
-    border: 4px solid var(--check--);
 }
 
 
@@ -71,17 +70,18 @@ body.modo-escuro p {
     color: var(--white);
 }
 
+body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show   {
+     color: var(--white);
+}
+
 
 
 body.modo-escuro .container-fluid{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     background-color: var(--dark--);
-    flex-direction: column;
-
-
-
+    flex-direction: row;
 }
 
 
@@ -90,17 +90,19 @@ body.modo-escuro .bg-body-tertiary{
 }
 
 
-
-body.modo-escuro .bg-body-tertiary{
-    --bs-bg-opacity:0
+.nav-item{
+    display: flex;
+    justify-content: center;
 }
+
+
 
 
 
 body.modo-escuro header {
-    display: flex;
-    flex-direction: row;
-    justify-content:center ;
+ /*    display: flex; */
+/*     flex-direction: row;
+ */   /*  justify-content:center ; */
     text-align: center;
     margin-bottom: 3rem;
 
@@ -121,7 +123,7 @@ body.modo-escuro footer p {
 }
 
 
-header {
+/* header {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -150,22 +152,29 @@ header {
     justify-content: center;
     align-items: center;
 }
+ */
+ #menu{
+    display: flex;
+    justify-content: right;
+
+ }
+
+ .container-fluid {
+    display: flex;
+    align-items: center;
+    flex-wrap: inherit;
+    justify-content: right;
+
+    flex-direction: row;
+}
+
+
 
 
 .bg-body-tertiary{
     --bs-bg-opacity:0
 }
 
-
-
-#logo img {
-    display: flex;
-    width: 6rem;
-    height: 3rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
 
 
 
@@ -181,9 +190,40 @@ header {
     height: 2rem;
     margin: 15px;
     text-align: center;
-
-
 }
+
+#acesso:hover {
+    background-color: #a33f37;
+}
+
+
+
+#logo img {
+    display: flex;
+    width: 6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+/* 
+#acesso {
+    cursor: pointer;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+
+} */
 
 #acesso:hover {
     background-color: #a33f37;
@@ -199,14 +239,14 @@ svg {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
+/*     justify-content: center;
+ */}
 
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
-    align-items: center;
+    justify-content: center;
 
 }
 
@@ -215,18 +255,30 @@ svg {
 }
 
 
+.navbar-toggler {
+    display: flex;
+    background-color: var(--white);
+    justify-content: right;
+}
+
+
+.btn-outline-success{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+}
 
 
 
 
 
-
-
-
-
-
-
-
+.navbar>.container-fluid{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: right;
+}
 
 
 
@@ -262,3 +314,60 @@ footer p {
     border-radius: 8px;
     background-color: var(--primary-color);
 }
+
+
+
+
+@media only screen and (max-width: 940px) {
+    .btn-outline-success{
+        justify-content: right;
+    }
+
+    body.modo-escuro .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        background-color: var(--dark--);
+        flex-direction: row;
+    }
+
+    .modo-escuro .btn-outline-success{
+        justify-content: right;
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-direction: row;
+    }
+
+    .container-flex-properties {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: right;
+      }
+
+
+
+
+    
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

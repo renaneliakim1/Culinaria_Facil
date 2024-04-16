@@ -12,7 +12,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
       defer
     </script>
-    
+
   <link rel="stylesheet" href="/static/login.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -35,38 +35,75 @@
         <video src="https://videos.pexels.com/video-files/4296854/4296854-hd_1920_1080_25fps.mp4" autoplay loop
             muted></video>
     </main> -->
-
   <header>
-    <div class="logo">
-      <a id=logo href="/templates/index.html"><img src="/imgs/logo.png" alt="Culinárioteca" title="Culinárioteca"></a>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a id=logo href="/templates/index.html"><img src="/imgs/logo.png" alt="Culinárioteca" title="Culinárioteca"></a>
 
-    <div class="bntacesso">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <div class="form-check form-switch" id="toggle-mode">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
+          <nav class="navbar bg-body-tertiary">
+
+
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li>
+                <a href="/templates/login.html"> <button type="button" id="acesso" class="btn btn-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-person-check" viewBox="0 0 16 16">
+                      <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                      <path
+                        d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                    </svg> Inicio</button></a>
+              </li>
+          
+         <!--      <li class="nav-item">
+                <a href="/templates/login.html"> <button type="button" id="acesso" class="btn btn-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-person-check" viewBox="0 0 16 16">
+                      <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                      <path
+                        d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                    </svg> Entrar</button></a>
+              </li> -->
+              <li class="nav-item">
+                <a href="/templates/cadastro_usuario.html"> <button type="button" id="acesso"
+                    class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                      <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                      <path
+                        d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                    </svg>Cadastre-se</button></a>
+              </li>  
+              <li>
+                <nav class="navbar bg-body-tertiary">
+                  <div class="container-fluid">
+                    <form class="d-flex" role="search" id="search">
+                      <input class="form-control me-2" type="search" placeholder="Bolo de canela com maçã"
+                        aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </nav>
+              </li>
+              <li class="form-check form-switch" id="toggle-mode">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
+
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-
-      <a href="/templates/login.html"> <button type="button" id="acesso" class="btn btn-danger">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check"
-            viewBox="0 0 16 16">
-            <path
-              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-            <path
-              d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
-          </svg> Entrar</button></a>
+    </nav>
 
 
-      <a href="/templates/cadastro_usuario.html"> <button type="button" id="acesso" class="btn btn-danger"><svg
-            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add"
-            viewBox="0 0 16 16">
-            <path
-              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-            <path
-              d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
-          </svg>Cadastre-se</button></a>
-    </div>
+
+
 
   </header>
   <div class="formulario">
@@ -79,12 +116,12 @@
         </span>
       </div>
       <div class="input-container">
-        <input type="password" placeholder="Senha"  required>
+        <input type="password" placeholder="Senha" required>
       </div>
-      
+
       <a href="/templates/index.html"><button type="submit" class="submit">
           Entrar
-      </button></a>
+        </button></a>
 
       <p class="signup-link">
         Sem conta?
@@ -106,8 +143,8 @@
   // modo escuro
 
   document.getElementById('flexSwitchCheckDefault').addEventListener('click', function () {
-  document.body.classList.toggle('modo-escuro');
-});
+    document.body.classList.toggle('modo-escuro');
+  });
 
 
 </script>

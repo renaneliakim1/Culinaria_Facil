@@ -65,6 +65,43 @@ body.modo-escuro label{
 
 }
 
+
+
+body.modo-escuro .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+    flex-direction: column;
+
+
+
+}
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro header {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+
+
 .card {
     background-color: #ac2020;
     color: #000000;
@@ -80,11 +117,35 @@ body.modo-escuro footer p{
 header {
     display: flex;
     flex-direction: row;
-    justify-content:space-between ;
+    justify-content:center ;
     text-align: center;
     margin-bottom: 3rem;
 
 }
+
+
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    flex-direction: column;
+
+
+}
+
+
+#navbarSupportedContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
 
 
 #logo img{
@@ -525,6 +586,8 @@ footer p {
 
 
     }
+
+
 
     h5{
         display: block; 

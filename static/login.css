@@ -30,6 +30,8 @@
     --card--: #FCF3E5;
     --check--: #fac08d;
     --dark--: #222;
+    --darkform--: #5c5c5c;
+
 
 
 
@@ -60,14 +62,69 @@ body.modo-escuro label {
 
 
 body.modo-escuro form {
-    background-color: var(--dark--);
-    border: 4px solid var(--check--);
+    background-color: var(--darkform--);
 }
+
+
+body.modo-escuro .btn-outline-success{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+
+}
+
+
+
+body.modo-escuro #search{
+
+    background-color: var(--dark--);
+    
+
+}
+
 
 
 body.modo-escuro p {
     color: var(--white);
 }
+
+
+
+body.modo-escuro .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+    flex-direction: column;
+
+
+
+}
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro header {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+
 
 
 .card {
@@ -85,11 +142,50 @@ body.modo-escuro footer p {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     margin-bottom: 3rem;
 
 }
+
+
+
+
+.bg-body-tertiary{
+    display: flex;
+    justify-content: center;
+    --bs-bg-opacity:0
+}
+
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--white);
+    flex-direction: column;
+
+
+}
+
+
+#navbarSupportedContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.btn-outline-success{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+
+}
+
+
+
 
 
 #logo img {
@@ -141,6 +237,7 @@ svg {
     align-items: center;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -336,6 +433,32 @@ footer p {
         justify-content: center;
     }
 
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+
     .formulario{
         margin-bottom: 1rem;
     }
@@ -482,13 +605,25 @@ p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+    
 
     
     .bntacesso {
@@ -634,21 +769,30 @@ p {
     }
 
 
-
     header {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
+
 
     }
-    
 
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
     
     .formulario{
         margin-bottom: 1rem;
@@ -796,15 +940,24 @@ p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
 
 
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
     
     .bntacesso {
         display: flex;
@@ -955,14 +1108,24 @@ p {
         align-items: center;
         flex-direction: row;
         gap: 20px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
 
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
 
     
     .bntacesso {

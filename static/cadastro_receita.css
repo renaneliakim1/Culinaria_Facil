@@ -108,6 +108,41 @@ body.modo-escuro span{
 
 
 
+body.modo-escuro .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+    flex-direction: column;
+
+
+
+}
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro header {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+
+
 body.modo-escuro .dropzone-area {
     width: 100%;
     padding: 1rem;
@@ -133,12 +168,35 @@ body.modo-escuro .dropzone-area {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     margin-bottom: 3rem;
 
 }
 
+
+
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    flex-direction: column;
+
+
+}
+
+
+#navbarSupportedContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bg-body-tertiary{
+    --bs-bg-opacity:0
+}
 
 #logo img {
     display: flex;
@@ -193,7 +251,7 @@ svg {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--check--);
+    background-color: var(--card--);
     border-radius: 8px;
     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
     border-radius: 4px;
@@ -213,7 +271,7 @@ form {
 }
 
 #nome {
-    background-color: var(--check--);
+    background-color: var(--card--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
 
@@ -222,7 +280,7 @@ form {
 
 textarea {
     resize: none;
-    background-color: var(--check--);
+    background-color: var(--card--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
 

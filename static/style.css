@@ -27,6 +27,8 @@
     --white: #ffffff;
     --gray: #efefef;
     --gray-2: #757575;
+    --darkform--: #5c5c5c;
+
 
     --facebook-color: #4267B2;
     --google-color: #DB4437;
@@ -42,12 +44,29 @@ body {
 
 
 
+
+
+
+
+
 header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     margin-bottom: 3rem;
+    flex-direction: column;
+    
+
+
+
+}
+
+
+
+
+.logo{
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -81,6 +100,9 @@ ul {
     height: 2rem;
     margin: 15px;
     text-align: center;
+    justify-content: center;
+    flex-direction: column;
+ 
 
 
 }
@@ -396,6 +418,20 @@ footer p {
 
     }
 
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
 
     footer {
 
@@ -457,7 +493,7 @@ footer p {
         width: 100%;
         margin-bottom: 1rem;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
@@ -563,7 +599,7 @@ footer p {
         width: 100%;
         /*             margin-bottom: 1rem; */
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
@@ -674,7 +710,7 @@ footer p {
         width: 100%;
         /*             margin-bottom: 1rem; */
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
@@ -783,7 +819,7 @@ footer p {
         width: 90%;
         /*             margin-bottom: 1rem; */
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }

@@ -101,6 +101,9 @@ body.modo-escuro p{
     color: var(--white);
 }
 
+body.modo-escuro span{
+    color: var(--white);
+}
 
 
 
@@ -192,7 +195,7 @@ svg {
     padding: 20px;
     background-color: var(--check--);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
     border-radius: 4px;
 
 }
@@ -212,6 +215,8 @@ form {
 #nome {
     background-color: var(--check--);
     border: #000000 solid 0.5px;
+    font-size: 0.8rem;
+
 
 }
 
@@ -219,6 +224,7 @@ textarea {
     resize: none;
     background-color: var(--check--);
     border: #000000 solid 0.5px;
+    font-size: 0.8rem;
 
 
 }
@@ -945,6 +951,18 @@ footer p {
         height: 3rem;
     }
 
+
+
+
+   .container p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+
+   }
+
+
     #filtro {
         display: grid;
         grid-template-columns: 2fr 2fr;
@@ -971,6 +989,8 @@ footer p {
         font-size: 0.8rem;
 
     }
+
+   
 
     h2{
         font-size: 1rem;

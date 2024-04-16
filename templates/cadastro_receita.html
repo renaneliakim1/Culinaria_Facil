@@ -63,12 +63,22 @@
     <div class="container">
         <h1>Cadastro de Receita</h1>
         <form id="form-receita">
-            <label for="nome">Nome da Receita:</label>
-            <input type="text" id="nome" name="nome" required>
+            <label for="nome" >Nome da Receita: </label>
+            <input type="text" id="nome" name="nome" placeholder="Bolo simples" required>
             <label for="ingredientes">Ingredientes:</label>
-            <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+            <textarea id="ingredientes" name="ingredientes" rows="4" required placeholder="3 xícaras (chá) de farinha de trigo..."></textarea>
             <label for="instrucoes">Instruções:</label>
-            <textarea id="instrucoes" name="instrucoes" rows="4" required></textarea>
+            <textarea id="instrucoes" name="instrucoes" rows="4" placeholder="Misture as gemas, a margarina e o açúcar..." required></textarea>
+
+
+            <div id="gerar_senha_tamanho">
+                <label for="customRange1" class="form-label">Defina o tempo de preparo: <span id="valor"> </span>
+                    minutos </label>
+                <input type="range" class="form-range" id="customRange1" min="2" max="240" value="8">
+            </div>
+
+
+            <p>Escolha a categoria:</p>
 
 
 
@@ -76,7 +86,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                        Sem Glutem
+                        Sem Glútem
                     </label>
                 </div>
                 <div class="form-check">
@@ -117,12 +127,12 @@
                                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                             </svg>
                         </div>
-                        <p>Clique para fazer upload ou arraste e solte</p>
+                        <p>Clique para fazer upload</p>
                         <input type="file" required id="upload-file" name="uploaded-file">
                         <p class="message">Nenhum arquivo selecionado
                         </p>
                     </div>
-                
+
                 </form>
             </div>
 
@@ -167,6 +177,15 @@
             document.getElementById('form-receita').reset();
         });
 
+        // temporizador
+        let customRange1Element = document.querySelector("#customRange1");
+        let sizeKey = document.querySelector("#valor");
+
+        let charset = "";
+
+        customRange1Element.addEventListener('input', function () {
+            sizeKey.innerHTML = this.value;
+        });
 
 
 

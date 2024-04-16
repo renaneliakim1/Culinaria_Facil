@@ -228,6 +228,10 @@ label {
 }
 
 
+h3{
+    font-size: 1rem;
+}
+
 
 #filtro {
     display: flex;

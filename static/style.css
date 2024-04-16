@@ -139,7 +139,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     margin: 20px;
-    gap: 20px
+    gap: 20px;
 }
 
 label {
@@ -181,12 +181,24 @@ label {
     height: 3rem;
 }
 
+.filtroCategoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+.filtroCategoria h3{
+    font-size: 1.2rem;
+}
+
 
 #filtro {
     display: flex;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 0.5rem;
 
 
 }
@@ -776,12 +788,12 @@ footer p {
 
     }
 
-    .form-control{
+    .form-control {
         font-size: 0.8rem;
     }
 
 
-  
+
 
     .nav-pills {
         display: flex;

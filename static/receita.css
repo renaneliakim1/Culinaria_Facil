@@ -591,6 +591,72 @@ footer p {
 }
 
 
+@media only screen and (max-width: 768px) {
+    section{
+        flex-direction: column;
+        padding: 1rem;
+
+    }
+
+    #carouselExample{
+        width: 100%;
+
+    }
+
+
+    .preparo {
+        flex-direction: column;
+    
+       
+    }
+
+    .ingredientes{
+        padding-bottom: 1rem;
+    }
+
+
+    .categoria h3{
+        justify-content: center;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
+
+
+    .video{
+        display: flex;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 12rem;
+        margin-top: 2rem;
+        width: 100%;
+    
+      }
+    
+      iframe{
+        width: 60rem;
+        height: 10rem;
+        
+      }
+
+
+      .tempo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 20%;
+        margin-right: 20%;
+        font-size: 0.8rem;
+        padding-top: 2rem;
+    
+      }
+
+
+
+}
+
+
 
 
 

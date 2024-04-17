@@ -123,7 +123,10 @@ body.modo-escuro h3{
 }
 
 
-
+body.modo-escuro .d-block{
+    width: 40rem;
+    height: 20rem;
+}
 
 
 
@@ -274,7 +277,7 @@ section{
 
 .d-block{
     width: 40rem;
-    height: 40rem;
+    height: 20rem;
 }
 
 
@@ -383,9 +386,30 @@ section{
 
   .preparo li{
     padding: 0.5rem;
+    font-size: 0.8rem;
+
 
   }
 
+
+
+ 
+
+
+  .video{
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 25rem;
+    margin-top: 2rem;
+
+  }
+
+  iframe{
+    width: 60rem;
+    height: 30rem;
+  }
 
 
   .tempo{
@@ -396,7 +420,7 @@ section{
     margin-left: 20%;
     margin-right: 20%;
     font-size: 0.8rem;
-    padding: 2rem;
+    padding-top: 8rem;
 
 
     
@@ -433,6 +457,8 @@ footer p {
 
 
 
+
+
 @media only screen and (max-width: 940px) {
     .btn-outline-success{
         justify-content: right;
@@ -463,13 +489,6 @@ footer p {
         align-items: center;
         justify-content: right;
       }
-
-
-
-
-    
-    
-
 
 }
 

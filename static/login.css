@@ -90,6 +90,14 @@ body.modo-escuro .bg-body-tertiary{
 }
 
 
+
+body.modo-escuro .d-flex{
+    background-color: var(--dark--);
+
+}
+
+
+
 .nav-item{
     display: flex;
     justify-content: center;
@@ -159,6 +167,29 @@ body.modo-escuro footer p {
 
  }
 
+
+
+ #buscar{
+    cursor: pointer;
+    width: 10.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+}
+
+
+#buscar:hover {
+    background-color: #a33f37;
+}
+
+
  .container-fluid {
     display: flex;
     align-items: center;
@@ -167,6 +198,21 @@ body.modo-escuro footer p {
 
     flex-direction: row;
 }
+
+
+
+.form-control{
+    height: 2rem;
+}
+
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 
@@ -315,7 +361,7 @@ main video {
 
 
 .form {
-    background-color: var(--check--);
+    background-color: var(--card--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -347,7 +393,7 @@ main video {
 }
 
 .input-container input {
-    background-color: var(--check--);
+    background-color: var(--card--);
     color: var(--black);
     padding: 1rem;
     padding-right: 3rem;

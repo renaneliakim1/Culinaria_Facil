@@ -71,15 +71,17 @@ header {
 }
 
 
+
+
+
 #logo img {
     display: flex;
-    width: 6rem;
-    height: 3rem;
+    width: 12rem;
+    height: 5rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
 }
-
 
 ul {
     display: flex;

@@ -382,8 +382,17 @@ main video {
     color: #000;
 }
 
+
+#password{
+    width: 100%;
+}
+
+
 .input-container {
     position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .input-container input, .form button {
@@ -443,6 +452,8 @@ main video {
 p {
     margin-top: 50px;
 }
+
+
 
 
 footer {

@@ -98,28 +98,30 @@
         </span>
       </div>
 
+       <div class="input-container">
+            <input type="password" id="password" placeholder="Senha" required>
+            <i class="fa fa-eye" id="eye"></i>
+        </div>
 
-      <div class="input-container">
-        <input type="password" id="password" placeholder="Senha" required>
-        <i class="fa fa-eye" id="eye"></i>
-    </div>
-    
-    <script>
+     
+
+      <script>
         document.getElementById('eye').addEventListener('click', function () {
-            var campoSenha = document.getElementById('password');
-    
-            if (campoSenha.type === 'password') {
-                campoSenha.type = 'text';
-                document.getElementById('eye').classList.remove('fa-eye');
-                document.getElementById('eye').classList.add('fa-eye-slash');
-            } else {
-                campoSenha.type = 'password';
-                document.getElementById('eye').classList.remove('fa-eye-slash');
-                document.getElementById('eye').classList.add('fa-eye');
-            }
+          var campoSenha = document.getElementById('password');
+
+          if (campoSenha.type === 'password') {
+            campoSenha.type = 'text';
+            document.getElementById('eye').classList.remove('fa-eye-slash');
+            document.getElementById('eye').classList.add('fa-eye');
+          } else {
+            campoSenha.type = 'password';
+            document.getElementById('eye').classList.remove('fa-eye ');
+            document.getElementById('eye').classList.add('fa-eye-slash');
+          }
         });
-    </script>
-    
+      </script>
+  
+
 
 
 

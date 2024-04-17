@@ -61,17 +61,13 @@ body.modo-escuro label {
 }
 
 
-body.modo-escuro form {
-    background-color: var(--dark--);
-}
-
 
 body.modo-escuro p {
-    color: var(--white);
+    color: var(--white--);
 }
 
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show   {
-     color: var(--white);
+     color: var(--white--);
 }
 
 
@@ -100,9 +96,7 @@ body.modo-escuro .bg-body-tertiary{
 
 
 body.modo-escuro header {
- /*    display: flex; */
-/*     flex-direction: row;
- */   /*  justify-content:center ; */
+
     text-align: center;
     margin-bottom: 3rem;
 
@@ -116,6 +110,22 @@ body.modo-escuro header {
     color: #000000;
 }
 
+body.modo-escuro h1{
+    color: var(--white);
+}
+body.modo-escuro li{
+    color: var(--white);
+}
+
+
+body.modo-escuro h3{
+    color: var(--white);
+}
+
+
+
+
+
 
 body.modo-escuro footer p {
     color: #fff;
@@ -123,36 +133,15 @@ body.modo-escuro footer p {
 }
 
 
-/* header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+header {
+
     text-align: center;
     margin-bottom: 3rem;
 
 }
 
 
-
-
-.container-fluid{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    flex-direction: column;
-
-
-
-}
-
-
-#navbarSupportedContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
- */
  #menu{
     display: flex;
     justify-content: right;
@@ -213,25 +202,6 @@ body.modo-escuro footer p {
 
 
 
-
-
-/* 
-#acesso {
-    cursor: pointer;
-    width: 8.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-
-} */
-
 #acesso:hover {
     background-color: #a33f37;
 }
@@ -246,8 +216,7 @@ svg {
 
     display: flex;
     flex-direction: row;
-/*     justify-content: center;
- */}
+}
 
 #toggle-mode {
     display: flex;
@@ -276,10 +245,6 @@ svg {
 
 }
 
-
-
-
-
 .navbar>.container-fluid{
     display: flex;
     flex-wrap: inherit;
@@ -287,10 +252,155 @@ svg {
     justify-content: right;
 }
 
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.d-block{
+    width: 40rem;
+    height: 40rem;
+}
+
+
+#carouselExample{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
 
 
 
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+    margin-top: 2rem;
 
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffa723;
+  }
+  
+  
+  
+  .ingredientes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5rem;
+
+  }
+
+  .ingredientes li{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+
+  }
+
+
+  .categoria{
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  
+  .categoria h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+
+
+  }
+
+  .preparo{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: row;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 0.8rem;
+  }
+
+  .preparo li{
+    padding: 0.5rem;
+
+  }
+
+
+
+  .tempo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 0.8rem;
+    padding: 2rem;
+
+
+    
+  }
 
 footer {
 
@@ -300,8 +410,6 @@ footer {
     text-align: center;
     left: 0;
 }
-
-
 
 footer p {
     font-size: 0.8rem;

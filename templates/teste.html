@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário Dinâmico</title>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<h1>Formulário Dinâmico</h1>
+
+<div>
+    <button onclick="mostrarDadosPessoais()">Dados Pessoais</button>
+    <button onclick="mostrarEmailSenha()">E-mail e Senha</button>
+    <button onclick="mostrarReceitas()">Receitas Cadastradas</button>
+</div>
+
+<div id="dadosPessoais" class="hidden">
+    <span>Nome*</span> <br>
+    <input type="text" placeholder="Digite seu nome"> <br>
+    <span>CPF*</span> <br>
+    <input type="number" placeholder="Digite seu CPF"> <br>
+</div>
+
+<div id="emailSenha" class="hidden">
+    <span>E-mail*</span> <br>
+    <input type="email" placeholder="Digite seu e-mail"> <br>
+    <span>Senha*</span> <br>
+    <input type="password" placeholder="Digite sua senha"> <br>
+    <span>Repita a Senha*</span> <br>
+    <input type="password" placeholder="Repita sua senha"> <br>
+</div>
+
+<div id="receitas" class="hidden">
+    <span>ID</span> <span>Receita</span> <span>Ação</span> <br>
+    <!-- Aqui você pode adicionar dinamicamente as receitas cadastradas -->
+</div>
+
+<div>
+    <button onclick="salvar()">Salvar</button>
+    <button onclick="cancelar()">Cancelar</button>
+</div>
+
+<script>
+    function mostrarDadosPessoais() {
+        document.getElementById('dadosPessoais').classList.remove('hidden');
+        document.getElementById('emailSenha').classList.add('hidden');
+        document.getElementById('receitas').classList.add('hidden');
+    }
+
+    function mostrarEmailSenha() {
+        document.getElementById('dadosPessoais').classList.add('hidden');
+        document.getElementById('emailSenha').classList.remove('hidden');
+        document.getElementById('receitas').classList.add('hidden');
+    }
+
+    function mostrarReceitas() {
+        document.getElementById('dadosPessoais').classList.add('hidden');
+        document.getElementById('emailSenha').classList.add('hidden');
+        document.getElementById('receitas').classList.remove('hidden');
+    }
+
+    function salvar() {
+        alert('Dados salvos!');
+    }
+
+    function cancelar() {
+        alert('Operação cancelada!');
+    }
+</script>
+
+</body>
+</html>

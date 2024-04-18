@@ -117,6 +117,39 @@ body.modo-escuro header {
 
 
 
+body.modo-escuro .info{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    background-color: var(--dark--);
+}
+
+body.modo-escuro .table{
+    --bs-table-bg: var(--dark--);
+    color: var(--white--);
+
+}
+
+
+body.modo-escuro td{
+    color: var(--white);
+}
+
+
+body.modo-escuro th{
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .card {
     background-color: #ac2020;
@@ -171,6 +204,13 @@ body.modo-escuro footer p {
 
 #acesso:hover {
     background-color: #a33f37;
+}
+
+/* posição dos icon detro dos botoes */
+.nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -332,7 +372,12 @@ input .input-group{
     width: 5rem;
 }
 
-#label-input{
+#dadosnome{
+    width: 14rem;
+    height: 2.5rem;
+}
+
+#dadoscpf{
     width: 14rem;
     height: 2.5rem;
 }
@@ -370,7 +415,8 @@ input .input-group{
 
 #seguranca{
     display: flex;
-    padding: 2rem;
+    padding-left: 17rem;
+    padding-right: 17rem; 
     justify-content: center;
     flex-direction: column;
 }
@@ -387,10 +433,11 @@ input .input-group{
 }
 
 
-
-
-
-
+#receitas{
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem; 
+}
 
 
 

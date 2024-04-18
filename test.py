@@ -32,6 +32,7 @@ def buscar_receitas():
 def not_found(error):
     return "Página não encontrada", 404
 
+
 # Inicializar o servidor
 if __name__ == "__main__":
     app.run(debug=True)

@@ -290,6 +290,151 @@ svg {
 }
 
 
+h1{
+    text-align: center;
+}
+
+.abas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+}
+
+
+
+.input-group{
+    display: flex;
+    justify-content: left;
+    padding: 1rem;
+    width: 100%;
+} 
+
+
+
+
+input .input-group{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 8rem;
+} 
+
+
+
+#addon-wrapping{
+    width: 5rem;
+}
+
+#label-input{
+    width: 14rem;
+    height: 2.5rem;
+}
+
+
+.opcao{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+
+}
+
+.opcao button{
+    cursor: pointer;
+    width: 10.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+}
+
+
+.opcao button:hover {
+    background-color: #a33f37;
+}
+
+
+
+
+#seguranca{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#seguranca input .form-control{
+    height: 3rem;
+}
+
+
+.input-group>.form-control{
+    height: 2.5rem;
+    width: 8rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+.tab-btn{
+
+    cursor: pointer;
+    width: 10.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+}
+
+
+#tab-btn:hover {
+    background-color: #a33f37;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

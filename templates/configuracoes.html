@@ -17,6 +17,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  -->
+
+
+  <style>
+    #seguranca,
+    #receitas {
+      display: none;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -95,27 +104,27 @@
     <button class="tab-btn" onclick="openTab('receitas')">Receitas Cadastradas</button>
   </div>
 
-    <form action="">
-      <div class="info">
-        <div id="editar" class="tab-content active-tab">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">Nome*</span>
-            <input type="text" class="form-control" id="dadonome" placeholder=" " aria-label="Username"
-              aria-describedby="addon-wrapping" required>
-          </div>
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">CPF*</span>
-            <input type="text" name="cpf" size="9" id="dadoscpf" maxlength="9" required />
-          </div>
+  <form action="">
+    <div class="info">
+      <div id="editar" class="tab-content active-tab">
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">Nome*</span>
+          <input type="text" class="form-control" id="dadonome" placeholder=" " aria-label="Username"
+            aria-describedby="addon-wrapping" required>
         </div>
-
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">CPF*</span>
+          <input type="text" name="cpf" size="9" id="dadoscpf" maxlength="9" required />
+        </div>
       </div>
 
+    </div>
 
-    </form>
+
+  </form>
 
 
-    <!--  <div class="opcao">
+  <!--  <div class="opcao">
     <button onclick="salvarEdicao()" id="salvar-editar">Salvar</button>
     <button onclick="cancelarEdicao()" id="canceclar-editar">Cancelar</button>
   </div> -->
@@ -126,78 +135,78 @@
 
 
 
-    <div id="seguranca" class="tab-content">
-      <div class="input-group flex-nowrap" id="email">
-        <span class="input-group-text" id="addon-wrapping">E-mail*</span>
-        <input type="email" class="form-control" id="inputEmail4" required placeholder=" " required />
+  <div id="seguranca" class="tab-content">
+    <div class="input-group flex-nowrap" id="email">
+      <span class="input-group-text" id="addon-wrapping">E-mail*</span>
+      <input type="email" class="form-control" id="inputEmail4" required placeholder=" " required />
+    </div>
+    <div class="col">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Senha*</span>
+        <input type="password" class="form-control" id="passwordField1" placeholder="  " required>
+        <i class="fa fa-eye" id="eye1"></i>
       </div>
-      <div class="col">
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping">Senha*</span>
-          <input type="password" class="form-control" id="passwordField1" placeholder="  " required>
-          <i class="fa fa-eye" id="eye1"></i>
-        </div>
+    </div>
+    <div class="col">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping2">Repita*</span>
+        <input type="password" class="form-control" id="passwordField2" placeholder=" " required>
+        <i class="fa fa-eye" id="eye2"></i>
       </div>
-      <div class="col">
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping2">Repita*</span>
-          <input type="password" class="form-control" id="passwordField2" placeholder=" " required>
-          <i class="fa fa-eye" id="eye2"></i>
-        </div>
-      </div>
-
     </div>
 
-    <!-- 
+  </div>
+
+  <!-- 
   <div class="opcao">
     <button onclick="salvarEdicao()" id="salvar-seguranca">Salvar</button>
     <button onclick="cancelarEdicao()" id="cancelar-seguranca">Cancelar</button>
   </div> -->
 
 
-    <div id="receitas" class="tab-content">
-      <div class="tabela">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Receita</th>
-              <th scope="col" colspan="2">Ação</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Receita de bolo de chocolate</td>
-              <td><button id="acesso" onclick="editarReceita(1)">Editar</button></td>
-              <td><button id="acesso" onclick="excluirReceita(1)">Excluir</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Receita de salada de frutas</td>
-              <td><button id="acesso" onclick="editarReceita(2)">Editar</button></td>
-              <td><button id="acesso" onclick="excluirReceita(2)">Excluir</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Receita de macarrão à carbonara</td>
-              <td><button id="acesso" onclick="editarReceita(3)">Editar</button></td>
-              <td><button id="acesso" onclick="excluirReceita(3)">Excluir</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div id="receitas" class="tab-content">
+    <div class="tabela">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Receita</th>
+            <th scope="col" colspan="2">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Receita de bolo de chocolate</td>
+            <td><button id="acesso" onclick="editarReceita(1)">Editar</button></td>
+            <td><button id="acesso" onclick="excluirReceita(1)">Excluir</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Receita de salada de frutas</td>
+            <td><button id="acesso" onclick="editarReceita(2)">Editar</button></td>
+            <td><button id="acesso" onclick="excluirReceita(2)">Excluir</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Receita de macarrão à carbonara</td>
+            <td><button id="acesso" onclick="editarReceita(3)">Editar</button></td>
+            <td><button id="acesso" onclick="excluirReceita(3)">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
 
 
-    <div class="opcao">
-      <button onclick="salvarEdicao()" id="salvar-receitas">Salvar</button>
-      <button onclick="cancelarEdicao()" id="cancelar-receitas">Cancelar</button>
-    </div>
+  <div class="opcao">
+    <button onclick="salvarEdicao()" id="salvar-receitas">Salvar</button>
+    <button onclick="cancelarEdicao()" id="cancelar-receitas">Cancelar</button>
+  </div>
 
 
-  
+
 
   <!-- Adicione o Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

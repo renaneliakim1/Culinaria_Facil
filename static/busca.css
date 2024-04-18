@@ -613,6 +613,11 @@ footer p {
     }
 
 
+    .form-control{
+
+        width: 90%;
+    }
+
 }
 
 

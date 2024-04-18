@@ -22,7 +22,7 @@
   <style>
     #seguranca,
     #receitas {
-      display: none;
+    display: none;
     }
   </style>
 
@@ -134,7 +134,6 @@
 
 
 
-
   <div id="seguranca" class="tab-content">
     <div class="input-group flex-nowrap" id="email">
       <span class="input-group-text" id="addon-wrapping">E-mail*</span>
@@ -143,20 +142,51 @@
     <div class="col">
       <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">Senha*</span>
-        <input type="password" class="form-control" id="passwordField1" placeholder="  " required>
-        <i class="fa fa-eye" id="eye1"></i>
+        <input type="password" class="form-control" id="passwordField1" placeholder="*******" required>
+        <i class="fa fa-eye" id="eye1" onclick="togglePasswordVisibility('passwordField1', 'eye1')"></i>
       </div>
     </div>
     <div class="col">
       <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping2">Repita*</span>
-        <input type="password" class="form-control" id="passwordField2" placeholder=" " required>
-        <i class="fa fa-eye" id="eye2"></i>
+        <input type="password" class="form-control" id="passwordField2" placeholder="*******" required>
+        <i class="fa fa-eye" id="eye2" onclick="togglePasswordVisibility('passwordField2', 'eye2')"></i>
       </div>
     </div>
-
   </div>
-
+  
+  <script>
+    function togglePasswordVisibility(passwordFieldId, eyeIconId) {
+      const passwordField = document.getElementById(passwordFieldId);
+      const eyeIcon = document.getElementById(eyeIconId);
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordField.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      }
+    }
+  
+    let passwordField1 = document.getElementById('passwordField1');
+    let passwordField2 = document.getElementById('passwordField2');
+  
+    function validarSenha() {
+      if (passwordField1.value != passwordField2.value) {
+        passwordField2.setCustomValidity("Senhas diferentes!");
+        passwordField2.reportValidity();
+        return false;
+      } else {
+        passwordField2.setCustomValidity("");
+        return true;
+      }
+    }
+  
+    passwordField2.addEventListener('input', validarSenha);
+  </script>
+  
   <!-- 
   <div class="opcao">
     <button onclick="salvarEdicao()" id="salvar-seguranca">Salvar</button>
@@ -223,23 +253,9 @@
       document.getElementById(tabName).style.display = "block";
     }
 
-    let passwordField1 = document.getElementById('passwordField1');
-    let passwordField2 = document.getElementById('passwordField2');
 
-    function validarSenha() {
-      if (passwordField1.value != passwordField2.value) {
-        passwordField2.setCustomValidity("Senhas diferentes!");
-        passwordField2.reportValidity();
-        return false;
-      } else {
-        passwordField2.setCustomValidity("");
-        return true;
-      }
-    }
 
-    passwordField2.addEventListener('input', validarSenha);
-
-    function previewImagem(event) {
+   /*  function previewImagem(event) {
       var input = event.target;
       var preview = document.getElementById('imagem-preview');
 
@@ -255,7 +271,7 @@
         preview.style.display = 'block';
       }
     }
-
+ */
     function salvarEdicao() {
       alert("Edição salva!");
     }

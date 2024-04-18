@@ -68,7 +68,7 @@ body.modo-escuro label {
 
 
 body.modo-escuro .form-title {
-    color: var(--darkform--);
+    color: var(--black--);
 }
 
 body.modo-escuro p {
@@ -372,7 +372,7 @@ main video {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: var(--check--);
+    background-color: var(--card--);
     width: 64%;
     border-radius: 8px;
 }
@@ -403,7 +403,7 @@ main video {
 
 
 .form {
-    background-color: var(--check--);
+    background-color: var(--card--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -538,7 +538,7 @@ footer p {
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        background-color: var(--check--);
+        background-color: var(--card--);
         width: 100%;
         border-radius: 8px;
     }
@@ -566,7 +566,7 @@ footer p {
 
 
     .form {
-        background-color: var(--check--);
+        background-color: var(--card--);
         display: flex;
         flex-direction: column;
         padding: 1rem;
@@ -589,7 +589,7 @@ footer p {
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
-        background-color: var(--check--);
+        background-color: var(--card--);
         width: 95%;
         border-radius: 8px;
         margin-left: 2%;

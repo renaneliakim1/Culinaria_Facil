@@ -69,7 +69,7 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit" id="buscar">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
@@ -114,7 +114,7 @@
         </div>
         <div class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping">CPF*</span>
-          <input type="text" name="cpf" size="9" id="dadoscpf" maxlength="9" required />
+          <input type="text" class="form-control" name="cpf" size="9" id="dadoscpf" maxlength="9" required />
         </div>
       </div>
 
@@ -179,20 +179,20 @@
             <td>1</td>
             <td class="nome-receita">Receita de bolo de chocolate</td>
             <td><button id="editar-excluir" onclick="editarReceita(1)">Editar</button></td>
-            <td><button id="editar-excluir" onclick="excluirReceita(1)">Excluir</button></td>
+            <td><button id="editar-excluir-red" onclick="excluirReceita(1)">Excluir</button></td>
           </tr>
           <tr>
             <td>2</td>
             <td class="nome-receita">Receita de salada de frutas</td>
             <td><button id="editar-excluir" onclick="editarReceita(2)">Editar</button></td>
-            <td><button id="editar-excluir" onclick="excluirReceita(2)">Excluir</button></td>
+            <td><button id="editar-excluir-red" onclick="excluirReceita(2)">Excluir</button></td>
           </tr>
-          <tr>
+         <!--  <tr>
             <td>3</td>
             <td class="nome-receita" >Receita de macarrão à carbonara</td>
             <td><button id="editar-excluir" onclick="editarReceita(3)">Editar</button></td>
-            <td><button id="editar-excluir" onclick="excluirReceita(3)">Excluir</button></td>
-          </tr>
+            <td><button id="editar-excluir-red" onclick="excluirReceita(3)">Excluir</button></td>
+          </tr> -->
         </tbody>
       </table>
     </div>

@@ -36,7 +36,7 @@
 
 
     --facebook-color: #4267B2;
-    --google-color: #DB4437;
+    --btn--excluir: #DB4437;
     --twitter-color: #1DA1F2;
     --insta-color: #E1306C;
 }
@@ -307,6 +307,27 @@ svg {
     background-color: #a33f37;
 }
 
+
+#editar-excluir {
+    cursor: pointer;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+}
+
+#editar-excluir:hover {
+    background-color: #a33f37;
+}
+
+
+
 .form-control{
     height: 2rem;
 }
@@ -412,6 +433,28 @@ input .input-group{
 
 
 
+#editar-excluir-red {
+ 
+    cursor: pointer;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--btn--excluir);
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+
+
+}
+
+#editar-excluir-red:hover {
+    background-color: #a33f37;
+}
+
+
+
 
 #seguranca{
     display: flex;
@@ -440,6 +483,14 @@ input .input-group{
 }
 
 
+td{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+ 
+
+
 
 
 .tab-btn{
@@ -462,28 +513,6 @@ input .input-group{
 #tab-btn:hover {
     background-color: #a33f37;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -618,6 +647,30 @@ footer p {
         background-color: #a33f37;
     }
 
+
+
+
+    #editar-excluir-red {
+        cursor: pointer;
+        width: 3.5rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--btn--excluir);
+        color: var(--white);
+        font-size: 0.6rem;
+        outline: none;
+        height: 2rem;
+        text-align: center;
+    }
+    
+    #editar-excluir-red:hover {
+        background-color: #a33f37;
+    }
+
+
+
+
+
     .nome-receita{
         text-align: left;
     }
@@ -661,3 +714,220 @@ footer p {
 
 
 }
+
+
+
+
+@media only screen and (max-width: 360px) {
+
+    .abas{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+
+    h1{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #buscar{
+        align-items: center;
+        flex-direction: center;
+        font-size: 0.6rem;
+    }
+
+
+    
+    .info{
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+        #seguranca{
+            display: flex;
+            padding-left: 1rem;
+            padding-right: 1rem; 
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #seguranca input .form-control{
+            height: 3rem;
+        }
+    
+    
+        .tabela{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+    
+        }
+    
+    
+        #receitas{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0; 
+            font-size: 2px ;
+    
+        }
+
+
+        button .tab-btn{
+            font-size: 0.7rem;
+            margin: 0;
+        }
+
+
+        .tab-btn{
+            font-size: 0.7rem;
+            width: 5rem;
+            margin: 0.2rem;
+            
+        }
+
+
+        .input-group-text {
+            font-size: 0.6rem;
+        }
+        
+    
+        td{
+            font-size: 0.8rem;
+            margin: none;
+            
+    
+        }
+    
+        tr{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+        }
+
+
+        th, td{
+            font-size: 0.6rem;
+        }
+    
+    
+        .menu-table{
+            display: flex;
+            flex-direction: row;
+    
+        }
+    
+      
+    
+    
+        .table{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding: none;
+    
+        }
+    
+        tbody{
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+            padding-right: 1rem; 
+            box-sizing:border-box;
+            font-size: 2px ;
+            justify-content: left;
+    
+        }
+    
+        #editar-excluir {
+            cursor: pointer;
+            width: 3.5rem;
+            border: none;
+            border-radius: .5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.6rem;
+            outline: none;
+            height: 2rem;
+            text-align: center;
+        }
+        
+        #editar-excluir:hover {
+            background-color: #a33f37;
+        }
+    
+        .nome-receita{
+            text-align: left;
+        }
+
+
+        #dadosnome{
+            width: 12rem;
+            height: 2.5rem;
+        }
+        
+        #dadoscpf{
+            width: 12rem;
+            height: 2.5rem;
+        }
+
+        .info{
+            padding: none;
+        }
+
+        .input-group{
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+        
+        #addon-wrapping{
+            font-size: 0.6rem;
+        }
+    
+    
+    
+    
+            
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            margin-top: 5rem;
+        }
+    
+    
+    
+    
+        footer p {
+            font-size: 0.6rem;
+        }
+    
+    
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+    
+        ::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: rgb(0, 0, 0);
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: var(--primary-color);
+        }
+    
+    
+    
+    
+    }

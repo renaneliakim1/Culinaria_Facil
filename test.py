@@ -34,7 +34,7 @@ def not_found(error):
 
 
 
-
+  
 
 # Inicializar o servidor
 if __name__ == "__main__":

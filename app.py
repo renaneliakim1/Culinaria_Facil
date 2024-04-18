@@ -1,33 +1,177 @@
-from flask import Flask, render_template, request
-import requests
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask_bcrypt import Bcrypt
+from forms import FormularioRegistro, FormularioLogin, FormularioReceita
+import mysql.connector
+from datetime import datetime
+import email_validator
+
+
+try:
+    database_connection = mysql.connector.connect(user='root', password='', host='localhost', database='sitereceita')
+    print('Conexão com banco de dados bem sucedida')
+except:
+    print('Erro ao conectar ao banco de dados')
+
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 
-class ReceitasCulinarias:
-    def __init__(self):
-        self.url_base = "https://www.themealdb.com/api/json/v1/1/"
-    
-    def obter_receitas_por_regiao(self, regiao):
-        url = f"{self.url_base}filter.php?a={regiao}"
-        response = requests.get(url)
-        if response.status_code == 200:
-            dados = response.json()
-            return dados['meals']
-        else:
-            return None
+app.config['SECRET_KEY'] = '34#%#$tFDBXCBGHThfd4¨%$28*(86'
 
-receitas = ReceitasCulinarias()
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def pagina_inicial():
+    if 'user' in session:
+        return render_template('index.html', user=session['user'])
+    else:
+        return render_template('index.html')
 
-@app.route('/buscar', methods=['POST'])
-def buscar():
-    regiao = request.form['regiao']
-    receitas_regiao = receitas.obter_receitas_por_regiao(regiao)
-    return render_template('resultado.html', regiao=regiao, receitas=receitas_regiao)
+
+@app.route('/receitas/<int:pagina>')
+def pagina_receitas(pagina):
+    cursor = database_connection.cursor()
+    consulta_receitas = 'SELECT * FROM receitas'
+    cursor.execute(consulta_receitas)
+    resultado = cursor.fetchall()
+    inicio_pagina = (pagina-1)*10
+    fim_pagina = pagina*10
+    resultado_receita= resultado[inicio_pagina:fim_pagina]
+    if len(resultado_receita) >0:
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina)
+    else:
+        return redirect(url_for('pagina_inicial'))
+
+
+@app.route('/receitas/<int:pagina>/<int:receita_id>')
+def pagina_receita(pagina, receita_id):
+    cursor = database_connection.cursor()
+    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
+    cursor.execute(consulta_receita, (receita_id,))
+    resultado_receita = cursor.fetchall()
+    return render_template('receita.html', resultado_receita=resultado_receita)
+
+
+@app.route('/minhas_receitas/<int:pagina>')
+def minhas_receita(pagina):
+    if 'user' in session:
+        cursor = database_connection.cursor()
+        consulta_receita = 'SELECT * FROM receitas WHERE AutorID = %s'
+        autor_id = session['user'][0]
+        cursor.execute(consulta_receita, (autor_id,))
+        resultado = cursor.fetchall()
+        inicio_pagina = (pagina-1)*10
+        fim_pagina = pagina*10
+        resultado_receita= resultado[inicio_pagina:fim_pagina]
+        if len(resultado_receita) >0:
+            return render_template('minhas_receitas.html', resultado_receita=resultado_receita)
+        else:
+            return redirect(url_for('pagina_inicial'))
+    else:
+        return redirect(url_for('pagina_inicial'))
+
+
+@app.route('/cadastro', methods=['POST', 'GET'])
+def pagina_registro():
+    if 'user' in session:
+        return redirect(url_for('pagina_inicial'))
+    else:
+        form = FormularioRegistro()
+        if form.validate_on_submit():
+            registro_nome = form.registro_nome.data
+            registro_email = form.registro_email.data
+            registro_senha = form.registro_senha.data
+            cursor = database_connection.cursor()
+            consulta_email = 'SELECT email FROM usuario WHERE email = %s'
+            cursor.execute(consulta_email, (registro_email,))
+            resultado = cursor.fetchone()
+            cursor.close()
+            if resultado:
+                flash('Conta já Existe. Faça ')
+                return redirect(url_for('pagina_registro'))
+            else:
+                senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
+                inserir_dados = 'INSERT INTO usuario(nome, email, senha) VALUES (%s, %s, %s)'
+                dados_usuario = (registro_nome, registro_email, senha_hasheada)
+                cursor = database_connection.cursor()
+                cursor.execute(inserir_dados, dados_usuario)
+                database_connection.commit()
+                cursor.close()
+                flash('Conta Criada com Sucesso. Faça Login')
+                return redirect(url_for('pagina_login'))
+    return render_template('registerpage.html', form=form)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def pagina_login():
+    if 'user' in session:
+        return redirect(url_for('pagina_inicial'))
+    else:
+        form = FormularioLogin()
+        if form.validate_on_submit():
+            login_email = form.login_email.data
+            login_senha = form.login_senha.data
+            cursor = database_connection.cursor()
+            consulta_conta = 'SELECT id, nome,email, senha FROM usuario WHERE email = %s'
+            cursor.execute(consulta_conta, (login_email,))
+            resultado = cursor.fetchall()
+            cursor.close()
+            if resultado:
+                id_verificado, nome_verificado, email_verificado, senha_verificada = resultado[0]
+                verificar_senha = bcrypt.check_password_hash(senha_verificada, login_senha)
+                if verificar_senha:
+                    session['user'] = resultado[0]
+                    return redirect(url_for('pagina_inicial'))
+                else:
+                    flash('Email ou senha incorretos')
+                    return redirect(url_for('pagina_login'))
+            else:
+                flash('Email ou senha incorretos')
+                return redirect(url_for('pagina_login'))
+    return render_template('loginpage.html', form=form)
+
+
+@app.route('/perfil/')
+
+
+@app.route('/cadastro_receita', methods=['GET', 'POST'])
+def cadastro_receita():
+    if 'user' in session:
+        form = FormularioReceita()
+        if form.validate_on_submit():
+            titulo_receita = form.titulo_receita.data
+            descricao_redeita = form.descricao_receita.data
+            instrucoes_redeita = form.instrucoes_receita.data
+            ingredientes_receita = form.ingredientes_receita.data
+            dificuldade_receita = form.dificuldade_receita.data
+            tempo_preparo = form.tempo_preparo.data
+            categoria_receita = form.categoria_receita.data
+            cursor = database_connection.cursor()
+            consulta_categoria = 'SELECT * FROM categorias WHERE  categoriaNome= %s'
+            cursor.execute(consulta_categoria, (categoria_receita,))
+            resultado = cursor.fetchall()
+            if resultado:
+                id_categoria = resultado[0][0]
+                id_usuario = session['user'][0]
+                data_postagem = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                inserir_dados = 'INSERT INTO receitas (Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, CategoriaID, AutorID, data_hora) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)'
+                dados_receita = (titulo_receita, descricao_redeita, instrucoes_redeita, ingredientes_receita, tempo_preparo, dificuldade_receita, id_categoria, id_usuario, data_postagem)
+                cursor = database_connection.cursor()
+                cursor.execute(inserir_dados, dados_receita)
+                database_connection.commit()
+                cursor.close()
+                flash('Receita Cadastrada com Sucesso')
+            else:
+                flash('Categoria não Existe')
+        return render_template('cadastro_receita.html', form=form)
+    else:
+        return redirect(url_for('pagina_login'))
+
+
+@app.route('/logout')
+def sair():
+    session.pop('user', None)
+    return redirect(url_for('pagina_inicial'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
- 

@@ -428,6 +428,11 @@ main video {
     width: 100%;
 }
 
+.fa{
+    position: fixed;
+    margin: 10px;
+}
+
 
 .input-container {
     position: relative;

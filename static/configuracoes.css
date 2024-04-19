@@ -353,6 +353,7 @@ svg {
 
 h1{
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .abas{
@@ -372,7 +373,7 @@ h1{
 
 .input-group{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     padding: 1rem;
     width: 100%;
 } 
@@ -462,6 +463,7 @@ input .input-group{
     padding-right: 17rem; 
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 #seguranca input .form-control{
@@ -476,10 +478,32 @@ input .input-group{
 }
 
 
+
+
 #receitas{
     display: flex;
+    flex-direction: row;
     padding-left: 8rem;
     padding-right: 8rem; 
+}
+
+
+.tabela{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+
+.table{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: none;
+
 }
 
 
@@ -488,7 +512,32 @@ td{
     align-items: center;
     justify-content: right;
 }
+
  
+tr{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.input-group-text {
+    font-size: 0.9rem;
+    width: 5rem;
+}
+ 
+
+#dadosnome{
+    font-size: 1rem;
+}
+
+#dadoscpf{
+    font-size: 1rem;
+
+}
+
+
 
 
 
@@ -518,7 +567,7 @@ td{
 
 footer {
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -548,7 +597,9 @@ footer p {
 }
 
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 1200px) {
 
 
     

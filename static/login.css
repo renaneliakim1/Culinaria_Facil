@@ -61,68 +61,66 @@ body.modo-escuro label {
 }
 
 
-/* body.modo-escuro form {
+body.modo-escuro form {
     background-color: var(--darkform--);
 }
- */
 
 
-body.modo-escuro .form-title {
-    color: var(--black--);
+body.modo-escuro .btn-outline-success{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+
 }
+
+
+
+body.modo-escuro #search{
+
+    background-color: var(--dark--);
+    
+
+}
+
+
 
 body.modo-escuro p {
     color: var(--white);
 }
 
-body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: var(--white);
-}
 
 
-body.modo-escuro .signup-link {
-    color: var(--darkform--);
-
-}
-
-
-body.modo-escuro .container-fluid {
+body.modo-escuro .container-fluid{
     display: flex;
     align-items: center;
-    justify-content: right;
-    background-color: var(--dark--);
-    flex-direction: row;
-}
-
-
-body.modo-escuro .bg-body-tertiary {
-    --bs-bg-opacity: 0
-}
-
-
-
-body.modo-escuro .d-flex {
-    background-color: var(--dark--);
-
-}
-
-
-
-.nav-item {
-    display: flex;
     justify-content: center;
+    background-color: var(--dark--);
+    flex-direction: column;
+
+
+
 }
 
 
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
+
+
+
+body.modo-escuro .bg-body-tertiary{
+    --bs-bg-opacity:0
+}
 
 
 
 body.modo-escuro header {
-    /*    display: flex; */
-    /*     flex-direction: row;
- */
-    /*  justify-content:center ; */
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
     text-align: center;
+    margin-bottom: 3rem;
 
 }
 
@@ -141,7 +139,7 @@ body.modo-escuro footer p {
 }
 
 
-/* header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -153,13 +151,18 @@ body.modo-escuro footer p {
 
 
 
+.bg-body-tertiary{
+    display: flex;
+    justify-content: center;
+    --bs-bg-opacity:0
+}
+
 .container-fluid{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     background-color: var(--white);
     flex-direction: column;
-
 
 
 }
@@ -170,98 +173,25 @@ body.modo-escuro footer p {
     justify-content: center;
     align-items: center;
 }
- */
-#menu {
-    display: flex;
-    justify-content: right;
-
-}
 
 
 
-#buscar {
-    cursor: pointer;
-    width: 10.5rem;
-    border: none;
-    border-radius: .5rem;
+.btn-outline-success{
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-}
+    border-color: var(--primary-color);
 
 
-#buscar:hover {
-    background-color: #a33f37;
-}
-
-
-.container-fluid {
-    display: flex;
-    align-items: center;
-    flex-wrap: inherit;
-    justify-content: right;
-
-    flex-direction: row;
-}
-
-
-
-.form-control {
-    height: 2rem;
-}
-
-
-.d-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 
 
-
-
-.bg-body-tertiary {
-    --bs-bg-opacity: 0
-}
-
-
-
-
-#acesso {
-    cursor: pointer;
-    width: 8.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-}
-
-#acesso:hover {
-    background-color: #a33f37;
-}
-
-
-.logotipo {
-    display: flex;
-    justify-content: center;
-}
 
 #logo img {
     display: flex;
-    width: 12rem;
-    height: 5rem;
+    width: 6rem;
+    height: 3rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -269,9 +199,6 @@ body.modo-escuro footer p {
 
 
 
-
-
-/* 
 #acesso {
     cursor: pointer;
     width: 8.5rem;
@@ -286,7 +213,7 @@ body.modo-escuro footer p {
     text-align: center;
 
 
-} */
+}
 
 #acesso:hover {
     background-color: #a33f37;
@@ -302,14 +229,14 @@ svg {
 
     display: flex;
     flex-direction: row;
-    /*     justify-content: center;
- */
+    justify-content: center;
 }
 
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
+    align-items: center;
     justify-content: center;
 
 }
@@ -317,33 +244,6 @@ svg {
 #toggle-mode label {
     font-size: 0.8rem;
 }
-
-
-.navbar-toggler {
-    display: flex;
-    background-color: var(--white);
-    justify-content: right;
-}
-
-
-.btn-outline-success {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-
-}
-
-
-
-
-
-.navbar>.container-fluid {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: right;
-}
-
 
 
 /* main {
@@ -363,55 +263,26 @@ main video {
     opacity: 0.6;
 } */
 
-
-
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: var(--card--);
-    width: 64%;
-    border-radius: 8px;
-}
-
-.imagem {
-    display: flex;
-    justify-content: center;
-}
-
-
-.imagem img {
-    width: 70%;
-    height: 90%;
-}
-
-
-
-
-
-
-
 .formulario {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 11.9rem;
     width: 100%;
 }
 
 
 .form {
-    background-color: var(--card--);
+    background-color: var(--check--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
     max-width: 30rem;
     border-radius: 0.5rem;
-    /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
     margin-top: 4rem;
     width: 100%;
-    height: 27rem;
+    height: 25rem;
     gap: 1rem;
 }
 
@@ -423,22 +294,8 @@ main video {
     color: #000;
 }
 
-
-#password {
-    width: 100%;
-}
-
-.fa{
-    position: fixed;
-    margin: 10px;
-}
-
-
 .input-container {
     position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: center;
 }
 
 .input-container input, .form button {
@@ -448,7 +305,7 @@ main video {
 }
 
 .input-container input {
-    background-color: var(--card--);
+    background-color: var(--check--);
     color: var(--black);
     padding: 1rem;
     padding-right: 3rem;
@@ -469,7 +326,7 @@ main video {
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1rem;
+    font-size: 1.5rem;
     outline: none;
     height: 2.5rem;
     margin: 15px;
@@ -493,14 +350,16 @@ main video {
 
 .signup-link a {
     text-decoration: underline;
-    font-size: 1rem;
+}
 
+p {
+    margin-top: 50px;
 }
 
 
 footer {
 
-    position: absolute;
+
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -529,104 +388,503 @@ footer p {
 }
 
 
+@media only screen and (max-width: 940px) {
 
-@media only screen and (max-width: 900px) {
+    footer {
 
 
-    .container {
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 730px) {
+
+    #filtro {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-items: start;
+        align-items: center;
+
+
+
+    }
+
+
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+
+    header {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        background-color: var(--card--);
+        gap: 20px;
         width: 100%;
-        border-radius: 8px;
-    }
-
-    .imagem {
-        display: flex;
-        justify-content: center;
-        width: 60%;
-    }
-
-
-    .imagem img {
-        width: 80%;
-        height: 70%;
-    }
-
-
-    .formulario {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-
-
-    .form {
-        background-color: var(--card--);
-        display: flex;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
         flex-direction: column;
-        padding: 1rem;
-        max-width: 30rem;
-        border-radius: 0.5rem;
-        /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
-        margin-top: 4rem;
-        width: 100%;
-        height: 27rem;
-        gap: 1rem;
+
+
     }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
 
     
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 25rem;
+    gap: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
 
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        background-color: var(--card--);
-        width: 95%;
-        border-radius: 8px;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
+.input-container {
+    position: relative;
+}
 
-    .formulario {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        height: 70%;
-    }
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
 
-    .form-title {
-        font-size: 1rem;
-        line-height: 1rem;
-        font-weight: 600;
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
         text-align: center;
-        color: #000;
+        left: 0;
+
     }
 
-    .submit{
+
+    footer p {
         font-size: 0.8rem;
     }
 
+
+}
+
+@media only screen and (max-width: 729px) {
+
+    #logo img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
     
-   
+    
+    }
+    
 
-    .signup-link a{
-        font-size: 0.9rem;
-        margin: none;
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 
-    p {
-        margin-top: 0;
+    
+    .formulario{
+        margin-bottom: 1rem;
     }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 25rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 435px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        /*             height: 2.7rem; */
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 25rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
 
 
 
@@ -634,21 +892,358 @@ footer p {
 
     footer {
 
-        position: relative;
+
         bottom: 0;
+        position: static;
         width: 100%;
         text-align: center;
         left: 0;
+
     }
-    
-    
-    
+
+
     footer p {
         font-size: 0.8rem;
     }
 
 
+}
 
+
+
+
+
+@media only screen and (max-width: 375px) {
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 25rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 360px) {
+   
+
+
+
+
+    #acesso {
+        cursor: pointer;
+        width: 8.5rem;
+        border: none;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.8rem;
+        outline: none;
+        height: 2.7rem;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+
+    }
+
+
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        flex-direction: row;
+    
+    
+    }
+
+    
+    .bntacesso {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    
+    .formulario{
+        margin-bottom: 1rem;
+    }
+
+
+    
+.form {
+    background-color: var(--check--);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
+    margin-top: 4rem;
+    width: 90%;
+    height: 28rem;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: var(--check--);
+    color: var(--black);
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 2rem;
+}
+
+
+.submit {
+    cursor: pointer;
+    width: 15.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    margin: 15px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.submit:hover {
+    background-color: #a33f37;
+}
+
+.signup-link {
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 50px;
+}
+
+
+
+
+
+    footer {
+
+
+        bottom: 0;
+        position: static;
+        width: 100%;
+        text-align: center;
+        left: 0;
+
+    }
+
+
+    footer p {
+        font-size: 0.8rem;
+    }
 
 
 }

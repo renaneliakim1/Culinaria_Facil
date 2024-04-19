@@ -1,284 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/imgs/icon.png" width="24px" height="24px" type="image/x-icon" />
-
-  <title>Cadastro de Receitas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="/static/cadastro_receita.css">
-
-
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-
-
 <body>
-  <header>
-    <div class="logotipo">
-      <a class="navbar-brand" id="logo" href="/templates/index.html"><img src="/imgs/logo02.png" alt="Culinárioteca"
-          title="Culinárioteca" /></a>
-    </div>
-
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
-      <div class="container-fluid">
-        <!-- <a  class="navbar-brand"id=logo href="/templates/index.html"><img src="/imgs/logo.png" alt="Culinárioteca"
-                  title="Culinárioteca"></a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" id="acesso" aria-current="page" href="/templates/index.html"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
-                </svg>Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" id="acesso" aria-current="page" href="/templates/login.html"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-person-check-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
-                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                </svg>Login</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" id="acesso" aria-current="page" href="/templates/cadastro_usuario.html"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-person-fill-add" viewBox="0 0 16 16">
-                  <path
-                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                  <path
-                    d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
-                </svg>Cadastre-se</a>
-            </li>
-
-            <li class="form-check form-switch" id="toggle-mode">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-              <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit" id="buscar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                viewBox="0 0 16 16">
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-              </svg>Buscar
-            </button>
-          </form>
-          <li class="nav-item">
-            <a class="nav-link active" id="acesso" aria-current="page" href="/templates/index.html"><svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
-                <path fill-rule="evenodd"
-                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
-              </svg>Sair</a>
-          </li>
+{% set alertas = get_flashed_messages() %}
+    {% if alertas %}
+    {% for alerta in alertas %}
+    <div class="alert-messege">{{ alerta }}</div>
+    {% endfor %}
+    {% endif %}
+<form method="POST" action="">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.titulo_receita.label }}: {{ form.titulo_receita }}
+            {% for error in form.titulo_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
         </div>
-      </div>
-    </nav>
-
-    <div class="modo-claro"></div>
-  </header>
-
-
-  <h1>Cadastro de Receita</h1>
-
-  <div class="container">
-
-
-    <div class="titulo">
-      <div class="dropzone">
-        <form class="dropzone-box">
-          <h2>Carregar e anexar arquivos
-          </h2>
-          <p>
-            Anexe imagens ou vídeos a sua receita
-          </p>
-          <div class="dropzone-area">
-            <div class="file-upload-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15rem" height="10rem" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-              </svg>
-            </div>
-            <p>Clique para fazer upload</p>
-            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
-
-
-            <p class="message">Nenhum arquivo selecionado
-            </p>
-          </div>
-
-        </form>
-      </div>
-
-
-      <script>
-        document.getElementById('form-receita').addEventListener('submit', function (event) {
-          event.preventDefault();
-          var nome = document.getElementById('nome').value;
-          var ingredientes = document.getElementById('ingredientes').value;
-          var instrucoes = document.getElementById('instrucoes').value;
-
-          // Captura dos arquivos de imagem
-          var imagens = document.getElementById('imagens').files;
-
-          // Verifica se foram selecionadas até três imagens
-          if (imagens.length > 3) {
-            alert("Selecione no máximo três imagens.");
-            return;
-          }
-
-
-        });
-      </script>
-
-      <div class="nome">
-
-        <label for="nome">Nome da Receita: </label>
-        <input type="text" id="nome" name="nome" placeholder="Bolo simples" required>
-        <label for="ingredientes">Ingredientes:</label>
-        <textarea id="ingredientes" name="ingredientes" rows="4" required
-          placeholder="Digite cada ingrediente em uma linha "></textarea>
-        <label for="instrucoes">Instruções:</label>
-        <textarea id="instrucoes" name="instrucoes" rows="4"
-          placeholder="Digite o passo a passo da receita linha por linha" required></textarea>
-
-
-      </div>
-    </div>
-
-    <div id="gerar_senha_tamanho">
-      <label for="customRange1" class="form-label">Defina o tempo de cozimento: <span id="valor"> </span>
-        minutos </label>
-      <input type="range" class="form-range" id="customRange1" min="2" max="240" value="8">
-    </div>
-
-    <div class="dificuldade">
-      <div class="textdificuldade">
-        <p>Escolha a dificuldade:</p>
-      </div>
-      <div class="radio-inputs">
-        <label class="radio">
-          <input type="radio" name="radio" checked="">
-          <span class="name">Fácil</span>
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio">
-          <span class="name">Intermediário</span>
-        </label>
-
-        <label class="radio">
-          <input type="radio" name="radio">
-          <span class="name">Difícil</span>
-        </label>
-      </div>
-    </div>
-
-    <script>
-      // temporizador
-      let customRange1Element = document.querySelector("#customRange1");
-      let sizeKey = document.querySelector("#valor");
-
-      let charset = "";
-
-      customRange1Element.addEventListener('input', function () {
-        sizeKey.innerHTML = this.value;
-      });
-    </script>
-
-
-
-    <p class="escolhacatedoria">Escolha a categoria:</p>
-
-
-    <div id="filtro">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Sem Glútem
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Doces e Sobremesas
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Bebidas
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Vegano
-        </label>
-      </div>
-    </div>
-
-
-    <div id="cadastrar">
-
-      <input type="submit" value="Cadastrar Receita">
-      <input type="submit" value="Cancelar" id="cancelar">
-
-    </div>
-
-
-    <script src="/js/script.js"></script>
-
-    <div id="resultado"></div>
-
-
-  </div>
-  <footer>
-    <p>Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos reservados</p>
-  </footer>
-
-
-  <script>
-
-
-
-
-
-
-
-
-
-
-    // modo escuro
-
-    document.getElementById('flexSwitchCheckDefault').addEventListener('click', function () {
-      document.body.classList.toggle('modo-escuro');
-    });
-
-
-
-  </script>
+        <div>
+            {{ form.descricao_receita.label }}: {{ form.descricao_receita }}
+            {% for error in form.descricao_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.instrucoes_receita.label }}: {{ form.instrucoes_receita }}
+            {% for error in form.instrucoes_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.ingredientes_receita.label }}: {{ form.ingredientes_receita }}
+            {% for error in form.ingredientes_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.tempo_preparo.label }}: {{ form.tempo_preparo }}
+            {% for error in form.tempo_preparo.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
+            {% for error in form.dificuldade_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
+            {% for error in form.categoria_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <input type="submit" value="Cadastro_receita">
+    </form>
 </body>
-
 </html>

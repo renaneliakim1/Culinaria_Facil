@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Receitas Culinárias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/template/login.html">
+</head>
+
+<body>
+
+
+    <main>
+        <video src="/imgs/fundo.mp4" autoplay muted loop>
+            <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
+                muted></video>
+    </main>
+
+    <header>
+
+    
+
+
+        <div class="bntacesso">
+
+            <div class="logo">
+
+                <a id=logo href="/"><img src="/imgs/logo.png" alt="Culinárioteca" title="Culinárioteca"></a>
+    
+            </div>
+
+            {% if user %}
+            <a href="/logout"> <button type="button" id="acesso" class="btn btn-danger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+          </svg>Sair</button></a>
+
+
+          <a href="/cadastro_receita"> <button type="button" id="cadastro_receita"  class="btn btn-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708z"/>
+                <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+              </svg>Cadastrar Receita</button></a>
+            {% else %}
+            
+            <a href="/login"> <button type="button" id="acesso" class="btn btn-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-check" viewBox="0 0 16 16">
+                        <path
+                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                        <path
+                            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                    </svg> Entrar</button></a>
+
+
+            <a href="/cadastro"> <button type="button" id="acesso" class="btn btn-danger"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-add" viewBox="0 0 16 16">
+                        <path
+                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                        <path
+                            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                    </svg>Cadastre-se</button></a>
+        </div>
+
+{% endif %}
+
+    </header>
+
+    <section>
+
+        <h1>Bem-vindo à Biblioteca de Receitas Culinárias</h1>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Digite o nome da receita ou região:</label>
+            <input class="form-control me-2" type="search" placeholder="ex: Bolo de maçã com canela "
+                aria-label="Search">
+            <a href="/templates/busca.html"><button type="button" id="pesquisa" class="btn btn-danger">Buscar
+                    Receita</button></a>
+
+        </div>
+    </section>
+
+    <div class="filtroCategoria">
+        <h3>Filtre por categoria</h3>
+    </div>
+
+    <div id="filtro">
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Sem Glútem
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Doces e Sobremesas
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Bebidas
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Vegano
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
+        <img src="/imgs/botaoflutuante.png" width="140rem" height="90rem" alt="Logo" /><br>
+    </button>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            // Redirecionar para o link desejado
+            window.location.href = "/templates/cadastro_receita.html";
+        }
+    </script>
+
+
+    <footer>
+        <p>Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos reservados</p>
+    </footer>
+
+
+
+
+</body>
+<script>
+
+    let container = document.getElementById('container')
+
+    toggle = () => {
+        container.classList.toggle('sign-in')
+        container.classList.toggle('sign-up')
+    }
+
+    setTimeout(() => {
+        container.classList.add('sign-in')
+    }, 200)
+
+
+
+
+
+
+</script>
+
+</html>

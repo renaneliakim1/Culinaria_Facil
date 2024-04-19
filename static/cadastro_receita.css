@@ -108,7 +108,49 @@ body.modo-escuro header {
 }
 
 
+body.modo-escuro h2{
+    color: var(--white);
+}
 
+body.modo-escuro p{
+    color: var(--white);
+}
+
+body.modo-escuro .radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: var(--darkform--);
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  
+body.modo-escuro .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: var(--white);
+    transition: all .15s ease-in-out;
+
+    
+}
+body.modo-escuro .textdificuldade{
+    color: var(--white);
+} 
+
+
+body.modo-escuro .escolhacatedoria{
+    color: var(--white);
+} 
 
 .card {
     background-color: #ac2020;
@@ -448,9 +490,13 @@ label {
   }
   
   .radio-inputs .radio input:checked + .name {
-    background-color: #fff;
+    background-color: var(--primary-color);
     font-weight: 600;
 
+  }
+
+  .radio-inputs .name{
+    font-size: 0.8rem;
   }
 
 

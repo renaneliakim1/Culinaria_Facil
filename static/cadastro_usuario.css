@@ -433,6 +433,15 @@ h1 {
 }
 
 
+#password {
+    width: 100%;
+}
+
+.fa{
+    position: fixed;
+    margin: 10px;
+}
+
 
 footer {
 

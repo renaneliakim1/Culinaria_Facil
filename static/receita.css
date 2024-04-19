@@ -302,20 +302,6 @@ section{
 }
 
 
-.favorito{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-}
-
-
-.rating
-
-
-
-
 .rating:not(:checked) > input {
     position: absolute;
     appearance: none;
@@ -326,7 +312,6 @@ section{
     cursor: pointer;
     font-size: 30px;
     color: #666;
-    margin-top: 2rem;
 
   }
   

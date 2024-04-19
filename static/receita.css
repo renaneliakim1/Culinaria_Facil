@@ -305,10 +305,13 @@ section{
 .favorito{
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
   text-align: center;
-  height: 5rem;
 }
+
+
+.rating
 
 
 

@@ -110,7 +110,7 @@
           <h2>Carregar e anexar arquivos
           </h2>
           <p>
-            Anexe imagens a sua receita
+            Anexe imagens ou vídeos a sua receita
           </p>
           <div class="dropzone-area">
             <div class="file-upload-icon">
@@ -122,13 +122,36 @@
               </svg>
             </div>
             <p>Clique para fazer upload</p>
-            <input type="file" required id="upload-file" name="uploaded-file">
+            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
+
+
             <p class="message">Nenhum arquivo selecionado
             </p>
           </div>
 
         </form>
       </div>
+
+
+      <script>
+        document.getElementById('form-receita').addEventListener('submit', function (event) {
+          event.preventDefault();
+          var nome = document.getElementById('nome').value;
+          var ingredientes = document.getElementById('ingredientes').value;
+          var instrucoes = document.getElementById('instrucoes').value;
+
+          // Captura dos arquivos de imagem
+          var imagens = document.getElementById('imagens').files;
+
+          // Verifica se foram selecionadas até três imagens
+          if (imagens.length > 3) {
+            alert("Selecione no máximo três imagens.");
+            return;
+          }
+
+
+        });
+      </script>
 
       <div class="nome">
 
@@ -151,8 +174,29 @@
       <input type="range" class="form-range" id="customRange1" min="2" max="240" value="8">
     </div>
 
+    <div class="dificuldade">
+      <div class="textdificuldade">
+        <p>Escolha a dificuldade:</p>
+      </div>
+      <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="radio" checked="">
+          <span class="name">Fácil</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">Intermediário</span>
+        </label>
+
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">Difícil</span>
+        </label>
+      </div>
+    </div>
+
     <script>
-         // temporizador
+      // temporizador
       let customRange1Element = document.querySelector("#customRange1");
       let sizeKey = document.querySelector("#valor");
 
@@ -216,26 +260,12 @@
 
 
   <script>
-    document.getElementById('form-receita').addEventListener('submit', function (event) {
-      event.preventDefault();
-      var nome = document.getElementById('nome').value;
-      var ingredientes = document.getElementById('ingredientes').value;
-      var instrucoes = document.getElementById('instrucoes').value;
 
-      var receitaHtml = `
-                  <div class="receita">
-                      <h2>${nome}</h2>
-                      <p><strong>Ingredientes:</strong> ${ingredientes}</p>
-                      <p><strong>Instruções:</strong> ${instrucoes}</p>
-                  </div>
-              `;
 
-      document.getElementById('resultado').insertAdjacentHTML('beforeend', receitaHtml);
-      document.getElementById('form-receita').reset();
-    });
 
-  
- 
+
+
+
 
 
 

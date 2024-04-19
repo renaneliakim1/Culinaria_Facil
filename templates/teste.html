@@ -12,67 +12,50 @@
 </head>
 <body>
 
-<h1>Formulário Dinâmico</h1>
+    <input type="file" id="imagem1" name="imagem1">
+    <input type="file" id="imagem2" name="imagem2">
+    <input type="file" id="imagem3" name="imagem3">
 
-<div>
-    <button onclick="mostrarDadosPessoais()">Dados Pessoais</button>
-    <button onclick="mostrarEmailSenha()">E-mail e Senha</button>
-    <button onclick="mostrarReceitas()">Receitas Cadastradas</button>
-</div>
+    <script>
 
-<div id="dadosPessoais" class="hidden">
-    <span>Nome*</span> <br>
-    <input type="text" placeholder="Digite seu nome"> <br>
-    <span>CPF*</span> <br>
-    <input type="number" placeholder="Digite seu CPF"> <br>
-</div>
-
-<div id="emailSenha" class="hidden">
-    <span>E-mail*</span> <br>
-    <input type="email" placeholder="Digite seu e-mail"> <br>
-    <span>Senha*</span> <br>
-    <input type="password" placeholder="Digite sua senha"> <br>
-    <span>Repita a Senha*</span> <br>
-    <input type="password" placeholder="Repita sua senha"> <br>
-</div>
-
-<div id="receitas" class="hidden">
-    <span>ID</span> <span>Receita</span> <span>Ação</span> <br>
-    <!-- Aqui você pode adicionar dinamicamente as receitas cadastradas -->
-</div>
-
-<div>
-    <button onclick="salvar()">Salvar</button>
-    <button onclick="cancelar()">Cancelar</button>
-</div>
-
-<script>
-    function mostrarDadosPessoais() {
-        document.getElementById('dadosPessoais').classList.remove('hidden');
-        document.getElementById('emailSenha').classList.add('hidden');
-        document.getElementById('receitas').classList.add('hidden');
-    }
-
-    function mostrarEmailSenha() {
-        document.getElementById('dadosPessoais').classList.add('hidden');
-        document.getElementById('emailSenha').classList.remove('hidden');
-        document.getElementById('receitas').classList.add('hidden');
-    }
-
-    function mostrarReceitas() {
-        document.getElementById('dadosPessoais').classList.add('hidden');
-        document.getElementById('emailSenha').classList.add('hidden');
-        document.getElementById('receitas').classList.remove('hidden');
-    }
-
-    function salvar() {
-        alert('Dados salvos!');
-    }
-
-    function cancelar() {
-        alert('Operação cancelada!');
-    }
+    document.getElementById('form-receita').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var nome = document.getElementById('nome').value;
+        var ingredientes = document.getElementById('ingredientes').value;
+        var instrucoes = document.getElementById('instrucoes').value;
+    
+        // Captura dos arquivos de imagem
+        var imagens = [];
+        var imagem1 = document.getElementById('imagem1').files[0];
+        var imagem2 = document.getElementById('imagem2').files[0];
+        var imagem3 = document.getElementById('imagem3').files[0];
+    
+        // Verifica se cada campo de imagem foi preenchido
+        if (imagem1) imagens.push(imagem1);
+        if (imagem2) imagens.push(imagem2);
+        if (imagem3) imagens.push(imagem3);
+    
+        // Constrói o HTML da receita
+        var receitaHtml = `
+            <div class="receita">
+                <h2>${nome}</h2>
+                <p><strong>Ingredientes:</strong> ${ingredientes}</p>
+                <p><strong>Instruções:</strong> ${instrucoes}</p>
+        `;
+    
+        // Adiciona as tags de imagem ao HTML da receita
+        imagens.forEach(function (imagem, index) {
+            receitaHtml += `<img src="${URL.createObjectURL(imagem)}" alt="Imagem ${index + 1}">`;
+        });
+    
+        receitaHtml += `</div>`;
+    
+        // Insere o HTML da receita no elemento de resultado
+        document.getElementById('resultado').insertAdjacentHTML('beforeend', receitaHtml);
+        document.getElementById('form-receita').reset();
+    });
 </script>
+    
 
 </body>
 </html>

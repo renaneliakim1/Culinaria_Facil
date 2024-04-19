@@ -173,5 +173,6 @@ def sair():
     return redirect(url_for('pagina_inicial'))
 
 
+
 if __name__ == '__main__':
     app.run(debug=True)

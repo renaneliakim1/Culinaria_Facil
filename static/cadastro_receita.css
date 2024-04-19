@@ -155,6 +155,8 @@ body.modo-escuro footer p {
 
 
 #acesso {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     width: 8.5rem;
     border: none;
@@ -166,6 +168,7 @@ body.modo-escuro footer p {
     height: 2rem;
     margin: 15px;
     text-align: center;
+    align-items: center;
 }
 
 #acesso:hover {
@@ -283,28 +286,37 @@ svg {
     justify-content: right;
 }
 
-
-
-.container {
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--card--);
-    border-radius: 8px;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    border-radius: 4px;
-
-}
-
 h1 {
     text-align: center;
     font-size: 1.5rem;
 }
 
-form {
-    margin-bottom: 20px;
+
+.container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card--);
+    border-radius: 8px;
+    border-radius: 4px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
 
 
+#navbarSupportedContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 
 }
 
@@ -398,6 +410,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 1rem;
 
 
 }
@@ -416,27 +429,49 @@ label {
 
 
 
-h2 {
+h2, p{
     font-size: 1.5rem;
+    text-align: center;
 }
 
 p, .message {
     font-size: 1rem;
+}
 
+.escolhacatedoria{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#temporizador{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#temporizador label{
+    
+    justify-content: center;
+    width: 100%;
 }
 
 
+#temporizador input{
+    justify-content: center;
+    width: 100%;
+}
+
 
 .dropzone-box {
-    border-radius: 2rem;
+    border-radius: 8px;
     padding: 2rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/*     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
-    background-color: var(--white);
+    
 
 
 }
@@ -534,14 +569,28 @@ p, .message {
     align-items: center;
     flex-direction: column;
     width: 100%;
+  
+
 }
+
+
+.dropzone-area{
+    background-image: url(/imgs/Imagem1cadastre-se.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
 
 
 
 
 footer {
 
-
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;

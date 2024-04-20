@@ -136,6 +136,25 @@ body.modo-escuro footer p {
 }
 
 
+body.modo-escuro .idusuario{
+  font-size: 0.5rem;
+  color: var(--white);
+}
+
+
+
+body.modo-escuro #save-receita span{
+  font-size: 0.7rem;
+  color: var(--white);
+}
+
+
+body.modo-escuro .d-flex {
+  background-color: var(--dark--);
+
+}
+
+
 
 header {
 
@@ -166,6 +185,8 @@ header {
 .bg-body-tertiary{
     --bs-bg-opacity:0
 }
+
+
 
 
 
@@ -234,6 +255,39 @@ svg {
 }
 
 
+#buscar {
+  cursor: pointer;
+  width: 10.5rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 0.7rem;
+  outline: none;
+  height: 2rem;
+  margin: 15px;
+  text-align: center;
+
+}
+
+
+#buscar:hover {
+  background-color: #a33f37;
+}
+
+
+.form-control {
+  height: 2rem;
+}
+
+
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar-toggler {
     display: flex;
     background-color: var(--white);
@@ -263,6 +317,7 @@ h1{
 h3{
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 
@@ -302,6 +357,11 @@ section{
 }
 
 
+.idusuario{
+  font-size: 0.5rem;
+}
+
+
 .rating:not(:checked) > input {
     position: absolute;
     appearance: none;
@@ -336,7 +396,35 @@ section{
     color: #ffa723;
   }
   
+  #save-receita {
+    cursor: pointer;
+    width: 8rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+}
+
+#save-receita svg{
+  width: 20px;
+  height: 20px;
+}
+
+#save-receita:hover {
+    background-color: #a33f37;
+}
+
   
+#save-receita span{
+  font-size: 0.7rem;
+}
+
   
   .ingredientes{
     display: flex;
@@ -408,13 +496,14 @@ section{
     padding-left: 20%;
     padding-right: 20%;
     height: 25rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 
   }
 
-  iframe{
-    width: 60rem;
-    height: 30rem;
+  video{
+    width: 35rem;
+    height: 20rem;
   }
 
 
@@ -426,7 +515,7 @@ section{
     margin-left: 20%;
     margin-right: 20%;
     font-size: 0.8rem;
-    padding-top: 8rem;
+    padding-top: 2rem;
 
 
     

@@ -116,6 +116,12 @@ body.modo-escuro p{
     color: var(--white);
 }
 
+
+body.modo-escuro span{
+    color: var(--white);
+}
+
+
 body.modo-escuro .radio-inputs {
     position: relative;
     display: flex;

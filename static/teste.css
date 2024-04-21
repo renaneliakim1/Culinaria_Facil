@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -10,15 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    /* font-family: Josefin Sans;*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    /*     font-weight: 500; */
 
 }
 
-
+ /* color palettes */
 
 :root {
     --primary-color: #d57119;
@@ -33,14 +29,9 @@
     --darkform--: #5c5c5c;
 
 
-
-
-    --facebook-color: #4267B2;
-    --google-color: #DB4437;
-    --twitter-color: #1DA1F2;
-    --insta-color: #E1306C;
 }
 
+/* call "body.mode" followed by the class or id to activate dark mode   */ 
 
 body {
     width: 100%;
@@ -100,14 +91,6 @@ body.modo-escuro .d-flex {
 
 
 
-.nav-item {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
 body.modo-escuro header {
 
     text-align: center;
@@ -148,13 +131,37 @@ body.modo-escuro footer p {
 }
 
 
+/* end of dark mode */
 
-#menu {
+
+.logotipo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo img {
+    display: flex;
+    width: 12rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+/* navbar */
+.nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+/* option #menu dessabled */
+/*#menu {
     display: flex;
     justify-content: right;
 
 }
-
+ */
 
 .container-fluid {
     display: flex;
@@ -167,12 +174,14 @@ body.modo-escuro footer p {
 
 
 
+/* make navbar transparent */
 .bg-body-tertiary {
     --bs-bg-opacity: 0;
     --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
 
+/* defines characteristics of buttons */
 #acesso {
     cursor: pointer;
     width: 9.4rem;
@@ -192,20 +201,9 @@ body.modo-escuro footer p {
 }
 
 
-.logotipo {
-    display: flex;
-    justify-content: center;
-}
 
-#logo img {
-    display: flex;
-    width: 12rem;
-    height: 5rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
 
+/* define with the collapse button */
 
 button.navbar-toggler {
     background-color: var(--primary-color);
@@ -213,60 +211,7 @@ button.navbar-toggler {
 
 .navbar-toggler-icon {
     background-color: var(--primary-color);
-}
 
-
-
-
-#acesso:hover {
-    background-color: #a33f37;
-}
-
-
-svg {
-    width: 40px;
-    height: 25px;
-}
-
-.bntacesso {
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-#toggle-mode {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-
-}
-
-#toggle-mode label {
-    font-size: 0.8rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-.btn-outline-success {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-
-}
-
-#menu {
-    display: flex;
-    justify-content: right;
 }
 
 
@@ -290,21 +235,58 @@ svg {
     background-color: #a33f37;
 }
 
+
+
+/* button teeth icon */
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+.bntacesso {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* key for dark mode */
+
+#toggle-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+#toggle-mode label {
+    font-size: 0.8rem;
+}
+
+
+
+.btn-outline-success {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+}
+
+/* color label*/
 .form-control {
     height: 2rem;
     background-color: var(--check--);
 }
 
 
+/* search bar position */
+
 .d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
-
-
 
 .navbar>.container-fluid {
     display: flex;

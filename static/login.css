@@ -584,6 +584,16 @@ footer p {
 
 @media only screen and (max-width: 600px) {
 
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container-fluid{
+        z-index: -1;
+    }
+
     .container {
         display: flex;
         justify-content: center;

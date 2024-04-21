@@ -116,6 +116,73 @@ body.modo-escuro .navbar-toggler {
     background-color: var(--primary-color);
 }
 
+
+body.modo-escuro .dropdown-menu.show{
+    background-color: var(--dark--);
+}
+
+
+body.modo-escuro #acesso {
+    cursor: pointer;
+    width: 9.4rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+}
+
+
+
+
+body.modo-escuro svg {
+    color: var(--white);
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
+
+
+
+
+body.modo-escuro #buscar {
+    cursor: pointer;
+    width: 10rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 0.7rem;
+    outline: none;
+    height: 2rem;
+    margin: 15px;
+    text-align: center;
+
+}
+
+
+body.modo-escuro h1 {
+  color: var(--white);
+
+}
+
+
+
+
+
+
 section{
     display: flex;
     flex-direction: column;
@@ -198,8 +265,8 @@ body.modo-escuro footer p {
     width: 9.4rem;
     border: none;
     border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+/*     background-color: var(--primary-color);*/
+    color: var(--black);
     font-size: 0.7rem;
     outline: none;
     height: 2rem;
@@ -208,7 +275,7 @@ body.modo-escuro footer p {
 }
 
 #acesso:hover {
-    background-color: #a33f37;
+    background-color: var(--check--);
 }
 
 
@@ -228,11 +295,10 @@ button.navbar-toggler {
 
 #buscar {
     cursor: pointer;
-    width: 10.5rem;
+    width: 10rem;
     border: none;
     border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--black);
     font-size: 0.7rem;
     outline: none;
     height: 2rem;

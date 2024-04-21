@@ -119,6 +119,21 @@ body.modo-escuro .navbar-toggler {
     background-color: var(--primary-color);
 }
 
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
+
+
+
+
 .card {
     background-color: #ac2020;
     color: #000000;

@@ -124,15 +124,15 @@ body.modo-escuro .dropdown-menu.show{
 
 body.modo-escuro #acesso {
     cursor: pointer;
-    width: 9.4rem;
-    border: none;
-    border-radius: .5rem;
     color: var(--white);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     outline: none;
     height: 2rem;
     text-align: center;
+    border-radius: 8px;
+
 }
+
 
 
 
@@ -159,16 +159,22 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
+    width: 9rem;
+
     cursor: pointer;
-    width: 10rem;
-    border: none;
-    border-radius: .5rem;
     color: var(--white);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     outline: none;
-    height: 2rem;
-    margin: 15px;
+    height: 1.7rem;
     text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+
+
 
 }
 
@@ -178,9 +184,18 @@ body.modo-escuro h1 {
 
 }
 
+header{display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
 
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+    display: flex;
+    justify-content: left;
+    margin: 0px;
+    padding: 0px;
 
-
+}
 
 
 section{
@@ -219,8 +234,8 @@ body.modo-escuro footer p {
 
 #logo img {
     display: flex;
-    width: 12rem;
-    height: 5rem;
+    width: 4rem;
+    height: 3rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -245,11 +260,10 @@ body.modo-escuro footer p {
     display: flex;
     align-items: center;
     flex-wrap: inherit;
-    justify-content: right;
+    justify-content: space-between;
 
     flex-direction: row;
 }
-
 
 
 /* make navbar transparent */
@@ -262,16 +276,12 @@ body.modo-escuro footer p {
 /* defines characteristics of buttons */
 #acesso {
     cursor: pointer;
-    width: 9.4rem;
-    border: none;
-    border-radius: .5rem;
-/*     background-color: var(--primary-color);*/
     color: var(--black);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    margin: 15px;
     text-align: center;
+    border-radius: 8px;
 }
 
 #acesso:hover {
@@ -294,22 +304,29 @@ button.navbar-toggler {
 
 
 #buscar {
+    width: 9rem;
+
     cursor: pointer;
-    width: 10rem;
-    border: none;
-    border-radius: .5rem;
     color: var(--black);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     outline: none;
-    height: 2rem;
-    margin: 15px;
+    height: 1.7rem;
     text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+
+
+
 
 }
 
 
 #buscar:hover {
-    background-color: #a33f37;
+    background-color: var(--check--);
 }
 
 
@@ -334,11 +351,12 @@ svg {
     align-items: center;
     gap: 10px;
     justify-content: center;
+    font-size: 0.8rem;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 
@@ -352,8 +370,13 @@ svg {
 
 /* color label*/
 .form-control {
-    height: 2rem;
+    height: 1.5rem;
     background-color: var(--check--);
+    font-size: 0.7rem;
+}
+
+input.form-control.me-2{
+    font-size: 0.7rem;
 }
 
 
@@ -363,25 +386,26 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 
 
 
 
-h1 {
+section h1 {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 
 }
 

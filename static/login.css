@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -10,15 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    /* font-family: Josefin Sans;*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    /*     font-weight: 500; */
 
 }
 
-
+/* color palettes */
 
 :root {
     --primary-color: #d57119;
@@ -32,20 +28,14 @@
     --dark--: #222;
     --darkform--: #5c5c5c;
 
-
-
-
-    --facebook-color: #4267B2;
-    --google-color: #DB4437;
-    --twitter-color: #1DA1F2;
-    --insta-color: #E1306C;
 }
 
+/* call "body.mode" followed by the class or id to activate dark mode   */
 
 body {
     width: 100%;
     height: 100%;
-    background: var(--white);
+    background: var(--white--);
 
 }
 
@@ -56,49 +46,41 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: #fff;
+    color: var(--card--);
 
 }
 
 
-/* body.modo-escuro form {
+body.modo-escuro form {
     background-color: var(--darkform--);
 }
- */
 
-
-body.modo-escuro .form-title {
-    color: var(--black--);
-}
 
 body.modo-escuro p {
-    color: var(--white);
+    color: var(--white--);
 }
 
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: var(--white);
+    color: var(--white--);
 }
 
-
-body.modo-escuro .signup-link {
-    color: var(--darkform--);
-
-}
 
 
 body.modo-escuro .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: right;
-    background-color: var(--dark--);
+    justify-content: space-between;
     flex-direction: row;
 }
 
+body.modo-escuro .container {
+    background-color: var(--darkform--);
 
-body.modo-escuro .bg-body-tertiary {
-    --bs-bg-opacity: 0
 }
 
+body.modo-escuro .bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
 
 
 body.modo-escuro .d-flex {
@@ -108,30 +90,159 @@ body.modo-escuro .d-flex {
 
 
 
-.nav-item {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
 body.modo-escuro header {
-    /*    display: flex; */
-    /*     flex-direction: row;
- */
-    /*  justify-content:center ; */
+
     text-align: center;
 
 }
 
 
+body.modo-escuro .navbar-toggler-icon {
+    color: #1DA1F2;
+}
 
 
+
+body.modo-escuro .container {
+    background: var(--dark--);
+}
+
+body.modo-escuro .form {
+    background: var(--card--);
+}
+
+
+body.modo-escuro .navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+
+body.modo-escuro .dropdown-menu.show{
+    background-color: var(--dark--);
+}
+
+
+body.modo-escuro #acesso {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+
+
+
+
+body.modo-escuro svg {
+    color: var(--white);
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
+
+
+
+
+body.modo-escuro #buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+
+
+
+}
+
+
+body.modo-escuro  .higiene{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark--);
+}
+
+body.modo-escuro  .higiene li{
+  color: var(--white);
+}
+
+body.modo-escuro  .higiene h2{
+  color: var(--white);
+}
+
+body.modo-escuro h1 {
+  color: var(--white);
+
+}
+
+header{display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+  display: flex;
+  justify-content: left;
+  margin: 0px;
+  padding: 0px;
+
+}
+.dropdown-menu.show{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10 rem;
+    margin-top: 10px;
+
+}
 .card {
     background-color: #ac2020;
     color: #000000;
+}
+
+body.modo-escuro .container {
+   
+    background-color: var(--card--);
+
 }
 
 
@@ -141,72 +252,216 @@ body.modo-escuro footer p {
 }
 
 
-/* header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 3rem;
+/* end of dark mode */
 
+
+.logotipo {
+    display: flex;
+    justify-content: center;
 }
 
-
-
-
-.container-fluid{
+#logo img {
     display: flex;
+    width: 4rem;
+    height: 3rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
-    flex-direction: column;
-
-
-
+    margin-top: 10px;
 }
 
 
-#navbarSupportedContent {
+/* navbar */
+.nav-item {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
- */
-#menu {
+
+/* option #menu dessabled */
+/*#menu {
     display: flex;
     justify-content: right;
 
 }
-
-
-
-#buscar {
-    cursor: pointer;
-    width: 10.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-}
-
-
-#buscar:hover {
-    background-color: #a33f37;
-}
-
+ */
 
 .container-fluid {
     display: flex;
     align-items: center;
     flex-wrap: inherit;
-    justify-content: right;
+    justify-content: space-between;
 
     flex-direction: row;
+}
+
+
+/* make navbar transparent */
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+/* defines characteristics of buttons */
+#acesso {
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#acesso:hover {
+    background-color: var(--check--);
+}
+
+
+
+
+/* define with the collapse button */
+
+button.navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary-color);
+
+}
+
+
+#buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+
+
+
+
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+/* button teeth icon */
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+.bntacesso {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* key for dark mode */
+
+#toggle-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 0.8rem;
+
+}
+
+#toggle-mode label {
+    font-size: 0.6rem;
+}
+
+
+
+.btn-outline-success {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+}
+
+/* color label*/
+.form-control {
+    height: 1.5rem;
+    font-size: 0.7rem;
+}
+
+input.form-control.me-2{
+    font-size: 0.7rem;
+}
+
+
+/* search bar position */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: inherit;
+  justify-content: space-between;
+
+  flex-direction: row;
+}
+
+
+
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 0
+}
+
+svg {
+  width: 40px;
+  height: 25px;
+}
+
+.bntacesso {
+
+  display: flex;
+  flex-direction: row;
+}
+
+
+.dropdown-menu.show{
+  display: flex;
+  justify-content: column;
+  flex-direction: column;
+}
+
+
+
+
+
+
+.navbar>.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
@@ -223,74 +478,17 @@ body.modo-escuro footer p {
 }
 
 
-
-
-
-
 .bg-body-tertiary {
     --bs-bg-opacity: 0
 }
-
-
-
-
-#acesso {
-    cursor: pointer;
-    width: 9.4rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-}
-
-#acesso:hover {
-    background-color: #a33f37;
-}
-
 
 .logotipo {
     display: flex;
     justify-content: center;
 }
 
-#logo img {
-    display: flex;
-    width: 12rem;
-    height: 5rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
 
 
-
-
-
-/* 
-#acesso {
-    cursor: pointer;
-    width: 8.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-
-} */
-
-#acesso:hover {
-    background-color: #a33f37;
-}
 
 
 svg {
@@ -298,25 +496,9 @@ svg {
     height: 25px;
 }
 
-.bntacesso {
 
-    display: flex;
-    flex-direction: row;
-    /*     justify-content: center;
- */
-}
 
-#toggle-mode {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
 
-}
-
-#toggle-mode label {
-    font-size: 0.8rem;
-}
 
 
 .navbar-toggler {
@@ -324,46 +506,6 @@ svg {
     background-color: var(--white);
     justify-content: right;
 }
-
-
-.btn-outline-success {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-
-}
-
-
-
-
-
-.navbar>.container-fluid {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: right;
-}
-
-
-
-/* main {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-main video {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.6;
-} */
-
-
 
 
 .container {
@@ -408,7 +550,6 @@ main video {
     padding: 1rem;
     max-width: 30rem;
     border-radius: 0.5rem;
-    /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     margin-top: 4rem;
     width: 100%;
     height: 27rem;
@@ -528,11 +669,16 @@ footer p {
     background-color: var(--primary-color);
 }
 
-
+/* 
 
 @media only screen and (max-width: 900px) {
-
-
+    
+    body.modo-escuro  .container {
+      
+        background-color: var(--card--);
+    
+       
+    }
     .container {
         display: flex;
         justify-content: center;
@@ -572,7 +718,6 @@ footer p {
         padding: 1rem;
         max-width: 30rem;
         border-radius: 0.5rem;
-        /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
         margin-top: 4rem;
         width: 100%;
         height: 27rem;
@@ -582,7 +727,9 @@ footer p {
     
 }
 
-@media only screen and (max-width: 600px) {
+*/
+
+@media only screen and (max-width: 768px) {
 
     header{
         display: flex;
@@ -590,9 +737,7 @@ footer p {
         justify-content: space-around;
     }
 
-    .container-fluid{
-        z-index: -1;
-    }
+  
 
     .container {
         display: flex;
@@ -661,4 +806,4 @@ footer p {
 
 
 
-}
+} 

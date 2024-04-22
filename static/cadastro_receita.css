@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -10,15 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    /* font-family: Josefin Sans;*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    /*     font-weight: 500; */
 
 }
 
-
+/* color palettes */
 
 :root {
     --primary-color: #d57119;
@@ -32,15 +28,9 @@
     --dark--: #222;
     --darkform--: #5c5c5c;
 
-
-
-
-    --facebook-color: #4267B2;
-    --google-color: #DB4437;
-    --twitter-color: #1DA1F2;
-    --insta-color: #E1306C;
 }
 
+/* call "body.mode" followed by the class or id to activate dark mode   */
 
 body {
     width: 100%;
@@ -62,7 +52,7 @@ body.modo-escuro label {
 
 
 body.modo-escuro form {
-    background-color: var(--darkform--);
+    background-color: var(--check---);
 }
 
 
@@ -70,34 +60,33 @@ body.modo-escuro p {
     color: var(--white--);
 }
 
-body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show   {
-     color: var(--white--);
+body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--white--);
 }
 
 
 
-body.modo-escuro .container-fluid{
+body.modo-escuro .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
     flex-direction: row;
 }
 
-body.modo-escuro .container{
+body.modo-escuro .container {
     background-color: var(--darkform--);
 
 }
 
-body.modo-escuro .bg-body-tertiary{
-    --bs-bg-opacity:0
+body.modo-escuro .bg-body-tertiary {
+    --bs-bg-opacity: 0;
 }
 
 
-.nav-item{
-    display: flex;
-    justify-content: center;
-}
+body.modo-escuro .d-flex {
+    background-color: var(--dark--);
 
+}
 
 
 
@@ -108,66 +97,141 @@ body.modo-escuro header {
 }
 
 
-body.modo-escuro h2{
-    color: var(--white);
-}
-
-body.modo-escuro p{
-    color: var(--white);
+body.modo-escuro .navbar-toggler-icon {
+    color: #1DA1F2;
 }
 
 
-body.modo-escuro span{
-    color: var(--white);
+
+body.modo-escuro .container {
+    background: var(--card--);
+}
+
+body.modo-escuro .form {
+    background: var(--card--);
 }
 
 
-body.modo-escuro .radio-inputs {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 0.5rem;
-    background-color: var(--darkform--);
-    box-sizing: border-box;
-    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-    padding: 0.25rem;
-    width: 100%;
-    font-size: 14px;
-  }
+body.modo-escuro .navbar-toggler {
+    background-color: var(--primary-color);
+}
 
-  
-body.modo-escuro .radio-inputs .radio .name {
-    display: flex;
+
+body.modo-escuro .dropdown-menu.show{
+    background-color: var(--dark--);
+}
+
+
+body.modo-escuro #acesso {
     cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+
+
+
+
+body.modo-escuro svg {
+    color: var(--white);
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
+
+
+
+
+body.modo-escuro #buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
-    border: none;
-    padding: .5rem 0;
-    color: var(--white);
-    transition: all .15s ease-in-out;
+    background-color: var(--dark--);
 
-    
+
+
 }
-body.modo-escuro .textdificuldade{
-    color: var(--white);
-} 
 
 
-body.modo-escuro .escolhacatedoria{
-    color: var(--white);
-} 
+body.modo-escuro h1 {
+  color: var(--white);
 
+}
+
+
+body.modo-escuro label {
+    color: var(--black);
+}
+
+header{display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10 rem;
+    margin-top: 10px;
+
+}
 .card {
     background-color: #ac2020;
     color: #000000;
 }
 
 
-body.modo-escuro .d-flex{
-    background-color: var(--dark--);
-
+body.modo-escuro #toggle-mode label {
+    font-size: 0.6rem;
+    color: var(--white);
 }
+
+
+
+
 
 
 body.modo-escuro footer p {
@@ -176,108 +240,114 @@ body.modo-escuro footer p {
 }
 
 
- #menu{
-    display: flex;
-    justify-content: right;
-
- }
-
- .container-fluid {
-    display: flex;
-    align-items: center;
-    flex-wrap: inherit;
-    justify-content: right;
-
-    flex-direction: row;
-}
+/* end of dark mode */
 
 
-
-
-.bg-body-tertiary{
-    --bs-bg-opacity:0
-}
-
-
-
-
-#acesso {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    width: 9.4rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-    align-items: center;
-}
-
-#acesso:hover {
-    background-color: #a33f37;
-}
-
-
-#buscar{
-    cursor: pointer;
-    width: 10.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-}
-
-
-#buscar:hover {
-    background-color: #a33f37;
-}
-
-.logotipo{
+.logotipo {
     display: flex;
     justify-content: center;
 }
 
 #logo img {
     display: flex;
-    width: 12rem;
-    height: 5rem;
+    width: 4rem;
+    height: 3rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
 }
 
 
-
-.form-control{
-    height: 2rem;
-}
-
-
-.d-flex{
+/* navbar */
+.nav-item {
     display: flex;
     justify-content: center;
+}
+
+/* option #menu dessabled */
+/*#menu {
+    display: flex;
+    justify-content: right;
+
+}
+ */
+
+
+
+.navbar>.container-fluid {
+    display: flex;
+    flex-wrap: inherit;
     align-items: center;
+    justify-content: space-between;
+  }
+
+/* make navbar transparent */
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
 
-
+/* defines characteristics of buttons */
+#acesso {
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
 
 #acesso:hover {
-    background-color: #a33f37;
+    background-color: var(--check--);
 }
 
 
+
+
+/* define with the collapse button */
+
+button.navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary-color);
+
+}
+
+
+#buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+
+
+
+
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+/* button teeth icon */
 svg {
     width: 40px;
     height: 25px;
@@ -287,42 +357,55 @@ svg {
 
     display: flex;
     flex-direction: row;
-/*     justify-content: center;
- */}
+
+}
+
+/* key for dark mode */
 
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
+    font-size: 0.8rem;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    color: var(--black);
 }
 
 
-.navbar-toggler {
-    display: flex;
-    background-color: var(--white);
-    justify-content: right;
-}
 
-
-.btn-outline-success{
+.btn-outline-success {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
 
 }
 
-#menu{
-    display: flex;
-    justify-content: right;
+/* color label*/
+.form-control {
+    height: 1.5rem;
+    background-color: var(--check--);
+    font-size: 0.7rem;
+}
+
+input.form-control.me-2{
+    font-size: 0.7rem;
+    background-color: var(--white);
 }
 
 
+/* search bar position */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 
@@ -330,7 +413,7 @@ svg {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 h1 {
@@ -802,15 +885,15 @@ footer p {
     
     .container-fluid {
         display: flex;
-        align-items: right;
-        justify-content: right;
+        align-items: center;
+        justify-content: space-between;
         flex-direction: column;
     }
 
     body.modo-escuro .container-fluid {
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: space-between;
         background-color: var(--dark--);
         flex-direction: column;
     }
@@ -820,8 +903,8 @@ footer p {
     .container-flex-properties {
         display: flex;
         flex-wrap: inherit;
-        align-items: right;
-        justify-content: right;
+        align-items: center;
+        justify-content: center;
       }
 
 
@@ -837,7 +920,7 @@ footer p {
     body.modo-escuro .container-fluid {
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: space-between;
         background-color: var(--dark--);
         flex-direction: row;
     }
@@ -849,7 +932,7 @@ footer p {
     .container-fluid {
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: space-between;
         flex-direction: row;
     }
 
@@ -857,7 +940,7 @@ footer p {
         display: flex;
         flex-wrap: inherit;
         align-items: center;
-        justify-content: right;
+        justify-content: center;
       }
 
 

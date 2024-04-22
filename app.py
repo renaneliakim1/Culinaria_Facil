@@ -209,6 +209,7 @@ def cadastro_receita():
         return redirect(url_for('pagina_login'))
 
 
+
 @app.route('/logout')
 def sair():
     session.pop('user', None)

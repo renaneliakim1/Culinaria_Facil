@@ -242,6 +242,7 @@ button.navbar-toggler {
     height: 2rem;
     margin: 15px;
     text-align: center;
+    border: 1px solid var(--check--);
 
 }
 

@@ -173,6 +173,7 @@ body.modo-escuro #buscar {
     border: none;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--check--);
 
 
 
@@ -318,6 +319,7 @@ button.navbar-toggler {
     border: none;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--check--);
 
 
 

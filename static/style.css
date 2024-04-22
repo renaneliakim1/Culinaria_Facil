@@ -186,10 +186,27 @@ body.modo-escuro h1 {
 
 }
 
-
+body.modo-escuro h3 {
+    color: var(--white);
+}
+body.modo-escuro p {
+    color: var(--white);
+}
 body.modo-escuro label {
+    color: #fbfbfb;
+}
+
+
+body.modo-escuro p.card-text {
     color: var(--black);
 }
+
+
+body.modo-escuro #resultados{
+    background-color: transparent;
+}
+
+
 
 header{display: flex;
     justify-content: space-between;

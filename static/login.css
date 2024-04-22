@@ -23,7 +23,7 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #FCF3E5;
+    --card--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
@@ -523,11 +523,12 @@ svg {
 .imagem {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 
 .imagem img {
-    width: 70%;
+    width: 95%;
     height: 90%;
 }
 

@@ -24,6 +24,7 @@
     --gray: #969696;
     --gray-2: #d3d3d3;
     --card--: #ffc975;
+    --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
@@ -408,7 +409,7 @@ input.form-control.me-2{
     flex-direction: row;
     width: 100%;
     padding: 20px;
-    background-color: var(--card--);
+    background-color: var(--form--);
     border-radius: 8px;
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     border-radius: 4px;

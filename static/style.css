@@ -23,7 +23,8 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #f8dfb8;
+    --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
@@ -236,10 +237,9 @@ section img{
     margin-top: 10px;
 
 }
-/* .card {
-    background-color: #ac2020;
-    color: #000000;
-} */
+ .card {
+    background-color: var(--card--);
+}
 
 
 body.modo-escuro #toggle-mode label {

@@ -581,6 +581,31 @@ input .input-group{
 }
 
 
+#password {
+    width: 100%;
+}
+
+.fa{
+    position: fixed;
+    margin: 10px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+    justify-content: right; 
+
+}
+
+
 
 
 #receitas{

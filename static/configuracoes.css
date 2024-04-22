@@ -476,7 +476,7 @@ h1{
 
 .input-group{
     display: flex;
-    justify-content: center;
+    justify-content: right;  
     padding: 1rem;
     width: 100%;
 } 
@@ -580,6 +580,11 @@ input .input-group{
 
 }
 
+#passwordField1{
+    height: 2.5rem;
+    
+}
+
 #password {
     width: 100%;
 }
@@ -587,6 +592,7 @@ input .input-group{
 .fa{
     position: fixed;
     margin: 10px;
+    z-index: 9999;
 }
 
 .input-container {

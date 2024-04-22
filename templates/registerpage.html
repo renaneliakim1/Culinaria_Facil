@@ -9,7 +9,7 @@
     {% set alertas = get_flashed_messages() %}
     {% if alertas %}
     {% for alerta in alertas %}
-    <div class="alert-messege">{{ alerta }} <a href="/login"> Login</a></div>
+    <div class="alert-messege">{{ alerta }}</div>
     {% endfor %}
     {% endif %}
     <h1>Cadastro</h1>
@@ -26,6 +26,13 @@
             {{ form.registro_email.label }}
             {{ form.registro_email() }}
             {% for error in form.registro_email.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.registro_cpf.label }}
+            {{ form.registro_cpf() }}
+            {% for error in form.registro_cpf.errors %}
                 <div class="error-message">{{ error }}</div>
             {% endfor %}
         </div>

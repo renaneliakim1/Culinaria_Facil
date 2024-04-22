@@ -55,6 +55,12 @@
                 <div class="error-message">{{ error }}</div>
             {% endfor %}
         </div>
+        <div>
+            {{ form.imagem_receita.label }}: {{ form.imagem_receita }}
+            {% for error in form.imagem_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
         <input type="submit" value="Cadastro_receita">
     </form>
 </body>

@@ -167,7 +167,7 @@ body.modo-escuro footer p {
 /* navbar */
 .nav-item {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 /* option #menu dessabled */
@@ -208,7 +208,7 @@ body.modo-escuro footer p {
     outline: none;
     height: 2rem;
     margin: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 #acesso:hover {
@@ -271,7 +271,7 @@ svg {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
 
 }
 

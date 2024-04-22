@@ -128,7 +128,7 @@ body.modo-escuro #acesso {
     font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
 
 }
@@ -190,10 +190,10 @@ body.modo-escuro label {
     color: var(--black);
 }
 
-header{display: flex;
+/* header{display: flex;
     justify-content: left;
     flex-wrap: wrap;
-}
+} */
 
 .navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;
@@ -261,7 +261,7 @@ body.modo-escuro footer p {
 /* navbar */
 .nav-item {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 /* option #menu dessabled */
@@ -281,6 +281,7 @@ body.modo-escuro footer p {
     justify-content: space-between;
   }
 
+
 /* make navbar transparent */
 .bg-body-tertiary {
     --bs-bg-opacity: 0;
@@ -295,7 +296,7 @@ body.modo-escuro footer p {
     font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
 }
 
@@ -366,7 +367,7 @@ svg {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
     font-size: 0.8rem;
 
 }
@@ -862,7 +863,7 @@ footer p {
     }
 
   
-    header {
+  /*   header {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -873,7 +874,7 @@ footer p {
 
 
     } 
-
+ */
 
     
     .container-fluid {

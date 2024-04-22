@@ -130,7 +130,7 @@ body.modo-escuro #acesso {
     font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
 
 }
@@ -262,7 +262,7 @@ body.modo-escuro footer p {
 /* navbar */
 .nav-item {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 /* option #menu dessabled */
@@ -297,7 +297,7 @@ body.modo-escuro footer p {
     font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
 }
 
@@ -368,7 +368,7 @@ svg {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
     font-size: 0.8rem;
 
 }

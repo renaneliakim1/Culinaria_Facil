@@ -3,6 +3,8 @@ from flask_bcrypt import Bcrypt
 from forms import FormularioRegistro, FormularioLogin, FormularioReceita
 import mysql.connector
 from datetime import datetime
+import os
+from werkzeug.utils import secure_filename
 import email_validator
 
 
@@ -15,8 +17,10 @@ except:
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-
+app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['SECRET_KEY'] = '34#%#$tFDBXCBGHThfd4¨%$28*(86'
+app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+
 
 
 @app.route('/')
@@ -180,6 +184,19 @@ def cadastro_receita():
     if 'user' in session:
         form = FormularioReceita()
         if form.validate_on_submit():
+            imagem_receita = form.imagem_receita.data
+            formato_imagem = ('.png', '.jpg', '.jpeg')
+            if any(imagem_receita.endswith(formato_imagem) for formato in formato_imagem):
+                arquivo = secure_filename(imagem_receita.filename)
+                caminho_completo = os.path.join(app.config['UPLOAD_FOLDER'], arquivo)
+                with open(imagem_receita, 'rb') as f:
+                    f.save(caminho_completo)
+            else:
+                if imagem_receita:
+                    flash("O arquivo não termina com nenhum dos sufixos especificados.")
+                    return redirect(url_for('cadastro_receita'))
+                else:
+                    print('Upload feito sem imagem')
             titulo_receita = form.titulo_receita.data
             descricao_redeita = form.descricao_receita.data
             instrucoes_redeita = form.instrucoes_receita.data
@@ -209,12 +226,12 @@ def cadastro_receita():
         return redirect(url_for('pagina_login'))
 
 
-
 @app.route('/logout')
 def sair():
     session.pop('user', None)
     return redirect(url_for('pagina_inicial'))
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    with app.app_context():
+        app.run(debug=True)

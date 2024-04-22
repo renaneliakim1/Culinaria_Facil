@@ -80,6 +80,7 @@ def pagina_registro():
         if form.validate_on_submit():
             registro_nome = form.registro_nome.data
             registro_email = form.registro_email.data
+            registro_cpf = form.registro_cpf.data
             registro_senha = form.registro_senha.data
             cursor = database_connection.cursor()
             consulta_email = 'SELECT email FROM usuario WHERE email = %s'
@@ -87,18 +88,22 @@ def pagina_registro():
             resultado = cursor.fetchone()
             cursor.close()
             if resultado:
-                flash('Conta já Existe. Faça ')
+                flash('Conta já Existe. Faça Login')
                 return redirect(url_for('pagina_registro'))
             else:
-                senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
-                inserir_dados = 'INSERT INTO usuario(nome, email, senha) VALUES (%s, %s, %s)'
-                dados_usuario = (registro_nome, registro_email, senha_hasheada)
-                cursor = database_connection.cursor()
-                cursor.execute(inserir_dados, dados_usuario)
-                database_connection.commit()
-                cursor.close()
-                flash('Conta Criada com Sucesso. Faça Login')
-                return redirect(url_for('pagina_login'))
+                if registro_cpf.isnumeric():
+                    senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
+                    inserir_dados = 'INSERT INTO usuario(nome, email, cpf, senha) VALUES (%s, %s, %s, %s)'
+                    dados_usuario = (registro_nome, registro_email, registro_cpf, senha_hasheada)
+                    cursor = database_connection.cursor()
+                    cursor.execute(inserir_dados, dados_usuario)
+                    database_connection.commit()
+                    cursor.close()
+                    flash('Conta Criada com Sucesso. Faça Login')
+                    return redirect(url_for('pagina_login'))
+                else:
+                    flash('Digite apenas números no CPF')
+                    return redirect(url_for('pagina_registro'))
     return render_template('registerpage.html', form=form)
 
 

@@ -394,6 +394,12 @@ svg {
 }
 
 
+.form-check-input:checked {
+    background-color: #010a18;
+    border-color: #ffffff;
+}
+
+
 
 .btn-outline-success {
     background-color: var(--primary-color);

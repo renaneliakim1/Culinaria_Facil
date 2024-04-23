@@ -23,7 +23,7 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #f8dfb8;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
@@ -362,6 +362,12 @@ svg {
 }
 
 
+.form-check-input:checked {
+    background-color: #010a18;
+    border-color: #ffffff;
+}
+
+
 
 .btn-outline-success {
     background-color: var(--primary-color);
@@ -481,6 +487,14 @@ h3 {
 .card {
     transition: 500ms linear;
 
+}
+
+
+.card-body {
+    background-color: var(--card--);
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
 }
 
 .card:hover {

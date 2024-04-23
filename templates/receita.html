@@ -271,37 +271,23 @@
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
   </div>
 
- 
+  <div class="comentario">
+    <h3>Escreva um comentário</h3>
+    <label for="comentario"></label>
+    <textarea id="comentario" name="comentario" rows="4" required
+      placeholder="Escreva sua experiencia com a receita...">
+    </textarea>
 
-
+    
+    <div class="botoes">
+      <input type="submit" value="Enviar" id="enviar">
+      <input type="submit" value="Limpar " id="limpar">
+    </div>
+  </div>
 
   <button onclick="topFunction()" id="myBtn" title="Cadastre uma Receita">
     <img src="/imgs/botaoflutuante3.png" width="140rem" height="150rem" alt="Logo" /><br>
   </button>
-
-  <script>
-    window.onscroll = function () { scrollFunction() };
-
-    /*  function scrollFunction() {
-       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         document.getElementById("myBtn").style.display = "block";
-       } else {
-         document.getElementById("myBtn").style.display = "none";
-       }
-     } */
-
-    function topFunction() {
-      // Redirecionar para o link desejado
-      window.location.href = "/templates/cadastro_receita.html";
-    }
-
-
-  </script>
-
-
-
-
-
 
   <footer>
     <p>
@@ -311,7 +297,9 @@
   </footer>
 </body>
 
+
 <script src="/js/modo.-escuro.js"></script>
+<script src="/js/limpartexto.js"></script>
 <script src="/js/topFunction.js"></script>
 
 </html>

@@ -156,8 +156,8 @@ body.modo-escuro footer p {
 
 #logo img {
     display: flex;
-    width: 12rem;
-    height: 5rem;
+    width: 5rem;
+    height: 4rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;

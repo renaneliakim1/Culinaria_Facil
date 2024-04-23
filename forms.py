@@ -21,6 +21,7 @@ class FormularioLogin(FlaskForm):
     submit_login = SubmitField('Login')
 
 
+
 class FormularioReceita(FlaskForm):
     titulo_receita = StringField('Titulo', validators=[validators.DataRequired()])
     descricao_receita = TextAreaField('Descricao', validators=[validators.DataRequired()])

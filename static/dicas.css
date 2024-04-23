@@ -329,6 +329,12 @@ button.navbar-toggler {
 }
 
 
+
+.form-switch .form-check-input{
+  margin-left: -1.5em;
+}
+
+
 #buscar {
   width: 9rem;
 

@@ -373,6 +373,9 @@ svg {
     border-color: #ffffff;
 }
 
+.form-switch .form-check-input{
+    margin-left: -2em;
+}
 
 .btn-outline-success {
     background-color: var(--primary-color);

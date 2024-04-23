@@ -392,6 +392,10 @@ svg {
 }
 
 
+.form-switch .form-check-input{
+    margin-left: -1.5em;
+}
+
 .form-check-input:checked {
     background-color: #010a18;
     border-color: #ffffff;

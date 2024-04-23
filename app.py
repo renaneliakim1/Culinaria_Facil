@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, redirect, url_for, session, flash
 from flask_bcrypt import Bcrypt
 from forms import FormularioRegistro, FormularioLogin, FormularioReceita
 import mysql.connector

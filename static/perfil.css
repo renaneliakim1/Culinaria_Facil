@@ -46,7 +46,7 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: var(--card--);
+    color: var(--white);
 
 }
 
@@ -414,12 +414,20 @@ section h1 {
 
 #saibamais{
     font-size: 0.6rem;
+    
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    border: var(--primary-color);
+
+
   
 }
     
 #saibamais:hover{
     background-color: #a33f37; 
 }
+
 
 
 .form-check {

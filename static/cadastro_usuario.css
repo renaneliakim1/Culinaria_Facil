@@ -47,7 +47,7 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: var(--card--);
+    color: var(--white);
 
 }
 
@@ -600,7 +600,7 @@ footer p {
     .container {
         display: flex;
         flex-direction: column-reverse;
-        width: 100%;
+        width: 91%;
         margin: 20px auto;
         padding: 20px;
         background-color: var(--card--);

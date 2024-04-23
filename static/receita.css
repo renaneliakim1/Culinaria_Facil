@@ -46,7 +46,7 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: var(--card--);
+    color: var(--white);
 
 }
 
@@ -220,6 +220,11 @@ body.modo-escuro .ingredientes li {
 
 }
 
+
+body.modo-escuro #save-receita span{
+  color: var(--white);
+} 
+
 header{display: flex;
     justify-content: left;
     flex-wrap: wrap;
@@ -247,7 +252,7 @@ section{
 }
 
 section img{
-    border-radius: 50%;
+    border-radius: 8px;
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
@@ -523,13 +528,19 @@ section {
   flex-direction: column;
   align-items: center;
 
-
 }
-
+/* 
+img.d-block.w-100{
+  width: 150px;
+  height: 150px;
+}
+ */
 
 .idusuario {
   font-size: 0.5rem;
 }
+
+
 
 
 .rating:not(:checked)>input {

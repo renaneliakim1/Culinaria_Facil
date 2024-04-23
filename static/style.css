@@ -557,6 +557,18 @@ label {
 }
 
 
+
+#saibamais{
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+}
+    
+#saibamais:hover{
+        background-color: #a33f37; 
+}
+    
+
 .card {
     width: 15rem;
 

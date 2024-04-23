@@ -483,7 +483,7 @@ input[type="submit"] {
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     outline: none;
     height: 2.5rem;
 
@@ -836,13 +836,12 @@ footer p {
         align-items: center;
     }
 
-   
     #filtro {
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        justify-content: left;
-        align-items: center;
-
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 2rem);
+        padding: 1rem;
+        justify-content: center;
 
     }
 

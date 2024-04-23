@@ -7,6 +7,7 @@
 <body>
 {% for receita in resultado_receita %}
     <H2>{{ receita[1] }} </H2>
+    <img src="/static/uploads\{{ receita[10] }}"
     <p>Por: <a href="/perfil/{{ receita[8] }}">{{ receita[7] }} </a></p>
     <p>Postado em: {{ receita[9] }}</p>
     <p>Descrição</p>

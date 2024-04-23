@@ -19,7 +19,7 @@ except:
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['SECRET_KEY'] = '34#%#$tFDBXCBGHThfd4¨%$28*(86'
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 
@@ -30,7 +30,9 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 @app.route('/')
 def pagina_inicial():
     if 'user' in session:
-        return render_template('index.html', user=session['user'])
+        imagem_perfil = os.path.join(app.config['UPLOAD_FOLDER'], session['user'][4])
+        print(imagem_perfil)
+        return render_template('index.html', user=session['user'], imagem_perfil=imagem_perfil)
     else:
         return render_template('index.html')
 
@@ -53,10 +55,15 @@ def pagina_receitas(pagina):
 @app.route('/receita/<int:receita_id>')
 def pagina_receita(receita_id):
     cursor = database_connection.cursor()
-    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
+    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
     cursor.execute(consulta_receita, (receita_id,))
     resultado_receita = cursor.fetchall()
-    return render_template('receita.html', resultado_receita=resultado_receita)
+    print(resultado_receita[0][10])
+    imagem_receita = os.path.join(app.config['UPLOAD_FOLDER'], resultado_receita[0][10])
+    imagem_perfil = os.path.join(app.config['UPLOAD_FOLDER'], session['user'][4])
+    print(imagem_perfil)
+    print(imagem_receita)
+    return render_template('receita.html', resultado_receita=resultado_receita, imagem_receita=imagem_receita, imagem_perfil=imagem_perfil)
 
 
 @app.route('/minhas_receitas/<int:pagina>')
@@ -115,7 +122,7 @@ def pagina_registro():
                             os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
                                             secure_filename(nome_arquivo)))
                     else:
-                        nome_arquivo = "default_user.png"
+                        nome_arquivo = "default_user.jpg"
                     senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
                     inserir_dados = 'INSERT INTO usuario(nome, email, cpf,imagem_perfil, senha) VALUES (%s, %s, %s, %s, %s)'
                     dados_usuario = (registro_nome, registro_email, registro_cpf, nome_arquivo, senha_hasheada)
@@ -141,12 +148,12 @@ def pagina_login():
             login_email = form.login_email.data
             login_senha = form.login_senha.data
             cursor = database_connection.cursor()
-            consulta_conta = 'SELECT id, nome,email, senha FROM usuario WHERE email = %s'
+            consulta_conta = 'SELECT id, nome,email, senha, imagem_perfil FROM usuario WHERE email = %s'
             cursor.execute(consulta_conta, (login_email,))
             resultado = cursor.fetchall()
             cursor.close()
             if resultado:
-                id_verificado, nome_verificado, email_verificado, senha_verificada = resultado[0]
+                id_verificado, nome_verificado, email_verificado, senha_verificada, imagem_perfil_verificada = resultado[0]
                 verificar_senha = bcrypt.check_password_hash(senha_verificada, login_senha)
                 if verificar_senha:
                     session['user'] = resultado[0]
@@ -205,8 +212,6 @@ def cadastro_receita():
         form = FormularioReceita()
         if form.validate_on_submit():
             imagem_receita = form.imagem_receita.data
-            print(imagem_receita)
-            print(imagem_receita.filename)
             if imagem_receita:
                 upload_imagem = True
             else:
@@ -230,7 +235,7 @@ def cadastro_receita():
                     arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
                                               secure_filename(nome_arquivo)))
                 else:
-                    nome_arquivo = 'receita_default'
+                    nome_arquivo = 'receita_default.jpg'
                 id_categoria = resultado[0][0]
                 id_usuario = session['user'][0]
                 data_postagem = datetime.now().strftime('%Y-%m-%d %H:%M:%S')

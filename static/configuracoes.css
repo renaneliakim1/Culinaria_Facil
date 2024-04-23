@@ -123,6 +123,10 @@ body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
+.dropdown-menu{
+    background-color: var(--gray-2);
+}
+
 
 body.modo-escuro #acesso {
     cursor: pointer;

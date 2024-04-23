@@ -13,7 +13,7 @@
     {% endfor %}
     {% endif %}
     <h1>Login</h1>
-    <form method="POST" action="">
+    <form method="POST" action="" >
         {{ form.csrf_token }}
         <div>
             {{ form.login_email.label }}: {{ form.login_email }}

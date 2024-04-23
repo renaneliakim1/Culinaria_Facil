@@ -5,6 +5,8 @@ import mysql.connector
 from datetime import datetime
 import os
 from werkzeug.utils import secure_filename
+import hashlib
+import uuid
 import email_validator
 
 
@@ -20,6 +22,8 @@ bcrypt = Bcrypt(app)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['SECRET_KEY'] = '34#%#$tFDBXCBGHThfd4¨%$28*(86'
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+
+
 
 
 
@@ -65,8 +69,8 @@ def minhas_receita(pagina):
         resultado = cursor.fetchall()
         inicio_pagina = (pagina-1)*10
         fim_pagina = pagina*10
-        resultado_receita= resultado[inicio_pagina:fim_pagina]
-        if len(resultado_receita) >0:
+        resultado_receita = resultado[inicio_pagina:fim_pagina]
+        if len(resultado_receita) > 0:
             return render_template('usuario_receitas.html', resultado_receita=resultado_receita)
         else:
             flash("Você não possui receitas cadastradas.")
@@ -82,12 +86,19 @@ def pagina_registro():
     else:
         form = FormularioRegistro()
         if form.validate_on_submit():
+            imagem_perfil = form.imagem_perfil.data
+            print(imagem_perfil)
+            if imagem_perfil:
+                upload_imagem = True
+            else:
+                upload_imagem = False
+                flash('Perfil sem foto!')
             registro_nome = form.registro_nome.data
             registro_email = form.registro_email.data
             registro_cpf = form.registro_cpf.data
             registro_senha = form.registro_senha.data
             cursor = database_connection.cursor()
-            consulta_email = 'SELECT email FROM usuario WHERE email = %s'
+            consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s'
             cursor.execute(consulta_email, (registro_email,))
             resultado = cursor.fetchone()
             cursor.close()
@@ -96,9 +107,18 @@ def pagina_registro():
                 return redirect(url_for('pagina_registro'))
             else:
                 if registro_cpf.isnumeric():
+                    if upload_imagem:
+                        nome_arquivo = hashlib.sha1(
+                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_perfil.filename
+                        arquivo = form.imagem_perfil.data
+                        arquivo.save(
+                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
+                                            secure_filename(nome_arquivo)))
+                    else:
+                        nome_arquivo = "default_user.png"
                     senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
-                    inserir_dados = 'INSERT INTO usuario(nome, email, cpf, senha) VALUES (%s, %s, %s, %s)'
-                    dados_usuario = (registro_nome, registro_email, registro_cpf, senha_hasheada)
+                    inserir_dados = 'INSERT INTO usuario(nome, email, cpf,imagem_perfil, senha) VALUES (%s, %s, %s, %s, %s)'
+                    dados_usuario = (registro_nome, registro_email, registro_cpf, nome_arquivo, senha_hasheada)
                     cursor = database_connection.cursor()
                     cursor.execute(inserir_dados, dados_usuario)
                     database_connection.commit()
@@ -185,18 +205,13 @@ def cadastro_receita():
         form = FormularioReceita()
         if form.validate_on_submit():
             imagem_receita = form.imagem_receita.data
-            formato_imagem = ('.png', '.jpg', '.jpeg')
-            if any(imagem_receita.endswith(formato_imagem) for formato in formato_imagem):
-                arquivo = secure_filename(imagem_receita.filename)
-                caminho_completo = os.path.join(app.config['UPLOAD_FOLDER'], arquivo)
-                with open(imagem_receita, 'rb') as f:
-                    f.save(caminho_completo)
+            print(imagem_receita)
+            print(imagem_receita.filename)
+            if imagem_receita:
+                upload_imagem = True
             else:
-                if imagem_receita:
-                    flash("O arquivo não termina com nenhum dos sufixos especificados.")
-                    return redirect(url_for('cadastro_receita'))
-                else:
-                    print('Upload feito sem imagem')
+                upload_imagem = False
+                flash('Receita Sem Imagem!')
             titulo_receita = form.titulo_receita.data
             descricao_redeita = form.descricao_receita.data
             instrucoes_redeita = form.instrucoes_receita.data
@@ -209,11 +224,18 @@ def cadastro_receita():
             cursor.execute(consulta_categoria, (categoria_receita,))
             resultado = cursor.fetchall()
             if resultado:
+                if upload_imagem:
+                    nome_arquivo = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_receita.filename
+                    arquivo = form.imagem_receita.data
+                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
+                                              secure_filename(nome_arquivo)))
+                else:
+                    nome_arquivo = 'receita_default'
                 id_categoria = resultado[0][0]
                 id_usuario = session['user'][0]
                 data_postagem = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                inserir_dados = 'INSERT INTO receitas (Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, CategoriaID, AutorID, data_hora) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)'
-                dados_receita = (titulo_receita, descricao_redeita, instrucoes_redeita, ingredientes_receita, tempo_preparo, dificuldade_receita, id_categoria, id_usuario, data_postagem)
+                inserir_dados = 'INSERT INTO receitas (Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, CategoriaID, AutorID, data_hora, imagem_receita) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
+                dados_receita = (titulo_receita, descricao_redeita, instrucoes_redeita, ingredientes_receita, tempo_preparo, dificuldade_receita, id_categoria, id_usuario, data_postagem, nome_arquivo)
                 cursor = database_connection.cursor()
                 cursor.execute(inserir_dados, dados_receita)
                 database_connection.commit()
@@ -232,6 +254,8 @@ def sair():
     return redirect(url_for('pagina_inicial'))
 
 
+
 if __name__ == "__main__":
     with app.app_context():
         app.run(debug=True)
+

@@ -13,7 +13,7 @@
     {% endfor %}
     {% endif %}
     <h1>Cadastro</h1>
-    <form method="post" action="">
+    <form method="post" action="" enctype="multipart/form-data">
         {{ form.csrf_token }}
         <div>
             {{ form.registro_nome.label }}
@@ -33,6 +33,12 @@
             {{ form.registro_cpf.label }}
             {{ form.registro_cpf() }}
             {% for error in form.registro_cpf.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.imagem_perfil.label }}: {{ form.imagem_perfil() }}
+            {% for error in form.imagem_perfil.errors %}
                 <div class="error-message">{{ error }}</div>
             {% endfor %}
         </div>

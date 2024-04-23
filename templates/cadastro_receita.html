@@ -11,7 +11,7 @@
     <div class="alert-messege">{{ alerta }}</div>
     {% endfor %}
     {% endif %}
-<form method="POST" action="">
+<form method="POST" action="" enctype="multipart/form-data">
         {{ form.csrf_token }}
         <div>
             {{ form.titulo_receita.label }}: {{ form.titulo_receita }}
@@ -56,7 +56,7 @@
             {% endfor %}
         </div>
         <div>
-            {{ form.imagem_receita.label }}: {{ form.imagem_receita }}
+            {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
             {% for error in form.imagem_receita.errors %}
                 <div class="error-message">{{ error }}</div>
             {% endfor %}

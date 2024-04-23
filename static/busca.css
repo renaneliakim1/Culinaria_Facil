@@ -125,6 +125,9 @@ body.modo-escuro .dropdown-menu.show{
     background-color: var(--gray-2);
 }
 
+#flexSwitchCheckDefault{
+    border-color: #000000;
+}
 
 body.modo-escuro #acesso {
     cursor: pointer;

@@ -423,6 +423,10 @@ svg {
   font-size: 0.6rem;
 }
 
+#flexSwitchCheckDefault{
+  border-color: #000000;
+}
+
 
 
 .form-switch .form-check-input{

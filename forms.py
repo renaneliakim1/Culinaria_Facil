@@ -34,7 +34,9 @@ class FormularioReceita(FlaskForm):
     submit_receita = SubmitField('Cadastro_receita')
 
 
-
+class FormularioComentario(FlaskForm):
+    comentario_receita = TextAreaField('Comentário', validators=[validators.DataRequired()])
+    submit_receita = SubmitField('Comentar_receita')
 
 
 

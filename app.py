@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, session, flash
 from flask_bcrypt import Bcrypt
-from forms import FormularioRegistro, FormularioLogin, FormularioReceita
+from forms import FormularioRegistro, FormularioLogin, FormularioReceita, FormularioComentario
 import mysql.connector
 from datetime import datetime
 import os
@@ -52,18 +52,32 @@ def pagina_receitas(pagina):
         return redirect(url_for('pagina_inicial'))
 
 
-@app.route('/receita/<int:receita_id>')
+@app.route('/receita/<int:receita_id>', methods=['GET', 'POST'])
 def pagina_receita(receita_id):
     cursor = database_connection.cursor()
     consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
     cursor.execute(consulta_receita, (receita_id,))
     resultado_receita = cursor.fetchall()
-    print(resultado_receita[0][10])
-    imagem_receita = os.path.join(app.config['UPLOAD_FOLDER'], resultado_receita[0][10])
-    imagem_perfil = os.path.join(app.config['UPLOAD_FOLDER'], session['user'][4])
-    print(imagem_perfil)
-    print(imagem_receita)
-    return render_template('receita.html', resultado_receita=resultado_receita, imagem_receita=imagem_receita, imagem_perfil=imagem_perfil)
+    cursor.close()
+    cursor3 = database_connection.cursor()
+    consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id ORDER BY data_hora DESC'
+    cursor3.execute(consulta_receita)
+    resultado_comentarios = cursor3.fetchall()
+    cursor3.close()
+    if 'user' in session:
+        form = FormularioComentario()
+        if form.validate_on_submit():
+            comentario = form.comentario_receita.data
+            data_postagem = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            inserir_comentario = 'INSERT INTO comentarios(receitaID, usuarioID, comentario ,data_hora) VALUES (%s, %s, %s, %s)'
+            dados_comentario = (receita_id, session['user'][0],comentario, data_postagem)
+            cursor2 = database_connection.cursor()
+            cursor2.execute(inserir_comentario, dados_comentario)
+            database_connection.commit()
+            return redirect(url_for('pagina_receita',receita_id=receita_id))
+        return render_template('receita.html', resultado_receita=resultado_receita, user=session['user'], form=form, resultado_comentarios=resultado_comentarios)
+    else:
+        return render_template('receita.html', resultado_receita=resultado_receita, resultado_comentarios=resultado_comentarios)
 
 
 @app.route('/minhas_receitas/<int:pagina>')

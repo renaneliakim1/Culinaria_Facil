@@ -7,7 +7,7 @@
 <body>
 {% for receita in resultado_receita %}
     <H2>{{ receita[1] }} </H2>
-    <img src="/static/uploads\{{ receita[10] }}"
+    <img src="/static/uploads\{{ receita[10] }}" alt="pic1">
     <p>Por: <a href="/perfil/{{ receita[8] }}">{{ receita[7] }} </a></p>
     <p>Postado em: {{ receita[9] }}</p>
     <p>Descrição</p>
@@ -18,10 +18,32 @@
     <p>{{ receita[3] }} </p>
     <p>Ingredientes </p>
     <p>{{ receita[4] }} </p>
+     {% if user %}
+    <form method="POST" action="">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.comentario_receita.label }}: {{ form.comentario_receita }}
+            {% for error in form.comentario_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <input type="submit" value="Comentar">
+    </form>
+    {% else %}
+    <p>Faça <a href="/login">Login</a> para comentar</p>
+    {% endif %}
+    {% if resultado_comentarios %}
+    <p> Últimos comentários:</p>
+    {% for comentario in resultado_comentarios %}
+    <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 10px">
+    <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <p> Postado em: {{ comentario[3] }}</p>
+        <p>Comentou: {{ comentario[2] }}</p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>Nenhum comentário</p>
+    {% endif %}
 
-    <p>{{ receita[] }} </p>
-    <p>{{ receita[] }} </p>
-    <p>{{ receita[] }} </p>
 {% endfor %}
 </body>
 </html>

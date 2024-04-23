@@ -610,6 +610,23 @@ input .input-group {
     z-index: 9999;
 }
 
+#eye1 {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-180%);
+    cursor: pointer;
+}
+
+
+#eye2 {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-180%);
+    cursor: pointer;
+}
+
 .input-container {
     position: relative;
     display: flex;

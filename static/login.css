@@ -585,6 +585,15 @@ svg {
 }
 
 
+#eye {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-150%);
+    cursor: pointer;
+}
+
+
 .input-container {
     position: relative;
     display: flex;

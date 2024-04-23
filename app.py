@@ -195,10 +195,7 @@ def pagina_perfil(id_usuario):
         resultado_receitas = cursor.fetchall()
         cursor.close()
         if 'user' in session:
-            if session['user'][0] == resultado[0][0]:
-                return render_template('editar_perfil.html', resultado=resultado)
-            else:
-                return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas )
+            return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas, user=session['user'] )
         else:
             return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas)
     else:
@@ -266,6 +263,45 @@ def cadastro_receita():
     else:
         return redirect(url_for('pagina_login'))
 
+
+
+@app.route('/editar_receita/<int:id_receita_editar>', methods=['GET', 'POST'] )
+def editar_receita(id_receita_editar):
+    if 'user' in session:
+        cursor = database_connection.cursor()
+        consulta_receita = 'SELECT * FROM receitas inner join categorias on receitas.categoriaid = categorias.categoriaid WHERE ReceitaID= %s'
+        cursor.execute(consulta_receita, (id_receita_editar,))
+        resultado_receita = cursor.fetchall()
+        cursor.close()
+        if session['user'][0] == resultado_receita[0][8]:
+            form = FormularioReceita(titulo_receita=resultado_receita[0][1], descricao_receita=resultado_receita[0][2],
+                                     instrucoes_receita=resultado_receita[0][3], ingredientes_receita=resultado_receita[0][4],
+                                     tempo_preparo=resultado_receita[0][5], dificuldade_receita=resultado_receita[0][6],
+                                     categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][8])
+            if form.validate_on_submit():
+                cursor3 = database_connection.cursor()
+                categoria_receita = form.categoria_receita.data
+                consulta_categoria = 'SELECT * FROM categorias WHERE  categoriaNome= %s'
+                cursor3.execute(consulta_categoria, (categoria_receita,))
+                categoria_resultado = cursor3.fetchall()[0][0]
+                cursor3.close()
+                titulo_receita = form.titulo_receita.data
+                descricao_receita = form.descricao_receita.data
+                instrucoes_receita = form.instrucoes_receita.data
+                ingredientes_receita = form.ingredientes_receita.data
+                tempo_preparo = form.tempo_preparo.data
+                dificuldade_receita = form.dificuldade_receita.data
+                imagem_receita = form.imagem_receita.data.filename
+                cursor2 = database_connection.cursor()
+                dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, imagem_receita, id_receita_editar)
+                consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
+                cursor2.execute(consulta_receita, dados_receita)
+                database_connection.commit()
+                cursor2.close()
+                return redirect(url_for('pagina_receita', receita_id=id_receita_editar))
+            return render_template('editar_receita.html', resultado_receita=resultado_receita, form=form)
+    else:
+        return redirect(url_for('pagina_inicial'))
 
 @app.route('/logout')
 def sair():

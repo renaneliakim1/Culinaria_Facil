@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+{% set alertas = get_flashed_messages() %}
+    {% if alertas %}
+    {% for alerta in alertas %}
+    <div class="alert-messege">{{ alerta }}</div>
+    {% endfor %}
+    {% endif %}
+
 {% extends "navbar.html" %}
 
 

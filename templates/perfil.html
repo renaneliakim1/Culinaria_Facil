@@ -7,6 +7,9 @@
 <body>
 {% for usuario in resultado %}
     <p>nome: {{ usuario[1] }}</p>
+    {% if user[0] == usuario[0] %}
+    <a href="/editar_perfil/{{ usuario[0] }}"> Editar Perfil</a>
+    {% endif %}
 {% endfor %}
 {% if resultado_receitas %}
 <p>Receitas mais recentes:</p>

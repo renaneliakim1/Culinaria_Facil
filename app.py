@@ -31,7 +31,7 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 def pagina_inicial():
     if 'user' in session:
         imagem_perfil = os.path.join(app.config['UPLOAD_FOLDER'], session['user'][4])
-        print(imagem_perfil)
+        print(session['user'])
         return render_template('index.html', user=session['user'], imagem_perfil=imagem_perfil)
     else:
         return render_template('index.html')
@@ -119,8 +119,8 @@ def pagina_registro():
             registro_cpf = form.registro_cpf.data
             registro_senha = form.registro_senha.data
             cursor = database_connection.cursor()
-            consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s'
-            cursor.execute(consulta_email, (registro_email,))
+            consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s and cpf = %s'
+            cursor.execute(consulta_email, (registro_email, registro_cpf,))
             resultado = cursor.fetchone()
             cursor.close()
             if resultado:
@@ -239,6 +239,7 @@ def cadastro_receita():
             consulta_categoria = 'SELECT * FROM categorias WHERE  categoriaNome= %s'
             cursor.execute(consulta_categoria, (categoria_receita,))
             resultado = cursor.fetchall()
+            cursor.close()
             if resultado:
                 if upload_imagem:
                     nome_arquivo = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_receita.filename
@@ -311,10 +312,13 @@ def editar_receita(id_receita_editar):
                     ingredientes_receita = form.ingredientes_receita.data
                     tempo_preparo = form.tempo_preparo.data
                     dificuldade_receita = form.dificuldade_receita.data
-                    nome_imagem_deletar = resultado_receita[0][10]
-                    caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
-                    os.remove(caminho_deletar_imagem)
-                    print('antiga imagem deletada')
+                    if resultado_receita[0][10] == 'receita_default':
+                        pass
+                    else:
+                        nome_imagem_deletar = resultado_receita[0][10]
+                        caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
+                        os.remove(caminho_deletar_imagem)
+                        print('antiga imagem deletada')
                     cursor2 = database_connection.cursor()
                     dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, nome_arquivo, id_receita_editar)
                     consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
@@ -329,10 +333,108 @@ def editar_receita(id_receita_editar):
     else:
         return redirect(url_for('pagina_inicial'))
 
+
+
+@app.route('/editar_perfil/<int:id_usuario>', methods=['GET', 'POST'])
+def editar_perfil(id_usuario):
+    if 'user' in session:
+        cursor = database_connection.cursor()
+        consulta_perfil = 'SELECT * FROM usuario WHERE usuario.id= %s'
+        cursor.execute(consulta_perfil, (id_usuario,))
+        resultado_perfil = cursor.fetchall()
+        cursor.close()
+        if resultado_perfil:
+            if session['user'][0] == resultado_perfil[0][0]:
+                form = FormularioRegistro(registro_nome=resultado_perfil[0][1], registro_email=resultado_perfil[0][2],
+                                        registro_cpf=resultado_perfil[0][4], imagem_perfil=resultado_perfil[0][5])
+                if form.validate_on_submit():
+                    imagem_perfil = form.imagem_perfil.data
+                    if imagem_perfil:
+                        upload_imagem = True
+                    else:
+                        upload_imagem = False
+                    novo_nome = form.registro_nome.data
+                    novo_email = form.registro_email.data
+                    novo_cpf = form.registro_cpf.data
+                    nova_senha = form.registro_senha.data
+                    cursor = database_connection.cursor()
+                    consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s and cpf= %s'
+                    cursor.execute(consulta_email, (novo_email, novo_cpf))
+                    resultado_consulta = cursor.fetchall()
+                    cursor.close()
+                    if novo_cpf.isnumeric():
+                        if resultado_consulta:
+                            if resultado_consulta[0][0] == resultado_perfil[0][2] or resultado_consulta[0][1] == resultado_perfil[0][4]:
+                                atualizar_perfil = True
+                            else:
+                                atualizar_perfil = False
+                            if atualizar_perfil:
+                                if imagem_perfil:
+                                    nome_imagem_perfil = form.imagem_perfil.data.filename
+                                    novo_upload_imagem = True
+                                    if imagem_perfil.filename != nome_imagem_perfil:
+                                        pass
+                                else:
+                                    nome_imagem_perfil = resultado_perfil[0][5]
+                                    novo_upload_imagem = False
+                                if novo_upload_imagem:
+                                    nome_arquivo = hashlib.sha1(
+                                        str(uuid.uuid4()).encode('utf-8')).hexdigest() + nome_imagem_perfil
+                                    arquivo = form.imagem_perfil.data
+                                    arquivo.save(
+                                        os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                                                     app.config['UPLOAD_FOLDER'],
+                                                     secure_filename(nome_arquivo)))
+                                else:
+                                    nome_arquivo = resultado_perfil[0][5]
+                                senha_hasheada = bcrypt.generate_password_hash(nova_senha).decode('utf-8')
+                                cursor3 = database_connection.cursor()
+                                consulta_imagem = 'SELECT imagem_perfil FROM usuario WHERE usuario.id= %s'
+                                cursor3.execute(consulta_imagem, (id_usuario,))
+                                resultado_imagem = cursor3.fetchall()
+                                cursor3.close()
+                                if resultado_imagem:
+                                    if resultado_imagem[0][0] == 'default_user.jpg' or resultado_imagem[0][0] == nome_arquivo:
+                                        pass
+                                    else:
+
+                                        nome_imagem_deletar = resultado_imagem[0][0]
+                                        caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                                                                              app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
+
+                                        try:
+                                            os.remove(caminho_deletar_imagem)
+                                            print('apagado:' + nome_imagem_deletar)
+                                        except:
+                                            pass
+                                cursor2 = database_connection.cursor()
+                                atualizar_usuario = 'UPDATE usuario SET nome = %s, email = %s, senha = %s, imagem_perfil = %s where usuario.id= %s '
+                                cursor2.execute(atualizar_usuario, (novo_nome, novo_email, senha_hasheada, nome_arquivo, resultado_perfil[0][0]))
+                                database_connection.commit()
+                                cursor2.close()
+                                flash('Faça login novamente para ver as alterações')
+                                return redirect(url_for('sair'))
+                            else:
+                                flash('Credenciais CPF ou email já existe')
+                                return redirect(url_for('editar_perfil', id_usuario=id_usuario))
+                    else:
+                        flash('CPF precisa ser númerico')
+                        return redirect(url_for('editar_perfil', id_usuario=id_usuario))
+                return render_template('editar_perfil.html', form=form)
+            else:
+                return redirect(url_for('pagina_inicial'))
+        else:
+            return redirect(url_for('pagina_inicial'))
+    else:
+        print('teste3')
+        return redirect(url_for('pagina_inicial'))
+
+
 @app.route('/logout')
 def sair():
     session.pop('user', None)
     return redirect(url_for('pagina_inicial'))
+
 
 
 

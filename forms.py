@@ -2,27 +2,31 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, validators, PasswordField, SubmitField, TextAreaField, IntegerField, FileField, SelectField
 from flask_wtf.file import FileAllowed, MultipleFileField
 import mysql.connector
+from wtforms.widgets import Input
+
 
 
 def obter_categorias():
     try:
         database_connection = mysql.connector.connect(user='root', password='', host='localhost',
                                                       database='sitereceita')
-        print('Conexão com banco de dados bem sucedida')
+        print('Conexão com banco de dados bem sucedida no forms')
         cursor = database_connection.cursor()
         cursor.execute("SELECT categoriaNome FROM categorias")
-        print('aaaaa')
         categorias = cursor.fetchall()
         cursor.close()
         database_connection.close()
-        print('bbbb')
         choices = [(str(categoria[0]), categoria[0]) for categoria in categorias]
-        print('cccc')
         return choices
 
     except:
-        print('Erro ao conectar ao banco de dados')
+        print('Erro ao conectar ao banco de dados no forms')
         return []
+
+
+class RangeInput500(Input):
+    input_type = 'range'
+    input_attrs = {'min': '1', 'max': '500'}
 
 
 
@@ -51,7 +55,7 @@ class FormularioReceita(FlaskForm):
     descricao_receita = TextAreaField('Descricao', validators=[validators.DataRequired()])
     instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()])
     ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()])
-    tempo_preparo = IntegerField('Tempo de Preparo(minutos)', [validators.NumberRange(min=0, max=500)])
+    tempo_preparo = IntegerField('Tempo de Preparo(minutos)', widget=RangeInput500(), validators=[validators.DataRequired(), validators.InputRequired()])
     dificuldade_receita = SelectField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])
     imagem_receita = FileField('Imagem da Receita', validators=[ FileAllowed(['jpg', 'png', 'jpeg'])])

@@ -63,5 +63,10 @@
         </div>
         <input type="submit" value="Cadastro_receita">
     </form>
+    <script>
+        document.getElementById("tempo_preparo").oninput = function() {
+            document.getElementById("selectedValue").innerText = this.value;
+        }
+    </script>
 </body>
 </html>

@@ -97,16 +97,6 @@
                             </svg>Dicas</a>
                     </li>
 
-
-
-
-
-
-
-
-
-
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -203,6 +193,59 @@
           <span class="input-group-text" id="addon-wrapping">CPF*</span>
           <input type="text" class="form-control" name="cpf" size="9" id="dadoscpf" placeholder=" "  maxlength="9" required />
         </div>
+
+        <div class="dropzone">
+          <form class="dropzone-box">
+            <h2>Carregar e anexar arquivos
+            </h2>
+            <p>
+              Anexe imagens ou vídeos a sua receita
+            </p>
+            <div class="dropzone-area">
+              <div class="file-upload-icon">
+               <!--  <svg xmlns="http://www.w3.org/2000/svg" width="15rem" height="10rem" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                </svg> -->
+              </div>
+              <p>Clique para fazer upload</p>
+              <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
+  
+  
+              <p class="message">Nenhum arquivo selecionado
+              </p>
+            </div>
+  
+          </form>
+        </div>
+  
+  
+        <script>
+          document.getElementById('form-receita').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var nome = document.getElementById('nome').value;
+            var ingredientes = document.getElementById('ingredientes').value;
+            var instrucoes = document.getElementById('instrucoes').value;
+  
+            // Captura dos arquivos de imagem
+            var imagens = document.getElementById('imagens').files;
+  
+            // Verifica se foram selecionadas até três imagens
+            if (imagens.length > 3) {
+              alert("Selecione no máximo três imagens.");
+              return;
+            }
+  
+  
+          });
+        </script>
+      
+         
+      
+      
+        
       </div>
 
     </div>
@@ -279,6 +322,12 @@
     <button onclick="salvarEdicao()" id="salvar-seguranca">Salvar</button>
     <button onclick="cancelarEdicao()" id="cancelar-seguranca">Cancelar</button>
   </div> -->
+
+
+
+  
+  
+    
 
 
   <div id="receitas" class="tab-content">
@@ -383,7 +432,7 @@
     </p>
   </footer>
 </body>
-
+<script src="/js/script.js"></script>
 <script src="/js/modo.-escuro.js"></script>
 <script src="/js/topFunction.js"></script>
 

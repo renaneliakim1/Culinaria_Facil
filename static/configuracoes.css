@@ -28,6 +28,8 @@
     --dark--: #222;
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
+    --lite--:#f5ecde;
+
 
 
 }
@@ -37,7 +39,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: var(--gray-2);
+    background: var(--lite--);
 
 }
 
@@ -124,7 +126,7 @@ body.modo-escuro .dropdown-menu.show {
 }
 
 .dropdown-menu{
-    background-color: var(--gray-2);
+    background-color: var(--lite--);
 }
 
 

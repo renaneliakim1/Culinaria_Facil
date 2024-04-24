@@ -60,8 +60,8 @@ def pagina_receita(receita_id):
     resultado_receita = cursor.fetchall()
     cursor.close()
     cursor3 = database_connection.cursor()
-    consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id ORDER BY data_hora DESC'
-    cursor3.execute(consulta_receita)
+    consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id WHERE receitaID = %s ORDER BY data_hora DESC'
+    cursor3.execute(consulta_receita, (receita_id,))
     resultado_comentarios = cursor3.fetchall()
     cursor3.close()
     if 'user' in session:

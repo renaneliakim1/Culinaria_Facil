@@ -30,6 +30,7 @@ CategoriaID INT,
 AutorID INT,
 data_hora datetime,
 imagem_receita varchar(255),
+video varchar(255),
 FOREIGN KEY (CategoriaID) REFERENCES categorias(categoriaID),
 foreign key (autorID) references usuario(id)
 );

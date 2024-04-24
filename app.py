@@ -257,6 +257,7 @@ def cadastro_receita():
                 database_connection.commit()
                 cursor.close()
                 flash('Receita Cadastrada com Sucesso')
+                return redirect(url_for('pagina_receitas',pagina=1))
             else:
                 flash('Categoria não Existe')
         return render_template('cadastro_receita.html', form=form)
@@ -277,28 +278,53 @@ def editar_receita(id_receita_editar):
             form = FormularioReceita(titulo_receita=resultado_receita[0][1], descricao_receita=resultado_receita[0][2],
                                      instrucoes_receita=resultado_receita[0][3], ingredientes_receita=resultado_receita[0][4],
                                      tempo_preparo=resultado_receita[0][5], dificuldade_receita=resultado_receita[0][6],
-                                     categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][8])
+                                     categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][10])
             if form.validate_on_submit():
+                print(resultado_receita[0][10])
                 cursor3 = database_connection.cursor()
                 categoria_receita = form.categoria_receita.data
                 consulta_categoria = 'SELECT * FROM categorias WHERE  categoriaNome= %s'
                 cursor3.execute(consulta_categoria, (categoria_receita,))
-                categoria_resultado = cursor3.fetchall()[0][0]
+                categoria_resultado = cursor3.fetchall()
                 cursor3.close()
-                titulo_receita = form.titulo_receita.data
-                descricao_receita = form.descricao_receita.data
-                instrucoes_receita = form.instrucoes_receita.data
-                ingredientes_receita = form.ingredientes_receita.data
-                tempo_preparo = form.tempo_preparo.data
-                dificuldade_receita = form.dificuldade_receita.data
-                imagem_receita = form.imagem_receita.data.filename
-                cursor2 = database_connection.cursor()
-                dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, imagem_receita, id_receita_editar)
-                consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
-                cursor2.execute(consulta_receita, dados_receita)
-                database_connection.commit()
-                cursor2.close()
-                return redirect(url_for('pagina_receita', receita_id=id_receita_editar))
+                if categoria_resultado:
+                    imagem_receita = resultado_receita[0][10]
+                    if form.imagem_receita.data.filename:
+                        nova_upload_imagem = True
+                        nova_imagem_receita = form.imagem_receita.data.filename
+                        if imagem_receita != nova_imagem_receita:
+                            imagem_receita = nova_imagem_receita
+                    else:
+                        imagem_receita = resultado_receita[0][10]
+                        nova_upload_imagem = False
+                    if nova_upload_imagem:
+                        nome_arquivo = hashlib.sha1(
+                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_receita
+                        arquivo = form.imagem_receita.data
+                        arquivo.save(
+                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
+                                         secure_filename(nome_arquivo)))
+                    categoria_resultado = categoria_resultado[0][0]
+                    titulo_receita = form.titulo_receita.data
+                    descricao_receita = form.descricao_receita.data
+                    instrucoes_receita = form.instrucoes_receita.data
+                    ingredientes_receita = form.ingredientes_receita.data
+                    tempo_preparo = form.tempo_preparo.data
+                    dificuldade_receita = form.dificuldade_receita.data
+                    nome_imagem_deletar = resultado_receita[0][10]
+                    caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
+                    os.remove(caminho_deletar_imagem)
+                    print('antiga imagem deletada')
+                    cursor2 = database_connection.cursor()
+                    dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, nome_arquivo, id_receita_editar)
+                    consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
+                    cursor2.execute(consulta_receita, dados_receita)
+                    database_connection.commit()
+                    cursor2.close()
+                    return redirect(url_for('pagina_receita', receita_id=id_receita_editar))
+                else:
+                    flash('Receita não atualizada. Categoria não existe')
+                    return redirect(url_for('editar_receita', id_receita_editar=id_receita_editar))
             return render_template('editar_receita.html', resultado_receita=resultado_receita, form=form)
     else:
         return redirect(url_for('pagina_inicial'))

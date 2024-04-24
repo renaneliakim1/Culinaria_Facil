@@ -305,6 +305,8 @@ def editar_receita(id_receita_editar):
                         arquivo.save(
                             os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
                                          secure_filename(nome_arquivo)))
+                    else:
+                        nome_arquivo = resultado_receita[0][10]
                     categoria_resultado = categoria_resultado[0][0]
                     titulo_receita = form.titulo_receita.data
                     descricao_receita = form.descricao_receita.data
@@ -312,13 +314,16 @@ def editar_receita(id_receita_editar):
                     ingredientes_receita = form.ingredientes_receita.data
                     tempo_preparo = form.tempo_preparo.data
                     dificuldade_receita = form.dificuldade_receita.data
-                    if resultado_receita[0][10] == 'receita_default':
+                    if resultado_receita[0][10] == 'receita_default.jpg' or resultado_receita[0][10] == nome_arquivo:
                         pass
                     else:
-                        nome_imagem_deletar = resultado_receita[0][10]
-                        caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
-                        os.remove(caminho_deletar_imagem)
-                        print('antiga imagem deletada')
+                        try:
+                            nome_imagem_deletar = resultado_receita[0][10]
+                            caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
+                            os.remove(caminho_deletar_imagem)
+                            print('antiga imagem deletada')
+                        except:
+                            pass
                     cursor2 = database_connection.cursor()
                     dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, nome_arquivo, id_receita_editar)
                     consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
@@ -401,7 +406,6 @@ def editar_perfil(id_usuario):
                                         nome_imagem_deletar = resultado_imagem[0][0]
                                         caminho_deletar_imagem = os.path.join(os.path.abspath(os.path.dirname(__file__)),
                                                                               app.config['UPLOAD_FOLDER'], nome_imagem_deletar)
-
                                         try:
                                             os.remove(caminho_deletar_imagem)
                                             print('apagado:' + nome_imagem_deletar)

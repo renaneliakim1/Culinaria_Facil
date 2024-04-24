@@ -10,7 +10,7 @@
     <img src="/static/uploads\{{ receita[10] }}" alt="pic1">
     <p>Por: <a href="/perfil/{{ receita[8] }}">{{ receita[7] }} </a></p>
     <p>Postado em: {{ receita[9] }}</p>
-    {% if user[0] == receita[8]%}
+    {% if user[0] == receita[8] %}
     <a HREF="/editar_receita/{{ receita[0] }}">Editar</a>
     {% endif %}
     <p>Descrição</p>

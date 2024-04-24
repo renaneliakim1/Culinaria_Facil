@@ -108,7 +108,6 @@ def pagina_registro():
         form = FormularioRegistro()
         if form.validate_on_submit():
             imagem_perfil = form.imagem_perfil.data
-            print(imagem_perfil)
             if imagem_perfil:
                 upload_imagem = True
             else:
@@ -119,12 +118,12 @@ def pagina_registro():
             registro_cpf = form.registro_cpf.data
             registro_senha = form.registro_senha.data
             cursor = database_connection.cursor()
-            consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s and cpf = %s'
+            consulta_email = 'SELECT email,cpf FROM usuario WHERE email = %s or cpf = %s'
             cursor.execute(consulta_email, (registro_email, registro_cpf,))
-            resultado = cursor.fetchone()
+            resultado = cursor.fetchall()
             cursor.close()
             if resultado:
-                flash('Conta já Existe. Faça Login')
+                flash('Alguns dados únicos da Conta já existe. Tente com outro Email ou CPF ')
                 return redirect(url_for('pagina_registro'))
             else:
                 if registro_cpf.isnumeric():

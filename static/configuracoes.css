@@ -760,6 +760,13 @@ tr {
 
 }
 
+
+.dropzone h2,
+.dropzone p {
+    font-size: 1rem;
+}
+
+
 .dropzone-box h2 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -1072,6 +1079,32 @@ footer p {
 }
 
 
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+.dropzone-area {
+    width: 80%;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 8rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    height: 8rem;
+}
+
+
+}
 
 
 @media only screen and (max-width: 360px) {

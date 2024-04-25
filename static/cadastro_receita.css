@@ -92,14 +92,11 @@ body.modo-escuro .d-flex {
 
 }
 
-
-
 body.modo-escuro header {
 
     text-align: center;
 
 }
-
 
 body.modo-escuro .navbar-toggler-icon {
     color: #1DA1F2;
@@ -143,15 +140,11 @@ body.modo-escuro #acesso {
 }
 
 
-
-
-
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
     height: 25px;
 }
-
 
 
 .svg-branco path,
@@ -163,8 +156,6 @@ body.modo-escuro svg {
     fill: var(--white) !important;
     stroke: var(--white) !important;
 }
-
-
 
 
 body.modo-escuro #buscar {
@@ -185,8 +176,6 @@ body.modo-escuro #buscar {
     background-color: var(--dark--);
     border: 1px solid var(--check--);
 
-
-
 }
 
 
@@ -204,6 +193,17 @@ body.modo-escuro label {
     justify-content: left;
     flex-wrap: wrap;
 } */
+
+
+body.modo-escuro .form-check-input:checked {
+    background-color: #dde1e6;
+    border-color: #ffffff;
+}
+
+
+
+
+
 
 .navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;
@@ -238,10 +238,6 @@ body.modo-escuro #toggle-mode label {
     font-size: 0.6rem;
     color: var(--white);
 }
-
-
-
-
 
 
 body.modo-escuro footer p {
@@ -389,18 +385,14 @@ svg {
     color: var(--black);
 }
 
-#flexSwitchCheckDefault{
-    border-color: #000000;
-}
 
-.form-check-input:checked {
-    background-color: #010a18;
-    border-color: #ffffff;
-}
 
-.form-switch .form-check-input{
-    margin-left: -2.5em;
-}
+
+
+
+
+
+
 
 .btn-outline-success {
     background-color: var(--primary-color);

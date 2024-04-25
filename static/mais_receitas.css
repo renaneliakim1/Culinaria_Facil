@@ -142,7 +142,7 @@ body.modo-escuro #acesso {
 
 body.modo-escuro #flexSwitchCheckDefault{
     border-color: #000000;
-    background-color: var(--dark--);
+    background-color: var(--lite--);
 }
 
 
@@ -218,12 +218,12 @@ section img{
     border-radius: 50%;
     width: 10rem;
     height: 10 rem;
-    margin-top: 10px;
 
 }
 .card {
     background-color: #ac2020;
     color: #000000;
+
 }
 
 
@@ -370,20 +370,10 @@ svg {
 }
 
 
-#flexSwitchCheckDefault{
-    border-color: #000000;
-    background-color: var(--white);
-}
-
-
 .form-switch .form-check-input{
     margin-left: -3em;
 }
 
-.form-check-input:checked {
-    background-color: #010a18;
-    border-color: #ffffff;
-}
 
 
 
@@ -433,6 +423,7 @@ section h1 {
     align-items: center;
     font-size: 1.5rem;
 
+
 }
 
 
@@ -471,8 +462,9 @@ section h1 {
 }
 
 
-h3 {
+h1{
     text-align: center;
+    font-size: 1.5rem;
 }
 
 
@@ -528,9 +520,65 @@ h3 {
 
 
 
-h5 {
-    display: block;
-    height: 2.7rem;
+
+.rating{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+
+.rating label{
+    margin: 0px;
+}
+
+
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffa723;
+  }
+  
+  
+
+
+
+.date{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.date p{
+   font-size: 0.6rem;
 }
 
 

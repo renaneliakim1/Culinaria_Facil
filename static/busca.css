@@ -376,10 +376,7 @@ svg {
     font-size: 0.6rem;
 }
 
-.form-check-input:checked {
-    background-color: #010a18;
-    border-color: #ffffff;
-}
+
 
 .form-switch .form-check-input{
     margin-left: -2em;
@@ -582,6 +579,19 @@ h3{
 .card:hover{
     transform: scale(1.1);
 }
+
+
+.date{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.date p{
+   font-size: 0.6rem;
+}
+
+
 
 
 .rating:not(:checked) > input {

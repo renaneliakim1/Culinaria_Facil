@@ -140,12 +140,6 @@ body.modo-escuro #acesso {
 }
 
 
-body.modo-escuro #flexSwitchCheckDefault{
-    border-color: #000000;
-    background-color: var(--dark--);
-}
-
-
 
 
 body.modo-escuro svg {
@@ -370,20 +364,15 @@ svg {
 }
 
 
-#flexSwitchCheckDefault{
-    border-color: #000000;
-    background-color: var(--white);
-}
 
 
 .form-switch .form-check-input{
     margin-left: -3em;
+    --bs-form-check-bg: var(--white);
+
 }
 
-.form-check-input:checked {
-    background-color: #010a18;
-    border-color: #ffffff;
-}
+
 
 
 

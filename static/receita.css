@@ -427,9 +427,6 @@ svg {
   font-size: 0.6rem;
 }
 
-#flexSwitchCheckDefault{
-  border-color: #000000;
-}
 
 
 
@@ -438,10 +435,6 @@ svg {
 }
 
 
-.form-check-input:checked {
-  background-color: #010a18;
-  border-color: #ffffff;
-}
 
 
 

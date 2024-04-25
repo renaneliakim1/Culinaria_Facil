@@ -370,19 +370,20 @@ svg {
 }
 
 
-#flexSwitchCheckDefault{
-    border-color: #000000;
-}
 
-.form-check-input:checked {
-    background-color: #010a18;
-    border-color: #ffffff;
-}
+
+
+
+
+
 
 
 .form-switch .form-check-input{
     margin-left: -1.5em;
+    
 }
+
+
 
 
 .btn-outline-success {

@@ -30,9 +30,7 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 @app.route('/')
 def pagina_inicial():
     if 'user' in session:
-        imagem_perfil = os.path.join(app.config['UPLOAD_FOLDER'], session['user'][4])
-        print(session['user'])
-        return render_template('index.html', user=session['user'], imagem_perfil=imagem_perfil)
+        return render_template('index.html', user=session['user'])
     else:
         return render_template('index.html')
 

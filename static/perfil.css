@@ -37,8 +37,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: var(--lite--);
-
+    background-color: var(--lite--);
 }
 
 body.modo-escuro {
@@ -192,10 +191,7 @@ body.modo-escuro h1 {
 
 }
 
-header{display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-}
+
 
 .navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;

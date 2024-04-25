@@ -289,7 +289,8 @@ body.modo-escuro footer p {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-  }
+}
+
 
 
 /* make navbar transparent */
@@ -432,12 +433,7 @@ input.form-control.me-2{
 
 
 
-.navbar>.container-fluid{
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 h1 {
     text-align: center;

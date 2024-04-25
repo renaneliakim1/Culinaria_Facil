@@ -208,11 +208,6 @@ body.modo-escuro h1 {
 
 }
 
-header {
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-}
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
   display: flex;

@@ -712,10 +712,13 @@ h6 a {
   margin-top: 1rem;
   margin-bottom: 3rem;
 
+  
+
+
 }
 
 video {
-  width: 35rem;
+  width: 21rem;
   height: 12rem;
 }
 
@@ -744,8 +747,8 @@ h3 {
   justify-content: center;
   text-align: left;
   flex-direction: column;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 20%;
+  margin-left: 20%;
   font-size: 0.8rem;
 }
 
@@ -806,8 +809,8 @@ textarea {
 .comentario-postados{
   display: flex;
   flex-direction: column;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 20%;
+  margin-left: 20%;
 
   gap: 10px;
 

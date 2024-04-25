@@ -615,18 +615,13 @@ label {
 }
 
 
-
-
-
-
-
 h2, p{
-    font-size: 1.5rem;
+    font-size: 0.5rem;
     text-align: center;
 }
 
 p, .message {
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 .escolhacatedoria{
@@ -655,28 +650,27 @@ p, .message {
 
 .dropzone-box {
     border-radius: 8px;
-    padding: 2rem;
-/*     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+/*  padding: 2rem; */
+/*  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
-    
-
+    font-size: 0.5rem;
 
 }
 
 .dropzone-box h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
 
 .dropzone-area {
     width: 100%;
-    padding: 1rem;
+/*     padding: 1rem;*/ 
     position: relative;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     min-height: 9rem;
     display: flex;
     text-align: center;
@@ -705,9 +699,14 @@ p, .message {
 .dropzone-area .file-upload-icon svg {
     height: 3rem;
     width: 3rem;
-    margin-bottom: 0.5rem;
     stroke: var(--primary);
 }
+
+.dropzone-area .file-upload-icon p{
+    font-size: 0.5rem;
+}
+
+
 
 .dropzone--over {
     border-style: solid;
@@ -764,14 +763,23 @@ p, .message {
 
 }
 
-
+/* 
 .dropzone-area{
-    background-image: url(/imgs/Imagem1cadastre-se.png);
+    background-image: url(/imgs/camera14.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
 }
+
+
+
+
+#dropzone-area-video{
+    background-image: url(/imgs/filmadora.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
 
 
 footer {

@@ -25,11 +25,13 @@ Descricao TEXT,
 Instrucoes TEXT,
 ingredientes TEXT,
 TempoPreparo INT,
+TempoPreparo INT,
 Dificuldade VARCHAR(50),
 CategoriaID INT,
 AutorID INT,
 data_hora datetime,
 imagem_receita varchar(255),
+video_receita varchar(255),
 FOREIGN KEY (CategoriaID) REFERENCES categorias(categoriaID),
 foreign key (autorID) references usuario(id)
 );

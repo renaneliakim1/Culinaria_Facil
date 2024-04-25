@@ -61,6 +61,12 @@
                 <div class="error-message">{{ error }}</div>
             {% endfor %}
         </div>
+        <div>
+            {{ form.video_receita.label }}: {{ form.video_receita() }}
+            {% for error in form.video_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
         <input type="submit" value="Atualizar Receita">
     </form>
 </body>

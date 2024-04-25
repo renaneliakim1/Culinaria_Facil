@@ -59,6 +59,7 @@ class FormularioReceita(FlaskForm):
     dificuldade_receita = SelectField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])
     imagem_receita = FileField('Imagem da Receita', validators=[ FileAllowed(['jpg', 'png', 'jpeg'])])
+    video_receita = FileField('Video Receita', validators=[FileAllowed(["mp4","avi","mkv","mov","wmv","flv","webm","mpeg"])])
     submit_receita = SubmitField('Cadastro_receita')
 
 

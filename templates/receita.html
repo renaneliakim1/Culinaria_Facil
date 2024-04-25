@@ -8,6 +8,13 @@
 {% for receita in resultado_receita %}
     <H2>{{ receita[1] }} </H2>
     <img src="/static/uploads\{{ receita[10] }}" alt="pic1">
+    {% if receita[11] != 'sem_video' %}
+    <video width="400" controls>
+        <source src="/static/uploads\{{ receita[11] }}" type="video/{{ receita[11].split('.')[1] }}">
+    </video>
+    {% else %}
+    <p>Sem vídeo</p>
+    {% endif %}
     <p>Por: <a href="/perfil/{{ receita[8] }}">{{ receita[7] }} </a></p>
     <p>Postado em: {{ receita[9] }}</p>
     {% if user[0] == receita[8] %}

@@ -55,10 +55,11 @@ def pagina_receitas(pagina):
 @app.route('/receita/<int:receita_id>', methods=['GET', 'POST'])
 def pagina_receita(receita_id):
     cursor = database_connection.cursor()
-    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
+    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita, video_receita FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
     cursor.execute(consulta_receita, (receita_id,))
     resultado_receita = cursor.fetchall()
     cursor.close()
+    print(resultado_receita)
     cursor3 = database_connection.cursor()
     consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id WHERE receitaID = %s ORDER BY data_hora DESC'
     cursor3.execute(consulta_receita, (receita_id,))
@@ -222,11 +223,16 @@ def cadastro_receita():
         form = FormularioReceita()
         if form.validate_on_submit():
             imagem_receita = form.imagem_receita.data
+            video_receita = form.video_receita.data
             if imagem_receita:
                 upload_imagem = True
             else:
                 upload_imagem = False
                 flash('Receita Sem Imagem!')
+            if video_receita:
+                upload_video = True
+            else:
+                upload_video = False
             titulo_receita = form.titulo_receita.data
             descricao_redeita = form.descricao_receita.data
             instrucoes_redeita = form.instrucoes_receita.data
@@ -247,11 +253,18 @@ def cadastro_receita():
                                               secure_filename(nome_arquivo)))
                 else:
                     nome_arquivo = 'receita_default.jpg'
+                if upload_video:
+                    nome_arquivo_video = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest() + video_receita.filename
+                    arquivo = form.video_receita.data
+                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
+                                              secure_filename(nome_arquivo_video)))
+                else:
+                    nome_arquivo_video = 'sem_video'
                 id_categoria = resultado[0][0]
                 id_usuario = session['user'][0]
                 data_postagem = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                inserir_dados = 'INSERT INTO receitas (Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, CategoriaID, AutorID, data_hora, imagem_receita) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
-                dados_receita = (titulo_receita, descricao_redeita, instrucoes_redeita, ingredientes_receita, tempo_preparo, dificuldade_receita, id_categoria, id_usuario, data_postagem, nome_arquivo)
+                inserir_dados = 'INSERT INTO receitas (Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, CategoriaID, AutorID, data_hora, imagem_receita, video_receita) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
+                dados_receita = (titulo_receita, descricao_redeita, instrucoes_redeita, ingredientes_receita, tempo_preparo, dificuldade_receita, id_categoria, id_usuario, data_postagem, nome_arquivo, nome_arquivo_video)
                 cursor = database_connection.cursor()
                 cursor.execute(inserir_dados, dados_receita)
                 database_connection.commit()
@@ -278,7 +291,8 @@ def editar_receita(id_receita_editar):
             form = FormularioReceita(titulo_receita=resultado_receita[0][1], descricao_receita=resultado_receita[0][2],
                                      instrucoes_receita=resultado_receita[0][3], ingredientes_receita=resultado_receita[0][4],
                                      tempo_preparo=resultado_receita[0][5], dificuldade_receita=resultado_receita[0][6],
-                                     categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][10])
+                                     categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][10],
+                                     video_receita=resultado_receita[0][11])
             if form.validate_on_submit():
                 print(resultado_receita[0][10])
                 cursor3 = database_connection.cursor()
@@ -289,6 +303,7 @@ def editar_receita(id_receita_editar):
                 cursor3.close()
                 if categoria_resultado:
                     imagem_receita = resultado_receita[0][10]
+                    video_receita = resultado_receita[0][11]
                     if form.imagem_receita.data.filename:
                         nova_upload_imagem = True
                         nova_imagem_receita = form.imagem_receita.data.filename
@@ -306,6 +321,24 @@ def editar_receita(id_receita_editar):
                                          secure_filename(nome_arquivo)))
                     else:
                         nome_arquivo = resultado_receita[0][10]
+                    if form.video_receita.data:
+                        novo_upload_video = True
+                        novo_video_receita = form.video_receita.data.filename
+                        if video_receita != novo_video_receita:
+                            video_receita = novo_video_receita
+                    else:
+                        video_receita = resultado_receita[0][11]
+                        novo_upload_video = False
+                    if novo_upload_video:
+                        nome_arquivo_video = hashlib.sha1(
+                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + video_receita
+                        arquivo_video = form.video_receita.data
+                        arquivo_video.save(
+                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
+                                         secure_filename(nome_arquivo_video)))
+                    else:
+                        nome_arquivo_video = resultado_receita[0][11]
+
                     categoria_resultado = categoria_resultado[0][0]
                     titulo_receita = form.titulo_receita.data
                     descricao_receita = form.descricao_receita.data
@@ -323,9 +356,19 @@ def editar_receita(id_receita_editar):
                             print('antiga imagem deletada')
                         except:
                             pass
+                    if resultado_receita[0][11] == 'sem_video' or resultado_receita[0][11] == nome_arquivo_video:
+                        pass
+                    else:
+                        try:
+                            nome_video_deletar = resultado_receita[0][11]
+                            caminho_deletar_video = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_video_deletar)
+                            os.remove(caminho_deletar_video)
+                            print('antigo video deletado')
+                        except:
+                            pass
                     cursor2 = database_connection.cursor()
-                    dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, nome_arquivo, id_receita_editar)
-                    consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s WHERE receitaID = %s'
+                    dados_receita = (titulo_receita, descricao_receita, instrucoes_receita, ingredientes_receita, tempo_preparo, dificuldade_receita, categoria_resultado, nome_arquivo, nome_arquivo_video, id_receita_editar)
+                    consulta_receita = 'UPDATE receitas SET Titulo = %s, Descricao = %s, Instrucoes = %s, Ingredientes = %s, TempoPreparo = %s, Dificuldade = %s, CategoriaID = %s, imagem_receita = %s, video_receita = %s WHERE receitaID = %s'
                     cursor2.execute(consulta_receita, dados_receita)
                     database_connection.commit()
                     cursor2.close()
@@ -353,10 +396,6 @@ def editar_perfil(id_usuario):
                                         registro_cpf=resultado_perfil[0][4], imagem_perfil=resultado_perfil[0][5])
                 if form.validate_on_submit():
                     imagem_perfil = form.imagem_perfil.data
-                    if imagem_perfil:
-                        upload_imagem = True
-                    else:
-                        upload_imagem = False
                     novo_nome = form.registro_nome.data
                     novo_email = form.registro_email.data
                     novo_cpf = form.registro_cpf.data

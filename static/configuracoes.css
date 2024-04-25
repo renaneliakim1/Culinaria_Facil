@@ -351,9 +351,6 @@ button.navbar-toggler {
     background-color: var(--white);
     border: 1px solid var(--check--);
 
-
-
-
 }
 
 
@@ -655,8 +652,6 @@ input .input-group {
 }
 
 
-
-
 #receitas {
     display: flex;
     flex-direction: row;
@@ -680,7 +675,6 @@ input .input-group {
     width: 100%;
     flex-direction: column;
     padding: none;
-
 }
 
 
@@ -688,6 +682,7 @@ td {
     display: flex;
     align-items: center;
     justify-content: right;
+
 }
 
 
@@ -696,7 +691,15 @@ tr {
     justify-content: center;
     flex-direction: row;
     width: 100%;
+
 }
+
+/* change background of config table */
+
+.table>:not(caption)>*>* {
+    background-color: var(--lite--);
+}
+
 
 
 .input-group-text {
@@ -713,10 +716,6 @@ tr {
     font-size: 1rem;
 
 }
-
-
-
-
 
 
 .tab-btn {

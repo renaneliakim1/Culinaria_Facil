@@ -38,10 +38,11 @@
             {% endfor %}
         </div>
         <div>
-            {{ form.tempo_preparo.label }}: {{ form.tempo_preparo }}
+            {{ form.tempo_preparo.label }}: {{ form.tempo_preparo(min=1, max=500, oninput="outputUpdate(value)") }}
             {% for error in form.tempo_preparo.errors %}
                 <div class="error-message">{{ error }}</div>
             {% endfor %}
+            <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
         </div>
         <div>
             {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
@@ -69,10 +70,8 @@
         </div>
         <input type="submit" value="Cadastro_receita">
     </form>
-    <script>
-        document.getElementById("tempo_preparo").oninput = function() {
-            document.getElementById("selectedValue").innerText = this.value;
-        }
+    <script type="text/javascript"
+    src="{{ url_for('static', filename='tempo_receita.js') }}">
     </script>
 </body>
 </html>

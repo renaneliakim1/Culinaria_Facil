@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, PasswordField, SubmitField, TextAreaField, IntegerField, FileField, SelectField
-from flask_wtf.file import FileAllowed, MultipleFileField
+from wtforms import StringField, validators, PasswordField, SubmitField, TextAreaField, FileField, SelectField, DecimalRangeField
+from flask_wtf.file import FileAllowed
 import mysql.connector
 from wtforms.widgets import Input
 
@@ -55,7 +55,7 @@ class FormularioReceita(FlaskForm):
     descricao_receita = TextAreaField('Descricao', validators=[validators.DataRequired()])
     instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()])
     ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()])
-    tempo_preparo = IntegerField('Tempo de Preparo(minutos)', widget=RangeInput500(), validators=[validators.DataRequired(), validators.InputRequired()])
+    tempo_preparo = DecimalRangeField('Tempo de Preparo', default=0)
     dificuldade_receita = SelectField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])
     imagem_receita = FileField('Imagem da Receita', validators=[ FileAllowed(['jpg', 'png', 'jpeg'])])

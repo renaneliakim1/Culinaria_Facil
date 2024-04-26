@@ -167,48 +167,20 @@
 
 
     <div class="titulo">
+    
+
       <div class="dropzone">
-        <form class="dropzone-box">
-          <h2>Carregar e anexar arquivos
-          </h2>
+        <h2>Carregar e anexar arquivos</h2>
+        <form class="dropzone-box" id="form-receita">
           <div class="dropzone-area">
             <div class="file-upload-icon">
-              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.46 96.46" xml:space="preserve">
-                <g>
-                  <path style="fill:#484E4E;" d="M63.9,28.673c0,1.356-2.528,2.455-3.72,2.455h-23.9c-1.191,0-3.72-1.099-3.72-2.455l1.563-15.749
-                      c0-1.355,0.966-2.454,2.157-2.454h23.9c1.191,0,2.158,1.099,2.158,2.454L63.9,28.673z" />
-                                    <path style="fill:#FFFFFF;" d="M59.066,14.383c0,0.791-0.563,1.432-1.259,1.432H38.45c-0.695,0-1.259-0.641-1.259-1.432l0,0
-                      c0-0.791,0.564-1.432,1.259-1.432h19.357C58.502,12.951,59.066,13.592,59.066,14.383L59.066,14.383z" />
-                                    <path style="fill:#484E4E;" d="M81.884,25.859c0,1.128-0.81,2.043-1.808,2.043H77.86c-0.998,0-1.808-0.915-1.808-2.043v-5.591
-                      c0-1.129,0.81-2.043,1.808-2.043h2.217c0.998,0,1.808,0.915,1.808,2.043V25.859z" />
-                                    <path style="fill:#484E4E;" d="M25.101,25.283v-3.435c0-1.339-1.085-2.424-2.424-2.424h-8.89c-1.338,0-2.424,1.085-2.424,2.424
-                      v3.435H25.101z" />
-                                    <path style="fill:#484E4E;" d="M50.02,40.786h-2.099c-0.818,0-1.48,0.663-1.48,1.48v11.875c0,0.817,0.663,1.48,1.48,1.48h2.099
-                      V40.786z" />
-                                    <path style="fill:#484E4E;" d="M46.441,40.786h2.098c0.818,0,1.481,0.663,1.481,1.48v11.875c0,0.817-0.663,1.48-1.481,1.48h-2.098
-                      V40.786z" />
-                                    <path style="fill:#CFCEC7;" d="M96.308,78.639c0,4.061-3.292,7.352-7.353,7.352H7.505c-4.061,0-7.352-3.292-7.352-7.352V31.456
-                      c0-4.061,3.292-7.352,7.352-7.352h81.451c4.061,0,7.353,3.292,7.353,7.352V78.639z" />
-                                    <rect x="0" y="38.497" style="fill:#484E4E;" width="96.46" height="33.101" />
-                                    <g>
-                                      <circle style="fill:#CFCEC7;" cx="83.475" cy="61.906" r="3.749" />
-                                      <circle style="fill:#FF7526;" cx="83.475" cy="61.906" r="2.21" />
-                                    </g>
-                                    <path style="opacity:0.16;fill:#FFFFFF;" d="M48.128,10.469H36.28c-1.191,0-2.157,1.099-2.157,2.454l-1.109,11.181h-7.912v-2.256
-                      c0-1.339-1.085-2.424-2.424-2.424h-8.89c-1.338,0-2.424,1.085-2.424,2.424v2.256H7.505c-4.061,0-7.352,3.292-7.352,7.352v7.041H0
-                      v33.101h0.152v7.041c0,4.061,3.292,7.352,7.352,7.352h40.624V10.469z" />
-                  <circle style="fill:#FF7526;" cx="48.23" cy="55.802" r="27.011" />
-                  <circle style="fill:#484E4E;" cx="48.23" cy="55.802" r="21.295" />
-                  <circle style="fill:#CFCEC7;" cx="48.23" cy="55.802" r="15.899" />
-                  <circle style="fill:#484E4E;" cx="48.23" cy="55.802" r="11.447" />
-                  <circle style="fill:#FFFFFF;" cx="41.534" cy="48.682" r="4.729" />
-                </g>
-              </svg>
+
+              <img src="/imgs/foto.svg"  width="50px" height="50px" alt="">
+     
             </div>
-            <p>Clique para fazer upload, Formatos aceitos: jpg, png, jpeg
+            <p>Fazer upload de imagens, formatos: jpg, png, jpeg
             </p>
-            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
+            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*">
 
 
             <p class="message">Nenhum arquivo selecionado
@@ -216,6 +188,9 @@
           </div>
 
         </form>
+
+        <div id="file-list"></div>
+
 
 
         <script>
@@ -224,16 +199,20 @@
             var nome = document.getElementById('nome').value;
             var ingredientes = document.getElementById('ingredientes').value;
             var instrucoes = document.getElementById('instrucoes').value;
-        
+
             // Captura dos arquivos de imagem
             var imagens = document.getElementById('imagens').files;
-        
+            var fileList = document.getElementById('file-list');
+
+            // Limpa a lista de arquivos
+            fileList.innerHTML = '';
+
             // Verifica se foram selecionadas até três imagens
             if (imagens.length > 3) {
               alert("Selecione no máximo três imagens.");
               return;
             }
-        
+
             // Verifica se todas as imagens selecionadas são dos tipos permitidos
             for (var i = 0; i < imagens.length; i++) {
               var imagem = imagens[i];
@@ -242,155 +221,84 @@
                 alert("Por favor, selecione apenas imagens do tipo jpg, jpeg ou png.");
                 return;
               }
+
+              // Cria um elemento de lista para cada arquivo selecionado
+              var listItem = document.createElement('p');
+              listItem.textContent = imagem.name;
+              fileList.appendChild(listItem);
             }
-        
+
+            // Verifica se há vídeo anexado
+            var videos = Array.from(imagens).filter(file => file.type.startsWith('video'));
+            if (videos.length > 0) {
+              alert("Por favor, selecione apenas imagens, vídeos não são permitidos.");
+              return;
+            }
+
             // Se todas as verificações passaram, você pode prosseguir com o envio do formulário ou fazer o que for necessário com os dados.
-        
           });
         </script>
 
+        <br>
 
-
-
-        <form class="dropzone-box">
-          <p>
-            Formatos aceitos: jpg, png, jpeg
-          </p>
+        <form class="dropzone-box" id="form-receita-videos">
           <div class="dropzone-area" id="dropzone-area-video">
             <div class="file-upload-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                id="Layer_1" width="512" height="512" viewBox="0 0 128 128" xml:space="preserve">
-                <g>
-                  <circle style="fill:#4AB8A1;" cx="64" cy="64" r="64" />
-                  <path style="fill:#43A691;"
-                    d="M122.724,89.457L94.859,21.491l-0.004-0.002c-1.089-3.115-4.527-4.771-7.644-3.683l-21.094,7.37   l-10.855,3.731L45,32.428v0.002l-10,3.731v0.001l-4.633,1.56l-0.205-0.123c-0.287,0.045-0.605,0.119-0.873,0.208   c-0.238,0.073-0.484,0.167-0.708,0.268c-0.001,0-0.013,0.001-0.014,0.001C26.482,39.018,25,41.094,25,43.52v0.512v0.512V56.52V57   v0.035v0.478v0.035v0.478V73v0.512v0.512v26.498v0.513v0.512c0,1.179,0.402,2.335,1.063,3.339l5.768,14.434   C41.284,124.829,52.269,128,64,128C90.297,128,112.879,112.134,122.724,89.457z" />
-                  <g>
-                    <path style="fill:#B3B3B3;"
-                      d="M103,57v43.521c0,3.301-2.7,6.479-6,6.479H31c-3.3,0-6-3.178-6-6.479V57H103z" />
-                    <path style="fill:#A6A6A6;"
-                      d="M100,57v43.521c0,3.301-2.7,6.479-6,6.479h3c3.3,0,6-3.178,6-6.479V57H100z" />
-                    <path style="fill:#263740;"
-                      d="M62,83.521c0-1.649,1.149-2.293,2.555-1.428l7.892,4.855c1.404,0.863,1.404,2.279,0,3.145    l-7.892,4.855C63.15,95.813,62,95.171,62,93.521V83.521z" />
-                    <path style="fill:#242424;"
-                      d="M30,57.919l69.142-24.148l-4.286-12.272c-1.089-3.115-4.527-4.774-7.644-3.687L30,37.794V57.919z" />
-                    <polygon style="fill:#FFD464;" points="58.87,47.836 69.552,44.105 45.349,32.433 34.668,36.163   " />
-                    <polygon style="fill:#FFD464;"
-                      points="66.118,25.179 55.438,28.909 79.641,40.582 90.321,36.852   " />
-                    <polygon style="fill:#FFD464;"
-                      points="76.207,21.655 98.698,32.502 94.968,21.821 86.889,17.925   " />
-                    <g>
-                      <rect x="25" y="57" style="fill:#242424;" width="78" height="16" />
-                      <g>
-                        <polygon style="fill:#FFD464;" points="93.656,57 82.343,57 66.343,73 77.656,73     " />
-                        <polygon style="fill:#FFD464;" points="99.656,73 103,69.18 103,57.865 88.343,73     " />
-                        <polygon style="fill:#FFD464;" points="44.343,73 55.656,73 71.656,57 60.343,57     " />
-                      </g>
-                    </g>
-                    <path style="fill:#E6E6E6;"
-                      d="M30.079,37.601C27.213,38.049,25,40.537,25,43.523v13V73h8.001L49,56.761l0,0L30.079,37.601z" />
-                    <path style="fill:#D9D9D9;"
-                      d="M30.079,37.601c-0.538,0.084-1.041,0.261-1.522,0.478L47,56.761l0,0L31.001,73h2L49,56.761l0,0    L30.079,37.601z" />
-                    <circle style="fill:#242424;" cx="34" cy="56.522" r="5" />
-                    <circle style="fill:#FFFFFF;" cx="34" cy="56.522" r="3" />
-                  </g>
-                  <path style="fill:#263740;"
-                    d="M103,57v43.521c0,3.301-2.7,6.479-6,6.479H31c-3.3,0-6-3.178-6-6.479V57H103z" />
-                  <path style="fill:#1E2C33;"
-                    d="M100,57v43.521c0,3.301-2.7,6.479-6,6.479h3c3.3,0,6-3.178,6-6.479V57H100z" />
-                  <path style="fill:#F5F5F5;"
-                    d="M62,83.521c0-1.649,1.149-2.293,2.555-1.428l7.892,4.855c1.404,0.863,1.404,2.279,0,3.145   l-7.892,4.855C63.15,95.813,62,95.171,62,93.521V83.521z" />
-                  <path style="fill:#242424;"
-                    d="M30,57.919l69.142-24.148l-4.286-12.272c-1.089-3.115-4.527-4.774-7.644-3.687L30,37.794V57.919z" />
-                  <polygon style="fill:#FFD464;" points="58.87,47.836 69.552,44.105 45.349,32.433 34.668,36.163  " />
-                  <polygon style="fill:#FFD464;" points="66.118,25.179 55.438,28.909 79.641,40.582 90.321,36.852  " />
-                  <polygon style="fill:#FFD464;" points="76.207,21.655 98.698,32.502 94.968,21.821 86.889,17.925  " />
-                  <g>
-                    <rect x="25" y="57" style="fill:#242424;" width="78" height="16" />
-                    <g>
-                      <polygon style="fill:#FFD464;" points="93.656,57 82.343,57 66.343,73 77.656,73    " />
-                      <polygon style="fill:#FFD464;" points="99.656,73 103,69.18 103,57.865 88.343,73    " />
-                      <polygon style="fill:#FFD464;" points="44.343,73 55.656,73 71.656,57 60.343,57    " />
-                    </g>
-                  </g>
-                  <path style="fill:#263740;"
-                    d="M30.079,37.601C27.213,38.049,25,40.537,25,43.523v13V73h8.001L49,56.761l0,0L30.079,37.601z" />
-                  <path style="fill:#D9D9D9;"
-                    d="M30.079,37.601c-0.538,0.084-1.041,0.261-1.522,0.478L47,56.761l0,0L31.001,73h2L49,56.761l0,0   L30.079,37.601z" />
-                  <circle style="fill:#F5F5F5;" cx="34" cy="56.522" r="5" />
-                  <circle style="fill:#263740;" cx="34" cy="56.522" r="3" />
-                  <rect x="25" y="73" style="fill:#D9D9D9;" width="78" height="2" />
-                </g>
-              </svg>
+              <div class="file-upload-icon">
+                             
+                <img src="/imgs/video.svg" width="50px" height="50px" alt="">
+
+              </div>
             </div>
-            <p>Clique para fazer upload, Formatos aceitos: jpg, png, jpeg
-            </p>
-            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
+            <p>Fazer upload de vídeo, formatos: mp4, mpeg4, flv, avi ou mkv</p>
+            <input type="file" id="video" name="video"
+              accept="video/mp4, video/mpeg4, video/flv, video/avi, video/x-matroska">
 
-
-            <p class="message">Nenhum arquivo selecionado
-            </p>
+            <p class="message-video">Nenhum arquivo selecionado</p>
+            <p id="nome-arquivo"></p>
           </div>
-
         </form>
+
+
+        <script>
+          document.getElementById('form-receita-videos').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var video = document.getElementById('video').files[0]; // Apenas o primeiro arquivo é considerado
+
+            // Verifica se um vídeo foi selecionado
+            if (!video) {
+              alert("Por favor, selecione um vídeo.");
+              return;
+            }
+
+            // Verifica se o vídeo selecionado é de um tipo permitido
+            var extensao = video.name.split('.').pop().toLowerCase();
+            if (extensao !== 'mp4' && extensao !== 'mpeg4' && extensao !== 'flv' && extensao !== 'avi' && extensao !== 'mkv') {
+              alert("Por favor, selecione um vídeo dos tipos mp4, mpeg4, flv, avi ou mkv.");
+              return;
+            }
+
+            // Se todas as verificações passaram, você pode prosseguir com o envio do formulário ou fazer o que for necessário com os dados.
+          });
+
+          // Adicionei um evento 'change' para limpar a seleção de arquivos de vídeo se o usuário tentar anexar mais de um arquivo
+          document.getElementById('video').addEventListener('change', function () {
+            if (this.files.length > 1) {
+              // Limpa a seleção de arquivos de vídeo
+              this.value = '';
+              // Alerta o usuário de que apenas um vídeo é permitido
+              alert("Por favor, selecione apenas um vídeo.");
+            } else if (this.files.length === 1) {
+              // Atualiza o nome do arquivo selecionado
+              document.getElementById('nome-arquivo').innerText = this.files[0].name;
+              // Oculta a mensagem "Nenhum arquivo selecionado"
+              document.querySelector('.message-video').style.display = 'none';
+            }
+          });
+        </script>
       </div>
 
 
-      <script>
-        document.getElementById('form-receita').addEventListener('submit', function (event) {
-          event.preventDefault();
-          var nome = document.getElementById('nome').value;
-          var ingredientes = document.getElementById('ingredientes').value;
-          var instrucoes = document.getElementById('instrucoes').value;
-      
-          // Captura dos arquivos de imagem
-          var imagens = document.getElementById('imagens').files;
-      
-          // Verifica se foram selecionadas até três imagens
-          if (imagens.length > 3) {
-            alert("Selecione no máximo três imagens.");
-            return;
-          }
-      
-          // Verifica se todas as imagens selecionadas são dos tipos permitidos
-          for (var i = 0; i < imagens.length; i++) {
-            var imagem = imagens[i];
-            var extensao = imagem.name.split('.').pop().toLowerCase();
-            if (extensao !== 'jpg' && extensao !== 'jpeg' && extensao !== 'png') {
-              alert("Por favor, selecione apenas imagens do tipo jpg, jpeg ou png.");
-              return;
-            }
-          }
-      
-          // Se todas as verificações passaram, você pode prosseguir com o envio do formulário ou fazer o que for necessário com os dados.
-      
-        });
-      
-        // Nova função para lidar com o envio de vídeos
-        document.getElementById('form-receita-videos').addEventListener('submit', function (event) {
-          event.preventDefault();
-          var videos = document.getElementById('videos').files;
-      
-          // Verifica se foram selecionados até três vídeos
-          if (videos.length > 3) {
-            alert("Selecione no máximo três vídeos.");
-            return;
-          }
-      
-          // Verifica se todos os vídeos selecionados são dos tipos permitidos
-          for (var i = 0; i < videos.length; i++) {
-            var video = videos[i];
-            var extensao = video.name.split('.').pop().toLowerCase();
-            if (extensao !== 'mp4' && extensao !== 'mpeg4' && extensao !== 'flv' && extensao !== 'avi' && extensao !== 'mkv') {
-              alert("Por favor, selecione apenas vídeos dos tipos mp4, mpeg4, flv, avi ou mkv.");
-              return;
-            }
-          }
-      
-          // Se todas as verificações passaram, você pode prosseguir com o envio do formulário ou fazer o que for necessário com os dados.
-      
-        });
-      </script>
-      
 
       <div class="nome">
 
@@ -408,6 +316,8 @@
 
       </div>
     </div>
+  
+
 
     <div id="gerar_senha_tamanho">
       <label for="customRange1" class="form-label">Defina o tempo de cozimento: <span id="valor"> </span>

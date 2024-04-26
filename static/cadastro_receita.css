@@ -196,7 +196,6 @@ body.modo-escuro label {
 
 
 body.modo-escuro .form-check-input:checked {
-    background-color: #dde1e6;
     border-color: #ffffff;
 }
 
@@ -434,7 +433,7 @@ h1 {
 
 
 .container {
-    width: 60%;
+    width: 50%;
     margin: 20px auto;
     padding: 20px;
     background-color: var(--card--);
@@ -862,6 +861,25 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+    .dropzone-area {
+        width: 100%;
+    /*     padding: 1rem;*/ 
+        position: relative;
+        /* margin-top: 1rem; */
+        min-height: 9rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid var(--black);
+        border-radius: 1rem;
+        color: var(--primary);
+        cursor: pointer;
+        height: 6rem;
+    }
+
+    
     .titulo{
         display: flex;
         flex-direction: column;

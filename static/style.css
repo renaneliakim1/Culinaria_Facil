@@ -205,6 +205,10 @@ body.modo-escuro p.card-text {
 }
 
 
+body.modo-escuro .date p {
+    color: var(--black);
+}
+
 body.modo-escuro #resultados{
     background-color: transparent;
 }

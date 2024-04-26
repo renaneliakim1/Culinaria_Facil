@@ -161,6 +161,11 @@ body.modo-escuro td {
 }
 
 
+body.modo-escuro .table>:not(caption)>*>* {
+    background-color: var(--dark---);
+}
+
+
 .svg-branco path,
 .svg-branco rect,
 .svg-branco circle,
@@ -245,6 +250,12 @@ body.modo-escuro .table {
     --bs-table-bg: var(--dark--);
     color: var(--white--);
 
+}
+
+body.modo-escuro h2,
+body.modo-escuro .message,
+body.modo-escuro p {
+    color: var(--white);
 }
 
 body.modo-escuro footer p {
@@ -851,14 +862,14 @@ tr {
 }
 
 
-.dropzone-area{
+/* .dropzone-area{
     background-image: url(/imgs/Imagem1cadastre-se.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
 }
-
+ */
 
 footer {
 

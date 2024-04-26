@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for receita in resultado_receita %}
+    <a href="/receita/{{ receita[0] }}"><img src="/static/uploads\{{ receita[10] }}" width="180" height="120" alt="pic1"> {{ receita[1] }} </a>
+    <p> {{ receita[2:3] }}</p>
+{% endfor %}
+</body>
+</html>

@@ -31,20 +31,20 @@ class RangeInput500(Input):
 
 
 class FormularioRegistro(FlaskForm):
-    registro_nome = StringField('Nome', validators=[validators.DataRequired()])
-    registro_email = StringField('Email', validators=[validators.DataRequired(), validators.Email()])
-    registro_cpf = StringField('CPF', validators=[validators.DataRequired(), validators.Length(min=11, max=11)])
-    imagem_perfil = FileField('Imagem do Perfil', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
-    registro_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)])
+    registro_nome = StringField('Nome', validators=[validators.DataRequired()], render_kw={"placeholder": "Nome"})
+    registro_email = StringField('Email', validators=[validators.DataRequired(), validators.Email()], render_kw={"placeholder": "E-mail"})
+    registro_cpf = StringField('CPF', validators=[validators.DataRequired(), validators.Length(min=11, max=11)], render_kw={"placeholder": "CPF"})
+    imagem_perfil = FileField('Imagem do Perfil', validators=[FileAllowed(['jpg', 'png', 'jpeg'])], )
+    registro_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)], render_kw={"placeholder": "Senha"})
     senha_confirmar = PasswordField('Confirmar Senha', validators=[validators.DataRequired(),
                                                                    validators.EqualTo('registro_senha',
-                                                                                      message='As senhas devem corresponder')])
-    submit_registro = SubmitField('Registrar')
+                                                                                      message='As senhas devem corresponder')], render_kw={"placeholder": "Confirmar Senha"})
+    submit_registro = SubmitField('Cadastrar')
 
 
 class FormularioLogin(FlaskForm):
-    login_email = StringField('Email', validators=[validators.DataRequired(), validators.Email()])
-    login_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)])
+    login_email = StringField('Email', validators=[validators.DataRequired(), validators.Email()],  render_kw={"placeholder": "E-mail"})
+    login_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)],  render_kw={"placeholder": "E-mail"})
     submit_login = SubmitField('Login')
 
 

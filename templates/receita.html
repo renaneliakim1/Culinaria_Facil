@@ -1,59 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% for receita in resultado_receita %}
-    <H2>{{ receita[1] }} </H2>
-    <img src="/static/uploads\{{ receita[10] }}" alt="pic1">
-    {% if receita[11] != 'sem_video' %}
-    <video width="400" controls>
-        <source src="/static/uploads\{{ receita[11] }}" type="video/{{ receita[11].split('.')[1] }}">
-    </video>
-    {% else %}
-    <p>Sem vídeo</p>
-    {% endif %}
-    <p>Por: <a href="/perfil/{{ receita[8] }}">{{ receita[7] }} </a></p>
-    <p>Postado em: {{ receita[9] }}</p>
-    {% if user[0] == receita[8] %}
-    <a HREF="/editar_receita/{{ receita[0] }}">Editar</a>
-    {% endif %}
-    <p>Descrição</p>
-    <p>Tempo médio: {{ receita[5] }} minutos </p>
-    <p>Dificuldade: {{ receita[6] }} </p>
-    <p>{{ receita[2] }} </p>
-    <p>Instruções</p>
-    <p>{{ receita[3] }} </p>
-    <p>Ingredientes </p>
-    <p>{{ receita[4] }} </p>
-     {% if user %}
-    <form method="POST" action="">
-        {{ form.csrf_token }}
-        <div>
-            {{ form.comentario_receita.label }}: {{ form.comentario_receita }}
-            {% for error in form.comentario_receita.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        </div>
-        <input type="submit" value="Comentar">
-    </form>
-    {% else %}
-    <p>Faça <a href="/login">Login</a> para comentar</p>
-    {% endif %}
-    {% if resultado_comentarios %}
-    <p> Últimos comentários:</p>
-    {% for comentario in resultado_comentarios %}
-    <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 10px">
-    <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <p> Postado em: {{ comentario[3] }}</p>
-        <p>Comentou: {{ comentario[2] }}</p>
-    </div>
-    {% endfor %}
-    {% else %}
-    <p>Nenhum comentário</p>
-    {% endif %}
+<html lang="pt-br">
 
-{% endfor %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/imgs/icon.png" width="24px" height="24px" type="image/x-icon" />
+
+  <title>Biblioteca de Receitas Culinárias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+      defer
+    </script>
+  <link rel="stylesheet" href="/static/receita.css" />
+  <link rel="stylesheet" href="/template/login.html" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
+                    alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {%  if not user %}
+                    <li class="nav-item">
+                        <a class="nav-link active" id="acesso" aria-current="page" href="/login"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="acesso" aria-current="page"
+                            href="/cadastro"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-person-fill-add"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path
+                                    d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
+                            </svg>cadastre-se</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
+                            href="/cadastro_receita"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
+                            </svg>cadastrar Receita</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
+                            href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>Dicas</a>
+                    </li> 
+                
+                        {% endif %}
+                        </ul>
+                    </li>
+                    {% if user %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-file-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5z" />
+                                <path
+                                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1" />
+                            </svg>Mais
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-item">
+                                    <a class="nav-link active" id="acesso" aria-current="page"
+                                        href="/templates/configuracoes.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                        </svg>Configurações</a>
+
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="acesso" aria-current="page"
+                                    href="/perfil/{{ user[0] }}"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-person-circle"
+                                        viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                    </svg>Perfil</a>
+                            </li>
+
+
+                           
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="acesso" aria-current="page"
+                                    href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-box-arrow-right"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                        <path fill-rule="evenodd"
+                                            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                                    </svg>Sair</a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+{% for receita in resultado_receita %}
+  <h1>{{ receita[1] }}</h1>
+
+  <section>
+    <div id="carouselExample" class="carousel slide">
+
+      <div class="carousel-inner">
+        <h6 class="idusuario">Postado por <a href="/templates/perfil.html"> Joaquim </a> em 24/04/2024</h6>
+        <div class="carousel-item active">
+          <img src="/static/uploads\{{ receita[10] }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/imgs/bolo_teste02.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/imgs/bolo_teste03.jpeg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+
+      <!-- <div class="rating" title="Favorite">
+
+        <input value="5" name="rate" id="star5" type="radio">
+        <label title="text" for="star5"></label>
+        <input value="4" name="rate" id="star4" type="radio">
+        <label title="text" for="star4"></label>
+        <input value="3" name="rate" id="star3" type="radio" checked="">
+        <label title="text" for="star3"></label>
+        <input value="2" name="rate" id="star2" type="radio">
+        <label title="text" for="star2"></label>
+        <input value="1" name="rate" id="star1" type="radio">
+        <label title="text" for="star1"></label>
+
+
+
+      </div> -->
+
+
+      <button
+        class="cursor-pointer flex items-center fill-lime-400 bg-lime-950 hover:bg-lime-900 active:border active:border-lime-400 rounded-md duration-100 p-2"
+        id="save-receita" title="Save">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 25 25">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.507 19.853V6.034C18.5116 5.49905 18.3034 4.98422 17.9283 4.60277C17.5532 4.22131 17.042 4.00449 16.507 4H8.50705C7.9721 4.00449 7.46085 4.22131 7.08577 4.60277C6.7107 4.98422 6.50252 5.49905 6.50705 6.034V19.853C6.45951 20.252 6.65541 20.6407 7.00441 20.8399C7.35342 21.039 7.78773 21.0099 8.10705 20.766L11.907 17.485C12.2496 17.1758 12.7705 17.1758 13.113 17.485L16.9071 20.767C17.2265 21.0111 17.6611 21.0402 18.0102 20.8407C18.3593 20.6413 18.5551 20.2522 18.507 19.853Z"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="text-sm text-lime-400 font-bold pr-1">Salvar Receita</span>
+      </button>
+
+
+
+    </div>
+
+    <div class="ingredientes">
+      <h3>Ingredientes:</h3>
+      <ul>
+        <li>{{ receita[4] }}</li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+  <div class="categoria">
+    <h3>Categoria da receita: Vegana</h3>
+  </div>
+
+  <h3>Modo de Preparo:</h3>
+
+  <div class="preparo">
+
+    <ol>
+      <li>{{ receita[3] }}</li>
+    </ol>
+
+    <img src= "{{ url_for('static', filename='/imgs/chef.png') }}" alt="">
+  </div>
+
+  <div class="tempo">
+    <h3>Tempo de Preparo: 50 min <img src="{{ url_for('static', filename='/imgs/relogio.png') }}" alt="relogio" title="relogio" width="40px" height="40px">
+    </h3>
+  </div>
+
+
+  <div class="video">
+    <video width="400" controls>
+      <source src="/static/uploads\{{ receita[11] }}" type="video/{{ receita[11].split('.')[1] }}">
+  </video>
+  </div>
+  {% if user %}
+  <form method="POST" action="">
+      {{ form.csrf_token }}
+      <div>
+          {{ form.comentario_receita.label }}: {{ form.comentario_receita }}
+          {% for error in form.comentario_receita.errors %}
+              <div class="error-message">{{ error }}</div>
+          {% endfor %}
+      </div>
+      <input type="submit" value="Comentar">
+  </form>
+  {% else %}
+  <p>Faça <a href="/login">Login</a> para comentar</p>
+  {% endif %}
+  {% if resultado_comentarios %}
+  <p> Últimos comentários:</p>
+  {% for comentario in resultado_comentarios %}
+  <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 10px">
+  <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <p> Postado em: {{ comentario[3] }}</p>
+      <p>Comentou: {{ comentario[2] }}</p>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p>Nenhum comentário</p>
+  {% endif %}
+  {% endfor %}
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
+    <img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /><br>
+</button>
+
+  <footer>
+    <p>
+      Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos
+      reservados
+    </p>
+  </footer>
 </body>
+
+
+<script src="/js/modo.-escuro.js"></script>
+<script src="/js/limpartexto.js"></script>
+<script src="/js/topFunction.js"></script>
+
 </html>

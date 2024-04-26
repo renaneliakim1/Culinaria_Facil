@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -10,15 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    /* font-family: Josefin Sans;*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    /*     font-weight: 500; */
 
 }
 
-
+/* color palettes */
 
 :root {
     --primary-color: #d57119;
@@ -27,25 +23,22 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #FCF3E5;
+    --form--: #ffc975;
+    --card--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
+    --lite--:#f5ecde;
 
 
-
-
-    --facebook-color: #4267B2;
-    --google-color: #DB4437;
-    --twitter-color: #1DA1F2;
-    --insta-color: #E1306C;
 }
 
+/* call "body.mode" followed by the class or id to activate dark mode   */
 
 body {
     width: 100%;
     height: 100%;
-    background: var(--white);
+    background: var(--lite--);
 
 }
 
@@ -56,7 +49,7 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: #fff;
+    color: var(--white);
 
 }
 
@@ -66,70 +59,191 @@ body.modo-escuro form {
 }
 
 
-body.modo-escuro .btn-outline-success{
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-
-
-}
-
-
-
-body.modo-escuro #search{
-
-    background-color: var(--dark--);
-    
-
-}
-
-
-
 body.modo-escuro p {
-    color: var(--white);
+    color: var(--white--);
+}
+
+body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--white--);
 }
 
 
 
-body.modo-escuro .container-fluid{
+body.modo-escuro .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+body.modo-escuro .container {
+    background-color: var(--darkform--);
+
+}
+
+body.modo-escuro .bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+
+
+body.modo-escuro .d-flex {
     background-color: var(--dark--);
-    flex-direction: column;
 
-
-
-}
-
-
-body.modo-escuro .bg-body-tertiary{
-    --bs-bg-opacity:0
-}
-
-
-
-body.modo-escuro .bg-body-tertiary{
-    --bs-bg-opacity:0
 }
 
 
 
 body.modo-escuro header {
-    display: flex;
-    flex-direction: row;
-    justify-content:center ;
+
     text-align: center;
-    margin-bottom: 3rem;
+
+}
+
+
+body.modo-escuro .navbar-toggler-icon {
+    color: #1DA1F2;
+}
+
+
+
+body.modo-escuro .container {
+    background: var(--dark--);
+}
+
+body.modo-escuro .form {
+    background: var(--card--);
+}
+
+
+body.modo-escuro .navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+
+body.modo-escuro .dropdown-menu.show{
+    background-color: var(--dark--);
+}
+
+
+body.modo-escuro #acesso {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: left;
+    border-radius: 8px;
 
 }
 
 
 
 
+
+body.modo-escuro svg {
+    color: var(--white);
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
+
+
+
+
+body.modo-escuro #buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+    border: 1px solid var(--check--);
+
+
+
+}
+
+
+body.modo-escuro  .higiene{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark--);
+}
+
+body.modo-escuro  .higiene li{
+  color: var(--white);
+}
+
+body.modo-escuro  .higiene h2{
+  color: var(--white);
+}
+
+body.modo-escuro h1 {
+  color: var(--white);
+
+}
+
+
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+  display: flex;
+  justify-content: left;
+  margin: 0px;
+  padding: 0px;
+
+}
+.dropdown-menu.show{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10 rem;
+    margin-top: 10px;
+
+}
 .card {
     background-color: #ac2020;
     color: #000000;
+}
+
+body.modo-escuro .container {
+   
+    background-color: var(--card--);
+
 }
 
 
@@ -139,87 +253,116 @@ body.modo-escuro footer p {
 }
 
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 3rem;
-
-}
+/* end of dark mode */
 
 
-
-
-.bg-body-tertiary{
+.logotipo {
     display: flex;
     justify-content: center;
-    --bs-bg-opacity:0
 }
-
-.container-fluid{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    background-color: var(--white);
-    flex-direction: column;
-
-
-}
-
-
-#navbarSupportedContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.btn-outline-success{
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-
-
-}
-
-
-
-
 
 #logo img {
     display: flex;
-    width: 6rem;
-    height: 3rem;
+    width: 5rem;
+    height: 4rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
 }
 
 
+/* navbar */
+.nav-item {
+    display: flex;
+    justify-content: left;
+}
 
+/* option #menu dessabled */
+/*#menu {
+    display: flex;
+    justify-content: right;
+
+}
+ */
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    flex-wrap: inherit;
+    justify-content: space-between;
+
+    flex-direction: row;
+}
+
+
+/* make navbar transparent */
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+/* defines characteristics of buttons */
 #acesso {
     cursor: pointer;
-    width: 8.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
+    color: var(--black);
+    font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    margin: 15px;
-    text-align: center;
-
-
+    text-align: left;
+    border-radius: 8px;
 }
 
 #acesso:hover {
-    background-color: #a33f37;
+    background-color: var(--check--);
 }
 
 
+
+
+/* define with the collapse button */
+
+button.navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary-color);
+
+}
+
+
+#buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border: 1px solid var(--check--);
+
+
+
+
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+/* button teeth icon */
 svg {
     width: 40px;
     height: 25px;
@@ -229,60 +372,203 @@ svg {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
 }
+
+/* key for dark mode */
 
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
+    font-size: 0.8rem;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 
-/* main {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+
+
+
+.form-switch .form-check-input{
+    margin-left: -1.5em;
 }
 
-main video {
-    position: absolute;
-    object-fit: cover;
+
+
+
+.btn-outline-success {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+
+}
+
+/* color label*/
+.form-control {
+    height: 1.5rem;
+    font-size: 0.7rem;
+}
+
+input.form-control.me-2{
+    font-size: 0.7rem;
+}
+
+
+/* search bar position */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: inherit;
+  justify-content: space-between;
+
+  flex-direction: row;
+}
+
+
+
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 0
+}
+
+svg {
+  width: 40px;
+  height: 25px;
+}
+
+.bntacesso {
+
+  display: flex;
+  flex-direction: row;
+}
+
+
+.dropdown-menu.show{
+  display: flex;
+  justify-content: column;
+  flex-direction: column;
+}
+
+.dropdown-menu{
+    background-color: var(--lite--);
+}
+
+
+
+
+
+
+.navbar>.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.form-control {
+    height: 2rem;
+}
+
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0
+}
+
+.logotipo {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+svg {
+    width: 40px;
+    height: 25px;
+}
+
+
+
+
+
+
+.navbar-toggler {
+    display: flex;
+    background-color: var(--white);
+    justify-content: right;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--form--);
+    width: 64%;
+    border-radius: 8px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.6;
-} */
+}
+
+
+.imagem img {
+    width: 95%;
+    height: 90%;
+}
+
+
+
+
+
+
 
 .formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 11.9rem;
     width: 100%;
 }
 
 
 .form {
-    background-color: var(--check--);
+    background-color: var(--card--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
     max-width: 30rem;
     border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
     margin-top: 4rem;
     width: 100%;
-    height: 25rem;
+    height: 27rem;
     gap: 1rem;
 }
 
@@ -294,8 +580,31 @@ main video {
     color: #000;
 }
 
+
+#password {
+    width: 100%;
+}
+
+.fa{
+    position: fixed;
+    margin: 10px;
+}
+
+
+#eye {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-150%);
+    cursor: pointer;
+}
+
+
 .input-container {
     position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .input-container input, .form button {
@@ -305,7 +614,7 @@ main video {
 }
 
 .input-container input {
-    background-color: var(--check--);
+    background-color: var(--card--);
     color: var(--black);
     padding: 1rem;
     padding-right: 3rem;
@@ -326,7 +635,7 @@ main video {
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1rem;
     outline: none;
     height: 2.5rem;
     margin: 15px;
@@ -350,16 +659,14 @@ main video {
 
 .signup-link a {
     text-decoration: underline;
-}
+    font-size: 1rem;
 
-p {
-    margin-top: 50px;
 }
 
 
 footer {
 
-
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -387,843 +694,119 @@ footer p {
     background-color: var(--primary-color);
 }
 
+/* 
 
-@media only screen and (max-width: 940px) {
-
-    footer {
-
-
-        bottom: 0;
-        position: static;
+@media only screen and (max-width: 900px) {
+    
+    body.modo-escuro  .container {
+      
+        background-color: var(--card--);
+    
+       
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: var(--card--);
         width: 100%;
-        text-align: center;
-        left: 0;
+        border-radius: 8px;
+    }
 
+    .imagem {
+        display: flex;
+        justify-content: center;
+        width: 60%;
     }
 
 
-    footer p {
-        font-size: 0.8rem;
+    .imagem img {
+        width: 80%;
+        height: 70%;
     }
 
 
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+
+    .form {
+        background-color: var(--card--);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        max-width: 30rem;
+        border-radius: 0.5rem;
+        margin-top: 4rem;
+        width: 100%;
+        height: 27rem;
+        gap: 1rem;
+    }
+
+    
 }
 
+*/
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 768px) {
 
-    #filtro {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        margin-top: 2rem;
-        margin-left: 10%;
-        margin-right: 10%;
-        justify-items: start;
-        align-items: center;
-
-
-
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
+  
 
-    .bntacesso {
+    .container {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column-reverse;
-        justify-content: center;
+        background-color: var(--card--);
+        width: 91%;
+        border-radius: 8px;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
-
-    header {
+    .formulario {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        margin-bottom: 1rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
+        width: 90%;
+        height: 70%;
     }
 
-
-    .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        flex-direction: row;
-    
-    
-    }
-
-    .formulario{
-        margin-bottom: 1rem;
-    }
-
-
-    
-.form {
-    background-color: var(--check--);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    margin-top: 4rem;
-    width: 90%;
-    height: 25rem;
-    gap: 1rem;
-}
-
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
-}
-
-.input-container input {
-    background-color: var(--check--);
-    color: var(--black);
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    width: 100%;
-    height: 2rem;
-}
-
-
-.submit {
-    cursor: pointer;
-    width: 15.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.5rem;
-    outline: none;
-    height: 2.5rem;
-    margin: 15px;
-
-    text-align: center;
-    width: 100%;
-
-
-}
-
-.submit:hover {
-    background-color: #a33f37;
-}
-
-.signup-link {
-    color: var(--black);
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 50px;
-}
-
-
-
-    footer {
-
-
-        bottom: 0;
-        position: static;
-        width: 100%;
+    .form-title {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 600;
         text-align: center;
-        left: 0;
-
+        color: #000;
     }
 
-
-    footer p {
+    .submit{
         font-size: 0.8rem;
     }
 
-
-}
-
-@media only screen and (max-width: 729px) {
-
-    #logo img {
-        display: flex;
-        width: 10rem;
-        height: 6rem;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-
-    #acesso {
-        cursor: pointer;
-        width: 8.5rem;
-        border: none;
-        padding: .6rem 0;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.8rem;
-        outline: none;
-        height: 2.7rem;
-        margin: 10px;
-        text-align: center;
-
-
-    }
-
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        margin-bottom: 1rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
-    }
-
-
-    .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        flex-direction: row;
     
-    
-    }
-    
-
-    
-    .bntacesso {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    
-    .formulario{
-        margin-bottom: 1rem;
-    }
-
-
-    
-.form {
-    background-color: var(--check--);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    margin-top: 4rem;
-    width: 90%;
-    height: 25rem;
-    gap: 1rem;
-}
-
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
-}
-
-.input-container input {
-    background-color: var(--check--);
-    color: var(--black);
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    width: 100%;
-    height: 2rem;
-}
-
-
-.submit {
-    cursor: pointer;
-    width: 15.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.5rem;
-    outline: none;
-    height: 2.5rem;
-    margin: 15px;
-
-    text-align: center;
-    width: 100%;
-
-
-}
-
-.submit:hover {
-    background-color: #a33f37;
-}
-
-.signup-link {
-    color: var(--black);
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 50px;
-}
-
-
-
-
-    footer {
-
-
-        bottom: 0;
-        position: static;
-        width: 100%;
-        text-align: center;
-        left: 0;
-
-    }
-
-
-    footer p {
-        font-size: 0.8rem;
-    }
-
-
-}
-
-
-
-@media only screen and (max-width: 435px) {
-
-
-
-    #acesso {
-        cursor: pointer;
-        width: 8.5rem;
-        border: none;
-        padding: .6rem 0;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.8rem;
-        outline: none;
-        /*             height: 2.7rem; */
-        margin: 10px;
-        text-align: center;
-
-
-    }
-
-
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        margin-bottom: 1rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
-    }
-
-
-    .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        flex-direction: row;
-    
-    
-    }
-    
-    .formulario{
-        margin-bottom: 1rem;
-    }
-
-
-    
-.form {
-    background-color: var(--check--);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    margin-top: 4rem;
-    width: 90%;
-    height: 25rem;
-    gap: 1rem;
-}
-
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
-}
-
-.input-container input {
-    background-color: var(--check--);
-    color: var(--black);
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    width: 100%;
-    height: 2rem;
-}
-
-
-.submit {
-    cursor: pointer;
-    width: 15.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.5rem;
-    outline: none;
-    height: 2.5rem;
-    margin: 15px;
-
-    text-align: center;
-    width: 100%;
-
-
-}
-
-.submit:hover {
-    background-color: #a33f37;
-}
-
-.signup-link {
-    color: var(--black);
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 50px;
-}
-
-
-
-
-
-
-
-    footer {
-
-
-        bottom: 0;
-        position: static;
-        width: 100%;
-        text-align: center;
-        left: 0;
-
-    }
-
-
-    footer p {
-        font-size: 0.8rem;
-    }
-
-
-}
-
-
-
-
-
-@media only screen and (max-width: 375px) {
-
-
-
-    #acesso {
-        cursor: pointer;
-        width: 8.5rem;
-        border: none;
-        padding: .6rem 0;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.8rem;
-        outline: none;
-        height: 2.7rem;
-        margin: 10px;
-        text-align: center;
-
-
-    }
-
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        margin-bottom: 1rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
-    }
-
-
-    .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        flex-direction: row;
-    
-    
-    }
-    
-    .bntacesso {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    
-    .formulario{
-        margin-bottom: 1rem;
-    }
-
-
-    
-.form {
-    background-color: var(--check--);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    margin-top: 4rem;
-    width: 90%;
-    height: 25rem;
-    gap: 1rem;
-}
-
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
-}
-
-.input-container input {
-    background-color: var(--check--);
-    color: var(--black);
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    width: 100%;
-    height: 2rem;
-}
-
-
-.submit {
-    cursor: pointer;
-    width: 15.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.5rem;
-    outline: none;
-    height: 2.5rem;
-    margin: 15px;
-
-    text-align: center;
-    width: 100%;
-
-
-}
-
-.submit:hover {
-    background-color: #a33f37;
-}
-
-.signup-link {
-    color: var(--black);
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 50px;
-}
-
-
-
-
-
-    footer {
-
-
-        bottom: 0;
-        position: static;
-        width: 100%;
-        text-align: center;
-        left: 0;
-
-    }
-
-
-    footer p {
-        font-size: 0.8rem;
-    }
-
-
-}
-
-@media only screen and (max-width: 360px) {
    
 
-
-
-
-    #acesso {
-        cursor: pointer;
-        width: 8.5rem;
-        border: none;
-        padding: .6rem 0;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.8rem;
-        outline: none;
-        height: 2.7rem;
-        margin: 10px;
-        text-align: center;
-
-
+    .signup-link a{
+        font-size: 0.9rem;
+        margin: none;
     }
 
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        margin-bottom: 1rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
+    p {
+        margin-top: 0;
     }
-
-
-    .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        flex-direction: row;
-    
-    
-    }
-
-    
-    .bntacesso {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    
-    .formulario{
-        margin-bottom: 1rem;
-    }
-
-
-    
-.form {
-    background-color: var(--check--);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08);
-    margin-top: 4rem;
-    width: 90%;
-    height: 28rem;
-    gap: 1rem;
-}
-
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
-}
-
-.input-container input {
-    background-color: var(--check--);
-    color: var(--black);
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    width: 100%;
-    height: 2rem;
-}
-
-
-.submit {
-    cursor: pointer;
-    width: 15.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.5rem;
-    outline: none;
-    height: 2.5rem;
-    margin: 15px;
-
-    text-align: center;
-    width: 100%;
-
-
-}
-
-.submit:hover {
-    background-color: #a33f37;
-}
-
-.signup-link {
-    color: var(--black);
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 50px;
-}
 
 
 
@@ -1231,19 +814,21 @@ p {
 
     footer {
 
-
+        position: relative;
         bottom: 0;
-        position: static;
         width: 100%;
         text-align: center;
         left: 0;
-
     }
-
-
+    
+    
+    
     footer p {
         font-size: 0.8rem;
     }
 
 
-}
+
+
+
+} 

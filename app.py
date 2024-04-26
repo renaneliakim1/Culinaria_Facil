@@ -29,10 +29,15 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 
 @app.route('/')
 def pagina_inicial():
+    cursor = database_connection.cursor()
+    consulta_receitas = 'SELECT * FROM receitas LIMIT 3'
+    cursor.execute(consulta_receitas)
+    resultado_receita = cursor.fetchall()
+    cursor.close()
     if 'user' in session:
-        return render_template('index.html', user=session['user'])
+        return render_template('index.html', user=session['user'], resultado_receita=resultado_receita)
     else:
-        return render_template('index.html')
+        return render_template('index.html', resultado_receita=resultado_receita)
 
 
 @app.route('/receitas/<int:pagina>')
@@ -59,7 +64,7 @@ def pagina_receita(receita_id):
     cursor.close()
     print(resultado_receita)
     cursor3 = database_connection.cursor()
-    consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id WHERE receitaID = %s ORDER BY data_hora DESC'
+    consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora, imagem_perfil FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id WHERE receitaID = %s ORDER BY data_hora DESC'
     cursor3.execute(consulta_receita, (receita_id,))
     resultado_comentarios = cursor3.fetchall()
     cursor3.close()

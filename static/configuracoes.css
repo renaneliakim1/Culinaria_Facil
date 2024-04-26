@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -10,15 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(12, 12, 12);
-    /* font-family: Josefin Sans;*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    /*     font-weight: 500; */
 
 }
 
-
+/* color palettes */
 
 :root {
     --primary-color: #d57119;
@@ -27,25 +23,23 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #FCF3E5;
+    --card--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-
-
-
-
-    --facebook-color: #4267B2;
     --btn--excluir: #DB4437;
-    --twitter-color: #1DA1F2;
-    --insta-color: #E1306C;
+    --lite--:#f5ecde;
+
+
+
 }
 
+/* call "body.mode" followed by the class or id to activate dark mode   */
 
 body {
     width: 100%;
     height: 100%;
-    background: var(--white--);
+    background: var(--lite--);
 
 }
 
@@ -56,7 +50,7 @@ body.modo-escuro {
 
 
 body.modo-escuro label {
-    color: var(--card--);
+    color: var(--white);
 
 }
 
@@ -79,7 +73,7 @@ body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
 body.modo-escuro .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
     flex-direction: row;
 }
 
@@ -89,129 +83,188 @@ body.modo-escuro .container {
 }
 
 body.modo-escuro .bg-body-tertiary {
-    --bs-bg-opacity: 0
+    --bs-bg-opacity: 0;
 }
 
 
-body.modo-escuro .d-flex{
+body.modo-escuro .d-flex {
     background-color: var(--dark--);
 
 }
-
-
-
-.nav-item {
-    display: flex;
-    justify-content: center;
-}
-
 
 
 
 body.modo-escuro header {
 
     text-align: center;
-    margin-bottom: 3rem;
 
 }
 
 
+body.modo-escuro .navbar-toggler-icon {
+    color: #1DA1F2;
+}
 
-body.modo-escuro .info{
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
+
+
+body.modo-escuro .container {
+    background: var(--card--);
+}
+
+body.modo-escuro .form {
+    background: var(--card--);
+}
+
+
+body.modo-escuro .navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+
+body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-body.modo-escuro .table{
-    --bs-table-bg: var(--dark--);
-    color: var(--white--);
+.dropdown-menu{
+    background-color: var(--lite--);
+}
+
+
+body.modo-escuro #acesso {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: left;
+    border-radius: 8px;
 
 }
 
 
-body.modo-escuro td{
+
+
+
+body.modo-escuro svg {
+    color: var(--white);
+    width: 40px;
+    height: 25px;
+}
+
+
+body.modo-escuro th {
+    color: var(--white);
+}
+
+body.modo-escuro td {
     color: var(--white);
 }
 
 
-body.modo-escuro th{
-    color: var(--white);
+body.modo-escuro .table>:not(caption)>*>* {
+    background-color: var(--dark---);
+}
+
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
 }
 
 
 
 
+body.modo-escuro #buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark--);
+    border: 1px solid var(--check--);
 
 
 
+}
 
 
+body.modo-escuro h1 {
+    color: var(--white);
+
+}
 
 
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
+    display: flex;
+    justify-content: left;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10 rem;
+    margin-top: 10px;
+
+}
 
 .card {
     background-color: #ac2020;
     color: #000000;
 }
 
+body.modo-escuro .info {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    background-color: var(--dark--);
+}
+
+
+
+body.modo-escuro .table {
+    --bs-table-bg: var(--dark--);
+    color: var(--white--);
+
+}
+
+body.modo-escuro h2,
+body.modo-escuro .message,
+body.modo-escuro p {
+    color: var(--white);
+}
 
 body.modo-escuro footer p {
-    color: var(--white);
+    color: #fff;
 
 }
 
 
-#menu {
-    display: flex;
-    justify-content: right;
-
-}
-
-.container-fluid {
-    display: flex;
-    align-items: center;
-    flex-wrap: inherit;
-    justify-content: right;
-
-    flex-direction: row;
-}
-
-
-
-
-.bg-body-tertiary {
-    --bs-bg-opacity: 0
-}
-
-
-
-
-#acesso {
-    cursor: pointer;
-    width: 8.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
-}
-
-#acesso:hover {
-    background-color: #a33f37;
-}
-
-/* posição dos icon detro dos botoes */
-.nav-link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* end of dark mode */
 
 
 .logotipo {
@@ -221,26 +274,104 @@ body.modo-escuro footer p {
 
 #logo img {
     display: flex;
-    width: 12rem;
-    height: 5rem;
+    width: 5rem;
+    height: 4rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
 }
 
 
+/* navbar */
+.nav-item {
+    display: flex;
+    justify-content: left;
+}
 
+/* option #menu dessabled */
+/*#menu {
+    display: flex;
+    justify-content: right;
 
+}
+ */
 
-
-
-
-
-#acesso:hover {
-    background-color: #a33f37;
+.container-fluid {
+    display: flex;
+    align-items: center;
+    flex-wrap: inherit;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 
+
+
+/* make navbar transparent */
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+/* defines characteristics of buttons */
+#acesso {
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 2rem;
+    text-align: left;
+    border-radius: 8px;
+}
+
+#acesso:hover {
+    background-color: var(--check--);
+}
+
+
+
+
+/* define with the collapse button */
+
+button.navbar-toggler {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary-color);
+
+}
+
+
+#buscar {
+    width: 9rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border: 1px solid var(--check--);
+
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+/* button teeth icon */
 svg {
     width: 40px;
     height: 25px;
@@ -250,29 +381,29 @@ svg {
 
     display: flex;
     flex-direction: row;
-    /*     justify-content: center;
- */
+
 }
+
+/* key for dark mode */
 
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
+    font-size: 0.8rem;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 
-.navbar-toggler {
-    display: flex;
+.form-switch .form-check-input{
+    margin-left: -1.5em;
     background-color: var(--white);
-    justify-content: right;
 }
-
 
 .btn-outline-success {
     background-color: var(--primary-color);
@@ -281,44 +412,38 @@ svg {
 
 }
 
-#menu {
-    display: flex;
-    justify-content: right;
-}
-
-
-#buscar{
-    cursor: pointer;
-    width: 10.5rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+/* color label*/
+.form-control {
+    height: 1.5rem;
     font-size: 0.7rem;
-    outline: none;
-    height: 2rem;
-    margin: 15px;
-    text-align: center;
+}
 
+input.form-control.me-2 {
+    font-size: 0.7rem;
 }
 
 
-#buscar:hover {
-    background-color: #a33f37;
+/* search bar position */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
 
 
 #editar-excluir {
     cursor: pointer;
-    width: 8.5rem;
+    width: 3.5rem;
     border: none;
     border-radius: .5rem;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     outline: none;
     height: 2rem;
-    margin: 15px;
     text-align: center;
 }
 
@@ -328,42 +453,46 @@ svg {
 
 
 
-.form-control{
+
+#editar-excluir-red {
+    cursor: pointer;
+    width: 3.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--btn--excluir);
+    color: var(--white);
+    font-size: 0.6rem;
+    outline: none;
     height: 2rem;
+    text-align: center;
 }
 
-
-.d-flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#editar-excluir-red:hover {
+    background-color: #a33f37;
 }
-
-
-
 
 
 .navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 
-h1{
+h1 {
     text-align: center;
     font-size: 1.5rem;
 }
 
-.abas{
+.abas {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.info{
+.info {
     display: flex;
     padding: 2rem;
     justify-content: center;
@@ -371,48 +500,48 @@ h1{
 
 
 
-.input-group{
+.input-group {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     padding: 1rem;
     width: 100%;
-} 
+}
 
 
 
 
-input .input-group{
+input .input-group {
     display: flex;
     justify-content: center;
     padding: 1rem;
     width: 8rem;
-} 
+}
 
 
 
-#addon-wrapping{
+#addon-wrapping {
     width: 5rem;
 }
 
-#dadosnome{
+#dadosnome {
     width: 14rem;
     height: 2.5rem;
 }
 
-#dadoscpf{
+#dadoscpf {
     width: 14rem;
     height: 2.5rem;
 }
 
 
-.opcao{
+.opcao {
     display: flex;
     justify-content: center;
     margin: 0.5rem;
 
 }
 
-.opcao button{
+.opcao button {
     cursor: pointer;
     width: 10.5rem;
     border: none;
@@ -435,9 +564,9 @@ input .input-group{
 
 
 #editar-excluir-red {
- 
+
     cursor: pointer;
-    width: 8.5rem;
+    width: 3.5rem;
     border: none;
     border-radius: .5rem;
     background-color: var(--btn--excluir);
@@ -457,38 +586,83 @@ input .input-group{
 
 
 
-#seguranca{
+#seguranca {
     display: flex;
     padding-left: 17rem;
-    padding-right: 17rem; 
+    padding-right: 17rem;
     justify-content: center;
     flex-direction: column;
     width: 100%;
 }
 
-#seguranca input .form-control{
+#seguranca input .form-control {
     height: 3rem;
 }
 
 
-.input-group>.form-control{
+.input-group>.form-control {
     height: 2.5rem;
     width: 8rem;
 
 }
 
+#passwordField1 {
+    height: 2.5rem;
 
+}
 
+#password {
+    width: 100%;
+}
 
-#receitas{
-    display: flex;
-    flex-direction: row;
-    padding-left: 8rem;
-    padding-right: 8rem; 
+.fa {
+    position: fixed;
+    margin: 10px;
+    z-index: 9999;
+}
+
+#eye1 {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-180%);
+    cursor: pointer;
 }
 
 
-.tabela{
+#eye2 {
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    transform: translateY(-180%);
+    cursor: pointer;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.input-container input, .form button {
+    outline: none;
+    border: 1px solid #595b5d;
+    margin: 8px 0;
+    justify-content: right;
+
+}
+
+
+#receitas {
+    display: flex;
+    flex-direction: row;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+
+.tabela {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -498,51 +672,55 @@ input .input-group{
 
 
 
-.table{
+.table {
     display: flex;
     width: 100%;
     flex-direction: column;
     padding: none;
-
 }
 
 
-td{
+td {
     display: flex;
     align-items: center;
     justify-content: right;
+
 }
 
- 
-tr{
+
+tr {
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
+
 }
+
+/* change background of config table */
+
+.table>:not(caption)>*>* {
+    background-color: var(--lite--);
+}
+
 
 
 .input-group-text {
     font-size: 0.9rem;
     width: 5rem;
 }
- 
 
-#dadosnome{
+
+#dadosnome {
     font-size: 1rem;
 }
 
-#dadoscpf{
+#dadoscpf {
     font-size: 1rem;
 
 }
 
 
-
-
-
-
-.tab-btn{
+.tab-btn {
 
     cursor: pointer;
     width: 10.5rem;
@@ -565,6 +743,134 @@ tr{
 
 
 
+.dropzone-box {
+    border-radius: 8px;
+    padding: 2rem;
+/*     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 36rem;
+    width: 100%;
+    
+
+
+}
+
+
+.dropzone h2,
+.dropzone p {
+    font-size: 1rem;
+}
+
+
+.dropzone-box h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 9rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    height: 12rem;
+}
+
+.dropzone-area [type="file"] {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 12rem;
+}
+
+.dropzone-area .file-upload-icon svg {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary);
+}
+
+.dropzone--over {
+    border-style: solid;
+    background-color: var(--black);
+}
+
+.dropzone-actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--black);
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.dropzone-actions button {
+    flex-grow: 1;
+    /*  min-height: 1rem; */
+    font-size: 1.2rem;
+}
+
+.dropzone-actions button:hover {
+    text-decoration: underline;
+}
+
+.dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-actions button[type='submit'] {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  
+
+}
+
+
+/* .dropzone-area{
+    background-image: url(/imgs/Imagem1cadastre-se.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+ */
+
 footer {
 
     position: fixed;
@@ -572,6 +878,7 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
+    padding-top: 5rem;
 }
 
 
@@ -602,27 +909,27 @@ footer p {
 @media only screen and (max-width: 1200px) {
 
 
-    
-.info{
-    display: flex;
-    justify-content: center;
-}
+
+    .info {
+        display: flex;
+        justify-content: center;
+    }
 
 
-    #seguranca{
+    #seguranca {
         display: flex;
         padding-left: 2rem;
-        padding-right: 2rem; 
+        padding-right: 2rem;
         justify-content: center;
         flex-direction: column;
     }
-    
-    #seguranca input .form-control{
+
+    #seguranca input .form-control {
         height: 3rem;
     }
 
 
-    .tabela{
+    .tabela {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -630,22 +937,22 @@ footer p {
     }
 
 
-    #receitas{
+    #receitas {
         display: flex;
         flex-direction: column;
         padding-left: 0;
-        padding-right: 0; 
-        font-size: 2px ;
+        padding-right: 0;
+        font-size: 2px;
 
     }
 
-    td{
+    td {
         font-size: 0.8rem;
-        
+
 
     }
 
-    tr{
+    tr {
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -653,16 +960,16 @@ footer p {
     }
 
 
-    .menu-table{
+    .menu-table {
         display: flex;
         flex-direction: row;
 
     }
 
-  
 
 
-    .table{
+
+    .table {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -670,13 +977,13 @@ footer p {
 
     }
 
-    tbody{
+    tbody {
         display: flex;
         flex-direction: column;
         padding-left: 1rem;
-        padding-right: 1rem; 
-        box-sizing:border-box;
-        font-size: 2px ;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        font-size: 2px;
         justify-content: left;
 
     }
@@ -693,7 +1000,7 @@ footer p {
         height: 2rem;
         text-align: center;
     }
-    
+
     #editar-excluir:hover {
         background-color: #a33f37;
     }
@@ -713,7 +1020,7 @@ footer p {
         height: 2rem;
         text-align: center;
     }
-    
+
     #editar-excluir-red:hover {
         background-color: #a33f37;
     }
@@ -722,21 +1029,23 @@ footer p {
 
 
 
-    .nome-receita{
+    .nome-receita {
         text-align: left;
     }
- 
 
 
 
 
-        
+
+
     footer {
         position: relative;
         bottom: 0;
         width: 100%;
         text-align: center;
         left: 0;
+        margin-top: 9rem;
+
     }
 
 
@@ -769,217 +1078,243 @@ footer p {
 
 
 
+
+@media only screen and (max-width: 768px) {
+
+
+.dropzone-area {
+    width: 80%;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 8rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    height: 8rem;
+}
+
+
+}
+
+
 @media only screen and (max-width: 360px) {
 
-    .abas{
+    .abas {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
-        
+
     }
 
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 1rem;
     }
 
-    #buscar{
+    #buscar {
         align-items: center;
         flex-direction: center;
         font-size: 0.6rem;
     }
 
 
-    
-    .info{
+
+    .info {
         display: flex;
         justify-content: center;
     }
-    
-    
-        #seguranca{
-            display: flex;
-            padding-left: 1rem;
-            padding-right: 1rem; 
-            justify-content: center;
-            flex-direction: column;
-        }
-        
-        #seguranca input .form-control{
-            height: 3rem;
-        }
-    
-    
-        .tabela{
-            display: flex;
-            width: 100%;
-            justify-content: center;
-    
-        }
-    
-    
-        #receitas{
-            display: flex;
-            flex-direction: column;
-            padding-left: 0;
-            padding-right: 0; 
-            font-size: 2px ;
-    
-        }
 
 
-        button .tab-btn{
-            font-size: 0.7rem;
-            margin: 0;
-        }
-
-
-        .tab-btn{
-            font-size: 0.7rem;
-            width: 5rem;
-            margin: 0.2rem;
-            
-        }
-
-
-        .input-group-text {
-            font-size: 0.6rem;
-            width: 5rem;
-        }
-        
-    
-        td{
-            font-size: 0.8rem;
-            margin: none;
-            
-    
-        }
-    
-        tr{
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            width: 100%;
-        }
-
-
-        th, td{
-            font-size: 0.6rem;
-        }
-    
-    
-        .menu-table{
-            display: flex;
-            flex-direction: row;
-    
-        }
-    
-      
-    
-    
-        .table{
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            padding: none;
-    
-        }
-    
-        tbody{
-            display: flex;
-            flex-direction: column;
-            padding-left: 1rem;
-            padding-right: 1rem; 
-            box-sizing:border-box;
-            font-size: 2px ;
-            justify-content: left;
-    
-        }
-    
-        #editar-excluir {
-            cursor: pointer;
-            width: 3.5rem;
-            border: none;
-            border-radius: .5rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 0.6rem;
-            outline: none;
-            height: 2rem;
-            text-align: center;
-        }
-        
-        #editar-excluir:hover {
-            background-color: #a33f37;
-        }
-    
-        .nome-receita{
-            text-align: left;
-        }
-
-
-        #dadosnome{
-            width: 12rem;
-            height: 2.5rem;
-        }
-        
-        #dadoscpf{
-            width: 12rem;
-            height: 2.5rem;
-        }
-
-        .info{
-            padding: none;
-        }
-
-        .input-group{
-            padding-left: 1px;
-            padding-right: 1px;
-        }
-        
-        #addon-wrapping{
-            font-size: 0.6rem;
-        }
-    
-    
-    
-    
-            
-        footer {
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            left: 0;
-            margin-top: 5rem;
-        }
-    
-    
-    
-    
-        footer p {
-            font-size: 0.6rem;
-        }
-    
-    
-        ::-webkit-scrollbar {
-            width: 7px;
-        }
-    
-        ::-webkit-scrollbar-track {
-            border-radius: 5px;
-            background-color: rgb(0, 0, 0);
-        }
-    
-        ::-webkit-scrollbar-thumb {
-            border-radius: 8px;
-            background-color: var(--primary-color);
-        }
-    
-    
-    
-    
+    #seguranca {
+        display: flex;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: center;
+        flex-direction: column;
     }
+
+    #seguranca input .form-control {
+        height: 3rem;
+    }
+
+
+    .tabela {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+
+    #receitas {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 2px;
+
+    }
+
+
+    button .tab-btn {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+
+    .tab-btn {
+        font-size: 0.7rem;
+        width: 5rem;
+        margin: 0.2rem;
+
+    }
+
+
+    .input-group-text {
+        font-size: 0.6rem;
+        width: 5rem;
+    }
+
+
+    td {
+        font-size: 0.8rem;
+        margin: none;
+
+
+    }
+
+    tr {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+
+    th, td {
+        font-size: 0.6rem;
+    }
+
+
+    .menu-table {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+
+
+    .table {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: none;
+
+    }
+
+    tbody {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        font-size: 2px;
+        justify-content: left;
+
+    }
+
+    #editar-excluir {
+        cursor: pointer;
+        width: 3.5rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 0.6rem;
+        outline: none;
+        height: 2rem;
+        text-align: center;
+    }
+
+    #editar-excluir:hover {
+        background-color: #a33f37;
+    }
+
+    .nome-receita {
+        text-align: left;
+    }
+
+
+    #dadosnome {
+        width: 12rem;
+        height: 2.5rem;
+    }
+
+    #dadoscpf {
+        width: 12rem;
+        height: 2.5rem;
+    }
+
+    .info {
+        padding: none;
+    }
+
+    .input-group {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    #addon-wrapping {
+        font-size: 0.6rem;
+    }
+
+
+
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        margin-top: 10rem;
+    }
+
+
+
+
+    footer p {
+        font-size: 0.6rem;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: var(--primary-color);
+    }
+
+
+
+
+}

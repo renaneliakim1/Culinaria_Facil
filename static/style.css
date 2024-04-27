@@ -215,9 +215,10 @@ body.modo-escuro #resultados{
 
 
 
-header{display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+header{
+  display: flex;
+/*     justify-content: space-between; */  
+  flex-wrap: wrap;
 }
 
 .navbar-nav.me-auto.mb-2.mb-lg-0{
@@ -310,6 +311,10 @@ body.modo-escuro footer p {
     width: 100%;
 }
 
+
+.dropdown-menu.show{
+    background-color: var(--lite--);
+}
 
 /* defines characteristics of buttons */
 #acesso {
@@ -424,6 +429,7 @@ svg {
 input.form-control.me-2{
     font-size: 0.7rem;
     background-color: var(--white);
+    height: 3rem;
 }
 
 
@@ -459,7 +465,7 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 65rem;
+    height: 43.6rem;
     z-index: -1;
     opacity: 0.6;
 }
@@ -689,7 +695,9 @@ h5 {
     height: 2.7rem;
 }
 
-
+ul .navbar-nav.me-auto.mb-2.mb-lg-0{
+    margin: none;
+}
 
 
 
@@ -787,7 +795,7 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 7rem;
+    padding-top: 10rem;
 }
 
 
@@ -844,6 +852,14 @@ footer p {
         align-items: center;
         margin: none;
 
+    }
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 46.6rem;
+        z-index: -1;
+        opacity: 0.6;
     }
 }
 
@@ -957,15 +973,22 @@ footer p {
  
 @media only screen and (max-width: 768px) {
 
+
+    input.form-control.me-2{
+        font-size: 0.7rem;
+        background-color: var(--white);
+        height: 3rem;
+        width: 100%;
+    }
     header{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: left;
 
-    }
+    } 
 
     .mb-3{
-        width: 70%;
+        width: 80%;
     }
 
 
@@ -1036,6 +1059,17 @@ footer p {
  
 
 @media only screen and (max-width: 365px) {
+
+    .mb-3{
+        width: 80%;
+    }
+
+    input.form-control.me-2{
+        font-size: 0.7rem;
+        background-color: var(--white);
+        height: 3rem;
+        width: 80%;
+    }
 
     .navbar>.container-fluid {
         display: flex;

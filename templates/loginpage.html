@@ -25,51 +25,58 @@
   <div class="modo-claro"></div>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
-                    alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
+      <div class="container-fluid">
+        <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
+            alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
 
 
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {%  if not user %}
-                    <li class="nav-item">
-                      <a class="nav-link active" id="acesso" aria-current="page"
-                          href="/cadastro"><svg xmlns="http://www.w3.org/2000/svg"
-                              width="16" height="16" fill="currentColor" class="bi bi-person-fill-add"
-                              viewBox="0 0 16 16">
-                              <path
-                                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                              <path
-                                  d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
-                          </svg>cadastre-se</a>
-                  </li>
-                        {% endif %}
-                        </ul>
-                </ul>
-              </div>
-              <form class="d-flex" role="search">
-                  <input class="form-control me-2"  type="search" placeholder="Buscar" aria-label="Search" />
-                  <button class="btn btn-outline-success"   type="submit" id="buscar">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                          class="bi bi-search" viewBox="0 0 16 16">
-                          <path
-                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                      </svg>Buscar
-                  </button>
-              </form>
-          </div>
-
-            </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% if not user %}
+            <li class="nav-item">
+              <a class="nav-link active" id="acesso" aria-current="page" href="/cadastro"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                  <path
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                  <path
+                    d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
+                </svg>cadastre-se</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
+                  href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                      height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                      <path
+                          d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                      <path fill-rule="evenodd"
+                          d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                  </svg>Dicas</a>
+          </li>
+          </ul>
         </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit" id="buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>Buscar
+          </button>
+        </form>
+      </div>
+
+      </div>
+      </div>
     </nav>
-</header>
+  </header>
   <div class="container">
 
     <div class="imagem">
@@ -82,46 +89,66 @@
 
 
 
-  <div class="formulario">
-    {% set alertas = get_flashed_messages() %}
-    {% if alertas %}
-    {% for alerta in alertas %}
-    <div class="alert-messege">{{ alerta }}</div>
-    {% endfor %}
-    {% endif %}
-    <form class="form" method="POST" action="">
-      {{ form.csrf_token }}
-      <p class="form-title">Faça login em sua conta</p>
-      <div class="input-container">
-        {{ form.login_email }}
-            {% for error in form.login_email.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <span>
-        </span>
-      </div>
+    <div class="formulario">
+      {% set alertas = get_flashed_messages() %}
+      {% if alertas %}
+      {% for alerta in alertas %}
+      <div class="alert-messege">{{ alerta }}</div>
+      {% endfor %}
+      {% endif %}
+      <form class="form" method="POST" action="">
+        {{ form.csrf_token }}
+        <p class="form-title">Faça login em sua conta</p>
+        <div class="input-container">
+          {{ form.login_email }}
+          {% for error in form.login_email.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <span>
+          </span>
+        </div>
 
-      <div class="input-container">
-        {{ form.login_senha }}
-            {% for error in form.login_senha.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <i class="fa fa-eye-slash" id="eye"></i>
-      </div>
+        <div class="input-container" type="password">
+          {{ form.login_senha }}
+          {% for error in form.login_senha.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <i class="fa fa-eye-slash eye" id="eye" data-target="login_senha"></i>
+        </div>
+
+        <script>
+          document.querySelectorAll('.eye').forEach(function (eye) {
+            eye.addEventListener('click', function () {
+              var targetId = this.getAttribute('data-target');
+              var campoSenha = document.querySelector('[name="' + targetId + '"]'); // Seleciona o campo de senha pelo atributo 'name'
+
+              if (campoSenha.type === 'password') {
+                campoSenha.type = 'text';
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+              } else {
+                campoSenha.type = 'password';
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+              }
+            });
+          });
+        </script>
 
 
 
-<button type="submit" class="submit">
+
+        <button type="submit" class="submit">
           Entrar
         </button>
 
 
-      <p class="signup-link">
-        Sem conta?
-        <a href="/cadastro">Cadastre-se</a>
-      </p>
-    </form>
-  </div>
+        <p class="signup-link">
+          Sem conta?
+          <a href="/cadastro">Cadastre-se</a>
+        </p>
+      </form>
+    </div>
 
   </div>
 

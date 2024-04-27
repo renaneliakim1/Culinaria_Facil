@@ -160,7 +160,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ receita[1] }}</h5>
                     <p class="card-text">
-                        {{ receita[2] }}
+                        {{ receita[2][0:150] }} ...
                     </p>
                     <div class="date">
                         <p>{{ receita[9] }}</p>
@@ -184,8 +184,9 @@
 
 
     <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
-        <img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /><br>
+        <a href="/cadastro_receita"><img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /></a><br>
     </button>
+
 
     <footer>
         <p>

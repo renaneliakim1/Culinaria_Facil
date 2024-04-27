@@ -150,7 +150,9 @@
     <div id="carouselExample" class="carousel slide">
 
       <div class="carousel-inner">
-        <h6 class="idusuario">Postado por <a href="/perfil/{{ receita[8] }}"> {{ receita[7] }} </a> em {{ receita[9] }}   {% if user %}   {% if user[0] == receita[8] %}
+        <h6 class="idusuario">Postado por <a href="/perfil/{{ receita[8] }}"> {{ receita[7] }} </a> em {{ receita[9] }}   
+          {% if user %}   
+          {% if user[0] == receita[8] %}
           <a HREF="/editar_receita/{{ receita[0] }}">Editar</a>
           {% endif %} {% endif %}</h6> 
         <div class="carousel-item active">
@@ -262,9 +264,10 @@
 
 
 
-<button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
-    <img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /><br>
+  <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
+    <a href="/cadastro_receita"><img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /></a><br>
 </button>
+
 
   <footer>
     <p>

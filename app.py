@@ -193,7 +193,7 @@ def pagina_perfil(id_usuario):
     cursor.close()
     if resultado:
         cursor = database_connection.cursor()
-        consulta_receita_usuario = 'SELECT receitaID ,Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, data_hora FROM usuario INNER JOIN receitas ON usuario.id = receitas.AutorID WHERE  usuario.id= %s ORDER BY data_hora DESC LIMIT 3'
+        consulta_receita_usuario = 'SELECT receitaID ,Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, data_hora, imagem_receita FROM usuario INNER JOIN receitas ON usuario.id = receitas.AutorID WHERE  usuario.id= %s ORDER BY data_hora DESC LIMIT 3'
         cursor.execute(consulta_receita_usuario, (id_usuario,))
         resultado_receitas = cursor.fetchall()
         cursor.close()
@@ -276,7 +276,7 @@ def cadastro_receita():
                 return redirect(url_for('pagina_receitas',pagina=1))
             else:
                 flash('Categoria não Existe')
-        return render_template('cadastro_receita.html', form=form)
+        return render_template('cadastro_receita.html', form=form,  user=session['user'])
     else:
         return redirect(url_for('pagina_login'))
 

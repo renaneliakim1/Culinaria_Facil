@@ -601,7 +601,7 @@ h1 {
 
 .dropzone h2,
 .dropzone p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -740,7 +740,9 @@ footer p {
     background-color: var(--primary-color);
 }
 
-/* 
+
+
+
 
 @media only screen and (max-width: 768px) {
 
@@ -822,6 +824,16 @@ footer p {
         margin-top: 0px;
         font-size: 0.8rem;
     }
+
+    .dropzone-box {
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
     
         
     footer {
@@ -843,4 +855,18 @@ footer p {
 
 
 
-} */
+} 
+
+@media only screen and (max-width: 380px) {
+
+    .dropzone-box {
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}

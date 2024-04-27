@@ -27,11 +27,6 @@
 
 <body>
   <div class="modo-claro"></div>
-  <!--    <main>
-        <video src="https://videos.pexels.com/video-files/4296854/4296854-hd_1920_1080_25fps.mp4" autoplay loop
-            muted></video>
-    </main> -->
-
 
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -58,7 +53,17 @@
                 </svg>Login</a>
             </li>
             {% endif %}
-          </ul>
+            <li class="nav-item">
+              <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
+                  href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                      height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                      <path
+                          d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                      <path fill-rule="evenodd"
+                          d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                  </svg>Dicas</a>
+          </li>
+           
           </ul>
         </div>
         <form class="d-flex" role="search">
@@ -122,44 +127,88 @@
           </span>
         </div>
 
-        <div class="input-container">
-          {{ form.registro_senha() }}
-          {% for error in form.registro_senha.errors %}
-          <div class="error-message">{{ error }}</div>
-          {% endfor %}
-          <i class="fa fa-eye-slash" id="eye"></i>
-
-
-        </div>
-        <div class="input-container">
-          {{ form.senha_confirmar() }}
-          {% for error in form.senha_confirmar.errors %}
-          <div class="error-message">{{ error }}</div>
-          {% endfor %}
-          <i class="fa fa-eye-slash" id="eye"></i>
-        </div>
-      </form>
-
-
-
-      <div class="dropzone">
-        <form class="dropzone-box">
-          <h2>Carregar imagem de perfil</h2>
-
-          <div class="dropzone-area">
-            <div class="file-upload-icon">
-              <img src="/static/imgs/foto.svg" id="foto" width="25px" height="25px" alt="">
-            </div>
-            <p>Clique para fazer upload</p>
-            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
-
-
-            <p class="message">Nenhum arquivo selecionado
-            </p>
+        <form>
+          <div class="input-container" type="password">
+            {{ form.registro_senha() }}
+            {% for error in form.registro_senha.errors %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+            <i class="fa fa-eye-slash eye" id="eye" data-target="registro_senha"></i>
           </div>
+          <div class="input-container" type="password">
+            {{ form.senha_confirmar() }}
+            {% for error in form.senha_confirmar.errors %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+            <i class="fa fa-eye-slash eye" id="eye" data-target="senha_confirmar"></i>
+       
 
+           
+          </div>
+          <script>
+            document.querySelectorAll('.eye').forEach(function(eye) {
+              eye.addEventListener('click', function() {
+                var targetId = this.getAttribute('data-target');
+                var campoSenha = document.getElementById(targetId);
+          
+                if (campoSenha.type === 'password') {
+                  campoSenha.type = 'text';
+                  this.classList.remove('fa-eye-slash');
+                  this.classList.add('fa-eye');
+                } else {
+                  campoSenha.type = 'password';
+                  this.classList.remove('fa-eye');
+                  this.classList.add('fa-eye-slash');
+                }
+              });
+            });
+          </script> 
         </form>
-      </div>
+        
+       
+        
+
+
+        <div class="dropzone">
+          <form class="dropzone-box">
+            <h2>Carregar imagem de perfil</h2>
+        
+            <div class="dropzone-area">
+              <div class="file-upload-icon">
+                <img src="/static/imgs/foto.svg" id="foto" width="25px" height="25px" alt="">
+              </div>
+              <p>Clique para fazer upload</p>
+              <input type="file" id="imagens" name="imagens[]" multiple accept="image/*">
+              <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+            </div>
+        
+          </form>
+        </div>
+        
+        <script>
+          function uploadImage(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+        
+            // Verifica se há arquivos selecionados
+            if (event.target.files.length > 0) {
+              var file = event.target.files[0];
+              var reader = new FileReader();
+        
+              reader.onload = function(e) {
+                var image = document.getElementById('foto');
+                image.src = e.target.result;
+                document.getElementById('file-name').textContent = file.name; // Atualiza o texto com o nome do arquivo
+              };
+        
+              reader.readAsDataURL(file);
+            }
+          }
+        
+          // Adiciona um ouvinte de evento ao input de arquivo
+          document.getElementById('imagens').addEventListener('change', uploadImage);
+        </script>
+        
+      
 
 
 

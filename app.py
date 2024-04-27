@@ -475,6 +475,15 @@ def editar_perfil(id_usuario):
         return redirect(url_for('pagina_inicial'))
 
 
+@app.route('/dicas')
+def dicas():
+    if 'user' in session:
+        return render_template('dicas.html', user=session['user'])
+    else:
+        return render_template('dicas.html')
+
+
+
 @app.route('/logout')
 def sair():
     session.pop('user', None)

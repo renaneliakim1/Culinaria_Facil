@@ -208,7 +208,7 @@ def pagina_perfil(id_usuario):
 @app.route('/perfil/<int:id_usuario>/receitas/<int:pagina>')
 def usuario_receita(id_usuario, pagina):
     cursor = database_connection.cursor()
-    consulta_receita = 'SELECT * FROM receitas WHERE AutorID = %s'
+    consulta_receita = 'SELECT receitaid,titulo, descricao, data_hora, imagem_receita, usuario.nome FROM receitas  inner join usuario on receitas.autorid = usuario.id WHERE AutorID = %s'
     cursor.execute(consulta_receita, (id_usuario,))
     resultado = cursor.fetchall()
     inicio_pagina = (pagina-1)*10

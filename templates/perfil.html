@@ -154,8 +154,10 @@
     <section>
         <h1>Receitas postadas por {{ usuario[1] }}</h1>
         <img src="/static/uploads\{{ usuario[3]}}" alt="pic1">
+        {% if user %}
         {% if user[0] == usuario[0] %}
         <a href="/editar_perfil/{{ usuario[0] }}"> Editar Perfil</a>
+        {% endif %}
     {% endif %}
     </section>
     {% endfor %}

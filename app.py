@@ -58,7 +58,7 @@ def pagina_receitas(pagina):
 @app.route('/receita/<int:receita_id>', methods=['GET', 'POST'])
 def pagina_receita(receita_id):
     cursor = database_connection.cursor()
-    consulta_receita = 'SELECT receitaID, Titulo, descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita, video_receita FROM receitas inner join usuario  on receitas.autorID = usuario.id WHERE receitaID = %s'
+    consulta_receita = 'SELECT receitaID, Titulo, receitas.descricao, Instrucoes, ingredientes, tempoPreparo, Dificuldade, usuario.nome, usuario.id, data_hora, imagem_receita, video_receita, categoriaNome FROM receitas inner join usuario  on receitas.autorID = usuario.id inner join categorias on categorias.categoriaID = receitas.categoriaID WHERE receitaID = %s'
     cursor.execute(consulta_receita, (receita_id,))
     resultado_receita = cursor.fetchall()
     cursor.close()

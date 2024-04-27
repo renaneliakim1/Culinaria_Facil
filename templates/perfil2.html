@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for usuario in resultado %}
+    <p>nome: {{ usuario[1] }}</p>
+    {% if user[0] == usuario[0] %}
+    <a href="/editar_perfil/{{ usuario[0] }}"> Editar Perfil</a>
+    {% endif %}
+{% endfor %}
+{% if resultado_receitas %}
+<p>Receitas mais recentes:</p>
+  {% for receita in resultado_receitas %}
+    <a href="/receita/{{ receita[0] }}">{{ receita[1] }} </a>
+    <p>{{ receita[2] }}</p>
+{% endfor %}
+
+<a href="/perfil/{{ resultado[0][0] }}/receitas/1">Veja todas as Receitas Desse usuário</a>
+{% else %}
+<p>Este usuário não possui receitas</p>
+{% endif %}
+</body>
+</html>

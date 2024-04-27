@@ -44,7 +44,7 @@ class FormularioRegistro(FlaskForm):
 
 class FormularioLogin(FlaskForm):
     login_email = StringField('Email', validators=[validators.DataRequired(), validators.Email()],  render_kw={"placeholder": "E-mail"})
-    login_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)],  render_kw={"placeholder": "E-mail"})
+    login_senha = PasswordField('Senha', validators=[validators.DataRequired(), validators.Length(min=6)],  render_kw={"placeholder": "Senha"})
     submit_login = SubmitField('Login')
 
 

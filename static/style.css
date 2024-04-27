@@ -631,55 +631,13 @@ label {
 }
 
 
-
-.rating:not(:checked) > input {
-    position: absolute;
-    appearance: none;
-  }
-  
-  .rating:not(:checked) > label {
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    color: #666;
-  }
-  
-  .rating:not(:checked) > label:before {
-    content: '★';
-  }
-  
-  .rating > input:checked + label:hover,
-  .rating > input:checked + label:hover ~ label,
-  .rating > input:checked ~ label:hover,
-  .rating > input:checked ~ label:hover ~ label,
-  .rating > label:hover ~ input:checked ~ label {
-    color: #e58e09;
-  }
-  
-  .rating:not(:checked) > label:hover,
-  .rating:not(:checked) > label:hover ~ label {
-    color: #ff9e0b;
-  }
-  
-  .rating > input:checked ~ label {
-    color: #ffa723;
-  }
-  
-  .rating{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    width: 80%;
+.todas_receitas{
+    text-align: center;
+    color: #000000;
 }
-
-
-.rating label{
-    margin: 0px;
+.todas_receitas a{
+    color: #000000;
 }
-  
-
-  
-  
 
 
 
@@ -820,7 +778,18 @@ footer p {
     background-color: var(--primary-color);
 }
 
+@media only screen and (max-width: 2560px) {
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 47.6rem;
+        z-index: -1;
+        opacity: 0.6;
+    }
 
+
+}
 
 @media only screen and (max-width: 1200px) {
 

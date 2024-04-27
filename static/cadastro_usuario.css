@@ -470,6 +470,7 @@ h1 {
 .formulario {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     align-items: center;
@@ -482,12 +483,11 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    max-width: 30rem;
     border-radius: 0.5rem;
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     margin-top: 1rem;
     width: 100%;
-    height: 32rem;
+    height: 25rem;
     gap: 1rem;
 }
 
@@ -516,12 +516,13 @@ h1 {
     padding-right: 3rem;
     font-size: 0.8rem;
     line-height: 1.25rem;
-    width: 300px;
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     width: 100%;
     height: 2rem;
 }
+
+
 
 
 .submit {
@@ -564,6 +565,7 @@ h1 {
     width: 100%;
 }
 
+
 .fa{
     position: fixed;
     margin: 10px;
@@ -585,10 +587,124 @@ h1 {
     align-items: center;
 }
 
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
+
+
+
+.dropzone-box {
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dropzone h2,
+.dropzone p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.dropzone-box h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 4rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    height: 8rem;
+}
+
+.dropzone-area [type="file"] {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 7rem;
+}
+
+.dropzone-area .file-upload-icon svg {
+    height: 1rem;
+    width: 1rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary);
+}
+
+.dropzone--over {
+    border-style: solid;
+    background-color: var(--black);
+}
+
+.dropzone-actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--black);
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.dropzone-actions button {
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+.dropzone-actions button:hover {
+    text-decoration: underline;
+}
+
+.dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-actions button[type='submit'] {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10rem;
+
+
+}
+
+#foto{
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -624,7 +740,7 @@ footer p {
     background-color: var(--primary-color);
 }
 
-
+/* 
 
 @media only screen and (max-width: 768px) {
 
@@ -637,7 +753,6 @@ footer p {
         padding: 20px;
         background-color: var(--card--);
         border-radius: 8px;
-        /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
         border-radius: 4px;
 
     }
@@ -668,11 +783,9 @@ footer p {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        max-width: 30rem;
         border-radius: 0.5rem;
-        /*         box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
         width: 90%;
-        height: 28rem;
+        height: 27rem;
         gap: 1rem;
     }
 
@@ -730,4 +843,4 @@ footer p {
 
 
 
-}
+} */

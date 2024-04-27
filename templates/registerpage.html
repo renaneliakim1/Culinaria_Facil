@@ -33,50 +33,49 @@
     </main> -->
 
 
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-              <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
-                      alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
-  
-  
-  
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                  aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      {%  if not user %}
-                      <li class="nav-item">
-                          <a class="nav-link active" id="acesso" aria-current="page" href="/login"><svg
-                                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                  class="bi bi-person-check-fill" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd"
-                                      d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
-                                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                              </svg>Login</a>
-                      </li>
-                          {% endif %}
-                          </ul>
-                  </ul>
-                </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2"  type="search" placeholder="Buscar" aria-label="Search" />
-                    <button class="btn btn-outline-success"   type="submit" id="buscar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                            class="bi bi-search" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                        </svg>Buscar
-                    </button>
-                </form>
-            </div>
-  
-              </div>
-          </div>
-      </nav>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
+            alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
+
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% if not user %}
+            <li class="nav-item">
+              <a class="nav-link active" id="acesso" aria-current="page" href="/login"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>Login</a>
+            </li>
+            {% endif %}
+          </ul>
+          </ul>
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit" id="buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>Buscar
+          </button>
+        </form>
+      </div>
+
+      </div>
+      </div>
+    </nav>
   </header>
   <div class="container">
 
@@ -86,67 +85,83 @@
     </div>
 
 
-  <div class="formulario">
-    {% set alertas = get_flashed_messages() %}
-    {% if alertas %}
-    {% for alerta in alertas %}
-    <div class="alert-messege">{{ alerta }}</div>
-    {% endfor %}
-    {% endif %}
+    <div class="formulario">
+      {% set alertas = get_flashed_messages() %}
+      {% if alertas %}
+      {% for alerta in alertas %}
+      <div class="alert-messege">{{ alerta }}</div>
+      {% endfor %}
+      {% endif %}
 
-    <form class="form" method="post" action="" enctype="multipart/form-data">
-      {{ form.csrf_token }}
-      <p class="form-title">Faça seu cadastro</p>
-      <div class="input-container">
-            {{ form.registro_nome() }}
-            {% for error in form.registro_nome.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <span>
-        </span>
-      </div>
-      <div class="input-container">
-        {{ form.registro_email() }}
-            {% for error in form.registro_email.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <span>
-        </span>
-      </div>
+      <form class="form" method="post" action="" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <p class="form-title">Faça seu cadastro</p>
+        <div class="input-container">
+          {{ form.registro_nome() }}
+          {% for error in form.registro_nome.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <span>
+          </span>
+        </div>
+        <div class="input-container">
+          {{ form.registro_email() }}
+          {% for error in form.registro_email.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <span>
+          </span>
+        </div>
 
-      <div class="input-container">
-        {{ form.registro_cpf() }}
-            {% for error in form.registro_cpf.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <span>
-        </span>
-      </div>
-      <div class="input-container">
-        {{ form.imagem_perfil() }}
-            {% for error in form.imagem_perfil.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <span>
-        </span>
-      </div>
+        <div class="input-container">
+          {{ form.registro_cpf() }}
+          {% for error in form.registro_cpf.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <span>
+          </span>
+        </div>
 
-      <div class="input-container">
-            {{ form.registro_senha() }}
-            {% for error in form.registro_senha.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <i class="fa fa-eye-slash" id="eye"></i>
+        <div class="input-container">
+          {{ form.registro_senha() }}
+          {% for error in form.registro_senha.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <i class="fa fa-eye-slash" id="eye"></i>
 
 
+        </div>
+        <div class="input-container">
+          {{ form.senha_confirmar() }}
+          {% for error in form.senha_confirmar.errors %}
+          <div class="error-message">{{ error }}</div>
+          {% endfor %}
+          <i class="fa fa-eye-slash" id="eye"></i>
+        </div>
+      </form>
+
+
+
+      <div class="dropzone">
+        <form class="dropzone-box">
+          <h2>Carregar imagem de perfil</h2>
+
+          <div class="dropzone-area">
+            <div class="file-upload-icon">
+              <img src="/static/imgs/foto.svg" id="foto" width="25px" height="25px" alt="">
+            </div>
+            <p>Clique para fazer upload</p>
+            <input type="file" id="imagens" name="imagens[]" multiple accept="image/*, video/*">
+
+
+            <p class="message">Nenhum arquivo selecionado
+            </p>
+          </div>
+
+        </form>
       </div>
-      <div class="input-container">
-        {{ form.senha_confirmar() }}
-            {% for error in form.senha_confirmar.errors %}
-                <div class="error-message">{{ error }}</div>
-            {% endfor %}
-        <i class="fa fa-eye-slash" id="eye"></i>
-      </div>
+
+
 
       <button type="submit" class="submit">
         Cadastrar
@@ -156,8 +171,7 @@
         Já possui conta?
         <a href="/login">Login</a>
       </p>
-    </form>
-  </div>
+    </div>
 
   </div>
 
@@ -173,11 +187,9 @@
 
 
 
-<script type="text/javascript"
-    src="{{ url_for('static', filename='/js/modo.-escuro.js') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='/js/modo.-escuro.js') }}">
 </script>
-<script type="text/javascript"
-    src="{{ url_for('static', filename='/js/topFunction.js') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='/js/topFunction.js') }}">
 </script>
 
 </html>

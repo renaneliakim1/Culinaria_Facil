@@ -150,7 +150,9 @@
     <div id="carouselExample" class="carousel slide">
 
       <div class="carousel-inner">
-        <h6 class="idusuario">Postado por <a href="/perfil/{{ receita[8] }}"> {{ receita[7] }} </a> em {{ receita[9] }}</h6>
+        <h6 class="idusuario">Postado por <a href="/perfil/{{ receita[8] }}"> {{ receita[7] }} </a> em {{ receita[9] }}      {% if user[0] == receita[8] %}
+          <a HREF="/editar_receita/{{ receita[0] }}">Editar</a>
+          {% endif %}</h6> 
         <div class="carousel-item active">
           <img src="/static/uploads\{{ receita[10] }}" class="d-block w-100" alt="...">
         </div>
@@ -220,11 +222,14 @@
     </h3>
   </div>
 
-
+  {% if receita[11] != 'sem_video' %}
   <div class="video">
     <video width="400" controls>
       <source src="/static/uploads\{{ receita[11] }}" type="video/{{ receita[11].split('.')[1] }}">
   </video>
+  {% else %}
+  <p>Receita sem vídeo</p>
+  {% endif %}
   </div>
   {% if user %}
   <form method="POST" action="">
@@ -243,7 +248,9 @@
   {% if resultado_comentarios %}
   <p> Últimos comentários:</p>
   {% for comentario in resultado_comentarios %}
+
   <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 10px">
+  <img src="/static/uploads\{{ comentario[4] }}" alt="pic1">
   <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <p> Postado em: {{ comentario[3] }}</p>
       <p>Comentou: {{ comentario[2] }}</p>
   </div>

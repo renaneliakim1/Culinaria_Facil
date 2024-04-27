@@ -150,11 +150,15 @@
 
 
     {% if resultado_receitas %}
+    {% for usuario in resultado %}
     <section>
-        <h1>Receitas postadas por Nome de Usuario</h1>
-        <img src="/imgs/Imagem1login.png" alt="">
+        <h1>Receitas postadas por {{ usuario[1] }}</h1>
+        <img src="/static/uploads\{{ usuario[3]}}" alt="pic1">
+        {% if user[0] == usuario[0] %}
+        <a href="/editar_perfil/{{ usuario[0] }}"> Editar Perfil</a>
+    {% endif %}
     </section>
-
+    {% endfor %}
     {% for receita in resultado_receitas %}
     <div id="resultados">
         <div class="card">
@@ -180,7 +184,7 @@
 
 
     <div class="mais_receitas">
-        <a href="#topo" id="opcao_mais_rececitas">Acessar mais receitas de nome de Usuario</a>
+        <a href="/perfil/{{ resultado[0][0] }}/receitas/1" id="opcao_mais_rececitas">Acessar mais receitas de nome de Usuario</a>
     </div>
 
 

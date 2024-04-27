@@ -187,7 +187,7 @@ def pagina_login():
 @app.route('/perfil/<int:id_usuario>')
 def pagina_perfil(id_usuario):
     cursor = database_connection.cursor()
-    consulta_usuario = 'SELECT usuario.id,usuario.nome, usuario.email FROM usuario WHERE  usuario.id= %s'
+    consulta_usuario = 'SELECT usuario.id,usuario.nome, usuario.email, usuario.imagem_perfil FROM usuario WHERE  usuario.id= %s'
     cursor.execute(consulta_usuario, (id_usuario,))
     resultado = cursor.fetchall()
     cursor.close()

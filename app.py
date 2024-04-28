@@ -45,7 +45,7 @@ def pagina_inicial():
 
 
 
-@app.route('/receitas/pesquisa//<input_pesquisa>/<int:pagina>')
+@app.route('/receitas/pesquisa//<input_pesquisa>/<int:pagina>', methods=['GET', 'POST'])
 def pagina_pesquisa(pagina, input_pesquisa):
     cursor = database_connection.cursor()
     pesquisa_receita = '''
@@ -65,9 +65,13 @@ def pagina_pesquisa(pagina, input_pesquisa):
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado_pesquisa [inicio_pagina:fim_pagina]
-    return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina)
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+    return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
 
-@app.route('/receitas/<int:pagina>')
+@app.route('/receitas/<int:pagina>' , methods=['GET', 'POST'])
 def pagina_receitas(pagina):
     cursor = database_connection.cursor()
     consulta_receitas = 'SELECT * FROM receitas'
@@ -76,8 +80,12 @@ def pagina_receitas(pagina):
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if len(resultado_receita) >0:
-        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina)
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
     else:
         return redirect(url_for('pagina_inicial'))
 
@@ -95,6 +103,10 @@ def pagina_receita(receita_id):
     cursor3.execute(consulta_receita, (receita_id,))
     resultado_comentarios = cursor3.fetchall()
     cursor3.close()
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if 'user' in session:
         form = FormularioComentario()
         if form.validate_on_submit():
@@ -106,9 +118,9 @@ def pagina_receita(receita_id):
             cursor2.execute(inserir_comentario, dados_comentario)
             database_connection.commit()
             return redirect(url_for('pagina_receita',receita_id=receita_id))
-        return render_template('receita.html', resultado_receita=resultado_receita, user=session['user'], form=form, resultado_comentarios=resultado_comentarios)
+        return render_template('receita.html', resultado_receita=resultado_receita, user=session['user'], form=form, resultado_comentarios=resultado_comentarios, form_pesquisa=form_pesquisa)
     else:
-        return render_template('receita.html', resultado_receita=resultado_receita, resultado_comentarios=resultado_comentarios)
+        return render_template('receita.html', resultado_receita=resultado_receita, resultado_comentarios=resultado_comentarios, form_pesquisa=form_pesquisa)
 
 
 @app.route('/minhas_receitas/<int:pagina>')
@@ -502,12 +514,16 @@ def editar_perfil(id_usuario):
         return redirect(url_for('pagina_inicial'))
 
 
-@app.route('/dicas')
+@app.route('/dicas' , methods=['GET', 'POST'])
 def dicas():
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if 'user' in session:
-        return render_template('dicas.html', user=session['user'])
+        return render_template('dicas.html', user=session['user'], form_pesquisa=form_pesquisa)
     else:
-        return render_template('dicas.html')
+        return render_template('dicas.html', form_pesquisa=form_pesquisa)
 
 
 @app.route('/logout')

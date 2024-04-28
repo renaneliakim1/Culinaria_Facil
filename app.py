@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, session, flash
 from flask_bcrypt import Bcrypt
-from forms import FormularioRegistro, FormularioLogin, FormularioReceita, FormularioComentario
+from forms import FormularioRegistro, FormularioLogin, FormularioReceita, FormularioComentario, FormularioPesquisa
 import mysql.connector
 from datetime import datetime
 import os
@@ -27,18 +27,45 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def pagina_inicial():
     cursor = database_connection.cursor()
     consulta_receitas = 'SELECT * FROM receitas LIMIT 3'
     cursor.execute(consulta_receitas)
     resultado_receita = cursor.fetchall()
     cursor.close()
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        cursor = database_connection.cursor()
+        pesquisa_receita = '''
+        SELECT * 
+        FROM receitas 
+        WHERE Titulo LIKE %s 
+        OR Descricao LIKE %s 
+        OR Instrucoes LIKE %s 
+        OR ingredientes LIKE %s 
+        OR TempoPreparo LIKE %s 
+        OR Dificuldade LIKE %s
+        '''
+        pesquisa = form_pesquisa.pesquisa_input.data
+        cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
+        resultado_pesquisa = cursor.fetchall()
+        cursor.close()
+        print(resultado_pesquisa)
+        return pagina_pesquisa(1, resultado_pesquisa)
     if 'user' in session:
-        return render_template('index.html', user=session['user'], resultado_receita=resultado_receita)
+        return render_template('index.html', user=session['user'], resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
     else:
-        return render_template('index.html', resultado_receita=resultado_receita)
+        return render_template('index.html', resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
 
+
+
+@app.route('/receitas/pesquisa/<int:pagina>')
+def pagina_pesquisa(pagina, resultado_pesquisa):
+    inicio_pagina = (pagina-1)*10
+    fim_pagina = pagina*10
+    resultado_receita= resultado_pesquisa [inicio_pagina:fim_pagina]
+    return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina)
 
 @app.route('/receitas/<int:pagina>')
 def pagina_receitas(pagina):
@@ -481,7 +508,6 @@ def dicas():
         return render_template('dicas.html', user=session['user'])
     else:
         return render_template('dicas.html')
-
 
 
 @app.route('/logout')

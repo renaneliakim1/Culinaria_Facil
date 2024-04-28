@@ -68,4 +68,6 @@ class FormularioComentario(FlaskForm):
     submit_receita = SubmitField('Comentar_receita')
 
 
-
+class FormularioPesquisa(FlaskForm):
+    pesquisa_input = StringField('Pesquisa', validators=[validators.DataRequired()])
+    submit_receita = SubmitField('Pesquisar')

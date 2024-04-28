@@ -158,17 +158,17 @@
     
 
     <section>
+        <form method="POST" action="">
+            {{ form_pesquisa.csrf_token }}
+            <h1>Bem-vindo à Culinária Fácil <br>
+                "Receitas para Todos os Paladares"</h1> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Pesquise por uma receita</label>
+                {{ form_pesquisa.pesquisa_input }}
+                <input type="submit" class="btn btn-danger" value="Pesquisar">
+            </div>
+        </form>
 
-        <h1>Bem-vindo à Culinária Fácil <br>
-            "Receitas para Todos os Paladares"</h1> 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Pesquise por uma receita</label>
-            <input class="form-control me-2" type="search" placeholder="ex: Bolo de maçã com canela "
-                aria-label="Search">
-            <a href="/templates/busca.html"><button type="button" id="pesquisa" class="btn btn-danger">Buscar
-                    Receita</button></a>
-
-        </div>
     </section>
 
     <div class="filtroCategoria">

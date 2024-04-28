@@ -154,6 +154,7 @@
 
 
         <div id="resultados">
+            {% if resultado_receita %}
             {% for receita in resultado_receita %}
             <div class="card">
                 <a href="/receita/{{ receita[0] }}"><img src="/static/uploads\{{ receita[10] }}" class="card-img-top" alt="..." /></a>
@@ -169,7 +170,9 @@
                 </div>
             </div>
             {% endfor %}
-
+            {% else %}
+            <p>Nenhuma Receita Encontrada</p>
+            {% endif %}
         </div>
        
 

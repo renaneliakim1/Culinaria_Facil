@@ -550,6 +550,55 @@ label {
 }
 
 
+#gerar_senha_tamanho{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
+
+}
+
+#tempo_preparo{
+    width: 100%;
+}
+
+
+.escolhacatedoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.input-img{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dificuldade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+#dificuldade_receita{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
 
 .radio-inputs {
     position: relative;

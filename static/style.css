@@ -426,6 +426,34 @@ svg {
     font-size: 0.7rem;
 } */
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.form-label{
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+
+
+#pesquisa_input{
+    font-size: 0.7rem;
+    background-color: var(--card--);
+    height: 2rem;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+
+
 input.form-control.me-2{
     font-size: 0.7rem;
     background-color: var(--white);
@@ -492,10 +520,11 @@ h1 {
     flex-direction: column;
     margin: 20px;
     gap: 20px;
-    width: 40%;
+    width: 100%;
 }
 
-label {
+.mb-3 label {
+    font-size: 1rem;
 
     margin: 10px;
 
@@ -552,6 +581,7 @@ label {
     grid-template-columns: 2fr 1fr;
     justify-content: center;
     margin-top: 0.5rem;
+    align-items: center;
 
 
 }
@@ -561,8 +591,15 @@ label {
     justify-content: center;
     align-items: center;
     margin: 20px;
+    gap: 10px;
 }
 
+
+.form-check-input[type=checkbox]{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 #resultados {

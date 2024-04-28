@@ -83,8 +83,6 @@
                         </li> 
                     
                             {% endif %}
-                            </ul>
-                        </li>
                         {% if user %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
@@ -110,7 +108,7 @@
 
 
                                 </li>
-                                <li class="nav-item">
+                              <!--   <li class="nav-item">
                                     <a class="nav-link active" id="acesso" aria-current="page"
                                         href="/perfil/{{ user[0] }}"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                             height="16" fill="currentColor" class="bi bi-person-circle"
@@ -119,7 +117,7 @@
                                             <path fill-rule="evenodd"
                                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                                         </svg>Perfil</a>
-                                </li>
+                                </li> -->
 
 
                                
@@ -141,6 +139,16 @@
                         </li>
                         {% endif %}
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2"  type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-outline-success"   type="submit" id="buscar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>Buscar
+                        </button>
+                    </form>
                     
                 </div>
             </div>

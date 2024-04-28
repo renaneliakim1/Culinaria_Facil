@@ -75,7 +75,10 @@
                                     <path fill-rule="evenodd"
                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
                                 </svg>Dicas</a>
-                        </li> 
+                        </li>
+
+                       
+           
                     
                             {% endif %}
                         {% if user %}
@@ -114,6 +117,12 @@
                                         </svg>Perfil</a>
                                 </li>
 
+                                <li class="form-check form-switch" id="toggle-mode">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
+                                </li>
+                        
+
 
                                
                                 <li>
@@ -134,6 +143,16 @@
                         </li>
                         {% endif %}
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2"  type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-outline-success"   type="submit" id="buscar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>Buscar
+                        </button>
+                    </form>
                     
                 </div>
             </div>
@@ -156,7 +175,7 @@
         <div class="container">
             <div class="higiene">
                 <h2>Higiene na Cozinha</h2>
-                <img src="/imgs/img-higiene3.png" alt="">
+                <img src="/static/imgs/img-higiene3.png" alt="">
 
                 <ul>
                     <li>Mantenha a cozinha limpa e higienizada durante o preparo das refeições, lavando as
@@ -181,7 +200,7 @@
 
             <div class="higiene">
                 <h2>Armazenamento Adequado de Alimentos</h2>
-                <img src="/imgs/armazenamento04.png" alt="">
+                <img src="/static/imgs/armazenamento04.png" alt="">
 
                 <ul>
                     <li>Armazene alimentos perecíveis, como carne, laticínios e ovos, na geladeira para prolongar sua
@@ -204,7 +223,7 @@
 
             <div class="higiene">
                 <h2>Seleção de Ingredientes Frescos</h2>
-                <img src="/imgs/alimentos.png" alt="">
+                <img src="/static/imgs/alimentos.png" alt="">
 
                 <ul>
                     <li>Prefira comprar produtos sazonais e locais sempre que possível, pois geralmente são mais frescos
@@ -233,9 +252,8 @@
     </section>
 
 
-
     <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
-        <img src="/imgs/botaoFlutuante9.png" width="100rem" height="100rem" alt="Logo" /><br>
+        <a href="/cadastro_receita"><img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}" width="100rem" height="100rem" alt="Logo" /></a><br>
     </button>
 
 

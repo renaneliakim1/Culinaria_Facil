@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% set alertas = get_flashed_messages() %}
+    {% if alertas %}
+    {% for alerta in alertas %}
+    <div class="alert-messege">{{ alerta }}</div>
+    {% endfor %}
+    {% endif %}
+    <h1>Cadastro</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.registro_nome.label }}
+            {{ form.registro_nome() }}
+            {% for error in form.registro_nome.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.registro_email.label }}
+            {{ form.registro_email() }}
+            {% for error in form.registro_email.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.registro_cpf.label }}
+            {{ form.registro_cpf() }}
+            {% for error in form.registro_cpf.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.imagem_perfil.label }}: {{ form.imagem_perfil() }}
+            {% for error in form.imagem_perfil.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.registro_senha.label }}
+            {{ form.registro_senha() }}
+            {% for error in form.registro_senha.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.senha_confirmar.label }}
+            {{ form.senha_confirmar() }}
+            {% for error in form.senha_confirmar.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>

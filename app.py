@@ -97,7 +97,6 @@ def pagina_receita(receita_id):
     cursor.execute(consulta_receita, (receita_id,))
     resultado_receita = cursor.fetchall()
     cursor.close()
-    print(resultado_receita)
     cursor3 = database_connection.cursor()
     consulta_receita = 'SELECT usuario.id, usuario.nome, comentario, data_hora, imagem_perfil FROM comentarios INNER JOIN usuario ON comentarios.usuarioID = usuario.id WHERE receitaID = %s ORDER BY data_hora DESC'
     cursor3.execute(consulta_receita, (receita_id,))
@@ -253,6 +252,7 @@ def usuario_receita(id_usuario, pagina):
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
+    cursor.close()
     if len(resultado_receita) >0:
         return render_template('usuario_receitas.html', resultado_receita=resultado_receita)
     else:
@@ -263,6 +263,10 @@ def usuario_receita(id_usuario, pagina):
 def cadastro_receita():
     if 'user' in session:
         form = FormularioReceita()
+        form_pesquisa = FormularioPesquisa()
+        if form_pesquisa.validate_on_submit():
+            input_pesquisa = form_pesquisa.pesquisa_input.data
+            return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
         if form.validate_on_submit():
             imagem_receita = form.imagem_receita.data
             video_receita = form.video_receita.data
@@ -315,7 +319,7 @@ def cadastro_receita():
                 return redirect(url_for('pagina_receitas',pagina=1))
             else:
                 flash('Categoria não Existe')
-        return render_template('cadastro_receita.html', form=form,  user=session['user'])
+        return render_template('cadastro_receita.html', form=form,  user=session['user'], form_pesquisa=form_pesquisa)
     else:
         return redirect(url_for('pagina_login'))
 
@@ -335,6 +339,11 @@ def editar_receita(id_receita_editar):
                                      tempo_preparo=resultado_receita[0][5], dificuldade_receita=resultado_receita[0][6],
                                      categoria_receita=resultado_receita[0][12], imagem_receita=resultado_receita[0][10],
                                      video_receita=resultado_receita[0][11])
+            
+            form_pesquisa = FormularioPesquisa()
+            if form_pesquisa.validate_on_submit():
+                input_pesquisa = form_pesquisa.pesquisa_input.data
+                return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
             if form.validate_on_submit():
                 print(resultado_receita[0][10])
                 cursor3 = database_connection.cursor()
@@ -418,7 +427,7 @@ def editar_receita(id_receita_editar):
                 else:
                     flash('Receita não atualizada. Categoria não existe')
                     return redirect(url_for('editar_receita', id_receita_editar=id_receita_editar))
-            return render_template('editar_receita.html', resultado_receita=resultado_receita, form=form)
+            return render_template('editar_receita.html', resultado_receita=resultado_receita, form=form, form_pesquisa=form_pesquisa, user=session['user'])
     else:
         return redirect(url_for('pagina_inicial'))
 
@@ -436,6 +445,11 @@ def editar_perfil(id_usuario):
             if session['user'][0] == resultado_perfil[0][0]:
                 form = FormularioRegistro(registro_nome=resultado_perfil[0][1], registro_email=resultado_perfil[0][2],
                                         registro_cpf=resultado_perfil[0][4], imagem_perfil=resultado_perfil[0][5])
+                cursor = database_connection.cursor()
+                consulta_receita = 'SELECT receitaid,titulo, descricao, data_hora, imagem_receita, usuario.nome FROM receitas  inner join usuario on receitas.autorid = usuario.id WHERE AutorID = %s'
+                cursor.execute(consulta_receita, (id_usuario,))
+                usuario_receita = cursor.fetchall()
+                cursor.close()
                 if form.validate_on_submit():
                     imagem_perfil = form.imagem_perfil.data
                     novo_nome = form.registro_nome.data
@@ -504,13 +518,12 @@ def editar_perfil(id_usuario):
                     else:
                         flash('CPF precisa ser númerico')
                         return redirect(url_for('editar_perfil', id_usuario=id_usuario))
-                return render_template('editar_perfil.html', form=form)
+                return render_template('editar_perfil.html', form=form, user=session['user'], usuario_receita=usuario_receita)
             else:
                 return redirect(url_for('pagina_inicial'))
         else:
             return redirect(url_for('pagina_inicial'))
     else:
-        print('teste3')
         return redirect(url_for('pagina_inicial'))
 
 

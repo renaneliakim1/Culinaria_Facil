@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% set alertas = get_flashed_messages() %}
+    {% if alertas %}
+    {% for alerta in alertas %}
+    <div class="alert-messege">{{ alerta }}</div>
+    {% endfor %}
+    {% endif %}
+<form method="POST" action="" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.titulo_receita.label }}: {{ form.titulo_receita }}
+            {% for error in form.titulo_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.descricao_receita.label }}: {{ form.descricao_receita }}
+            {% for error in form.descricao_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.instrucoes_receita.label }}: {{ form.instrucoes_receita }}
+            {% for error in form.instrucoes_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.ingredientes_receita.label }}: {{ form.ingredientes_receita }}
+            {% for error in form.ingredientes_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.tempo_preparo.label }}: {{ form.tempo_preparo(min=1, max=500, oninput="outputUpdate(value)") }}
+            {% for error in form.tempo_preparo.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+            <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
+        </div>
+        <div>
+            {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
+            {% for error in form.dificuldade_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
+            {% for error in form.categoria_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
+            {% for error in form.imagem_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.video_receita.label }}: {{ form.video_receita() }}
+            {% for error in form.video_receita.errors %}
+                <div class="error-message">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <input type="submit" value="Atualizar Receita">
+    </form>
+    <script type="text/javascript"
+    src="{{ url_for('static', filename='tempo_receita.js') }}">
+    </script>
+</body>
+</html>

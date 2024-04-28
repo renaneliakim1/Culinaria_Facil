@@ -71,8 +71,6 @@
                     </li> 
                 
                         {% endif %}
-                        </ul>
-                    </li>
                     {% if user %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
@@ -129,6 +127,16 @@
                     </li>
                     {% endif %}
                 </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2"  type="search" placeholder="Buscar" aria-label="Search" />
+                  <button class="btn btn-outline-success"   type="submit" id="buscar">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                          class="bi bi-search" viewBox="0 0 16 16">
+                          <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                      </svg>Buscar
+                  </button>
+              </form>
                 
             </div>
         </div>
@@ -149,46 +157,35 @@
         <form class="dropzone-box" id="form-receita">
           <div class="dropzone-area">
             <div class="file-upload-icon">
-
-              <img src="/imgs/foto.svg"  width="50px" height="50px" alt="">
-     
+              <img src="/static/imgs/foto.svg" width="50px" height="50px" alt="">
             </div>
-            <p>Fazer upload de imagens, formatos: jpg, png, jpeg
-            </p>
+            <p>Fazer upload de imagens, formatos: jpg, png, jpeg</p>
             <input type="file" id="imagens" name="imagens[]" multiple accept="image/*">
+            <p class="message">Nenhum arquivo selecionado</p> <!-- Mantém a classe message inicialmente -->
+            <div id="file-list"></div>
 
-
-            <p class="message">Nenhum arquivo selecionado
-            </p>
           </div>
 
         </form>
-
-        <div id="file-list"></div>
-
-
-
+        
+        
         <script>
-          document.getElementById('form-receita').addEventListener('submit', function (event) {
+          document.getElementById('form-receita').addEventListener('submit', function(event) {
             event.preventDefault();
             var nome = document.getElementById('nome').value;
             var ingredientes = document.getElementById('ingredientes').value;
             var instrucoes = document.getElementById('instrucoes').value;
-
-            // Captura dos arquivos de imagem
+        
             var imagens = document.getElementById('imagens').files;
             var fileList = document.getElementById('file-list');
-
-            // Limpa a lista de arquivos
-            fileList.innerHTML = '';
-
-            // Verifica se foram selecionadas até três imagens
+        
+            fileList.innerHTML = ''; // Limpa a lista de arquivos
+        
             if (imagens.length > 3) {
               alert("Selecione no máximo três imagens.");
               return;
             }
-
-            // Verifica se todas as imagens selecionadas são dos tipos permitidos
+        
             for (var i = 0; i < imagens.length; i++) {
               var imagem = imagens[i];
               var extensao = imagem.name.split('.').pop().toLowerCase();
@@ -196,23 +193,42 @@
                 alert("Por favor, selecione apenas imagens do tipo jpg, jpeg ou png.");
                 return;
               }
-
-              // Cria um elemento de lista para cada arquivo selecionado
+        
               var listItem = document.createElement('p');
               listItem.textContent = imagem.name;
               fileList.appendChild(listItem);
             }
-
-            // Verifica se há vídeo anexado
+        
             var videos = Array.from(imagens).filter(file => file.type.startsWith('video'));
             if (videos.length > 0) {
               alert("Por favor, selecione apenas imagens, vídeos não são permitidos.");
               return;
             }
-
-            // Se todas as verificações passaram, você pode prosseguir com o envio do formulário ou fazer o que for necessário com os dados.
+        
+            // Esconde a mensagem "Nenhum arquivo selecionado" e mostra os nomes dos arquivos selecionados
+            var message = document.querySelector('.message');
+            message.style.display = 'none';
+          });
+        
+          // Adiciona um ouvinte de evento para atualizar a lista de arquivos sempre que um novo arquivo é selecionado
+          document.getElementById('imagens').addEventListener('change', function(event) {
+            var fileList = document.getElementById('file-list');
+            fileList.innerHTML = ''; // Limpa a lista de arquivos
+        
+            var imagens = event.target.files;
+            for (var i = 0; i < imagens.length; i++) {
+              var imagem = imagens[i];
+              var listItem = document.createElement('p');
+              listItem.textContent = imagem.name;
+              fileList.appendChild(listItem);
+            }
+        
+            // Se algum arquivo for selecionado, esconde a mensagem "Nenhum arquivo selecionado"
+            var message = document.querySelector('.message');
+            message.style.display = imagens.length > 0 ? 'none' : 'block';
           });
         </script>
+        
 
         <br>
 
@@ -221,7 +237,7 @@
             <div class="file-upload-icon">
               <div class="file-upload-icon">
                              
-                <img src="/imgs/video.svg" width="50px" height="50px" alt="">
+                <img src="/static/imgs/video.svg" width="50px" height="50px" alt="">
 
               </div>
             </div>
@@ -277,7 +293,7 @@
 
       <div class="nome">
 
-        <label for="nome">Nome da Receita: </label>
+        <label for="nome">Nome da Receita:</label>
         {{ form.titulo_receita }}
             {% for error in form.titulo_receita.errors %}
                 <div class="error-message">{{ error }}</div>
@@ -303,7 +319,7 @@
     <div id="gerar_senha_tamanho">
       <label for="customRange1" class="form-label">Defina o tempo de cozimento: <span id="valor"> </span>
         minutos </label>
-      <input type="range" class="form-range" id="customRange1" min="2" max="500" value="8">
+      <input type="range" class="form-range" id="customRange1" min="2" max="240" value="8">
     </div>
 
     <div class="dificuldade">

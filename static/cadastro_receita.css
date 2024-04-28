@@ -422,8 +422,13 @@ input.form-control.me-2{
 
 }
 
+#titulo_receita{
+    background-color: var(--card--);
+}
 
-
+input #titulo_receita label{
+    font-size: 0.8rem;
+}
 
 
 h1 {
@@ -433,7 +438,7 @@ h1 {
 
 
 .container {
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     padding: 20px;
     background-color: var(--card--);
@@ -609,13 +614,16 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 15px;
     gap: 15px;
+
+    font-size: 0.8rem;
+
 }
 
 
 h2, p{
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -1007,6 +1015,8 @@ footer p {
         grid-template-columns: 2fr 1fr;
         justify-content: left;
         align-items: center;
+        padding: 0px;
+        
     }
 
     
@@ -1015,6 +1025,7 @@ footer p {
         display: flex;
         justify-content: left;
         align-items: left;
+        font-size: 0.8rem;
         
 
     }

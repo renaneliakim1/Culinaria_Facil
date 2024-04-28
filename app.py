@@ -36,8 +36,19 @@ def pagina_inicial():
     cursor.close()
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
-        cursor = database_connection.cursor()
-        pesquisa_receita = '''
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+    if 'user' in session:
+        return render_template('index.html', user=session['user'], resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
+    else:
+        return render_template('index.html', resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
+
+
+
+@app.route('/receitas/pesquisa//<input_pesquisa>/<int:pagina>')
+def pagina_pesquisa(pagina, input_pesquisa):
+    cursor = database_connection.cursor()
+    pesquisa_receita = '''
         SELECT * 
         FROM receitas 
         WHERE Titulo LIKE %s 
@@ -47,21 +58,10 @@ def pagina_inicial():
         OR TempoPreparo LIKE %s 
         OR Dificuldade LIKE %s
         '''
-        pesquisa = form_pesquisa.pesquisa_input.data
-        cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
-        resultado_pesquisa = cursor.fetchall()
-        cursor.close()
-        print(resultado_pesquisa)
-        return pagina_pesquisa(1, resultado_pesquisa)
-    if 'user' in session:
-        return render_template('index.html', user=session['user'], resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
-    else:
-        return render_template('index.html', resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
-
-
-
-@app.route('/receitas/pesquisa/<int:pagina>')
-def pagina_pesquisa(pagina, resultado_pesquisa):
+    pesquisa = input_pesquisa
+    cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
+    resultado_pesquisa = cursor.fetchall()
+    cursor.close()
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado_pesquisa [inicio_pagina:fim_pagina]

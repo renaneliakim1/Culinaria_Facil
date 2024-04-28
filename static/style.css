@@ -941,7 +941,9 @@ footer p {
  */
  
 @media only screen and (max-width: 768px) {
-
+    .mb-3{
+        width: 80%;
+    }
 
     input.form-control.me-2{
         font-size: 0.7rem;
@@ -1030,7 +1032,7 @@ footer p {
 @media only screen and (max-width: 365px) {
 
     .mb-3{
-        width: 80%;
+        width: 100%;
     }
 
     input.form-control.me-2{

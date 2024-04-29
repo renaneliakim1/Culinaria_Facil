@@ -117,7 +117,6 @@
           </span>
         </div>
 
-        <form>
           <div class="input-container" type="password">
             {{ form.registro_senha() }}
             {% for error in form.registro_senha.errors %}
@@ -153,14 +152,13 @@
               });
             });
           </script> 
-        </form>
         
        
         
 
 
         <div class="dropzone">
-          <form class="dropzone-box">
+          <div class="dropzone-box">
             <h2>Carregar imagem de perfil</h2>
         
             <div class="dropzone-area">
@@ -168,13 +166,19 @@
                 <img src="/static/imgs/foto.svg" id="foto" width="25px" height="25px" alt="">
               </div>
               <p>Clique para fazer upload</p>
-              <input type="file" id="imagens" name="imagens[]" multiple accept="image/*">
+              {{ form.imagem_perfil() }}
+                {% for error in form.imagem_perfil.errors %}
+                <div class="error-message">{{ error }}</div>
+                {% endfor %}
               <p id="file-name" class="message">Nenhum arquivo selecionado</p>
             </div>
         
-          </form>
+          </div>
         </div>
-        
+        <button type="submit" class="submit">
+          Cadastrar
+        </button>
+      </form>
         <script>
           function uploadImage(event) {
             event.preventDefault(); // Impede o comportamento padrão do formulário
@@ -202,9 +206,6 @@
 
 
 
-      <button type="submit" class="submit">
-        Cadastrar
-      </button>
 
       <p class="signup-link">
         Já possui conta?

@@ -86,7 +86,7 @@
       <div class="alert-messege">{{ alerta }}</div>
       {% endfor %}
       {% endif %}
-      <form class="form" method="POST" action="">
+      <form class="form" method="POST" action=""  enctype="multipart/form-data">
         {{ form.csrf_token }}
         <p class="form-title">Faça login em sua conta</p>
         <div class="input-container">

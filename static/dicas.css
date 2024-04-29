@@ -316,7 +316,11 @@ body.modo-escuro footer p {
 }
 
 
+#pesquisa_input{
+  border-radius: 8px;
+  
 
+}
 
 /* define with the collapse button */
 

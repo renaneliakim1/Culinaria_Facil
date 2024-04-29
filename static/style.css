@@ -406,7 +406,7 @@ svg {
 
 
 .form-check-input:checked {
-    background-color: #010a18;
+    background-color: #0961ee;
     border-color: #ffffff;
 }
 
@@ -493,7 +493,7 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 43.6rem;
+    height: 70rem;
     z-index: -1;
     opacity: 0.6;
 }
@@ -608,6 +608,8 @@ label {
     width: 90%;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5rem;
+
 
 }
 
@@ -622,15 +624,36 @@ label {
 #saibamais:hover{
         background-color: #a33f37; 
 }
+
+
+.todas_receitas{
+    text-align: center;
+    margin: 2rem;
+}
     
 
 .card {
-    width: 15rem;
+    width: 13em;
+    height: 25rem;
 
 
 
 }
 
+/* .card a img {
+    height: 6rem;
+
+}
+ */
+.card-img-top {
+    height: 9rem;
+
+}
+
+.card-text{
+    height: 6rem;
+
+}
 
 .text {
 
@@ -790,7 +813,8 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 10rem;
+    padding-top: 6rem;
+ 
 }
 
 
@@ -815,18 +839,26 @@ footer p {
     background-color: var(--primary-color);
 }
 
-@media only screen and (max-width: 2560px) {
+/* @media only screen and (max-width: 2560px) {
+    main {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
     main video {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 47.6rem;
+        height: 50rem;
         z-index: -1;
         opacity: 0.6;
     }
 
-
-}
+} */
 
 @media only screen and (max-width: 1200px) {
 
@@ -978,6 +1010,15 @@ footer p {
  */
  
 @media only screen and (max-width: 768px) {
+    body{
+        background-color: var(--lite--);
+    }
+
+    #flexCheckDefault{
+        border-color: black ;
+    }
+
+
     .mb-3{
         width: 80%;
     }

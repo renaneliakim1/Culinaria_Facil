@@ -170,7 +170,7 @@
 
 
             <div class="titulo">
-                <div class="input-img">
+             <!--    <di class="input-img">
                     <div>
                         {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
                         {% for error in form.imagem_receita.errors %}
@@ -183,7 +183,34 @@
                         <div class="error-message">{{ error }}</div>
                         {% endfor %}
                     </div>
+                </di -->v>
+
+
+
+
+                <div class="dropzone">
+                    <div class="dropzone-box">
+                    <h2>Carregar imagem de perfil</h2>
+                
+                    <div class="dropzone-area">
+                        <div class="file-upload-icon">
+                            {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
+                            {% for error in form.imagem_receita.errors %}
+                            <div class="error-message">{{ error }}
+                            {% endfor %}
+                        </div>
+
+                        <p>Clique para fazer upload</p>
+                        {{ form.imagem_perfil() }}
+                        {% for error in form.imagem_perfil.errors %}
+                        <div class="error-message">{{ error }}</div>
+                        {% endfor %}
+                        <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+                    </div>
+                
+                    </div>
                 </div>
+
 
                 <div class="nome">
 

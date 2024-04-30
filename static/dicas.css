@@ -165,8 +165,6 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-  width: 9rem;
-
   cursor: pointer;
   color: var(--white);
   font-size: 0.6rem;
@@ -340,8 +338,15 @@ button.navbar-toggler {
 }
 
 
+#barra_pesquisa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
 #buscar {
-  width: 9rem;
 
   cursor: pointer;
   color: var(--black);
@@ -355,12 +360,8 @@ button.navbar-toggler {
   border: none;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--lite--);
   border: 1px solid var(--check--);
-
-
-
-
 }
 
 
@@ -419,12 +420,13 @@ svg {
 }
 
 /* color label*/
-.form-control {
+#pesquisa_input{
   height: 1.5rem;
+  background-color: var(--lite--);
   font-size: 0.7rem;
 }
 
-input.form-control.me-2 {
+input.form-control.me-2{
   font-size: 0.7rem;
 }
 
@@ -722,6 +724,19 @@ footer p {
     gap: 2rem;
 
   }
+
+  
+  #barra_pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+  }
+
+
+
 
 
 }

@@ -128,7 +128,7 @@
                         </li>
                         {% endif %}
                     </ul>
-                    <form method="POST" action="">
+                    <form id="barra_pesquisa" method="POST" action="">
                         {{ form_pesquisa.csrf_token }}
                         {{ form_pesquisa.pesquisa_input }}
                         <button class="btn btn-outline-success" type="submit" id="buscar">

@@ -169,8 +169,8 @@
     {% endif %}
     </section>
     {% endfor %}
-    {% for receita in resultado_receitas %}
     <div id="resultados">
+        {% for receita in resultado_receitas %}
         <div class="card">
             <img src="/static/uploads\{{ receita[8] }}" class="card-img-top" alt="..." />
             <div class="card-body">

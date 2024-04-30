@@ -416,6 +416,7 @@ svg {
 .form-control {
     height: 1.5rem;
     font-size: 0.7rem;
+    background-color: var(--lite--);
 }
 
 input.form-control.me-2 {
@@ -654,6 +655,11 @@ input .input-group {
 }
 
 
+label{
+    font-size: 0.7rem;
+
+}
+
 #receitas {
     display: flex;
     flex-direction: row;
@@ -667,7 +673,6 @@ input .input-group {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-
 }
 
 
@@ -683,7 +688,9 @@ input .input-group {
 td {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
+    font-size: 0.7rem;
+
 
 }
 
@@ -693,6 +700,15 @@ tr {
     justify-content: center;
     flex-direction: row;
     width: 100%;
+    gap: 5rem;
+    font-size: 0.7rem;
+
+}
+
+th{
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
 
 }
 
@@ -700,6 +716,8 @@ tr {
 
 .table>:not(caption)>*>* {
     background-color: var(--lite--);
+    width: 15rem;
+
 }
 
 
@@ -746,7 +764,6 @@ tr {
 .dropzone-box {
     border-radius: 8px;
     padding: 2rem;
-/*     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -862,6 +879,15 @@ tr {
 }
 
 
+#registro_senha{
+    width: 17rem;
+}
+
+#senha_confirmar{
+    width: 17rem;
+
+}
+
 /* .dropzone-area{
     background-image: url(/imgs/Imagem1cadastre-se.png);
     background-size: contain;
@@ -873,7 +899,7 @@ tr {
 
 footer {
 
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -1044,7 +1070,6 @@ footer p {
         width: 100%;
         text-align: center;
         left: 0;
-        margin-top: 9rem;
 
     }
 
@@ -1076,9 +1101,6 @@ footer p {
 }
 
 
-
-
-
 @media only screen and (max-width: 768px) {
 
 
@@ -1101,9 +1123,40 @@ footer p {
 }
 
 
+.table>:not(caption)>*>* {
+    background-color: var(--lite--);
+    width: 1rem;
+
 }
 
 
+button .tab-btn {
+    font-size: 0.7rem;
+    width: 8rem;
+    margin: 0.2rem;
+}
+
+
+tr {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+
+}
+
+/* 
 @media only screen and (max-width: 360px) {
 
     .abas {
@@ -1169,6 +1222,14 @@ footer p {
     button .tab-btn {
         font-size: 0.7rem;
         margin: 0;
+        width: 7rem;
+    }
+
+
+    .tab-btn {
+        font-size: 0.7rem;
+        width: 8rem;
+        margin: 0.2rem;
     }
 
 
@@ -1186,23 +1247,32 @@ footer p {
     }
 
 
-    td {
-        font-size: 0.8rem;
-        margin: none;
-
-
-    }
-
+    
     tr {
         display: flex;
         justify-content: center;
         flex-direction: row;
         width: 100%;
+        gap: 1rem;
     }
 
 
+
+    td {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+
+
+
     th, td {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+    }
+
+    .nome-receita{
+        width: 15rem;
     }
 
 
@@ -1231,7 +1301,13 @@ footer p {
         box-sizing: border-box;
         font-size: 2px;
         justify-content: left;
+        justify-content: space-between;
 
+    }
+
+
+    .table>thead{
+        justify-content: space-between;
     }
 
     #editar-excluir {
@@ -1284,12 +1360,11 @@ footer p {
 
 
     footer {
-        position: relative;
+        position: absolute;
         bottom: 0;
         width: 100%;
         text-align: center;
         left: 0;
-        margin-top: 10rem;
     }
 
 
@@ -1317,4 +1392,4 @@ footer p {
 
 
 
-}
+}  */

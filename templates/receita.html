@@ -78,8 +78,6 @@
                     </li> 
                 
                         {% endif %}
-                        </ul>
-                    </li>
                     {% if user %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
@@ -136,7 +134,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <form method="POST" action="">
+                <form   class="pesquisa_input" method="POST" action="">
                   {{ form_pesquisa.csrf_token }}
                   {{ form_pesquisa.pesquisa_input }}
                   <button class="btn btn-outline-success" type="submit" id="buscar">
@@ -252,31 +250,31 @@
   {% endif %}
   </div>
   {% if user %}
-  <form method="POST" action="">
+  <form method="POST" action="" id="comentario">
       {{ form.csrf_token }}
-      <div>
+      <div id="textarea">
           {{ form.comentario_receita.label }}: {{ form.comentario_receita }}
           {% for error in form.comentario_receita.errors %}
               <div class="error-message">{{ error }}</div>
           {% endfor %}
       </div>
-      <input type="submit" value="Comentar">
+      <input type="submit" value="Comentar" id="comentar">
   </form>
   {% else %}
   <p>Faça <a href="/login">Login</a> para comentar</p>
   {% endif %}
   {% if resultado_comentarios %}
-  <p> Últimos comentários:</p>
+  <p class="ultimos-comentarios"> Últimos comentários:</p>
   {% for comentario in resultado_comentarios %}
 
-  <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 10px">
+  <div  class="comentarios" >
   <img src="/static/uploads\{{ comentario[4] }}" alt="pic1">
-  <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <p> Postado em: {{ comentario[3] }}</p>
-      <p>Comentou: {{ comentario[2] }}</p>
+  <a href="/perfil/{{ comentario[0] }}">{{ comentario [1] }}</a> <h6> Postado em: {{ comentario[3] }}</h6>
+      <p class="comentario-postado"><b>Comentou:</b> {{ comentario[2] }}</p>
   </div>
   {% endfor %}
   {% else %}
-  <p>Nenhum comentário</p>
+  <p class="nenhum-comentario" >Nenhum comentário</p>
   {% endif %}
   {% endfor %}
 

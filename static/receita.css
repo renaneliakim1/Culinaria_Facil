@@ -27,7 +27,7 @@
   --check--: #fac08d;
   --dark--: #222;
   --darkform--: #5c5c5c;
-  --lite--:#f5ecde;
+  --lite--: #f5ecde;
 
 
 }
@@ -124,7 +124,7 @@ body.modo-escuro .dropdown-menu.show {
 }
 
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: var(--lite--);
 }
 
@@ -235,13 +235,13 @@ body.modo-escuro #save-receita span {
 
 
 body.modo-escuro textarea {
-  background-color:var(--lite--) ;
+  background-color: var(--lite--);
   border: none;
 }
 
 
 
-body.modo-escuro .coment-text{
+body.modo-escuro .coment-text {
   color: var(--white);
 }
 
@@ -370,7 +370,7 @@ button.navbar-toggler {
 
 
 #buscar {
-  width: 9rem;
+  width: 5.5rem;
 
   cursor: pointer;
   color: var(--black);
@@ -386,9 +386,7 @@ button.navbar-toggler {
   justify-content: center;
   background-color: var(--white);
   border: 1px solid var(--check--);
-
-
-
+  padding: 0px;
 
 }
 
@@ -397,6 +395,14 @@ button.navbar-toggler {
   background-color: var(--check--);
 }
 
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
 
 /* button teeth icon */
@@ -430,7 +436,7 @@ svg {
 
 
 
-.form-switch .form-check-input{
+.form-switch .form-check-input {
   margin-left: -1.5em;
 }
 
@@ -445,10 +451,17 @@ svg {
 
 }
 
-/* color label*/
-.form-control {
+.pesquisa_input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#pesquisa_input {
   height: 1.5rem;
   font-size: 0.7rem;
+  border-radius: 8px;
+
 }
 
 input.form-control.me-2 {
@@ -547,7 +560,6 @@ section {
 
 #carouselExample {
   display: flex;
-  width: 50%;
   height: 50%;
   justify-content: center;
   margin-top: 2%;
@@ -567,76 +579,17 @@ img.d-block.w-100{
   font-size: 0.5rem;
 }
 
+h6 {
+  font-size: 0.8rem;
+}
+
 h6 a {
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 
 }
 
 
-
-.rating:not(:checked)>input {
-  position: absolute;
-  appearance: none;
-}
-
-.rating:not(:checked)>label {
-  float: right;
-  cursor: pointer;
-  font-size: 30px;
-  color: #666;
-
-}
-
-.rating:not(:checked)>label:before {
-  content: '★';
-}
-
-.rating>input:checked+label:hover,
-.rating>input:checked+label:hover~label,
-.rating>input:checked~label:hover,
-.rating>input:checked~label:hover~label,
-.rating>label:hover~input:checked~label {
-  color: #e58e09;
-}
-
-.rating:not(:checked)>label:hover,
-.rating:not(:checked)>label:hover~label {
-  color: #ff9e0b;
-}
-
-.rating>input:checked~label {
-  color: #ffa723;
-}
-
-#save-receita {
-  cursor: pointer;
-  width: 8rem;
-  border: none;
-  border-radius: .5rem;
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-size: 0.7rem;
-  outline: none;
-  height: 2rem;
-  margin: 15px;
-  text-align: center;
-
-}
-
-#save-receita svg {
-  width: 20px;
-  height: 20px;
-}
-
-#save-receita:hover {
-  background-color: #a33f37;
-}
-
-
-#save-receita span {
-  font-size: 0.7rem;
-}
 
 
 .ingredientes {
@@ -645,6 +598,7 @@ h6 a {
   flex-direction: column;
   text-align: center;
   padding-bottom: 5rem;
+  width: 40%;
 
 }
 
@@ -686,8 +640,8 @@ h6 a {
   justify-content: center;
   text-align: left;
   flex-direction: row;
-  margin-right: 20%;
-  margin-left: 20%;
+  padding-left: 27%;
+  padding-right: 27%;
   font-size: 0.8rem;
 }
 
@@ -698,11 +652,6 @@ h6 a {
 
 }
 
-
-
-
-
-
 .video {
   display: flex;
   justify-content: center;
@@ -711,9 +660,6 @@ h6 a {
   height: 12rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
-
-  
-
 
 }
 
@@ -742,20 +688,18 @@ h3 {
 }
 
 
-.comentario {
+#comentario {
   display: flex;
   justify-content: center;
+  width: 100%;
   text-align: left;
   flex-direction: column;
-  margin-right: 20%;
-  margin-left: 20%;
+  margin-bottom: 20px;
   font-size: 0.8rem;
 }
 
-.comentario img{
-  width: 50px;
-  height: 60px;
-}
+
+
 
 textarea {
   padding: 10px;
@@ -767,9 +711,9 @@ textarea {
   width: 100%;
   height: 5rem;
   resize: none;
-  font-size: 0.8rem ;
+  font-size: 0.8rem;
 
-  
+
 }
 
 
@@ -781,10 +725,12 @@ textarea {
   text-align: center;
 }
 
+#textarea {
+  width: 70%;
+}
 
 
-#enviar,
-#limpar {
+#comentar {
   display: flex;
   justify-content: center;
   width: 8.5rem;
@@ -798,42 +744,81 @@ textarea {
 }
 
 
-.coment{
+.coment {
   display: flex;
-  flex-direction:row ;
+  flex-direction: row;
   align-items: flex-start;
   gap: 10px;
- 
-}
-
-.comentario-postados{
-  display: flex;
-  flex-direction: column;
-  margin-right: 20%;
-  margin-left: 20%;
-
-  gap: 10px;
 
 }
 
-.post-list{
+.post-list {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: flex-start;
 }
 
-.post-list img{
+.ultimos-comentarios {
+  text-align: center;
+
+}
+
+
+.comentarios {
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: var(--lite--);
+  gap: 10px;
+
+}
+
+.comentarios p b {
+  font-size: 0.8rem;
+
+}
+
+.comentarios p {
+  font-size: 0.8rem;
+  width: 80%;
+
+}
+
+
+.comentario-postados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 10rem;
+  height: 10rem;
+  text-align: left;
+
+
+
+}
+
+
+.comentario-postados p {
+  font-size: 0.8rem;
+  text-align: left;
+
+
+}
+
+
+
+.comentarios img {
   width: 50px;
   height: 60px;
 }
 
-.coment-text{
-  font-size: 0.8rem ;
-  text-align: justify;
+.nenhum-comentario {
+  text-align: center;
 }
-
-
 
 #myBtn {
   display: flex;
@@ -960,6 +945,46 @@ footer p {
 
 @media only screen and (max-width: 940px) {
 
+  #textarea {
+    width: 90%;
+  }
+
+  .comentario-postados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    height: 10rem;
+    text-align: left;
+
+
+
+  }
+
+
+
+  .comentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: var(--lite--);
+    gap: 10px;
+
+
+
+  }
+
+  .comentarios p {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: justify;
+  }
+
+
 
   section {
     display: flex;
@@ -1017,6 +1042,47 @@ footer p {
 @media only screen and (max-width: 768px) {
 
 
+  #textarea {
+    width: 90%;
+  }
+
+  .comentario-postados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    height: 10rem;
+    text-align: left;
+
+
+
+  }
+
+
+
+  .comentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: var(--lite--);
+    gap: 10px;
+
+
+
+  }
+
+  .comentarios p {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: justify;
+  }
+
+
+
   section {
     display: flex;
     justify-content: center;
@@ -1032,9 +1098,9 @@ footer p {
     justify-content: center;
     text-align: left;
     flex-direction: row;
-    margin-right: 10%;
-    margin-left: 10%;
     font-size: 0.8rem;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   h3 {
@@ -1129,98 +1195,142 @@ footer p {
     height: 15rem;
   }
 
+
+  .comentario {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    margin: 10px;
+
+    font-size: 0.8rem;
+  }
+
+  .comentario img {
+    width: 50px;
+    height: 60px;
+  }
+
+  textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: var(--card--) solid 0.5px;
+    text-align: left;
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    font-size: 0.8rem;
+
+
+  }
+
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+
+
+  #comentar {
+    display: flex;
+    justify-content: center;
+    width: 8.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.8rem;
+    outline: none;
+    height: 1.7rem;
+  }
+
+
+  .coment {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+
+  }
+
+
+
+  .post-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .post-list img {
+    width: 50px;
+    height: 60px;
+  }
+
+  .coment-text {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 450px) {
+  section{
+    gap: 20px;
+  }
   
-.comentario {
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  flex-direction: column;
-  margin: 10px;
+  #textarea {
+    width: 90%;
+  }
 
-  font-size: 0.8rem;
-}
-
-.comentario img{
-  width: 50px;
-  height: 60px;
-}
-
-textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  border: var(--card--) solid 0.5px;
-  text-align: left;
-  width: 100%;
-  height: 5rem;
-  resize: none;
-  font-size: 0.8rem ;
-
-  
-}
-
-
-.botoes {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  gap: 20px;
-  text-align: center;
-}
+  .comentario-postados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    height: 10rem;
+    text-align: left;
 
 
 
-#enviar,
-#limpar {
-  display: flex;
-  justify-content: center;
-  width: 8.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-size: 0.8rem;
-  outline: none;
-  height: 1.7rem;
-}
-
-
-.coment{
-  display: flex;
-  flex-direction:row ;
-  align-items: flex-start;
-  gap: 10px;
- 
-}
-
-.comentario-postados{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 10px;
-  padding: 10px;
-
-}
-
-.post-list{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.post-list img{
-  width: 50px;
-  height: 60px;
-}
-
-.coment-text{
-  font-size: 0.8rem ;
-  text-align: justify;
-}
+  }
 
 
 
+  .comentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: var(--lite--);
+    gap: 10px;
 
+
+
+  }
+
+  .comentarios p {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: justify;
+  }
 }

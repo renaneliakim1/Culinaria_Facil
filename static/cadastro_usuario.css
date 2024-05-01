@@ -435,7 +435,7 @@ input.form-control.me-2{
     border-radius: 8px;
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     border-radius: 4px;
-    height: 50%;
+    height: 100%;
     align-items: center;
     border-radius: 8px;
 
@@ -487,7 +487,7 @@ h1 {
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     margin-top: 1rem;
     width: 100%;
-    height: 25rem;
+    height: 40rem;
     gap: 1rem;
 }
 
@@ -779,18 +779,16 @@ footer p {
 
 
 
-
     .form {
         background-color: var(--card--);
         display: flex;
         flex-direction: column;
         padding: 1rem;
         border-radius: 0.5rem;
-        width: 90%;
-        height: 27rem;
+        width: 100%;
+        height: 40rem;
         gap: 1rem;
     }
-
 
     .submit{
         font-size: 0.8rem;
@@ -859,6 +857,8 @@ footer p {
 
 @media only screen and (max-width: 380px) {
 
+   
+
     .dropzone-box {
         border-radius: 8px;
         padding: 1rem;
@@ -866,7 +866,38 @@ footer p {
         justify-content: center;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 20px;
+     
+        padding: 20px;
+        margin: 20px 20px;
+
     }
+
+        
+    .submit {
+        cursor: pointer;
+        width: 15.5rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 1rem;
+        outline: none;
+        height: 3rem;
+        margin: 20px;
+
+        text-align: center;
+        width: 100%;
+
+
+    }
+
+    .submit:hover {
+        background-color: #a33f37;
+    }
+
+   
+
+
+
 
 }

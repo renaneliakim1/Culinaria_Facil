@@ -207,6 +207,11 @@ body.modo-escuro h1 {
 }
 
 
+body.modo-escuro #barra_pesquisa{
+ background-color: var(--dark--);
+}
+
+
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
   display: flex;
   justify-content: left;

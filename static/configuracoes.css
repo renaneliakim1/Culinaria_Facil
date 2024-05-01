@@ -208,6 +208,18 @@ body.modo-escuro h1 {
 }
 
 
+
+body.modo-escuro .dropzone-area {
+    background-color: var(--lite--);
+
+}
+
+
+body.modo-escuro .dropzone-area label{
+    color: var(--black);
+}
+
+
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
@@ -215,6 +227,8 @@ body.modo-escuro h1 {
     padding: 0px;
 
 }
+
+
 
 
 section {

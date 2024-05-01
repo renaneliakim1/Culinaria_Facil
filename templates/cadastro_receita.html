@@ -118,6 +118,10 @@
                                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                                         </svg>Perfil</a>
                                 </li>
+                                <li class="form-check form-switch" id="toggle-mode">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
+                                </li>
     
     
                                
@@ -286,8 +290,12 @@
 
 
 
-    <script type="text/javascript" src="{{ url_for('static', filename='tempo_receita.js') }}">
-    </script>
+<script type="text/javascript" src="{{ url_for('static', filename='tempo_receita.js') }}"></script>
+
+    
+<script type="text/javascript" src="{{ url_for('static', filename='/js/modo.-escuro.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/topFunction.js') }}"></script>
+
     <script src="/js/modo.-escuro.js"></script>
     <script src="/js/limparCampos.js"></script>
     <script src="/js/topFunction.js"></script>

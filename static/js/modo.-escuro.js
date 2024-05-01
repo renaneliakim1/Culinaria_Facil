@@ -8,21 +8,24 @@ document.getElementById("flexSwitchCheckDefault").addEventListener("click", func
     });
 });
  */
-
+/* 
 window.onscroll = function () { scrollFunction() };
  
-/*   // modo escuro
+  // modo escuro
        
        document
             .getElementById("flexSwitchCheckDefault")
             .addEventListener("click", function () {
                 document.body.classList.toggle("modo-escuro");
-            }); */
-
+            }); 
+ */
 
 
 
 /* ----------------------------------------------------------------------------------- */
+
+
+
 
 // Função para definir o modo escuro
 function enableDarkMode() {
@@ -78,6 +81,7 @@ function enableLightMode() {
         svg.classList.remove("svg-branco");
     });
 }
+
 
 
 

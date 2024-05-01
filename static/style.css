@@ -42,7 +42,7 @@ body {
 
 }
 
-body.modo-escuro {
+/* body.modo-escuro {
     background-color: #222;
     color: #fff;
 }
@@ -212,7 +212,7 @@ body.modo-escuro .date p {
 body.modo-escuro #resultados{
     background-color: transparent;
 }
-
+ */
 
 
 header{
@@ -249,7 +249,7 @@ section img{
 }
 
 
-body.modo-escuro #toggle-mode label {
+/* body.modo-escuro #toggle-mode label {
     font-size: 0.6rem;
     color: var(--white);
 }
@@ -258,7 +258,7 @@ body.modo-escuro #toggle-mode label {
 body.modo-escuro footer p {
     color: #fff;
 
-}
+} */
 
 
 /* end of dark mode */

@@ -200,13 +200,13 @@
                         <div class="file-upload-icon">
                             {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
                             {% for error in form.imagem_receita.errors %}
-                            <div class="error-message">{{ error }}
+                                <div class="error-message">{{ error }}</div>
                             {% endfor %}
                         </div>
 
                         <p>Clique para fazer upload</p>
-                        {{ form.imagem_perfil() }}
-                        {% for error in form.imagem_perfil.errors %}
+                        {{ form.video_receita.label }}: {{ form.video_receita() }}
+                        {% for error in form.video_receita.errors %}
                         <div class="error-message">{{ error }}</div>
                         {% endfor %}
                         <p id="file-name" class="message">Nenhum arquivo selecionado</p>

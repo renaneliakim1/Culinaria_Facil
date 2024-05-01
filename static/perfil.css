@@ -306,6 +306,12 @@ button.navbar-toggler {
 }
 
 
+.form-control.me-2{
+    border: 1px solid var(--check--);
+
+}
+
+
 #buscar {
     width: 9rem;
 
@@ -318,7 +324,6 @@ button.navbar-toggler {
     border-radius: 8px;
     border-radius: .5rem;
     border-color: var(--black);
-    border: none;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);

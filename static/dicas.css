@@ -314,11 +314,7 @@ body.modo-escuro footer p {
 }
 
 
-#pesquisa_input{
-  border-radius: 8px;
-  
 
-}
 
 /* define with the collapse button */
 
@@ -424,7 +420,14 @@ svg {
   height: 1.5rem;
   background-color: var(--lite--);
   font-size: 0.7rem;
+  border-radius: 8px;
+  width: 13rem;
+  border: 1px solid var(--check--);
+
 }
+
+
+
 
 input.form-control.me-2{
   font-size: 0.7rem;

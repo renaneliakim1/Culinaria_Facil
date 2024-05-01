@@ -537,6 +537,9 @@ def dicas():
         return render_template('dicas.html', user=session['user'], form_pesquisa=form_pesquisa)
     else:
         return render_template('dicas.html', form_pesquisa=form_pesquisa)
+    
+
+
 
 
 @app.route('/logout')

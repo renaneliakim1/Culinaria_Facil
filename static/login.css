@@ -763,12 +763,12 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 
-    header{
+  /*   header{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-
+ */
   
 
     .container {
@@ -856,3 +856,17 @@ footer p {
 
 
 } 
+
+@media only screen and (max-width: 450px) {
+
+
+    footer {
+
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+
+}

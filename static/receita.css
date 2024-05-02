@@ -439,7 +439,10 @@ svg {
 }
 
 
+.form-check-input {
+  --bs-form-check-bg: var(--bs-body-bg);
 
+}
 
 .form-switch .form-check-input {
   margin-left: -1.5em;

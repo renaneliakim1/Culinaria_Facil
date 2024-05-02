@@ -248,16 +248,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- 
             <div id="gerar_senha_tamanho">
                 {{ form.tempo_preparo.label }} <br>
@@ -265,18 +255,9 @@
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
                 <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
-            </div>
+            </div>-->
 
     
-            <div id="gerar_senha_tamanho">
-                <label for="tempo_preparo" class="form-label"> <span id="valor"></span> minutos</label>
-                <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240" value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
-            </div>
-            
-            {% for error in form.tempo_preparo.errors %}
-            <div class="error-message">{{ error }}</div>
-            {% endfor %}
-             -->
 
 
             <div id="gerar_senha_tamanho">
@@ -289,53 +270,30 @@
                 <label for="tempo_preparo" class="form-label"> <span id="valor"></span> minutos</label>
                 <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240" value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
             </div>
-            
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-<!-- 
-           <div class="dificuldade">
-                <div class="textdificuldade">
-                </div>
-                {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
-                {% for error in form.dificuldade_receita.errors %}
-                <div class="error-message">{{ error }}</div>
-                {% endfor %}
-            </div> -->
+        
  
 
 
-            <div class="dificuldade form-check form-switch">
+            <div class="dificuldade">
                 <div class="textdificuldade">
-                    <p>Escolha a dificuldade:</p>
+                  <p>Escolha a dificuldade:</p>
                 </div>
                 <div class="radio-inputs">
-                    <label class="radio">
-                        <input type="radio" name="radio" checked="">
-                        {{ form.dificuldade_receita }}
-                    </label>
-                    
-            </div>
-            
-
-
-
-
+                  <label class="radio">
+                    <input type="radio" id="facil" name="dificuldade_receita" value="facil" checked="">
+                    <span class="name">Fácil</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" id="medio"  name="dificuldade_receita"  value="medio" >
+                    <span class="name">Médio</span>
+                  </label>
+          
+                  <label class="radio">
+                    <input type="radio"  id="dificil" name="dificuldade_receita" value="dificil" >
+                    <span class="name">Difícil</span>
+                  </label>
+                </div>
+              </div>
 
 
 

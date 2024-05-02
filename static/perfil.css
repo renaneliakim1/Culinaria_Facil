@@ -585,6 +585,13 @@ p{
    font-size: 0.6rem;
 }
 
+
+
+#opcao_mais_rececitas {
+    text-align: center;
+}
+
+
 #myBtn {
     display: inline-block;
     vertical-align: middle;
@@ -646,27 +653,20 @@ p{
 
 
 
-
-
 footer {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
+
     bottom: 0;
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 5rem;
-}
-
-
-
-footer p {
+    margin-top: 5rem;
+  }
+  
+  footer p {
     font-size: 0.8rem;
-}
-
+  }
+  
 
 ::-webkit-scrollbar {
     width: 7px;

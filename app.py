@@ -21,7 +21,7 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['SECRET_KEY'] = '34#%#$tFDBXCBGHThfd4¨%$28*(86'
-app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif', '.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv', '.webm', '.mpeg']
 
 
 

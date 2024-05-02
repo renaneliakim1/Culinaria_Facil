@@ -669,6 +669,10 @@ video {
 }
 
 
+.sem-video{
+  text-align: center;
+}
+
 .tempo {
   display: flex;
   justify-content: center;

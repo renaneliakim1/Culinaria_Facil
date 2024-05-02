@@ -212,10 +212,11 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 section img{
-    border-radius: 50%;
+/*     border-radius: 50%; */
     width: 10rem;
     height: 10 rem;
 
@@ -416,6 +417,26 @@ input.form-control.me-2{
 
 
 
+.pesquisa_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+  #pesquisa_input {
+    height: 1.5rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+  
+}
+
+
+#barra_pesquisa{
+
+    display: flex;
+    justify-content: right;
+}
+
 section h1 {
     display: flex;
     text-align: center;
@@ -477,8 +498,9 @@ h1{
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 2rem;
+    gap: 1.5rem;
 }
-
+/* 
 
 .card {
 
@@ -511,7 +533,7 @@ h1{
 .card:hover {
     transform: scale(1.1);
 }
-
+ */
 
 .btn-primary {
     background: var(--primary-color);
@@ -571,7 +593,7 @@ h1{
 
 
 
-.date{
+/* .date{
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -580,7 +602,7 @@ h1{
 .date p{
    font-size: 0.6rem;
 }
-
+ */
 
 .mais_receitas{
     display: flex;
@@ -620,6 +642,67 @@ h1{
     animation: alerta 1.5s infinite;
     transition: background, padding 500ms ease-in-out;   */
 
+}
+
+
+
+
+.card {
+    width: 13em;
+    height: 25rem;
+
+
+
+}
+
+/* .card a img {
+    height: 6rem;
+
+}
+ */
+.card-img-top {
+    height: 9rem;
+
+}
+
+.card-text{
+    height: 6rem;
+
+}
+
+.text {
+
+    text-align: center;
+
+
+}
+
+
+.card-text {
+    font-size: 0.8rem;
+    text-align: justify;
+
+}
+
+.card {
+    transition: 500ms linear;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+
+.date{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.date p{
+   font-size: 0.6rem;
 }
 
 

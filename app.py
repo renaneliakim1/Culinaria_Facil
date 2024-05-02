@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 import hashlib
 import uuid
 import email_validator
+import unicodedata
 
 
 try:
@@ -170,12 +171,14 @@ def pagina_registro():
             else:
                 if registro_cpf.isnumeric():
                     if upload_imagem:
-                        nome_arquivo = hashlib.sha1(
-                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_perfil.filename
+                        nome_arquivo_original = imagem_perfil.filename
+                        nome_arquivo_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                        nome_arquivo = nome_arquivo_hash + '_' + secure_filename(nome_arquivo_original)
+                        nome_arquivo = unicodedata.normalize('NFKD', nome_arquivo).encode('ascii', 'ignore').decode('ascii')
+                        
                         arquivo = form.imagem_perfil.data
-                        arquivo.save(
-                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
-                                            secure_filename(nome_arquivo)))
+                        arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo))
+
                     else:
                         nome_arquivo = "default_user.jpg"
                     senha_hasheada = bcrypt.generate_password_hash(registro_senha).decode('utf-8')
@@ -293,17 +296,24 @@ def cadastro_receita():
             cursor.close()
             if resultado:
                 if upload_imagem:
-                    nome_arquivo = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_receita.filename
+                    nome_arquivo_original = imagem_receita.filename
+                    nome_arquivo_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                    nome_arquivo = nome_arquivo_hash + '_' + secure_filename(nome_arquivo_original)
+                    nome_arquivo = unicodedata.normalize('NFKD', nome_arquivo).encode('ascii', 'ignore').decode('ascii')
+                    
                     arquivo = form.imagem_receita.data
-                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
-                                              secure_filename(nome_arquivo)))
+                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo))
+
                 else:
                     nome_arquivo = 'receita_default.jpg'
                 if upload_video:
-                    nome_arquivo_video = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest() + video_receita.filename
+                    nome_arquivo_video_original = video_receita.filename
+                    nome_arquivo_video_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                    nome_arquivo_video = nome_arquivo_video_hash + '_' + secure_filename(nome_arquivo_video_original)
+                    nome_arquivo_video = unicodedata.normalize('NFKD', nome_arquivo_video).encode('ascii', 'ignore').decode('ascii')
+                    
                     arquivo = form.video_receita.data
-                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
-                                              secure_filename(nome_arquivo_video)))
+                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo_video))
                 else:
                     nome_arquivo_video = 'sem_video'
                 id_categoria = resultado[0][0]
@@ -364,12 +374,14 @@ def editar_receita(id_receita_editar):
                         imagem_receita = resultado_receita[0][10]
                         nova_upload_imagem = False
                     if nova_upload_imagem:
-                        nome_arquivo = hashlib.sha1(
-                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + imagem_receita
+                        arquivo_imagem = form.imagem_receita.data
+                        nome_arquivo_original = arquivo_imagem.filename
+                        nome_arquivo_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                        nome_arquivo = nome_arquivo_hash + '_' + secure_filename(nome_arquivo_original)
+                        nome_arquivo = unicodedata.normalize('NFKD', nome_arquivo).encode('ascii', 'ignore').decode('ascii')
+                        
                         arquivo = form.imagem_receita.data
-                        arquivo.save(
-                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
-                                         secure_filename(nome_arquivo)))
+                        arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo))
                     else:
                         nome_arquivo = resultado_receita[0][10]
                     if form.video_receita.data:
@@ -381,12 +393,14 @@ def editar_receita(id_receita_editar):
                         video_receita = resultado_receita[0][11]
                         novo_upload_video = False
                     if novo_upload_video:
-                        nome_arquivo_video = hashlib.sha1(
-                            str(uuid.uuid4()).encode('utf-8')).hexdigest() + video_receita
                         arquivo_video = form.video_receita.data
-                        arquivo_video.save(
-                            os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
-                                         secure_filename(nome_arquivo_video)))
+                        nome_arquivo_video_original = arquivo_video.filename
+                        nome_arquivo_video_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                        nome_arquivo_video = nome_arquivo_video_hash + '_' + secure_filename(nome_arquivo_video_original)
+                        nome_arquivo_video = unicodedata.normalize('NFKD', nome_arquivo_video).encode('ascii', 'ignore').decode('ascii')
+                        
+                        arquivo = form.video_receita.data
+                        arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo_video))
                     else:
                         nome_arquivo_video = resultado_receita[0][11]
 
@@ -477,13 +491,15 @@ def editar_perfil(id_usuario):
                                     nome_imagem_perfil = resultado_perfil[0][5]
                                     novo_upload_imagem = False
                                 if novo_upload_imagem:
-                                    nome_arquivo = hashlib.sha1(
-                                        str(uuid.uuid4()).encode('utf-8')).hexdigest() + nome_imagem_perfil
+
+                                    nome_arquivo_original = imagem_perfil.filename
+                                    nome_arquivo_hash = hashlib.sha1(str(uuid.uuid4()).encode('utf-8')).hexdigest()
+                                    nome_arquivo = nome_arquivo_hash + '_' + secure_filename(nome_arquivo_original)
+                                    nome_arquivo = unicodedata.normalize('NFKD', nome_arquivo).encode('ascii', 'ignore').decode('ascii')
+                                    
                                     arquivo = form.imagem_perfil.data
-                                    arquivo.save(
-                                        os.path.join(os.path.abspath(os.path.dirname(__file__)),
-                                                     app.config['UPLOAD_FOLDER'],
-                                                     secure_filename(nome_arquivo)))
+                                    arquivo.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], nome_arquivo))
+
                                 else:
                                     nome_arquivo = resultado_perfil[0][5]
                                 senha_hasheada = bcrypt.generate_password_hash(nova_senha).decode('utf-8')

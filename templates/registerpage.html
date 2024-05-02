@@ -61,6 +61,8 @@
                 </svg>Login</a>
             </li>
             {% endif %}
+<<<<<<< HEAD
+=======
             <li class="nav-item">
               <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page" href="/dicas"><svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -112,6 +114,7 @@
                       d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
                   </svg>Sair</a>
               </li>
+>>>>>>> 774fc104f73fb977b4d711d81ad25a46e5352147
             </ul>
 
           </ul>
@@ -229,29 +232,7 @@
           Cadastrar
         </button>
       </form>
-      <script>
-        function uploadImage(event) {
-          event.preventDefault(); // Impede o comportamento padrão do formulário
-
-          // Verifica se há arquivos selecionados
-          if (event.target.files.length > 0) {
-            var file = event.target.files[0];
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-              var image = document.getElementById('foto');
-              image.src = e.target.result;
-              document.getElementById('file-name').textContent = file.name; // Atualiza o texto com o nome do arquivo
-            };
-
-            reader.readAsDataURL(file);
-          }
-        }
-
-        // Adiciona um ouvinte de evento ao input de arquivo
-        document.getElementById('imagens').addEventListener('change', uploadImage);
-      </script>
-
+      
 
 
 

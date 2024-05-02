@@ -400,6 +400,11 @@ svg {
 
 /* key for dark mode */
 
+#mais{
+    display: none;
+
+}
+
 #toggle-mode {
     display: none;
     align-items: center;
@@ -1007,6 +1012,11 @@ footer p {
 
     }
 
+    footer p{
+        font-size: 0.8rem;
+
+    }
+
     
    
 
@@ -1018,6 +1028,11 @@ footer p {
         background-color: var(--lite--);
     }
 
+    #mais{
+        display: block; /* Mostrar o elemento */
+    }
+
+
     #toggle-mode{
         display: block; /* Mostrar o elemento */
     }
@@ -1026,6 +1041,10 @@ footer p {
         border-color: black ;
     }
 
+    .todas_receitas a{
+        color: #000000;
+        font-size: 0.8rem;
+    }
 
     .mb-3{
         width: 80%;

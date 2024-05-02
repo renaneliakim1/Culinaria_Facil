@@ -100,8 +100,7 @@
                         </li> 
                     
                             {% endif %}
-                        {% if user %}
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" id="mais">
                             <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -113,6 +112,8 @@
                                 </svg>Mais
                             </a>
                             <ul class="dropdown-menu">
+                                {% if user %}
+
                                 <li>
                                     <a class="nav-item">
                                         <a class="nav-link active" id="acesso" aria-current="page"
@@ -133,6 +134,8 @@
                                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                                         </svg>Perfil</a>
                                 </li>
+                                {% endif %}
+
 
                                 
                                 <li class="form-check form-switch" id="toggle-mode">
@@ -144,7 +147,9 @@
 
 
 
-                               
+
+                                {% if user %}
+    
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -159,9 +164,11 @@
                                                 d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
                                         </svg>Sair</a>
                                 </li>
+                                {% endif %}
+
+
                             </ul>
                         </li>
-                        {% endif %}
                     </ul>
                     
                 </div>

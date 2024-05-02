@@ -170,7 +170,6 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-    width: 9rem;
 
     cursor: pointer;
     color: var(--white);
@@ -205,6 +204,14 @@ body.modo-escuro h1 {
     padding: 0px;
 
 }
+
+
+
+body.modo-escuro #barra_pesquisa{
+ 
+    background-color: var(--dark--);
+}
+  
 
 
 section{
@@ -421,13 +428,18 @@ input.form-control.me-2{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
   
-  #pesquisa_input {
+#pesquisa_input {
     height: 1.5rem;
     font-size: 0.7rem;
     border-radius: 8px;
-  
+    background-color: var(--lite--);
+    width: 100%;
+    border: 1px solid var(--check--);
+    width: 100%;
+
 }
 
 
@@ -435,6 +447,11 @@ input.form-control.me-2{
 
     display: flex;
     justify-content: right;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+
 }
 
 section h1 {

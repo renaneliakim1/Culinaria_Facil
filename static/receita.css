@@ -229,6 +229,11 @@ body.modo-escuro .ingredientes li {
 }
 
 
+body.modo-escuro #comentario{
+
+  background-color: var(--dark--);
+}
+
 body.modo-escuro #save-receita span {
   color: var(--white);
 }
@@ -239,14 +244,14 @@ body.modo-escuro textarea {
   border: none;
 }
 
-
+body.modo-escuro  .pesquisa_input{
+ 
+  background-color: var(--dark--);
+}
 
 body.modo-escuro .coment-text {
   color: var(--white);
 }
-
-
-
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
   display: flex;
@@ -672,6 +677,12 @@ video {
 .sem-video{
   text-align: center;
 }
+
+
+.faca_login{
+  text-align: center;
+}
+
 
 .tempo {
   display: flex;

@@ -248,40 +248,76 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- 
             <div id="gerar_senha_tamanho">
-                {{ form.tempo_preparo.label }} <br>{{ form.tempo_preparo(min=1, max=240, oninput="outputUpdate(value)") }}
+                {{ form.tempo_preparo.label }} <br>
                 {% for error in form.tempo_preparo.errors %}
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
                 <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
             </div>
 
-    <!-- 
-             <div id="gerar_senha_tamanho">
-                <label for="customRange1" class="form-label">Defina o tempo de cozimento: <span id="valor"> </span>
-                  minutos </label>
-                <input type="range" class="form-range" id="customRange1" min="2" max="500" value="8">
-              </div>  -->
-
-
-         
     
+            <div id="gerar_senha_tamanho">
+                <label for="tempo_preparo" class="form-label"> <span id="valor"></span> minutos</label>
+                <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240" value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
+            </div>
+            
+            {% for error in form.tempo_preparo.errors %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+             -->
+
+
+            <div id="gerar_senha_tamanho">
+                {{ form.tempo_preparo.label }} <br>
+                {% for error in form.tempo_preparo.errors %}
+                <div class="error-message">{{ error }}</div>
+                {% endfor %}
+                <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
+            
+                <label for="tempo_preparo" class="form-label"> <span id="valor"></span> minutos</label>
+                <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240" value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
+            </div>
+            
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
             
 
-
-          <div class="dificuldade">
+<!-- 
+           <div class="dificuldade">
                 <div class="textdificuldade">
                 </div>
                 {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
                 {% for error in form.dificuldade_receita.errors %}
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
-            </div>
-
+            </div> -->
+ 
 
 
             <div class="dificuldade form-check form-switch">
@@ -291,7 +327,7 @@
                 <div class="radio-inputs">
                     <label class="radio">
                         <input type="radio" name="radio" checked="">
-                        <span class="name">{{ form.dificuldade_receita }}</span>
+                        {{ form.dificuldade_receita }}
                     </label>
                     
             </div>

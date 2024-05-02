@@ -795,7 +795,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -822,4 +822,23 @@ footer p {
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    padding-top: 5rem;
+}
+
 }

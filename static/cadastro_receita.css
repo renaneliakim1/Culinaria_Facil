@@ -175,6 +175,7 @@ body.modo-escuro #buscar {
     justify-content: center;
     background-color: var(--dark--);
     border: 1px solid var(--check--);
+    padding: 0px;
 
 }
 
@@ -206,7 +207,7 @@ body.modo-escuro .form-check-input:checked {
 
 .navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin: 0px;
     padding: 0px;
 
@@ -326,7 +327,7 @@ button.navbar-toggler {
 
 
 #buscar {
-    width: 9rem;
+    width: 6rem;
 
     cursor: pointer;
     color: var(--black);
@@ -340,13 +341,9 @@ button.navbar-toggler {
     border: none;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
+    background-color: var(--lite--);
     border: 1px solid var(--check--);
-
-
-
-
-}
+  }
 
 
 #buscar:hover {
@@ -366,6 +363,35 @@ svg {
     display: flex;
     flex-direction: row;
 
+}
+
+#pesquisa_input{
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    background-color: var(--lite--);
+    font-size: 0.7rem;
+    border-radius: 8px;
+    width: 13rem;
+    border: 1px solid var(--check--);
+    
+  }
+  
+  
+  
+  
+  input.form-control.me-2{
+    font-size: 0.7rem;
+  }
+  
+
+#barra_pesquisa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* key for dark mode */
@@ -479,7 +505,6 @@ textarea {
 input[type="text"], textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -554,7 +579,8 @@ label {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    padding-top: 20px;
 
 }
 
@@ -659,6 +685,14 @@ ul{
 
 }
 
+
+
+select#categoria_receita{
+    background-color: var(--card--);
+}
+
+
+
 .form-check {
     display: flex;
     justify-content: center;
@@ -759,7 +793,7 @@ p, .message {
     border-radius: 1rem;
     color: var(--primary);
     cursor: pointer;
-    height: 12rem;
+    height: 10rem;
 }
 
 .dropzone-area [type="file"] {
@@ -771,7 +805,7 @@ p, .message {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 12rem;
+    height: 10rem;
 }
 
 .dropzone-area .file-upload-icon svg {

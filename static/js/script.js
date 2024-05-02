@@ -55,4 +55,6 @@ dropzoneBox.addEventListener("submit", (e) => {
   e.preventDefault();
   const myFiled = document.getElementById("upload-file");
   console.log(myFiled.files[0]);
-});
+}); 
+
+

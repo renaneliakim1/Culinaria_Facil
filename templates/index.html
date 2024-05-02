@@ -176,7 +176,12 @@
         </nav>
     </header>
     
-
+    {% set alertas = get_flashed_messages() %}
+    {% if alertas %}
+    {% for alerta in alertas %}
+    <div class="alert-messege">{{ alerta }}</div>
+    {% endfor %}
+    {% endif %}
     <section>
         <form method="POST" action="">
             {{ form_pesquisa.csrf_token }}

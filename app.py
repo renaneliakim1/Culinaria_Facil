@@ -541,7 +541,7 @@ def editar_perfil(id_usuario):
                     else:
                         flash('CPF precisa ser númerico')
                         return redirect(url_for('editar_perfil', id_usuario=id_usuario))
-                return render_template('editar_perfil.html', form=form, user=session['user'], usuario_receita=usuario_receita)
+                return render_template('editar_perfil.html', form=form, user=session['user'], usuario_receita=usuario_receita, contador_receita=0)
             else:
                 return redirect(url_for('pagina_inicial'))
         else:

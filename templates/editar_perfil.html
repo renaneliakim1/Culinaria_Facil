@@ -271,7 +271,7 @@
                     {% if usuario_receita %}
                     {% for receita in usuario_receita %}
                 <tr>
-                    <td>1</td>
+                    <td>{% set contador_receita = contador_receita + 1 %}{{ contador_receita }}</td>
                     <td class="nome-receita">{{ receita[1] }}</td>
                     <td><a id="editar-excluir" href="/editar_receita/{{ receita[0] }}">Editar</a></td>
                     

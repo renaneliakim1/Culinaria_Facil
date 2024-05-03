@@ -436,7 +436,10 @@ input.form-control.me-2 {
 
 input.form-control.me-2 {
     font-size: 0.7rem;
-    background-color: var(--white);
+    background-color: var(--lite--);
+    border-color: var(--card--);
+    width: 100%;
+
 }
 
 
@@ -455,7 +458,56 @@ input.form-control.me-2 {
 
 input #titulo_receita label {
     font-size: 0.8rem;
+    background-color: var(--lite--);
+
 }
+
+
+
+#buscar {
+    width: 10rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.6rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lite--);
+    border: 1px solid var(--check--);
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+
+
+.pesquisa_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pesquisa_input {
+    height: 1.5rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    width: 100%;
+    background-color: var(--lite--);
+
+
+}
+
 
 
 h1 {
@@ -546,7 +598,7 @@ input[type="submit"]:hover {
 }
 
 label {
-    font-size: 1rem;
+    font-size: 1em;
     color: var(--black);
 
 
@@ -692,6 +744,7 @@ select#categoria_receita {
     background-color: var(--card--);
     font-size: 1rem;
 }
+
 select#categoria_receita option {
     background-color: var(--card--);
     font-size: 1rem;
@@ -873,7 +926,7 @@ p, .message {
 
 
 
-.input-container{
+.input-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -881,7 +934,7 @@ p, .message {
 
 }
 
-.error-message{ 
+.error-message {
     color: red;
     font-size: 0.8rem;
 }
@@ -960,7 +1013,7 @@ footer p {
         border-radius: 8px;
         border-radius: 4px;
         max-width: none;
-      
+
 
     }
 
@@ -1013,7 +1066,7 @@ footer p {
 
     }
 
-    
+
 
 
     body.modo-escuro .d-flex {
@@ -1051,7 +1104,7 @@ footer p {
         justify-content: center;
     }
 
-    footer{
+    footer {
         margin-top: 4rem;
     }
 

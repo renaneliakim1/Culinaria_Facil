@@ -454,6 +454,8 @@ input.form-control.me-2 {
 
 #titulo_receita {
     background-color: var(--card--);
+    font-size: 0.8rem;
+
 }
 
 input #titulo_receita label {

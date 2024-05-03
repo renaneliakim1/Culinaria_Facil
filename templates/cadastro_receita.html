@@ -238,8 +238,8 @@
                                 </svg>
                             </div>
 
-                            <p>Clique para fazer upload <br>formatos aceitos jpg, png, jpeg</p>
-                            {{ form.imagem_receita.label }} {{ form.imagem_receita() }}
+                            <p>Clique para fazer upload <br>formatos jpg, png, jpeg</p>
+                           <!--  {{ form.imagem_receita.label }} --> {{ form.imagem_receita() }}
                             {% for error in form.imagem_receita.errors %}
                             <div class="error-message">{{ error }}</div>
                             {% endfor %}
@@ -330,9 +330,9 @@
 
                             </div>
 
-                            <p>Clique para fazer upload <br> formatos aceitos mp4, avi, mkv, mov, wmv, flv, webm, mpeg
+                            <p>Clique para fazer upload <br> formatos mp4, avi, mkv, mov, wmv, flv, webm, mpeg
                             </p>
-                            {{ form.video_receita.label }} {{ form.video_receita() }}
+                            <!-- {{ form.video_receita.label }} --> {{ form.video_receita() }}
                             {% for error in form.video_receita.errors %}
                             <div class="error-message">{{ error }}</div>
                             {% endfor %}

@@ -14,7 +14,30 @@
 
 }
 
+.pagina_contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.pagina_numero {
+    color: white; 
+    text-decoration: inherit; 
+    margin: 5px;
+    width: 25px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* color palettes */
+.pagina_numero:hover{
+    background-color: #a33f37;
+}
+
+
 
 :root {
     --primary-color: #d57119;

@@ -234,6 +234,13 @@
 
 
         </section>
+        <div class="pagina_contador">
+        {% if lista_numeros %}
+        {% for pagina_contador in lista_numeros %}
+        <a class="pagina_numero" href="/receitas/{{ pagina_contador }}">{{ pagina_contador }}</a>
+        {% endfor %}
+        {% endif %}
+        </div>
 
 
 
@@ -241,11 +248,10 @@
 
 
 
-
-        <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
+<!--         <button onclick="topFunction()" id="myBtn" title="Cadastre um Receita">
             <a href="/cadastro_receita"><img src="{{ url_for('static', filename='/imgs/botaoFlutuante9.png') }}"
                     width="100rem" height="100rem" alt="Logo" /></a><br>
-        </button>
+        </button> -->
 
 
         <footer>

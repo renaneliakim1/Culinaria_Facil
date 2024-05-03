@@ -9,6 +9,7 @@ import hashlib
 import uuid
 import email_validator
 import unicodedata
+import math
 
 
 try:
@@ -31,7 +32,7 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif', '.mp4', '.avi', '.mkv
 @app.route('/', methods=['GET', 'POST'])
 def pagina_inicial():
     cursor = database_connection.cursor()
-    consulta_receitas = 'SELECT * FROM receitas LIMIT 3'
+    consulta_receitas = 'SELECT * FROM receitas ORDER BY data_hora DESC LIMIT 3'
     cursor.execute(consulta_receitas)
     resultado_receita = cursor.fetchall()
     cursor.close()
@@ -70,23 +71,33 @@ def pagina_pesquisa(pagina, input_pesquisa):
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
         return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
-    return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+    if 'user' in session:
+
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'])
+    else:
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
 
 @app.route('/receitas/<int:pagina>' , methods=['GET', 'POST'])
 def pagina_receitas(pagina):
     cursor = database_connection.cursor()
-    consulta_receitas = 'SELECT * FROM receitas'
+    consulta_receitas = 'SELECT * FROM receitas ORDER BY data_hora DESC'
     cursor.execute(consulta_receitas)
     resultado = cursor.fetchall()
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
+    total_receita = resultado
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
         return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if len(resultado_receita) >0:
-        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+        paginas_contador = math.ceil(len(total_receita)/10)
+        lista_numeros = list(range(1, paginas_contador + 1))
+        if 'user' in session:
+            return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa,  user=session['user'], lista_numeros=lista_numeros)
+        else:
+            return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, lista_numeros=lista_numeros)
     else:
         return redirect(url_for('pagina_inicial'))
 
@@ -257,7 +268,10 @@ def usuario_receita(id_usuario, pagina):
     resultado_receita= resultado[inicio_pagina:fim_pagina]
     cursor.close()
     if len(resultado_receita) >0:
-        return render_template('usuario_receitas.html', resultado_receita=resultado_receita)
+        if 'user' in session:
+            return render_template('usuario_receitas.html', resultado_receita=resultado_receita,  user=session['user'] )
+        else:
+            return render_template('usuario_receitas.html', resultado_receita=resultado_receita)
     else:
         return redirect(url_for('pagina_perfil', id_usuario=id_usuario))
 

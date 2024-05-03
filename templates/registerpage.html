@@ -180,8 +180,6 @@
 
 
 
-
-
         <div class="dropzone">
           <div class="dropzone-box">
             <h2>Carregar imagem de perfil</h2>
@@ -192,14 +190,46 @@
               </div>
               <p>Clique para fazer upload</p>
               {{ form.imagem_perfil() }}
-              {% for error in form.imagem_perfil.errors %}
+<!--               <input type="file" id="upload-file" accept=".jpg, .jpeg, .png, .jfif" /> -->       
+             {% for error in form.imagem_perfil.errors %}
               <div class="error-message">{{ error }}</div>
               {% endfor %}
               <p id="file-name" class="message">Nenhum arquivo selecionado</p>
             </div>
-
           </div>
         </div>
+
+      <!--   <script>
+          const inputElement = document.getElementById("upload-file");
+
+          inputElement.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            updateDropzoneFileList(file);
+          });
+
+          const updateDropzoneFileList = (file) => {
+            const allowedExtensions = ["jpg", "jpeg", "png", "jfif"];
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+
+            const dropzoneFileMessage = document.getElementById("file-name");
+
+            if (allowedExtensions.includes(fileExtension)) {
+              dropzoneFileMessage.textContent = file.name;
+            } else {
+              dropzoneFileMessage.textContent = "Nenhum arquivo selecionado";
+              alert("Por favor, selecione apenas arquivos de imagem nos formatos JPG, JPEG, PNG ou JFIF.");
+              // Limpar o input de arquivo para remover o arquivo inválido selecionado
+              inputElement.value = "";
+            }
+          };
+        </script> -->
+
+
+
+
+
+
+
         <button type="submit" class="submit">
           Cadastrar
         </button>

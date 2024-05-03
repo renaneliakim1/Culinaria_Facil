@@ -795,12 +795,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 
@@ -833,12 +833,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 5rem;
+    padding-top: 8rem;
 }
 
 }

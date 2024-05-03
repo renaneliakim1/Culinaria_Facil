@@ -14,7 +14,23 @@
 
 }
 
+.alert-messege {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(255, 138, 138);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    max-width: 92%;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
+
+
+
 /* color palettes */
+
 
 :root {
     --primary-color: #d57119;
@@ -746,6 +762,8 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 
+
+
     
     .container {
         display: flex;
@@ -757,6 +775,9 @@ footer p {
         border-radius: 8px;
         border-radius: 4px;
 
+    }
+    .alert-messege {
+        max-width: 100%;
     }
 
     .imagem {

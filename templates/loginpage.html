@@ -105,6 +105,15 @@
       </div>
     </nav>
   </header>
+
+  {% set alertas = get_flashed_messages() %}
+  {% if alertas %}
+  {% for alerta in alertas %}
+  <div class="alert-messege">{{ alerta }}</div>
+  {% endfor %}
+  {% endif %}
+
+
   <div class="container">
 
     <div class="imagem">
@@ -114,16 +123,8 @@
     </div>
 
 
-
-
-
     <div class="formulario">
-      {% set alertas = get_flashed_messages() %}
-      {% if alertas %}
-      {% for alerta in alertas %}
-      <div class="alert-messege">{{ alerta }}</div>
-      {% endfor %}
-      {% endif %}
+
       <form class="form" method="POST" action="" enctype="multipart/form-data">
         {{ form.csrf_token }}
         <p class="form-title">Faça login em sua conta</p>

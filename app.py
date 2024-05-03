@@ -9,6 +9,7 @@ import hashlib
 import uuid
 import email_validator
 import unicodedata
+import math
 
 
 try:
@@ -70,7 +71,10 @@ def pagina_pesquisa(pagina, input_pesquisa):
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
         return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
-    return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+    if 'user' in session:
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+    else:
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'])
 
 @app.route('/receitas/<int:pagina>' , methods=['GET', 'POST'])
 def pagina_receitas(pagina):
@@ -81,12 +85,20 @@ def pagina_receitas(pagina):
     inicio_pagina = (pagina-1)*10
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
+    resultado_total = resultado
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
         return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if len(resultado_receita) >0:
-        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+        numero_paginas  = list(range(1,math.ceil(len(resultado_total)/10)+1))
+        print(numero_paginas)
+        print(len(resultado_total))
+        math.ceil(len(resultado_total)/10)
+        if 'user' in session:
+            return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'], numero_paginas=numero_paginas)
+        else:
+            return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, numero_paginas=numero_paginas)
     else:
         return redirect(url_for('pagina_inicial'))
 

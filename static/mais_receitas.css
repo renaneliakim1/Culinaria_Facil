@@ -14,6 +14,32 @@
 
 }
 
+.pagina_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina_container a {
+    color: inherit; 
+    text-decoration: inherit; 
+    width: 25px;
+    background-color: #d57119;
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+    #ac2020
+}
+
+.pagina_container a:hover {
+    background-color:#ac2020 ;
+}
+
+
+
 /* color palettes */
 
 :root {

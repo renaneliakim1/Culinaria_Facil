@@ -236,8 +236,14 @@
         </section>
 
 
-
-
+        
+        {% if numero_paginas %}
+        <div class="pagina_container">
+        {% for pag in numero_paginas %}
+        <a class="pagina_numero" href="/receitas/{{ pag }}">{{ pag }}</a>
+        {% endfor %}
+        </div>
+        {% endif %}
 
 
 

@@ -450,6 +450,8 @@ input.form-control.me-2 {
 
 
 #editar-excluir {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     width: 3.5rem;
     border: none;
@@ -460,6 +462,9 @@ input.form-control.me-2 {
     outline: none;
     height: 2rem;
     text-align: center;
+    text-decoration: none;
+    align-items: center;
+
 }
 
 #editar-excluir:hover {

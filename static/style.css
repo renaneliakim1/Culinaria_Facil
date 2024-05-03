@@ -129,9 +129,9 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -144,7 +144,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -330,12 +330,14 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
+
+
 
 #acesso:hover {
     background-color: var(--check--);
@@ -388,7 +390,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -657,6 +659,13 @@ label {
 
 
 }
+
+
+/* .card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: var(--bs-card-title-color);
+    height: 5rem;
+} */
 
 /* .card a img {
     height: 6rem;

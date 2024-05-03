@@ -682,10 +682,19 @@ svg {
 }
 
 
-.error-message{
-    font-size: 0.8rem;
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
 }
 
+.error-message{ 
+    color: red;
+    font-size: 0.8rem;
+}
 
 footer {
 

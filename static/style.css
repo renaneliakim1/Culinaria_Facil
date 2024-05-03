@@ -1110,7 +1110,7 @@ footer p {
     }
 
     .card {
-        width: 15rem;
+        width: 19rem;
 
 
 
@@ -1123,11 +1123,6 @@ footer p {
         margin: 0;
 
     }
-
-    
-    
-
-
 
 
 }
@@ -1165,6 +1160,11 @@ footer p {
         gap: 20px;
 
 
+    }
+
+
+    .card {
+        width: 15rem;
     }
 
 

@@ -215,7 +215,7 @@ body.modo-escuro #resultados{
 
 
 body.modo-escuro #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--white);
 }
  
@@ -410,13 +410,13 @@ svg {
     align-items: center;
     gap: 10px;
     justify-content: left;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 8px;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--black);
 }
 
@@ -1033,9 +1033,39 @@ footer p {
         display: block; /* Mostrar o elemento */
     }
 
+    .navbar-nav .dropdown-menu {
+        position: center;
+        width: 50%;
+    }
+
+
+    .nav-link.dropdown-toggle.show{
+      width: 30%;    }
+
+  
+
     #toggle-mode{
         display: block; /* Mostrar o elemento */
+        align-items: center;
+        gap: 10px;
+        justify-content: left;
+        font-size: 0.7rem;
+        margin-left: 8px
+        
     }
+
+    
+
+    #toggle-mode label{
+       
+        font-size: 0.7rem;
+        
+    }
+
+
+
+
+
 
     #flexCheckDefault{
         border-color: black ;

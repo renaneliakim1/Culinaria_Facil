@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/imgs/icon.png" width="24px" height="24px" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/icon.png') }}" width="24px" height="24px"
+        type="image/x-icon" />
 
     <title>Cadastro de Receitas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,11 +26,12 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" id="logo" href="/"><img src="{{ url_for('static', filename='/imgs/logo9.png') }}"
-                        alt="Culinárioteca" width="50px" height="50px" title="Culinárioteca" /></a>
-    
-    
-    
+                <a class="navbar-brand" id="logo" href="/"><img
+                        src="{{ url_for('static', filename='/imgs/logo9.png') }}" alt="Culinárioteca" width="50px"
+                        height="50px" title="Culinárioteca" /></a>
+
+
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +39,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        {%  if not user %}
+                        {% if not user %}
+                        <li class="nav-item">
+                            <a class="nav-link active" id="acesso" aria-current="page" href="/"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                                </svg>Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" id="acesso" aria-current="page" href="/login"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -48,10 +58,9 @@
                                 </svg>Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="acesso" aria-current="page"
-                                href="/cadastro"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="16" fill="currentColor" class="bi bi-person-fill-add"
-                                    viewBox="0 0 16 16">
+                            <a class="nav-link active" id="acesso" aria-current="page" href="/cadastro"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-fill-add" viewBox="0 0 16 16">
                                     <path
                                         d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                     <path
@@ -60,29 +69,34 @@
                         </li>
                         {% else %}
                         <li class="nav-item">
+                            <a class="nav-link active" id="acesso" aria-current="page" href="/"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                                </svg>Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
-                                href="/cadastro_receita"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up-fill"
-                                    viewBox="0 0 16 16">
+                                href="/cadastro_receita"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
                                 </svg>cadastrar Receita</a>
                         </li>
-    
-                         <li class="nav-item">
+
+                        <li class="nav-item">
                             <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
-                                href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                    height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
                                         d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                                     <path fill-rule="evenodd"
                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
                                 </svg>Dicas</a>
-                        </li> 
-                    
-                            {% endif %}
-                            </ul>
                         </li>
+
+                        {% endif %}
                         {% if user %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="acesso" href="#" role="button"
@@ -105,30 +119,25 @@
                                                 <path
                                                     d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
                                             </svg>Configurações</a>
-    
-    
+
+
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="acesso" aria-current="page"
-                                        href="/perfil/{{ user[0] }}"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-person-circle"
-                                            viewBox="0 0 16 16">
-                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                            <path fill-rule="evenodd"
-                                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                                        </svg>Perfil</a>
+                                <li class="form-check form-switch" id="toggle-mode">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alterar tema</label>
                                 </li>
-    
-    
-                               
+
+
+
+
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="acesso" aria-current="page"
-                                        href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-box-arrow-right"
-                                            viewBox="0 0 16 16">
+                                    <a class="nav-link active" id="acesso" aria-current="page" href="/logout"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
                                             <path fill-rule="evenodd"
@@ -139,22 +148,22 @@
                         </li>
                         {% endif %}
                     </ul>
-                    <form method="POST" action="">
-                        {{ form_pesquisa.csrf_token }}
-                        {{ form_pesquisa.pesquisa_input }}
+                    <form id="barra_pesquisa" class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
                         <button class="btn btn-outline-success" type="submit" id="buscar">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search"
-                            viewBox="0 0 16 16">
-                            <path
-                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                          </svg>Buscar
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>Buscar
                         </button>
                     </form>
-                    
+
                 </div>
             </div>
         </nav>
     </header>
+
 
     {% set alertas = get_flashed_messages() %}
     {% if alertas %}
@@ -170,7 +179,7 @@
 
 
             <div class="titulo">
-                <div class="input-img">
+                <!--    <di class="input-img">
                     <div>
                         {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
                         {% for error in form.imagem_receita.errors %}
@@ -183,6 +192,155 @@
                         <div class="error-message">{{ error }}</div>
                         {% endfor %}
                     </div>
+                </di -->
+
+
+
+
+                <div class="dropzone">
+                    <div class="dropzone-box">
+                        <h2>Carregar imagem da Receita</h2>
+
+                        <div class="dropzone-area">
+                            <div class="file-upload-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.46 96.46"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path style="fill:#484E4E;" d="M63.9,28.673c0,1.356-2.528,2.455-3.72,2.455h-23.9c-1.191,0-3.72-1.099-3.72-2.455l1.563-15.749
+		c0-1.355,0.966-2.454,2.157-2.454h23.9c1.191,0,2.158,1.099,2.158,2.454L63.9,28.673z" />
+                                        <path style="fill:#FFFFFF;" d="M59.066,14.383c0,0.791-0.563,1.432-1.259,1.432H38.45c-0.695,0-1.259-0.641-1.259-1.432l0,0
+		c0-0.791,0.564-1.432,1.259-1.432h19.357C58.502,12.951,59.066,13.592,59.066,14.383L59.066,14.383z" />
+                                        <path style="fill:#484E4E;" d="M81.884,25.859c0,1.128-0.81,2.043-1.808,2.043H77.86c-0.998,0-1.808-0.915-1.808-2.043v-5.591
+		c0-1.129,0.81-2.043,1.808-2.043h2.217c0.998,0,1.808,0.915,1.808,2.043V25.859z" />
+                                        <path style="fill:#484E4E;" d="M25.101,25.283v-3.435c0-1.339-1.085-2.424-2.424-2.424h-8.89c-1.338,0-2.424,1.085-2.424,2.424
+		v3.435H25.101z" />
+                                        <path style="fill:#484E4E;" d="M50.02,40.786h-2.099c-0.818,0-1.48,0.663-1.48,1.48v11.875c0,0.817,0.663,1.48,1.48,1.48h2.099
+		V40.786z" />
+                                        <path style="fill:#484E4E;" d="M46.441,40.786h2.098c0.818,0,1.481,0.663,1.481,1.48v11.875c0,0.817-0.663,1.48-1.481,1.48h-2.098
+		V40.786z" />
+                                        <path style="fill:#CFCEC7;" d="M96.308,78.639c0,4.061-3.292,7.352-7.353,7.352H7.505c-4.061,0-7.352-3.292-7.352-7.352V31.456
+		c0-4.061,3.292-7.352,7.352-7.352h81.451c4.061,0,7.353,3.292,7.353,7.352V78.639z" />
+                                        <rect x="0" y="38.497" style="fill:#484E4E;" width="96.46" height="33.101" />
+                                        <g>
+                                            <circle style="fill:#CFCEC7;" cx="83.475" cy="61.906" r="3.749" />
+                                            <circle style="fill:#FF7526;" cx="83.475" cy="61.906" r="2.21" />
+                                        </g>
+                                        <path style="opacity:0.16;fill:#FFFFFF;" d="M48.128,10.469H36.28c-1.191,0-2.157,1.099-2.157,2.454l-1.109,11.181h-7.912v-2.256
+		c0-1.339-1.085-2.424-2.424-2.424h-8.89c-1.338,0-2.424,1.085-2.424,2.424v2.256H7.505c-4.061,0-7.352,3.292-7.352,7.352v7.041H0
+		v33.101h0.152v7.041c0,4.061,3.292,7.352,7.352,7.352h40.624V10.469z" />
+                                        <circle style="fill:#FF7526;" cx="48.23" cy="55.802" r="27.011" />
+                                        <circle style="fill:#484E4E;" cx="48.23" cy="55.802" r="21.295" />
+                                        <circle style="fill:#CFCEC7;" cx="48.23" cy="55.802" r="15.899" />
+                                        <circle style="fill:#484E4E;" cx="48.23" cy="55.802" r="11.447" />
+                                        <circle style="fill:#FFFFFF;" cx="41.534" cy="48.682" r="4.729" />
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p>Clique para fazer upload <br>formatos jpg, png, jpeg</p>
+                           <!--  {{ form.imagem_receita.label }} --> {{ form.imagem_receita() }}
+                            {% for error in form.imagem_receita.errors %}
+                            <div class="error-message">{{ error }}</div>
+                            {% endfor %}
+                            <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+                        </div>
+
+                    </div>
+
+                    <div class="dropzone-box">
+                        <h2>Carregar vídeo da Receita</h2>
+
+                        <div class="dropzone-area">
+                            <div class="file-upload-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Layer_1" width="512" height="512" viewBox="0 0 128 128"
+                                    xml:space="preserve">
+                                    <g>
+                                        <circle style="fill:#4AB8A1;" cx="64" cy="64" r="64" />
+                                        <path style="fill:#43A691;"
+                                            d="M122.724,89.457L94.859,21.491l-0.004-0.002c-1.089-3.115-4.527-4.771-7.644-3.683l-21.094,7.37   l-10.855,3.731L45,32.428v0.002l-10,3.731v0.001l-4.633,1.56l-0.205-0.123c-0.287,0.045-0.605,0.119-0.873,0.208   c-0.238,0.073-0.484,0.167-0.708,0.268c-0.001,0-0.013,0.001-0.014,0.001C26.482,39.018,25,41.094,25,43.52v0.512v0.512V56.52V57   v0.035v0.478v0.035v0.478V73v0.512v0.512v26.498v0.513v0.512c0,1.179,0.402,2.335,1.063,3.339l5.768,14.434   C41.284,124.829,52.269,128,64,128C90.297,128,112.879,112.134,122.724,89.457z" />
+                                        <g>
+                                            <path style="fill:#B3B3B3;"
+                                                d="M103,57v43.521c0,3.301-2.7,6.479-6,6.479H31c-3.3,0-6-3.178-6-6.479V57H103z" />
+                                            <path style="fill:#A6A6A6;"
+                                                d="M100,57v43.521c0,3.301-2.7,6.479-6,6.479h3c3.3,0,6-3.178,6-6.479V57H100z" />
+                                            <path style="fill:#263740;"
+                                                d="M62,83.521c0-1.649,1.149-2.293,2.555-1.428l7.892,4.855c1.404,0.863,1.404,2.279,0,3.145    l-7.892,4.855C63.15,95.813,62,95.171,62,93.521V83.521z" />
+                                            <path style="fill:#242424;"
+                                                d="M30,57.919l69.142-24.148l-4.286-12.272c-1.089-3.115-4.527-4.774-7.644-3.687L30,37.794V57.919z" />
+                                            <polygon style="fill:#FFD464;"
+                                                points="58.87,47.836 69.552,44.105 45.349,32.433 34.668,36.163   " />
+                                            <polygon style="fill:#FFD464;"
+                                                points="66.118,25.179 55.438,28.909 79.641,40.582 90.321,36.852   " />
+                                            <polygon style="fill:#FFD464;"
+                                                points="76.207,21.655 98.698,32.502 94.968,21.821 86.889,17.925   " />
+                                            <g>
+                                                <rect x="25" y="57" style="fill:#242424;" width="78" height="16" />
+                                                <g>
+                                                    <polygon style="fill:#FFD464;"
+                                                        points="93.656,57 82.343,57 66.343,73 77.656,73     " />
+                                                    <polygon style="fill:#FFD464;"
+                                                        points="99.656,73 103,69.18 103,57.865 88.343,73     " />
+                                                    <polygon style="fill:#FFD464;"
+                                                        points="44.343,73 55.656,73 71.656,57 60.343,57     " />
+                                                </g>
+                                            </g>
+                                            <path style="fill:#E6E6E6;"
+                                                d="M30.079,37.601C27.213,38.049,25,40.537,25,43.523v13V73h8.001L49,56.761l0,0L30.079,37.601z" />
+                                            <path style="fill:#D9D9D9;"
+                                                d="M30.079,37.601c-0.538,0.084-1.041,0.261-1.522,0.478L47,56.761l0,0L31.001,73h2L49,56.761l0,0    L30.079,37.601z" />
+                                            <circle style="fill:#242424;" cx="34" cy="56.522" r="5" />
+                                            <circle style="fill:#FFFFFF;" cx="34" cy="56.522" r="3" />
+                                        </g>
+                                        <path style="fill:#263740;"
+                                            d="M103,57v43.521c0,3.301-2.7,6.479-6,6.479H31c-3.3,0-6-3.178-6-6.479V57H103z" />
+                                        <path style="fill:#1E2C33;"
+                                            d="M100,57v43.521c0,3.301-2.7,6.479-6,6.479h3c3.3,0,6-3.178,6-6.479V57H100z" />
+                                        <path style="fill:#F5F5F5;"
+                                            d="M62,83.521c0-1.649,1.149-2.293,2.555-1.428l7.892,4.855c1.404,0.863,1.404,2.279,0,3.145   l-7.892,4.855C63.15,95.813,62,95.171,62,93.521V83.521z" />
+                                        <path style="fill:#242424;"
+                                            d="M30,57.919l69.142-24.148l-4.286-12.272c-1.089-3.115-4.527-4.774-7.644-3.687L30,37.794V57.919z" />
+                                        <polygon style="fill:#FFD464;"
+                                            points="58.87,47.836 69.552,44.105 45.349,32.433 34.668,36.163  " />
+                                        <polygon style="fill:#FFD464;"
+                                            points="66.118,25.179 55.438,28.909 79.641,40.582 90.321,36.852  " />
+                                        <polygon style="fill:#FFD464;"
+                                            points="76.207,21.655 98.698,32.502 94.968,21.821 86.889,17.925  " />
+                                        <g>
+                                            <rect x="25" y="57" style="fill:#242424;" width="78" height="16" />
+                                            <g>
+                                                <polygon style="fill:#FFD464;"
+                                                    points="93.656,57 82.343,57 66.343,73 77.656,73    " />
+                                                <polygon style="fill:#FFD464;"
+                                                    points="99.656,73 103,69.18 103,57.865 88.343,73    " />
+                                                <polygon style="fill:#FFD464;"
+                                                    points="44.343,73 55.656,73 71.656,57 60.343,57    " />
+                                            </g>
+                                        </g>
+                                        <path style="fill:#263740;"
+                                            d="M30.079,37.601C27.213,38.049,25,40.537,25,43.523v13V73h8.001L49,56.761l0,0L30.079,37.601z" />
+                                        <path style="fill:#D9D9D9;"
+                                            d="M30.079,37.601c-0.538,0.084-1.041,0.261-1.522,0.478L47,56.761l0,0L31.001,73h2L49,56.761l0,0   L30.079,37.601z" />
+                                        <circle style="fill:#F5F5F5;" cx="34" cy="56.522" r="5" />
+                                        <circle style="fill:#263740;" cx="34" cy="56.522" r="3" />
+                                        <rect x="25" y="73" style="fill:#D9D9D9;" width="78" height="2" />
+                                    </g>
+                                </svg>
+
+                            </div>
+
+                            <p>Clique para fazer upload <br> formatos mp4, avi, mkv, mov, wmv, flv, webm, mpeg
+                            </p>
+                            <!-- {{ form.video_receita.label }} --> {{ form.video_receita() }}
+                            {% for error in form.video_receita.errors %}
+                            <div class="error-message">{{ error }}</div>
+                            {% endfor %}
+                            <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="nome">
@@ -198,12 +356,12 @@
                     <div class="error-message">{{ error }}</div>
                     {% endfor %}
                     <label for="ingredientes">Ingredientes:</label>
-                    {{ form.ingredientes_receita.label }}: {{ form.ingredientes_receita }}
+                   <!--  {{ form.ingredientes_receita.label }}: --> {{ form.ingredientes_receita }}
                     {% for error in form.ingredientes_receita.errors %}
                     <div class="error-message">{{ error }}</div>
                     {% endfor %}
                     <label for="instrucoes">Instruções:</label>
-                    {{ form.instrucoes_receita.label }}: {{ form.instrucoes_receita }}
+                   <!--  {{ form.instrucoes_receita.label }}: --> {{ form.instrucoes_receita }}
                     {% for error in form.instrucoes_receita.errors %}
                     <div class="error-message">{{ error }}</div>
                     {% endfor %}
@@ -212,35 +370,71 @@
 
 
 
+            <!-- 
             <div id="gerar_senha_tamanho">
-                {{ form.tempo_preparo.label }}: {{ form.tempo_preparo(min=1, max=240, oninput="outputUpdate(value)") }}
+                {{ form.tempo_preparo.label }} <br>
                 {% for error in form.tempo_preparo.errors %}
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
                 <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
+            </div>-->
+
+
+
+
+            <div id="gerar_senha_tamanho">
+                {{ form.tempo_preparo.label }} <br>
+                {% for error in form.tempo_preparo.errors %}
+                <div class="error-message">{{ error }}</div>
+                {% endfor %}
+                <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
+
+                <label for="tempo_preparo" class="form-label"> <span id="valor"></span> minutos</label>
+                <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240"
+                    value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
             </div>
+
+
+
 
             <div class="dificuldade">
                 <div class="textdificuldade">
-<!--                     <p>Escolha a dificuldade:</p>-->              
-              </div>
-                {{ form.dificuldade_receita.label }}: {{ form.dificuldade_receita }}
-                {% for error in form.dificuldade_receita.errors %}
+                    <p>Escolha a dificuldade:</p>
+                </div>
+                <div class="radio-inputs">
+                    <label class="radio">
+                        <input type="radio" id="facil" name="dificuldade_receita" value="facil" checked="">
+                        <span class="name">Fácil</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" id="medio" name="dificuldade_receita" value="medio">
+                        <span class="name">Médio</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" id="dificil" name="dificuldade_receita" value="dificil">
+                        <span class="name">Difícil</span>
+                    </label>
+                </div>
+            </div>
+
+
+
+
+            <p class="escolhacatedoria">Escolha a categoria:</p>
+
+            <div id="filtro">
+
+                {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
+                {% for error in form.categoria_receita.errors %}
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
             </div>
 
-            <p class="escolhacatedoria">Escolha a categoria:</p>
-
-
-            {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
-            {% for error in form.categoria_receita.errors %}
-            <div class="error-message">{{ error }}</div>
-            {% endfor %}
-
-
             <div id="cadastrar">
-                <input type="submit" value="Editar">
+                <input type="submit" value="Editar Receita">
+                <!--                 <input type="submit" value="Limpar" onclick="limparCampos()" id="cancelar">
+ -->
             </div>
         </div>
     </form>
@@ -256,13 +450,18 @@
 
 
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <script type="text/javascript" src="{{ url_for('static', filename='tempo_receita.js') }}">
-    </script>
-    <script src="/js/modo.-escuro.js"></script>
-    <script src="/js/limparCampos.js"></script>
-    <script src="/js/topFunction.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='tempo_receita.js') }}"></script>
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/modo.-escuro.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/topFunction.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/limparCampos.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+
+
 </body>
 
 </html>

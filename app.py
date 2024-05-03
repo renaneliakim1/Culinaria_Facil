@@ -256,8 +256,15 @@ def usuario_receita(id_usuario, pagina):
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
     cursor.close()
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if len(resultado_receita) >0:
-        return render_template('usuario_receitas.html', resultado_receita=resultado_receita)
+        if 'user' in session:
+            return render_template('usuario_receitas.html', resultado_receita=resultado_receita, user=session['user'], form_pesquisa=form_pesquisa)
+        else:
+            return render_template('usuario_receitas.html', resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
     else:
         return redirect(url_for('pagina_perfil', id_usuario=id_usuario))
 

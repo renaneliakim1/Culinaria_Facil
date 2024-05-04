@@ -159,11 +159,12 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-    width: 9rem;
+    display: flex;
+    width: 12rem;
 
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -236,7 +237,7 @@ section img {
 
 
 body.modo-escuro #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     color: var(--white);
 }
 
@@ -327,29 +328,6 @@ button.navbar-toggler {
 }
 
 
-#buscar {
-    width: 6rem;
-
-    cursor: pointer;
-    color: var(--black);
-    font-size: 0.6rem;
-    outline: none;
-    height: 1.7rem;
-    text-align: center;
-    border-radius: 8px;
-    border-radius: .5rem;
-    border-color: var(--black);
-    border: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--lite--);
-    border: 1px solid var(--check--);
-}
-
-
-#buscar:hover {
-    background-color: var(--check--);
-}
 
 
 
@@ -407,18 +385,9 @@ input.form-control.me-2 {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     color: var(--black);
 }
-
-
-
-
-
-
-
-
-
 
 .btn-outline-success {
     background-color: var(--primary-color);
@@ -467,11 +436,12 @@ input #titulo_receita label {
 
 
 #buscar {
-    width: 10rem;
+    display: flex;
+    width: 11rem;
 
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;

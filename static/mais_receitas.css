@@ -78,7 +78,7 @@ body.modo-escuro label {
 
 
 body.modo-escuro form {
-    background-color: var(--darkform--);
+    background-color: var(--dark--);
 }
 
 
@@ -156,9 +156,9 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -176,7 +176,7 @@ body.modo-escuro #flexSwitchCheckDefault{
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -195,10 +195,12 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
+    display: flex;
+    width: 10rem;
 
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -209,6 +211,7 @@ body.modo-escuro #buscar {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
+    gap:10px;
 
 
 
@@ -319,7 +322,7 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 2rem;
     text-align: left;
@@ -345,12 +348,14 @@ button.navbar-toggler {
 }
 
 
+
 #buscar {
-    width: 9rem;
+    display: flex;
+    width: 10rem;
 
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -361,6 +366,7 @@ button.navbar-toggler {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
+    gap:10px;
 
 
 
@@ -377,7 +383,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -399,7 +405,7 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
@@ -453,6 +459,7 @@ input.form-control.me-2{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap:10px;
     
 }
   

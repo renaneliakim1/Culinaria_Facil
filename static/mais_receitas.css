@@ -324,7 +324,7 @@ body.modo-escuro footer p {
     color: var(--black);
     font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }

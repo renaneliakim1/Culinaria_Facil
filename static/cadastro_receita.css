@@ -1106,6 +1106,12 @@ footer p {
         justify-content: center;
     }
 
+    #ingredientes_receita,
+    #instrucoes_receita,
+    #descricao_receita{
+        height: 5rem;
+    }
+
     footer {
         margin-top: 4rem;
     }

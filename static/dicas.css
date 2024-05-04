@@ -165,9 +165,11 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
+  display: flex;
+  width: 11rem;
   cursor: pointer;
   color: var(--white);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
   height: 1.7rem;
   text-align: center;
@@ -348,11 +350,12 @@ button.navbar-toggler {
 }
 
 #buscar {
-  width: 9rem;
+  display: flex;
+  width: 11rem;
 
   cursor: pointer;
   color: var(--black);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
   height: 1.7rem;
   text-align: center;
@@ -370,6 +373,8 @@ button.navbar-toggler {
 #buscar:hover {
   background-color: var(--check--);
 }
+
+
 
 
 #saibamais{
@@ -408,7 +413,7 @@ svg {
 }
 
 #toggle-mode label {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 

@@ -79,7 +79,7 @@ def pagina_pesquisa(pagina, input_pesquisa):
 @app.route('/receitas/<int:pagina>' , methods=['GET', 'POST'])
 def pagina_receitas(pagina):
     cursor = database_connection.cursor()
-    consulta_receitas = 'SELECT * FROM receitas'
+    consulta_receitas = 'SELECT * FROM receitas ORDER BY data_hora DESC'
     cursor.execute(consulta_receitas)
     resultado = cursor.fetchall()
     inicio_pagina = (pagina-1)*10

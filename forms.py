@@ -56,7 +56,7 @@ class FormularioReceita(FlaskForm):
     instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()], render_kw={"placeholder": "Descreva o passo a passo"})
     ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()], render_kw={"placeholder": "Os ingredientes"})
     tempo_preparo = DecimalRangeField('Tempo de Preparo', default=0)
-    dificuldade_receita = RadioField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
+    dificuldade_receita = RadioField('Dificuldade', choices=[('Fácil', 'Fácil'), ('Médio', 'Médio'), ('Difícil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])
     imagem_receita = FileField('Imagem da Receita', validators=[ FileAllowed(['jpg', 'png', 'jpeg', 'jfif'])])
     video_receita = FileField('Video Receita', validators=[FileAllowed(["mp4","avi","mkv","mov","wmv","flv","webm","mpeg"])])

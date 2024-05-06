@@ -132,9 +132,9 @@ body.modo-escuro .dropdown-menu.show {
 body.modo-escuro #acesso {
   cursor: pointer;
   color: var(--white);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
-  height: 2rem;
+  height: 2.5rem;
   text-align: left;
   border-radius: 8px;
 
@@ -147,7 +147,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
   color: var(--white);
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 
@@ -249,6 +249,18 @@ body.modo-escuro  .pesquisa_input{
   background-color: var(--dark--);
 }
 
+
+body.modo-escuro .comentarios{
+  background-color: var(--dark--);
+  color: var(--white);
+}
+
+body.modo-escuro .comentarios b,
+body.modo-escuro .comentarios .alt{
+  color: var(--white);
+
+}
+
 body.modo-escuro .coment-text {
   color: var(--white);
 }
@@ -348,9 +360,9 @@ body.modo-escuro footer p {
 #acesso {
   cursor: pointer;
   color: var(--black);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
-  height: 2rem;
+  height: 2.5rem;
   text-align: left;
   border-radius: 8px;
 }
@@ -413,7 +425,7 @@ form {
 /* button teeth icon */
 svg {
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 .bntacesso {
@@ -435,7 +447,7 @@ svg {
 }
 
 #toggle-mode label {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 
@@ -508,7 +520,7 @@ input.form-control.me-2 {
 
 svg {
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 .bntacesso {
@@ -558,8 +570,8 @@ section {
 }
 
 .d-block {
-  width: 40rem;
-  height: 20rem;
+  width: 24rem;
+  height: 24rem;
 }
 
 
@@ -577,14 +589,21 @@ section {
   flex-direction: column;
   align-items: center;
 
+
+}
+
+.carousel-item.active{
+  display: flex;
+  width: 24rem;
+  height: 24rem
 }
 
 /* 
 img.d-block.w-100{
   width: 150px;
   height: 150px;
-}
- */
+} */
+
 
 .idusuario {
   font-size: 0.5rem;
@@ -668,15 +687,15 @@ h6 a {
   justify-content: center;
   padding-left: 20%;
   padding-right: 20%;
-  height: 12rem;
+  height: 20rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
 
 }
 
 video {
-  width: 21rem;
-  height: 12rem;
+  width: 30em;
+  height: 20rem;
 }
 
 
@@ -1160,6 +1179,17 @@ footer p {
   }
 
 
+  .carousel-item.active{
+    display: flex;
+    width: 16rem;
+    height: 15rem
+  }
+
+  .d-block {
+    width: 16rem;
+    height: 15rem;
+  }
+
   .preparo {
     flex-direction: column;
 
@@ -1179,7 +1209,13 @@ footer p {
   }
 
   .ingredientes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: left;
     padding-bottom: 1rem;
+    gap: 10px;
+
   }
 
 
@@ -1333,6 +1369,10 @@ footer p {
   
   #textarea {
     width: 90%;
+  }
+
+  .tempo{
+    margin: 0px;
   }
 
   .comentario-postados {

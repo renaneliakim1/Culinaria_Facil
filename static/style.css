@@ -662,18 +662,6 @@ label {
 
 }
 
-
-/* .card-title {
-    margin-bottom: var(--bs-card-title-spacer-y);
-    color: var(--bs-card-title-color);
-    height: 5rem;
-} */
-
-/* .card a img {
-    height: 6rem;
-
-}
- */
 .card-img-top {
     height: 9rem;
 
@@ -849,7 +837,7 @@ footer {
 
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0px;
 }
 
@@ -1067,7 +1055,6 @@ footer p {
         font-size: 0.7rem;
         margin-left: 8px;
         margin-top: 10px;
-        width: 45%;
         font-size: 0.8rem;
         
     }
@@ -1175,9 +1162,26 @@ footer p {
 
 }
 
+@media only screen and (max-width: 450px) {
+    .card {
+        width: 17rem;
+
+
+
+    }
+
+    .card-img-top {
+        height: 9rem;
+
+    }
+
+
+}
+
+
  
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 380px) {
 
     .mb-3{
         width: 100%;
@@ -1212,7 +1216,7 @@ footer p {
 
 
     .card {
-        width: 15rem;
+        width: 14rem;
     }
 
 }

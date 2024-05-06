@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/icon.png') }}" width="24px" height="24px"
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/logo9.png') }}" width="24px" height="24px"
         type="image/x-icon" />
 
     <title>Cadastro de Receitas</title>
@@ -245,7 +245,7 @@
                             {% for error in form.imagem_receita.errors %}
                             <div class="error-message">{{ error }}</div>
                             {% endfor %}
-                            <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+                            <p id="file-name" class="message">Nenhum arquivo selecionado </p>
                         </div>
 
                     </div>
@@ -341,7 +341,8 @@
                             {% for error in form.video_receita.errors %}
                             <div class="error-message">{{ error }}</div>
                             {% endfor %}
-                            <p id="file-name" class="message">Nenhum arquivo selecionado</p>
+                            <p id="file-name" class="message">Nenhum arquivo selecionado <br>
+                                Grave na horizontal </p>
                         </div>
 
                     </div>

@@ -164,11 +164,11 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-    width: 9rem;
+    width: 10rem;
 
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -215,11 +215,6 @@ section img{
     margin-top: 10px;
 
 }
-.card {
-    background-color: #ac2020;
-    color: #000000;
-}
-
 
 body.modo-escuro footer p {
     color: #fff;
@@ -365,7 +360,7 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
@@ -470,25 +465,41 @@ h3 {
 
 
 #resultados {
-
     display: flex;
-    flex-wrap: wrap;
-    margin: 40px;
+    gap: 30px;
+    width: 100%;
     justify-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 2rem;
-}
-
-
-.card {
-
-    margin: 1rem;
-    background: var(--check--);
-    width: 15rem;
+    align-items: center;
+    margin-top: 1.5rem;
 
 
 }
+
+ .card {
+    width: 13em;
+    height: 25rem;
+
+
+
+}
+
+.card-img-top {
+    height: 9rem;
+
+}
+
+.card-text{
+    height: 6rem;
+
+}
+
+.text {
+
+    text-align: center;
+
+
+}
+
 
 .card-text {
     font-size: 0.8rem;
@@ -501,20 +512,12 @@ h3 {
 
 }
 
-
-.card-body {
-    background-color: var(--card--);
-    flex: 1 1 auto;
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-    color: var(--bs-card-color);
-    display: flex;
-    flex-direction: column;
-    
-}
-
 .card:hover {
     transform: scale(1.1);
 }
+
+
+
 
 
 .btn-primary {
@@ -535,6 +538,7 @@ p{
 
 .mais_receitas{
     display: flex;
+    padding-top: 1rem;
     margin-left: 5%;
     margin-right: 5%;
     justify-content: center;
@@ -695,4 +699,91 @@ footer {
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+
+    #resultados {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    
+    
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    #resultados {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        padding: 40px;
+    
+    
+    }
+
+    .card {
+        width: 16em;
+    
+    
+    
+    }
+    
+    .card-img-top {
+        height: 9rem;
+    
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .card {
+        width: 17rem;
+
+
+
+    }
+
+    .card-img-top {
+        height: 9rem;
+
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 380px) {
+    .card {
+        width: 17rem;
+
+
+
+    }
+
+    .card-img-top {
+        height: 9rem;
+
+    }
+
+
 }

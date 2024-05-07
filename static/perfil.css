@@ -32,6 +32,35 @@
 
 }
 
+#barra_pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+  }
+
+
+#pesquisa_input{
+height: 1.5rem;
+background-color: var(--lite--);
+font-size: 0.7rem;
+border-radius: 8px;
+width: 13rem;
+border: 1px solid var(--check--);
+width: 100%;
+}
+
+#barra_pesquisa{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+}
+
+
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
 body{
@@ -65,7 +94,9 @@ body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
 
-
+body.modo-escuro #barra_pesquisa{
+    background-color: var(--dark--);
+   }
 
 body.modo-escuro .container-fluid {
     display: flex;

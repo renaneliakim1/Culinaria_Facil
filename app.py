@@ -270,6 +270,11 @@ def pagina_perfil(id_usuario):
     cursor.execute(consulta_usuario, (id_usuario,))
     resultado = cursor.fetchall()
     cursor.close()
+    form_pesquisa = FormularioPesquisa()
+    if form_pesquisa.validate_on_submit():
+        input_pesquisa = form_pesquisa.pesquisa_input.data
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if resultado:
         cursor = database_connection.cursor()
         consulta_receita_usuario = 'SELECT receitaID ,Titulo, Descricao, Instrucoes, ingredientes, TempoPreparo, Dificuldade, data_hora, imagem_receita FROM usuario INNER JOIN receitas ON usuario.id = receitas.AutorID WHERE  usuario.id= %s ORDER BY data_hora DESC LIMIT 3'
@@ -277,9 +282,9 @@ def pagina_perfil(id_usuario):
         resultado_receitas = cursor.fetchall()
         cursor.close()
         if 'user' in session:
-            return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas, user=session['user'] )
+            return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas, user=session['user'], form_pesquisa=form_pesquisa )
         else:
-            return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas)
+            return render_template('perfil.html', resultado=resultado, resultado_receitas=resultado_receitas, form_pesquisa=form_pesquisa)
     else:
         return redirect(url_for("pagina_inicial"))
 
@@ -294,6 +299,7 @@ def usuario_receita(id_usuario, pagina):
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
     cursor.close()
+    form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
         input_categoria = form_pesquisa.categoria_receita.data

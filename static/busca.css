@@ -23,11 +23,11 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
 
 }
 
@@ -146,7 +146,6 @@ body.modo-escuro #acesso {
 
 
 body.modo-escuro svg {
-    color: var(--white);
     width: 40px;
     height: 30px;
 }
@@ -778,6 +777,11 @@ footer p {
 
 
     } */
+
+    
+    body.modo-escuro svg {
+    color: var(--white);
+    }
 
     #filtro {
         display: grid;

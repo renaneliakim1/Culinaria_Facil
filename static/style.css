@@ -23,15 +23,60 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #ffc975;
     --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
 
 
 }
+
+
+#categoria_receita li:last-child {
+    display: none;
+}
+
+#categoria_receita {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#categoria_receita li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+
+/* Estilizando os checkboxes */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.3s;
+    margin-right: 5px;
+    background-color: white;
+}
+
+input[type="radio"]:checked {
+    background-color: #2717de;
+}
+
+
+
+
+
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
@@ -121,8 +166,8 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
-    background-color: var(--dark--);
+body.modo-escuro .dropdown-menu.show {
+    background-color: var(--card--);
 }
 
 
@@ -149,15 +194,6 @@ body.modo-escuro svg {
 
 
 
-.svg-branco path,
-.svg-branco rect,
-.svg-branco circle,
-.svg-branco polygon,
-.svg-branco polyline,
-.svg-branco line {
-    fill: var(--white) !important;
-    stroke: var(--white) !important;
-}
 
 
 
@@ -510,9 +546,10 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 70rem;
+    height: 76rem;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.9;
+
 }
 
 
@@ -529,6 +566,33 @@ h1 {
 
 }
 
+.titulosite {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+
+    color: black;
+}
+
+
+
+.slogan {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+
+    color: black;
+}
 
 .mb-3 {
     display: flex;
@@ -662,6 +726,18 @@ label {
 
 }
 
+
+/* .card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: var(--bs-card-title-color);
+    height: 5rem;
+} */
+
+/* .card a img {
+    height: 6rem;
+
+}
+ */
 .card-img-top {
     height: 9rem;
 
@@ -837,7 +913,7 @@ footer {
 
 
 footer p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0px;
 }
 
@@ -894,13 +970,23 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 72rem;
+        height: 74rem;
         z-index: -1;
-        opacity: 0.6;
+        opacity: 0.9;
+
+    }
+
+    .titulosite {
+
+        font-size: 2.2rem;
+    }
+
+    .slogan{
+        font-size:  1.8rem;
     }
 
 
-    .mb-3{
+    .mb-3 {
         width: 70%;
     }
   
@@ -941,7 +1027,8 @@ footer p {
 
 
 @media only screen and (max-width: 1040px) {
-    
+
+
     main {
         display: flex;
         position: absolute;
@@ -955,16 +1042,29 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 90rem;
+        height: 74rem;
         z-index: -1;
-        opacity: 0.6;
+        opacity: 0.9;
+
     }
+
+
     
-    .mb-3{
+    .titulosite {
+
+        font-size: 2rem;
+    }
+
+    .slogan{
+        font-size:  1.7rem;
+    }
+
+
+    .mb-3 {
         width: 70%;
     }
 
-    #filtro {
+    #categoria_receita {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 2rem);
@@ -1030,9 +1130,102 @@ footer p {
         background-color: var(--lite--);
     }
 
- 
-    #mais{
-        display: block; /* Mostrar o elemento */
+
+    
+    .titulosite {
+
+        font-size: 2rem;
+    }
+
+    .slogan{
+        font-size:  1.5rem;
+    }
+
+
+    body.modo-escuro svg {
+        color: var(--white);
+    }
+
+    body.modo-escuro label {
+        color: var(--card--);
+
+    }
+
+
+    body.modo-escuro p {
+        color: var(--white--);
+    }
+
+
+    body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: var(--white--);
+    }
+
+
+    body.modo-escuro #acesso {
+        cursor: pointer;
+        color: var(--white);
+        font-size: 0.9rem;
+        outline: none;
+        height: 2.5rem;
+        text-align: left;
+        border-radius: 8px;
+
+    }
+
+
+    body.modo-escuro h1 {
+        color: var(--white);
+
+    }
+
+    body.modo-escuro h3 {
+        color: var(--white);
+    }
+
+    body.modo-escuro p {
+        color: var(--white);
+    }
+
+    body.modo-escuro label {
+        color: #fbfbfb;
+    }
+
+
+    body.modo-escuro .todas_receitas a {
+
+        color: var(--white);
+
+    }
+
+
+    body.modo-escuro #toggle-mode label {
+        font-size: 0.6rem;
+        color: var(--white);
+    }
+
+
+    body.modo-escuro footer p {
+        color: #fff;
+
+    }
+
+    .svg-branco path,
+    .svg-branco rect,
+    .svg-branco circle,
+    .svg-branco polygon,
+    .svg-branco polyline,
+    .svg-branco line {
+        fill: var(--white) !important;
+        stroke: var(--white) !important;
+    }
+
+
+   
+
+    #mais {
+        display: block;
+        /* Mostrar o elemento */
     }
 
     .navbar-nav .dropdown-menu {
@@ -1055,6 +1248,7 @@ footer p {
         font-size: 0.7rem;
         margin-left: 8px;
         margin-top: 10px;
+        width: 45%;
         font-size: 0.8rem;
         
     }
@@ -1162,26 +1356,9 @@ footer p {
 
 }
 
-@media only screen and (max-width: 450px) {
-    .card {
-        width: 17rem;
-
-
-
-    }
-
-    .card-img-top {
-        height: 9rem;
-
-    }
-
-
-}
-
-
  
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 365px) {
 
     .mb-3{
         width: 100%;
@@ -1216,7 +1393,7 @@ footer p {
 
 
     .card {
-        width: 14rem;
+        width: 15rem;
     }
 
 }

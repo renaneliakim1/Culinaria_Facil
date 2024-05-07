@@ -23,12 +23,12 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
 
 
 
@@ -410,7 +410,7 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 

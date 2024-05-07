@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/icon.png') }}" width="24px" height="24px"
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/logo9.png') }}" width="24px" height="24px"
         type="image/x-icon" />
 
     <title>Biblioteca de Receitas Culinárias</title>
@@ -33,7 +33,14 @@
         <video src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop>
             <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
                 muted></video>
+       
     </main>
+
+    <script>
+        var video = document.getElementById('videofundo');
+        var speed = 0.6; 
+        video.playbackRate = speed;
+    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -224,6 +231,8 @@
         </div>
         
     </div>
+
+    
     </form>
     <div class="text">
         <p>Receitas mais recentes</p>

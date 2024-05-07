@@ -23,12 +23,12 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #ffc975;
     --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
 
 
 }
@@ -70,8 +70,13 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: #555;
+    background-color: #2717de;
 }
+
+
+
+
+
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
@@ -189,15 +194,6 @@ body.modo-escuro svg {
 
 
 
-.svg-branco path,
-.svg-branco rect,
-.svg-branco circle,
-.svg-branco polygon,
-.svg-branco polyline,
-.svg-branco line {
-    fill: var(--white) !important;
-    stroke: var(--white) !important;
-}
 
 
 
@@ -550,7 +546,7 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 70rem;
+    height: 76rem;
     z-index: -1;
     opacity: 0.9;
 
@@ -569,6 +565,20 @@ h1 {
 
 
 }
+
+.titulosite {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+
+    color: black;
+}
+
 
 
 .slogan {
@@ -1054,7 +1064,7 @@ footer p {
         width: 70%;
     }
 
-    #filtro {
+    #categoria_receita {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 2rem);
@@ -1199,15 +1209,6 @@ footer p {
         color: #fff;
 
     }
-
-
-
-
-
-
-
-
-
 
     .svg-branco path,
     .svg-branco rect,

@@ -39,7 +39,8 @@ def pagina_inicial():
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if 'user' in session:
         return render_template('index.html', user=session['user'], resultado_receita=resultado_receita, form_pesquisa=form_pesquisa)
     else:
@@ -47,21 +48,42 @@ def pagina_inicial():
 
 
 
-@app.route('/receitas/pesquisa//<input_pesquisa>/<int:pagina>', methods=['GET', 'POST'])
-def pagina_pesquisa(pagina, input_pesquisa):
+@app.route('/receitas/pesquisa/<input_pesquisa>/<input_categoria>/<int:pagina>', methods=['GET', 'POST'])
+def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
     cursor = database_connection.cursor()
-    pesquisa_receita = '''
-        SELECT * 
-        FROM receitas 
-        WHERE Titulo LIKE %s 
-        OR Descricao LIKE %s 
-        OR Instrucoes LIKE %s 
-        OR ingredientes LIKE %s 
-        OR TempoPreparo LIKE %s 
-        OR Dificuldade LIKE %s
+    if input_categoria == 'todas':
+        pesquisa_receita = '''
+            SELECT * 
+            FROM receitas 
+            WHERE Titulo LIKE %s 
+            OR Descricao LIKE %s 
+            OR Instrucoes LIKE %s 
+            OR ingredientes LIKE %s 
+            OR TempoPreparo LIKE %s 
+            OR Dificuldade LIKE %s
+            '''
+    else:
+        cursor2 = database_connection.cursor()
+        categoria_pesquisa = " Select categoriaID from categorias where categoriaNome = %s"
+        pesquisa_categoria = input_categoria
+        cursor2.execute(categoria_pesquisa, (pesquisa_categoria,))
+        resultado_categoria = cursor2.fetchall()
+        print(resultado_categoria[0][0])
+        categoria_id = resultado_categoria[0][0]
+        cursor2.close()
+        pesquisa_receita = '''
+            SELECT * 
+            FROM receitas 
+            WHERE CategoriaID = %s
+            AND (Titulo LIKE %s 
+            OR Descricao LIKE %s 
+            OR Instrucoes LIKE %s 
+            OR ingredientes LIKE %s 
+            OR TempoPreparo LIKE %s 
+            OR Dificuldade LIKE %s)
         '''
     pesquisa = input_pesquisa
-    cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
+    cursor.execute(pesquisa_receita, (categoria_id,) + (f'%{pesquisa}%',) * 6)
     resultado_pesquisa = cursor.fetchall()
     cursor.close()
     inicio_pagina = (pagina-1)*10

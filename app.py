@@ -95,9 +95,9 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
         input_pesquisa = form_pesquisa.pesquisa_input.data
         return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
     if 'user' in session:
-        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'])
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'], nome_categoria=input_categoria)
     else:
-        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa)
+        return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa,  nome_categoria=input_categoria)
 
 @app.route('/receitas/<int:pagina>' , methods=['GET', 'POST'])
 def pagina_receitas(pagina):

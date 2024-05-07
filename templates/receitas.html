@@ -176,7 +176,11 @@
     {% endfor %}
     {% endif %}
     <h1> Todas as receitas</h1>
-
+    {% if nome_categoria %}
+    {% if nome_categoria != 'todas'%}
+    <p>Categoria: {{ nome_categoria }}</p>
+    {% endif %}
+    {% endif %}
 
 
     <div id="resultados">

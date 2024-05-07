@@ -24,6 +24,7 @@
     --gray: #969696;
     --gray-2: #d3d3d3;
     --card--: #fcdeae;
+    --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
@@ -105,11 +106,11 @@ body.modo-escuro .navbar-toggler-icon {
 
 
 body.modo-escuro .container {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 body.modo-escuro .form {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 
@@ -492,7 +493,7 @@ h1 {
     width: 70%;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--card--);
+    background-color: var(--form--);
     border-radius: 8px;
     border-radius: 4px;
     padding-left: 5%;

@@ -92,10 +92,6 @@ body.modo-escuro .container-fluid {
     flex-direction: row;
 }
 
-body.modo-escuro .container {
-    background-color: var(--darkform--);
-
-}
 
 body.modo-escuro .bg-body-tertiary {
     --bs-bg-opacity: 0;
@@ -121,13 +117,8 @@ body.modo-escuro .navbar-toggler-icon {
 }
 
 
-
-body.modo-escuro .container {
-    background: var(--dark--);
-}
-
 body.modo-escuro .form {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 
@@ -258,7 +249,7 @@ section img{
 
 body.modo-escuro .container {
    
-    background-color: var(--card--);
+    background-color: var(--form--);
 
 }
 
@@ -576,7 +567,7 @@ svg {
 
 
 .form {
-    background-color: var(--card--);
+    background-color: var(--form--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -822,6 +813,8 @@ footer p {
         background-color: var(--card--);
         width: 100%;
         border-radius: 8px;
+        background-color: var(--form--);
+
   
     }
 
@@ -835,7 +828,7 @@ footer p {
 
 
     .form {
-        background-color: var(--card--);
+        background-color: var(--form--);
         display: flex;
         flex-direction: column;
         padding: 1rem;

@@ -199,7 +199,21 @@
           </div>
         </div>
 
-      <!--   <script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const fileInput = document.querySelector('input[type="file"]');
+            const fileNameDisplay = document.getElementById('file-name');
+        
+            fileInput.addEventListener('change', function() {
+              const fileName = this.files[0].name;
+              fileNameDisplay.textContent = fileName;
+            });
+          });
+        </script>
+        
+
+       <!--  <script>
           const inputElement = document.getElementById("upload-file");
 
           inputElement.addEventListener("change", (e) => {
@@ -222,8 +236,8 @@
               inputElement.value = "";
             }
           };
-        </script> -->
-
+        </script> 
+ -->
 
 
 

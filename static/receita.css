@@ -769,6 +769,13 @@ textarea {
   width: 70%;
 }
 
+#comentario_receita{
+  background: var(--card--);
+  border: var(--check--) solid 0.7px;
+
+}
+
+
 
 #comentar {
   display: flex;

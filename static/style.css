@@ -123,7 +123,7 @@ body.modo-escuro .navbar-toggler {
 
 
 body.modo-escuro .dropdown-menu.show {
-    background-color: var(--dark--);
+    background-color: var(--card--);
 }
 
 
@@ -506,7 +506,7 @@ main video {
     height: 74rem;
     z-index: -1;
     opacity: 0.9;
-    
+
 }
 
 
@@ -531,6 +531,19 @@ h1 {
     color: black;
 }
 
+
+.slogan {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+
+    color: black;
+}
 
 .mb-3 {
     display: flex;
@@ -921,15 +934,19 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 79rem;
+        height: 74rem;
         z-index: -1;
-        opacity: 0.6;
-    }
+        opacity: 0.9;
 
+    }
 
     .titulosite {
 
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .slogan{
+        font-size:  1.8rem;
     }
 
 
@@ -967,6 +984,7 @@ footer p {
 
 @media only screen and (max-width: 1040px) {
 
+
     main {
         display: flex;
         position: absolute;
@@ -980,10 +998,23 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 90rem;
+        height: 74rem;
         z-index: -1;
-        opacity: 0.6;
+        opacity: 0.9;
+
     }
+
+
+    
+    .titulosite {
+
+        font-size: 2rem;
+    }
+
+    .slogan{
+        font-size:  1.7rem;
+    }
+
 
     .mb-3 {
         width: 70%;
@@ -1056,27 +1087,39 @@ footer p {
         background-color: var(--lite--);
     }
 
+
+    
+    .titulosite {
+
+        font-size: 2rem;
+    }
+
+    .slogan{
+        font-size:  1.5rem;
+    }
+
+
     body.modo-escuro svg {
         color: var(--white);
     }
 
     body.modo-escuro label {
         color: var(--card--);
-    
-    } 
-    
-    
-     body.modo-escuro p {
+
+    }
+
+
+    body.modo-escuro p {
         color: var(--white--);
     }
-    
-    
+
+
     body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
         color: var(--white--);
     }
-    
-    
-     body.modo-escuro #acesso {
+
+
+    body.modo-escuro #acesso {
         cursor: pointer;
         color: var(--white);
         font-size: 0.9rem;
@@ -1084,49 +1127,49 @@ footer p {
         height: 2.5rem;
         text-align: left;
         border-radius: 8px;
-    
+
     }
-    
-    
-     body.modo-escuro h1 {
+
+
+    body.modo-escuro h1 {
         color: var(--white);
-    
+
     }
-    
+
     body.modo-escuro h3 {
         color: var(--white);
     }
-    
+
     body.modo-escuro p {
         color: var(--white);
     }
-     
-     body.modo-escuro label {
+
+    body.modo-escuro label {
         color: #fbfbfb;
     }
-    
-    
+
+
     body.modo-escuro .todas_receitas a {
-    
+
         color: var(--white);
-    
+
     }
-     
-    
-     body.modo-escuro #toggle-mode label {
+
+
+    body.modo-escuro #toggle-mode label {
         font-size: 0.6rem;
         color: var(--white);
     }
-    
-    
+
+
     body.modo-escuro footer p {
         color: #fff;
-    
-    } 
-    
-    
-    
-    
+
+    }
+
+
+
+
 
 
 
@@ -1144,11 +1187,7 @@ footer p {
     }
 
 
-    .titulosite {
-
-        font-size: 1.5rem;
-    }
-
+   
 
     #mais {
         display: block;

@@ -62,6 +62,8 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
             OR TempoPreparo LIKE %s 
             OR Dificuldade LIKE %s
             '''
+        pesquisa = input_pesquisa
+        cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
     else:
         cursor2 = database_connection.cursor()
         categoria_pesquisa = " Select categoriaID from categorias where categoriaNome = %s"
@@ -82,8 +84,8 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
             OR TempoPreparo LIKE %s 
             OR Dificuldade LIKE %s)
         '''
-    pesquisa = input_pesquisa
-    cursor.execute(pesquisa_receita, (categoria_id,) + (f'%{pesquisa}%',) * 6)
+        pesquisa = input_pesquisa
+        cursor.execute(pesquisa_receita, (categoria_id,) + (f'%{pesquisa}%',) * 6)
     resultado_pesquisa = cursor.fetchall()
     cursor.close()
     inicio_pagina = (pagina-1)*10

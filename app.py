@@ -93,7 +93,8 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if 'user' in session:
         return render_template('receitas.html', resultado_receita=resultado_receita, pagina=pagina, form_pesquisa=form_pesquisa, user=session['user'], nome_categoria=input_categoria)
     else:
@@ -112,7 +113,8 @@ def pagina_receitas(pagina):
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if len(resultado_receita) >0:
         numero_paginas  = list(range(1,math.ceil(len(resultado_total)/10)+1))
         print(numero_paginas)
@@ -141,7 +143,8 @@ def pagina_receita(receita_id):
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if 'user' in session:
         form = FormularioComentario()
         if form.validate_on_submit():
@@ -291,10 +294,10 @@ def usuario_receita(id_usuario, pagina):
     fim_pagina = pagina*10
     resultado_receita= resultado[inicio_pagina:fim_pagina]
     cursor.close()
-    form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if len(resultado_receita) >0:
         if 'user' in session:
             return render_template('usuario_receitas.html', resultado_receita=resultado_receita, user=session['user'], form_pesquisa=form_pesquisa)
@@ -590,7 +593,8 @@ def dicas():
     form_pesquisa = FormularioPesquisa()
     if form_pesquisa.validate_on_submit():
         input_pesquisa = form_pesquisa.pesquisa_input.data
-        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa, pagina=1))
+        input_categoria = form_pesquisa.categoria_receita.data
+        return redirect( url_for('pagina_pesquisa', input_pesquisa=input_pesquisa,input_categoria=input_categoria, pagina=1))
     if 'user' in session:
         return render_template('dicas.html', user=session['user'], form_pesquisa=form_pesquisa)
     else:

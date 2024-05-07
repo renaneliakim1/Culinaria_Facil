@@ -23,14 +23,54 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #fcdeae;
+    --card--: #f8dfb8;
     --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--: #f4e1c4;
+    --lite--:#f5ecde;
 
 
+}
+
+
+#categoria_receita li:last-child {
+    display: none;
+}
+
+#categoria_receita {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#categoria_receita li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+
+/* Estilizando os checkboxes */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.3s;
+    margin-right: 5px;
+    background-color: white;
+}
+
+input[type="radio"]:checked {
+    background-color: #555;
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -48,10 +88,10 @@ body.modo-escuro {
 }
 
 
-/* body.modo-escuro label {
+body.modo-escuro label {
     color: var(--card--);
 
-} */
+}
 
 
 body.modo-escuro form {
@@ -59,15 +99,14 @@ body.modo-escuro form {
 }
 
 
-/* body.modo-escuro p {
+body.modo-escuro p {
     color: var(--white--);
 }
- */
 
-/* body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
- */
+
 
 
 body.modo-escuro .container-fluid {
@@ -122,12 +161,12 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show {
+body.modo-escuro .dropdown-menu.show{
     background-color: var(--dark--);
 }
 
 
-/* body.modo-escuro #acesso {
+body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
     font-size: 0.9rem;
@@ -137,17 +176,28 @@ body.modo-escuro .dropdown-menu.show {
     border-radius: 8px;
 
 }
- */
+
 
 
 
 
 body.modo-escuro svg {
+    color: var(--white);
     width: 40px;
     height: 30px;
 }
 
 
+
+.svg-branco path,
+.svg-branco rect,
+.svg-branco circle,
+.svg-branco polygon,
+.svg-branco polyline,
+.svg-branco line {
+    fill: var(--white) !important;
+    stroke: var(--white) !important;
+}
 
 
 
@@ -174,23 +224,21 @@ body.modo-escuro #buscar {
 }
 
 
-/* body.modo-escuro h1 {
-    color: var(--white);
+body.modo-escuro h1 {
+  color: var(--white);
 
 }
 
 body.modo-escuro h3 {
     color: var(--white);
 }
-
 body.modo-escuro p {
     color: var(--white);
 }
- */
-/* body.modo-escuro label {
+body.modo-escuro label {
     color: #fbfbfb;
 }
- */
+
 
 body.modo-escuro p.card-text {
     color: var(--black);
@@ -201,7 +249,7 @@ body.modo-escuro .date p {
     color: var(--black);
 }
 
-body.modo-escuro #resultados {
+body.modo-escuro #resultados{
     background-color: transparent;
 }
 
@@ -212,20 +260,20 @@ body.modo-escuro #toggle-mode label {
     font-size: 0.9rem;
     color: var(--white);
 }
-
-/* body.modo-escuro .todas_receitas a {
+ 
+body.modo-escuro .todas_receitas a{
 
     color: var(--white);
 
-} */
-
-header {
-    display: flex;
-    /*     justify-content: space-between; */
-    flex-wrap: wrap;
 }
 
-.navbar-nav.me-auto.mb-2.mb-lg-0 {
+header{
+  display: flex;
+/*     justify-content: space-between; */  
+  flex-wrap: wrap;
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;
     justify-content: left;
     margin: 0px;
@@ -234,22 +282,21 @@ header {
 }
 
 
-section {
+section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section img {
+section img{
     border-radius: 50%;
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
 
 }
-
-.card {
+ .card {
     background-color: var(--card--);
 }
 
@@ -301,13 +348,13 @@ body.modo-escuro footer p {
 
 
 
-.navbar>.container-fluid {
+ .navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-}
-
+  }
+  
 
 /* make navbar transparent */
 .bg-body-tertiary {
@@ -317,7 +364,7 @@ body.modo-escuro footer p {
 }
 
 
-.dropdown-menu.show {
+.dropdown-menu.show{
     background-color: var(--lite--);
 }
 
@@ -436,7 +483,7 @@ svg {
     font-size: 0.7rem;
 } */
 
-form {
+form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,14 +493,14 @@ form {
 
 
 
-.form-label {
+.form-label{
     text-align: center;
     font-size: 0.7rem;
 }
 
 
 
-#pesquisa_input {
+#pesquisa_input{
     font-size: 0.7rem;
     background-color: var(--card--);
     height: 2rem;
@@ -464,7 +511,7 @@ form {
 
 
 
-input.form-control.me-2 {
+input.form-control.me-2{
     font-size: 0.7rem;
     background-color: var(--white);
     height: 3rem;
@@ -482,7 +529,7 @@ input.form-control.me-2 {
 
 
 
-.navbar>.container-fluid {
+.navbar>.container-fluid{
     display: flex;
     flex-wrap: inherit;
     align-items: center;
@@ -503,11 +550,11 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 74rem;
+    height: 70rem;
     z-index: -1;
-    opacity: 0.9;
-    
+    opacity: 0.6;
 }
+
 
 
 
@@ -517,18 +564,9 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-}
 
 
-.titulosite {
-    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    font-size: 2.5rem;
 
-    color: black;
 }
 
 
@@ -572,7 +610,7 @@ h1 {
 }
 
 
-#mais {
+#mais{
     display: none;
 }
 
@@ -619,8 +657,8 @@ label {
 }
 
 
-.form-check-input[type=checkbox] {
-    display: flex;
+.form-check-input[type=checkbox]{
+    display:flex;
     justify-content: center;
     align-items: center;
 }
@@ -639,22 +677,22 @@ label {
 
 
 
-#saibamais {
+#saibamais{
     font-size: 0.6rem;
     display: flex;
     justify-content: center;
 }
-
-#saibamais:hover {
-    background-color: #a33f37;
+    
+#saibamais:hover{
+        background-color: #a33f37; 
 }
 
 
-.todas_receitas {
+.todas_receitas{
     text-align: center;
     margin: 2rem;
 }
-
+    
 
 .card {
     width: 13em;
@@ -664,12 +702,24 @@ label {
 
 }
 
+
+/* .card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: var(--bs-card-title-color);
+    height: 5rem;
+} */
+
+/* .card a img {
+    height: 6rem;
+
+}
+ */
 .card-img-top {
     height: 9rem;
 
 }
 
-.card-text {
+.card-text{
     height: 6rem;
 
 }
@@ -699,23 +749,22 @@ label {
 
 
 
-.date {
+.date{
     display: flex;
     justify-content: left;
     align-items: flex-start;
 }
 
-.date p {
-    font-size: 0.6rem;
+.date p{
+   font-size: 0.6rem;
 }
 
 
-.todas_receitas {
+.todas_receitas{
     text-align: center;
     color: #000000;
 }
-
-.todas_receitas a {
+.todas_receitas a{
     color: #000000;
 }
 
@@ -733,7 +782,7 @@ h5 {
     height: 2.7rem;
 }
 
-ul .navbar-nav.me-auto.mb-2.mb-lg-0 {
+ul .navbar-nav.me-auto.mb-2.mb-lg-0{
     margin: none;
 }
 
@@ -834,13 +883,13 @@ footer {
     text-align: center;
     left: 0;
     padding-top: 6rem;
-
+ 
 }
 
 
 
 footer p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0px;
 }
 
@@ -880,30 +929,6 @@ footer p {
 
 } */
 
-
-@media only screen and (max-width: 1366x) {
-
-    main {
-        display: flex;
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    main video {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 80rem;
-        z-index: -1;
-        opacity: 0.6;
-    }
-
-}
-
-
 @media only screen and (max-width: 1200px) {
 
 
@@ -916,27 +941,21 @@ footer p {
         height: 100%;
         z-index: -1;
     }
-
+    
     main video {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 79rem;
+        height: 72rem;
         z-index: -1;
         opacity: 0.6;
     }
 
 
-    .titulosite {
-
-        font-size: 2rem;
-    }
-
-
-    .mb-3 {
+    .mb-3{
         width: 70%;
     }
-
+  
 
     #filtro {
         display: flex;
@@ -962,11 +981,19 @@ footer p {
         margin: none;
 
     }
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 46.6rem;
+        z-index: -1;
+        opacity: 0.6;
+    }
 }
 
 
 @media only screen and (max-width: 1040px) {
-
+    
     main {
         display: flex;
         position: absolute;
@@ -975,7 +1002,7 @@ footer p {
         height: 100%;
         z-index: -1;
     }
-
+    
     main video {
         position: absolute;
         object-fit: cover;
@@ -984,8 +1011,8 @@ footer p {
         z-index: -1;
         opacity: 0.6;
     }
-
-    .mb-3 {
+    
+    .mb-3{
         width: 70%;
     }
 
@@ -1027,7 +1054,6 @@ footer p {
         margin: 0;
 
     }
-
     footer {
 
 
@@ -1040,119 +1066,25 @@ footer p {
 
     }
 
-    footer p {
+    footer p{
         font-size: 0.8rem;
 
     }
 
-
-
+    
+   
 
 }
 
-
+ 
 @media only screen and (max-width: 768px) {
-    body {
+    body{
         background-color: var(--lite--);
     }
 
-    body.modo-escuro svg {
-        color: var(--white);
-    }
-
-    body.modo-escuro label {
-        color: var(--card--);
-    
-    } 
-    
-    
-     body.modo-escuro p {
-        color: var(--white--);
-    }
-    
-    
-    body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-        color: var(--white--);
-    }
-    
-    
-     body.modo-escuro #acesso {
-        cursor: pointer;
-        color: var(--white);
-        font-size: 0.9rem;
-        outline: none;
-        height: 2.5rem;
-        text-align: left;
-        border-radius: 8px;
-    
-    }
-    
-    
-     body.modo-escuro h1 {
-        color: var(--white);
-    
-    }
-    
-    body.modo-escuro h3 {
-        color: var(--white);
-    }
-    
-    body.modo-escuro p {
-        color: var(--white);
-    }
-     
-     body.modo-escuro label {
-        color: #fbfbfb;
-    }
-    
-    
-    body.modo-escuro .todas_receitas a {
-    
-        color: var(--white);
-    
-    }
-     
-    
-     body.modo-escuro #toggle-mode label {
-        font-size: 0.6rem;
-        color: var(--white);
-    }
-    
-    
-    body.modo-escuro footer p {
-        color: #fff;
-    
-    } 
-    
-    
-    
-    
-
-
-
-
-
-
-    .svg-branco path,
-    .svg-branco rect,
-    .svg-branco circle,
-    .svg-branco polygon,
-    .svg-branco polyline,
-    .svg-branco line {
-        fill: var(--white) !important;
-        stroke: var(--white) !important;
-    }
-
-
-    .titulosite {
-
-        font-size: 1.5rem;
-    }
-
-
-    #mais {
-        display: block;
-        /* Mostrar o elemento */
+ 
+    #mais{
+        display: block; /* Mostrar o elemento */
     }
 
     .navbar-nav .dropdown-menu {
@@ -1161,31 +1093,31 @@ footer p {
     }
 
 
-    .nav-link.dropdown-toggle.show {
-        width: 30%;
+    .nav-link.dropdown-toggle.show{
+      width: 30%;    
     }
 
 
 
-    #toggle-mode {
-        display: block;
-        /* Mostrar o elemento */
+    #toggle-mode{
+        display: block; /* Mostrar o elemento */
         align-items: center;
         gap: 10px;
         justify-content: left;
         font-size: 0.7rem;
         margin-left: 8px;
         margin-top: 10px;
+        width: 45%;
         font-size: 0.8rem;
-
+        
     }
 
+    
 
-
-    #toggle-mode label {
-
+    #toggle-mode label{
+       
         font-size: 0.9rem;
-
+        
     }
 
 
@@ -1193,34 +1125,33 @@ footer p {
 
 
 
-    #flexCheckDefault {
-        border-color: black;
+    #flexCheckDefault{
+        border-color: black ;
     }
 
-    .todas_receitas a {
+    .todas_receitas a{
         color: #000000;
         font-size: 0.8rem;
     }
 
-    .mb-3 {
+    .mb-3{
         width: 80%;
     }
 
-    input.form-control.me-2 {
+    input.form-control.me-2{
         font-size: 0.7rem;
         background-color: var(--white);
         height: 3rem;
         width: 100%;
     }
-
-    header {
+    header{
         display: flex;
         flex-direction: row;
         justify-content: left;
 
-    }
+    } 
 
-    .mb-3 {
+    .mb-3{
         width: 80%;
     }
 
@@ -1234,11 +1165,11 @@ footer p {
 
 
     main video {
-        display: none;
+       display: none;
 
     }
 
-
+    
 
     #filtro {
         display: grid;
@@ -1284,32 +1215,15 @@ footer p {
 
 }
 
-@media only screen and (max-width: 450px) {
-    .card {
-        width: 17rem;
+ 
 
+@media only screen and (max-width: 365px) {
 
-
-    }
-
-    .card-img-top {
-        height: 9rem;
-
-    }
-
-
-}
-
-
-
-
-@media only screen and (max-width: 380px) {
-
-    .mb-3 {
+    .mb-3{
         width: 100%;
     }
 
-    input.form-control.me-2 {
+    input.form-control.me-2{
         font-size: 0.7rem;
         background-color: var(--white);
         height: 3rem;
@@ -1323,7 +1237,7 @@ footer p {
         justify-content: space-between;
     }
 
-
+  
 
     #filtro {
         display: grid;
@@ -1338,7 +1252,13 @@ footer p {
 
 
     .card {
-        width: 14rem;
+        width: 15rem;
     }
 
 }
+
+
+
+
+
+ 

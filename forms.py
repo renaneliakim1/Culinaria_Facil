@@ -17,6 +17,7 @@ def obter_categorias():
         cursor.close()
         database_connection.close()
         choices = [(str(categoria[0]), categoria[0]) for categoria in categorias]
+        choices.append(('todas','Todas as categorias'))
         return choices
 
     except:
@@ -56,7 +57,7 @@ class FormularioReceita(FlaskForm):
     instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()], render_kw={"placeholder": "Descreva o passo a passo"})
     ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()], render_kw={"placeholder": "Os ingredientes"})
     tempo_preparo = DecimalRangeField('Tempo de Preparo', default=0)
-    dificuldade_receita = RadioField('Dificuldade', choices=[('Fácil', 'Fácil'), ('Médio', 'Médio'), ('Difícil', 'Difícil')], validators=[validators.DataRequired()])
+    dificuldade_receita = RadioField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])
     imagem_receita = FileField('Imagem da Receita', validators=[ FileAllowed(['jpg', 'png', 'jpeg', 'jfif'])])
     video_receita = FileField('Video Receita', validators=[FileAllowed(["mp4","avi","mkv","mov","wmv","flv","webm","mpeg"])])
@@ -70,4 +71,5 @@ class FormularioComentario(FlaskForm):
 
 class FormularioPesquisa(FlaskForm):
     pesquisa_input = StringField('Pesquisa', validators=[validators.DataRequired()], render_kw={"placeholder": " Ex: Bolo de Cenoura "})
+    categoria_receita =RadioField('Categoria', choices=obter_categorias, default='todas')
     submit_receita = SubmitField('Pesquisar')

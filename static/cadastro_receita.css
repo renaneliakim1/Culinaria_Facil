@@ -423,7 +423,7 @@ input.form-control.me-2 {
 }
 
 #titulo_receita {
-    background-color: var(--card--);
+    background-color: var(--form--);
     font-size: 0.8rem;
 
 }
@@ -520,7 +520,7 @@ h1 {
 
 textarea {
     resize: none;
-    background-color: var(--card--);
+    background-color: var(--form--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
 

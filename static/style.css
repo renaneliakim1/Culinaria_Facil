@@ -34,7 +34,7 @@
 }
 
 
-#categoria_receita li:last-child {
+/* #categoria_receita li:last-child {
     display: none;
 }
 
@@ -51,7 +51,7 @@
     align-items: center;
     margin: 20px;
     gap: 10px;
-}
+} */
 
 
 /* Estilizando os checkboxes */
@@ -92,11 +92,11 @@ body.modo-escuro {
     color: #fff;
 }
 
-
+/* 
 body.modo-escuro label {
     color: var(--card--);
 
-}
+} */
 
 
 body.modo-escuro form {
@@ -104,10 +104,10 @@ body.modo-escuro form {
 }
 
 
-body.modo-escuro p {
+/* body.modo-escuro p {
     color: var(--white--);
 }
-
+ */
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
@@ -171,7 +171,7 @@ body.modo-escuro .dropdown-menu.show {
 }
 
 
-body.modo-escuro #acesso {
+/* body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
     font-size: 0.9rem;
@@ -181,14 +181,14 @@ body.modo-escuro #acesso {
     border-radius: 8px;
 
 }
-
+ */
 
 
 
 
 body.modo-escuro svg {
-    color: var(--white);
-    width: 40px;
+/*     color: var(--white);
+ */    width: 40px;
     height: 30px;
 }
 
@@ -225,16 +225,16 @@ body.modo-escuro h1 {
 
 }
 
-body.modo-escuro h3 {
+/* body.modo-escuro h3 {
     color: var(--white);
-}
-body.modo-escuro p {
+} */
+/* body.modo-escuro p {
     color: var(--white);
-}
-body.modo-escuro label {
+} */
+/* body.modo-escuro label {
     color: #fbfbfb;
 }
-
+ */
 
 body.modo-escuro p.card-text {
     color: var(--black);
@@ -257,11 +257,11 @@ body.modo-escuro #toggle-mode label {
     color: var(--white);
 }
  
-body.modo-escuro .todas_receitas a{
+/* body.modo-escuro .todas_receitas a{
 
     color: var(--white);
 
-}
+} */
 
 header{
   display: flex;
@@ -447,13 +447,13 @@ svg {
     align-items: center;
     gap: 10px;
     justify-content: left;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-left: 8px;
 
 }
 
 #toggle-mode label {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: var(--black);
 }
 
@@ -649,7 +649,7 @@ label {
     height: 3rem;
 } */
 
-.filtroCategoria {
+/* .filtroCategoria {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -663,14 +663,26 @@ label {
 
 
 #filtro {
-    display: flex;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
     margin-top: 0.5rem;
     align-items: center;
 
 
+} */
+
+
+#filtro {
+    display: flex;
+    flex-direction: row;
+ /*    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 2rem); */
+    padding: 1rem;
+    justify-content: center;
+    gap: 1rem;
 }
+
 
 .form-check {
     display: flex;
@@ -685,6 +697,7 @@ label {
     display:flex;
     justify-content: center;
     align-items: center;
+    border: #000000 solid 0.1px;
 }
 
 
@@ -705,6 +718,8 @@ label {
     font-size: 0.6rem;
     display: flex;
     justify-content: center;
+    position: relative;
+    width: 100%;
 }
     
 #saibamais:hover{
@@ -727,11 +742,13 @@ label {
 }
 
 
-/* .card-title {
+ .card-title {
     margin-bottom: var(--bs-card-title-spacer-y);
     color: var(--bs-card-title-color);
-    height: 5rem;
-} */
+    height:3rem;
+    text-align: justify;
+    font-size:  1rem;
+} 
 
 /* .card a img {
     height: 6rem;
@@ -970,7 +987,7 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 74rem;
+        height: 76rem;
         z-index: -1;
         opacity: 0.9;
 
@@ -1015,14 +1032,7 @@ footer p {
         margin: none;
 
     }
-    main video {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 46.6rem;
-        z-index: -1;
-        opacity: 0.6;
-    }
+
 }
 
 
@@ -1042,7 +1052,7 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 74rem;
+        height: 78rem;
         z-index: -1;
         opacity: 0.9;
 
@@ -1130,6 +1140,10 @@ footer p {
         background-color: var(--lite--);
     }
 
+    body.modo-escuro .dropdown-menu.show{
+        background-color: var(--dark--);
+    }
+
 
     
     .titulosite {
@@ -1200,7 +1214,7 @@ footer p {
 
 
     body.modo-escuro #toggle-mode label {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
         color: var(--white);
     }
 
@@ -1248,7 +1262,7 @@ footer p {
         font-size: 0.7rem;
         margin-left: 8px;
         margin-top: 10px;
-        width: 45%;
+        width: 100%;
         font-size: 0.8rem;
         
     }
@@ -1390,6 +1404,21 @@ footer p {
 
 
     }
+
+    #toggle-mode{
+        display: block; /* Mostrar o elemento */
+        align-items: center;
+        gap: 10px;
+        justify-content: left;
+        font-size: 0.7rem;
+        margin-left: 8px;
+        margin-top: 10px;
+        width:100%;
+        font-size: 0.9rem;
+        
+    }
+
+
 
 
     .card {

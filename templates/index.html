@@ -30,10 +30,10 @@
 
 
     <main>
-        <video src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop>
+        <video id="videofundo" src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop>
             <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
                 muted></video>
-       
+       </video>
     </main>
 
     <script>
@@ -224,13 +224,55 @@
         <h3>Filtre por categoria</h3>
     </div>
 
+
     <div id="filtro">
+
+            <div class="form-check">
+
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-0" name="categoria_receita"  value="Vegano"> <label for="categoria_receita-0">Vegano</label>
+             </div>   
+
+             <div class="form-check">
+ 
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-1" name="categoria_receita"  value="Sem Glútem" data-click-count="1" data-last-clicked="categoria_receita-1"> <label for="categoria_receita-1">Sem Glútem</label>
+            </div>   
+
+            <div class="form-check">
+
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-2" name="categoria_receita" value="Massas" data-click-count="1" data-last-clicked="categoria_receita-2"> <label for="categoria_receita-2">Massas</label>
+            </div>
+            
+            <div class="form-check">
+
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-3" name="categoria_receita" value="Doces e Sobremesas" data-click-count="1" data-last-clicked="categoria_receita-3"> <label for="categoria_receita-3">Doces e Sobremesas</label>
+            </div>
+            
+            
+            <div class="form-check">
+
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-4" name="categoria_receita" value="Bebidas e Drinks" data-click-count="1" data-last-clicked="categoria_receita-4"> <label for="categoria_receita-4">Bebidas e Drinks</label>
+            </div>
+            
+            <div class="form-check">
+
+                <input class="form-check-input" type="checkbox"  id="categoria_receita-5" name="categoria_receita" value="Carnes"> <label for="categoria_receita-5">Carnes</label>
+            </div>
+            
+            
+            <div class="form-check">
+
+                <input  style="display: none;" class="form-check-input" type="checkbox"  checked="" id="categoria_receita-6" name="categoria_receita" value="todas"> <label  style="display: none;"  for="categoria_receita-6">Todas as categorias</label>
+            </div>    
+        
+    </div>
+
+ <!--    <div id="filtro">
 
         <div class="form-check">
             {{ form_pesquisa.categoria_receita }}
         </div>
         
-    </div>
+    </div> -->
 
     
     </form>

@@ -431,11 +431,17 @@
 
             <div id="filtro">
 
+                <label for="categoria_receita">Categoria</label>: <select id="categoria_receita" name="categoria_receita" required=""><option value="Vegano">Vegano</option><option value="Sem Glútem">Sem Glútem</option><option value="Massas">Massas</option><option value="Doces e Sobremesas">Doces e Sobremesas</option><option value="Bebidas e Drinks">Bebidas e Drinks</option><option value="Carnes">Carnes</option><option style="display: none;" value="todas">Todas as categorias</option></select>
+                
+            </div>
+<!-- 
+            <div id="filtro">
+
                 {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
                 {% for error in form.categoria_receita.errors %}
                 <div class="error-message">{{ error }}</div>
                 {% endfor %}
-            </div>
+            </div> -->
 
             <div id="cadastrar">
                 <input type="submit" value="Cadastrar Receita">

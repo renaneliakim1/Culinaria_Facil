@@ -51,6 +51,7 @@ def pagina_inicial():
 @app.route('/receitas/pesquisa/<input_pesquisa>/<input_categoria>/<int:pagina>', methods=['GET', 'POST'])
 def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
     cursor = database_connection.cursor()
+    pesquisa = input_pesquisa
     if input_categoria == 'todas':
         pesquisa_receita = '''
             SELECT * 
@@ -62,7 +63,6 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
             OR TempoPreparo LIKE %s 
             OR Dificuldade LIKE %s
             '''
-        pesquisa = input_pesquisa
         cursor.execute(pesquisa_receita, (f'%{pesquisa}%',) * 6)
     else:
         cursor2 = database_connection.cursor()
@@ -84,7 +84,6 @@ def pagina_pesquisa(pagina, input_pesquisa, input_categoria):
             OR TempoPreparo LIKE %s 
             OR Dificuldade LIKE %s)
         '''
-        pesquisa = input_pesquisa
         cursor.execute(pesquisa_receita, (categoria_id,) + (f'%{pesquisa}%',) * 6)
     resultado_pesquisa = cursor.fetchall()
     cursor.close()

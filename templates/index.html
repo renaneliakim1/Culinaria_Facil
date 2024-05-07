@@ -30,10 +30,16 @@
 
 
     <main>
-        <video src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop>
-            <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
-                muted></video>
+        <video id="videofundo" src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop   >
+           <!--  <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
+                muted></video> -->
     </main>
+
+    <script>
+        var video = document.getElementById('videofundo');
+        var speed = 0.6; 
+        video.playbackRate = speed;
+    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -203,7 +209,7 @@
     <section>
         <form method="POST" action="">
             {{ form_pesquisa.csrf_token }}
-            <h1>Bem-vindo à Culinária Fácil <br>
+            <h1 class="titulosite"> Culinária Fácil <br>
                 "Receitas para Todos os Paladares"</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Pesquise por uma receita</label>

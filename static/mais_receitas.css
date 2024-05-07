@@ -47,11 +47,11 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
 
 
 }
@@ -697,9 +697,9 @@ h1{
 .card {
     width: 13em;
     height: 25rem;
-        background: var(--card--);
-
-
+}
+.card-body{
+    background: var(--card--);
 }
 
 .card-img-top {

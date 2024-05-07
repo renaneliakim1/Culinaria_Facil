@@ -41,15 +41,18 @@
 
   }
 
-
-#pesquisa_input{
+.pesquisa_input{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+  
+#pesquisa_input {
 height: 1.5rem;
-background-color: var(--lite--);
 font-size: 0.7rem;
 border-radius: 8px;
-width: 13rem;
-border: 1px solid var(--check--);
 width: 100%;
+background-color: var(--lite--);
 }
 
 #barra_pesquisa{

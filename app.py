@@ -32,7 +32,7 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif', '.mp4', '.avi', '.mkv
 @app.route('/', methods=['GET', 'POST'])
 def pagina_inicial():
     cursor = database_connection.cursor()
-    consulta_receitas = 'SELECT * FROM receitas LIMIT 3'
+    consulta_receitas = 'SELECT * FROM  receitas ORDER BY data_hora DESC LIMIT 3'
     cursor.execute(consulta_receitas)
     resultado_receita = cursor.fetchall()
     cursor.close()

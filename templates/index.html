@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/logo9.png') }}" width="24px" height="24px"
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/icon.png') }}" width="24px" height="24px"
         type="image/x-icon" />
 
     <title>Biblioteca de Receitas Culinárias</title>
@@ -30,16 +30,10 @@
 
 
     <main>
-        <video id="videofundo" src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop   >
-           <!--  <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
-                muted></video> -->
+        <video src="{{ url_for('static', filename='/imgs/fundo.mp4') }}" autoplay muted loop>
+            <video src="https://videos.pexels.com/video-files/3196004/3196004-uhd_3840_2160_25fps.mp4" autoplay loop
+                muted></video>
     </main>
-
-    <script>
-        var video = document.getElementById('videofundo');
-        var speed = 0.6; 
-        video.playbackRate = speed;
-    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -206,17 +200,16 @@
     <div class="alert-messege">{{ alerta }}</div>
     {% endfor %}
     {% endif %}
+    <form method="POST" action="">
     <section>
-        <form method="POST" action="">
             {{ form_pesquisa.csrf_token }}
-            <h1 class="titulosite"> Culinária Fácil <br>
+            <h1>Bem-vindo à Culinária Fácil <br>
                 "Receitas para Todos os Paladares"</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Pesquise por uma receita</label>
                 {{ form_pesquisa.pesquisa_input }}
                 <input type="submit" class="btn btn-danger" id="pesquisa" value="Pesquisar">
             </div>
-        </form>
 
     </section>
 
@@ -227,43 +220,11 @@
     <div id="filtro">
 
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Sem Glútem
-            </label>
+            {{ form_pesquisa.categoria_receita }}
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Doces e Sobremesas
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Bebidas e Drinks
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Vegano
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Massas
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Carnes
-            </label>
-        </div>
+        
     </div>
-
+    </form>
     <div class="text">
         <p>Receitas mais recentes</p>
     </div>
@@ -310,6 +271,7 @@
 
 
 </body>
+
 
 
 <script type="text/javascript" src="{{ url_for('static', filename='/js/modo.-escuro.js') }}">

@@ -251,7 +251,7 @@
     <div class="ingredientes">
       <h3>Ingredientes:</h3>
       <ul>
-        <li>{{ receita[4] }}</li>
+        <li style="white-space: pre-line">{{ receita[4] }}</li>
       </ul>
     </div>
   </section>
@@ -269,10 +269,10 @@
 
   <h3>Modo de Preparo:</h3>
 
-  <div class="preparo">
+  <div  class="preparo">
 
     <ol>
-      <li>{{ receita[3] }}</li>
+      <li style="white-space: pre-line">{{ receita[3] }}</li>
     </ol>
 
     <img src="{{ url_for('static', filename='/imgs/chef.png') }}" id="preparo.img" alt="">

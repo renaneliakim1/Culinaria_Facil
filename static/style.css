@@ -167,7 +167,7 @@ body.modo-escuro .navbar-toggler {
 
 
 body.modo-escuro .dropdown-menu.show {
-    background-color: var(--card--);
+    background-color: transparent;
 }
 
 
@@ -546,7 +546,7 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 76rem;
+    height: 66rem;
     z-index: -1;
     opacity: 0.9;
 
@@ -568,7 +568,7 @@ h1 {
 
 .titulosite {
 
-    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -577,13 +577,16 @@ h1 {
     text-align: center;
 
     color: black;
+
+
+    
 }
 
 
 
 .slogan {
 
-    background-image: linear-gradient(to bottom, var(--primary-color), #faa508, #f06203);
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -678,9 +681,7 @@ label {
     flex-direction: row;
  /*    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 2rem); */
-    padding: 1rem;
     justify-content: center;
-    gap: 1rem;
 }
 
 
@@ -688,7 +689,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     gap: 10px;
 }
 
@@ -923,7 +924,6 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 6rem;
  
 }
 
@@ -987,7 +987,7 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 76rem;
+        height: 72rem;
         z-index: -1;
         opacity: 0.9;
 
@@ -1052,7 +1052,7 @@ footer p {
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: 78rem;
+        height: 70rem;
         z-index: -1;
         opacity: 0.9;
 
@@ -1074,7 +1074,7 @@ footer p {
         width: 70%;
     }
 
-    #categoria_receita {
+    #filtro {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 2rem);
@@ -1119,7 +1119,6 @@ footer p {
         width: 90%;
         text-align: center;
         left: 0;
-        padding-top: 11rem;
         width: 100%;
 
     }

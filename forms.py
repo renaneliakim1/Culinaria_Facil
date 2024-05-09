@@ -54,8 +54,8 @@ class FormularioLogin(FlaskForm):
 class FormularioReceita(FlaskForm):
     titulo_receita = StringField('Titulo', validators=[ validators.Length(min=3, max=30),validators.DataRequired()], render_kw={"placeholder": "Título da Receita"})
     descricao_receita = TextAreaField('Descricao', validators=[validators.Length(min=3, max=100),validators.DataRequired()], render_kw={"placeholder": "Descreva em até 100 caracteres"})
-    instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()], render_kw={"placeholder": "Descreva o passo a passo"})
-    ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()], render_kw={"placeholder": "Os ingredientes"})
+    instrucoes_receita = TextAreaField('Instrucoes', validators=[validators.DataRequired()], render_kw={"placeholder": "Descreva cada passo a passo por linha"})
+    ingredientes_receita = TextAreaField('Ingredientes', validators=[validators.DataRequired()], render_kw={"placeholder": "Insira um ingrediente por linhas"})
     tempo_preparo = DecimalRangeField('Tempo de Preparo', default=0)
     dificuldade_receita = RadioField('Dificuldade', choices=[('facil', 'Fácil'), ('medio', 'Médio'), ('dificil', 'Difícil')], validators=[validators.DataRequired()])
     categoria_receita = SelectField('Categoria', choices=obter_categorias, validators=[validators.DataRequired(), validators.InputRequired()])

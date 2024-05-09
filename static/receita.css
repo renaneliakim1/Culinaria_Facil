@@ -265,6 +265,12 @@ body.modo-escuro .coment-text {
   color: var(--white);
 }
 
+
+body.modo-escuro p.sem-video,
+body.modo-escuro p.nenhum-comentario{
+  color: var(--white);
+}
+
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
   display: flex;
   justify-content: left;
@@ -560,13 +566,19 @@ h3 {
   margin-bottom: 1rem;
 }
 
+main{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
 section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-top: 2rem;
+  /* padding-left: 15%;
+  padding-right: 15%; */
 }
 
 .d-block {
@@ -639,13 +651,13 @@ h6 a {
   text-align: left;
   font-size: 0.8rem;
   padding: 0.5rem;
+  list-style-type: square;
 
 }
 
-
 .categoria {
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%;
+  margin-right: 15%; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -670,17 +682,23 @@ h6 a {
   justify-content: center;
   text-align: left;
   flex-direction: row;
-  padding-left: 27%;
-  padding-right: 27%;
+  /* padding-left: 27%;
+  padding-right: 27%; */
   font-size: 0.8rem;
+  align-items: center;
 }
+
+
 
 .preparo li {
   padding: 0.5rem;
   font-size: 0.8rem;
-
+  list-style-type: decimal;
 
 }
+
+
+
 
 .video {
   display: flex;
@@ -714,8 +732,8 @@ video {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  margin-left: 20%;
-  margin-right: 20%;
+/*   margin-left: 20%;
+  margin-right: 20%; */
   font-size: 0.8rem;
   padding-top: 2rem;
 
@@ -1001,11 +1019,28 @@ footer p {
 }
 
 
+@media only screen and (max-width: 1366px) {
+  main{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .preparo{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+}
+
 
 
 
 
 @media only screen and (max-width: 940px) {
+
+  main{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   #textarea {
     width: 90%;
@@ -1050,19 +1085,26 @@ footer p {
 
   section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 10%;
     padding-right: 10%;
   }
 
+  .ingredientes{
+    width: 70%;
+
+  }
+  
+  .ingredientes  li{
+    text-align: left;
+  }
 
   .preparo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     text-align: left;
-    flex-direction: row;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 0.8rem;
@@ -1102,7 +1144,10 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
-
+  main{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   #textarea {
     width: 90%;
@@ -1370,6 +1415,10 @@ footer p {
 
 
 @media only screen and (max-width: 450px) {
+  main{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   section{
     gap: 20px;
   }

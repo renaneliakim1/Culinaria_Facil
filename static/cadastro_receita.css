@@ -553,6 +553,13 @@ input[type="submit"] {
 
 }
 
+#descricao_receita,
+#ingredientes_receita,
+#instrucoes_receita{
+    height: 4rem;
+
+}
+
 
 #cadastrar {
     display: flex;

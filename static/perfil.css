@@ -37,7 +37,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
 
   }
 
@@ -55,13 +54,6 @@ width: 100%;
 background-color: var(--lite--);
 }
 
-#barra_pesquisa{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-width: 100%;
-}
 
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -342,25 +334,25 @@ button.navbar-toggler {
 
 
 #buscar {
-    width: 9rem;
-
+    display: flex;
+    width: 11rem;
+  
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
     border-radius: 8px;
     border-radius: .5rem;
     border-color: var(--black);
+    border: none;
     align-items: center;
     justify-content: center;
+    background-color: var(--lite--);
     border: 1px solid var(--check--);
-
-
-
-
-}
+  }
+  
 
 
 #buscar:hover {

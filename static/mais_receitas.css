@@ -527,15 +527,17 @@ section h1 {
 }
 
 .form-check-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 
 h1{
     text-align: center;
-    font-size: 1.5rem;
 }
 
+h1{
+    font-size: 1.5rem;
+}
 
 #resultados {
 
@@ -590,7 +592,7 @@ h1{
 
 
 
-
+/* 
 .rating{
     display: flex;
     flex-direction: row-reverse;
@@ -636,7 +638,7 @@ h1{
   .rating > input:checked ~ label {
     color: #ffa723;
   }
-  
+   */
   
 
 
@@ -758,7 +760,6 @@ h5 {
 
 
 
-
 #myBtn {
     display: inline-block;
     vertical-align: middle;
@@ -857,7 +858,10 @@ footer p {
 }
 
 
+
 @media only screen and (max-width: 768px) {
+
+  
     
 
 footer {

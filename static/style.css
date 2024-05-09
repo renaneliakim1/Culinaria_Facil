@@ -577,6 +577,9 @@ h1 {
     text-align: center;
 
     color: black;
+    -webkit-text-stroke: 1px rgb(121, 75, 75, 0.2);
+
+
 
 
     
@@ -595,6 +598,9 @@ h1 {
     text-align: center;
 
     color: black;
+
+    -webkit-text-stroke: 1px rgb(121, 75, 75, 0.2);
+
 }
 
 .mb-3 {

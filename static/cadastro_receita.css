@@ -348,8 +348,7 @@ svg {
 }
 
 
-
-
+ 
 
 input.form-control.me-2 {
     font-size: 0.7rem;
@@ -976,6 +975,12 @@ footer p {
         max-width: none;
 
 
+    }
+
+
+
+    input.form-control.me-2 {
+        height: 1.7rem;
     }
 
     .dropzone-area {

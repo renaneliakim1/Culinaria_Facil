@@ -190,7 +190,7 @@ body.modo-escuro #buscar {
 }
 
 
-body.modo-escuro .higiene {
+/* body.modo-escuro .higiene {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -204,7 +204,7 @@ body.modo-escuro .higiene li {
 
 body.modo-escuro .higiene h2 {
   color: var(--white);
-}
+} */
 
 body.modo-escuro h1 {
   color: var(--white);
@@ -276,6 +276,15 @@ body.modo-escuro p.nenhum-comentario{
 
 body.modo-escuro .faca_login {
   color: var(--white);
+}
+
+
+body.modo-escuro a{
+  color:var(--primary-color)
+}
+
+body.modo-escuro p.ultimos-comentarios{
+  color: #d3d3d3;
 }
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
@@ -841,6 +850,7 @@ textarea {
 .comentarios {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
   margin-left: 15%;
   margin-right: 15%;
   background-color: var(--lite--);
@@ -1152,6 +1162,12 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+
+
+  #pesquisa_input {
+    height: 1.7rem;
+  }
+  
   main{
     padding-left: 5%;
     padding-right: 5%;
@@ -1181,8 +1197,9 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-right: 5px;
+    margin-left: 5px;
+  
     background-color: var(--lite--);
     gap: 10px;
 
@@ -1333,7 +1350,8 @@ footer p {
     justify-content: center;
     text-align: left;
     flex-direction: column;
-    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 
     font-size: 0.8rem;
   }
@@ -1341,6 +1359,10 @@ footer p {
   .comentario img {
     width: 50px;
     height: 60px;
+  }
+
+  h6{
+    font-size: 0.6rem;
   }
 
   textarea {
@@ -1459,8 +1481,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
+ 
     background-color: var(--lite--);
     gap: 10px;
 

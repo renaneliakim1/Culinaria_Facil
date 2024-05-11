@@ -28,12 +28,8 @@
     --dark--: #222;
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
-    --lite--:#f4e1c4;
-    --pesquisa_input--:#fff7eb
-
-
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -127,7 +123,7 @@ body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -217,7 +213,7 @@ body.modo-escuro .dropzone-area {
 }
 
 
-body.modo-escuro .dropzone-area label{
+body.modo-escuro .dropzone-area label {
     color: var(--black);
 }
 
@@ -416,7 +412,7 @@ svg {
 }
 
 
-.form-switch .form-check-input{
+.form-switch .form-check-input {
     margin-left: -1.5em;
     background-color: var(--white);
 }
@@ -549,7 +545,7 @@ input .input-group {
 #registro_email,
 #registro_cpf,
 #registro_senha,
-#senha_confirmar{
+#senha_confirmar {
     background-color: var(--pesquisa_input--);
 }
 
@@ -694,7 +690,7 @@ input .input-group {
 }
 
 
-label{
+label {
     font-size: 0.7rem;
 
 }
@@ -704,6 +700,7 @@ label{
     flex-direction: row;
     padding-left: 8rem;
     padding-right: 8rem;
+    width: 100%;
 }
 
 
@@ -727,7 +724,7 @@ label{
 td {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     font-size: 0.7rem;
 
 
@@ -739,12 +736,11 @@ tr {
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    gap: 5rem;
     font-size: 0.7rem;
 
 }
 
-th{
+th {
     display: flex;
     justify-content: center;
     font-size: 0.7rem;
@@ -808,7 +804,7 @@ th{
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
-    
+
 
 
 }
@@ -913,16 +909,16 @@ th{
     align-items: center;
     flex-direction: column;
     width: 100%;
-  
+
 
 }
 
 
-#registro_senha{
+#registro_senha {
     width: 17rem;
 }
 
-#senha_confirmar{
+#senha_confirmar {
     width: 17rem;
 
 }
@@ -1098,11 +1094,6 @@ footer p {
         text-align: left;
     }
 
-
-
-
-
-
     footer {
         position: relative;
         bottom: 0;
@@ -1141,265 +1132,88 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
-
-
-.dropzone-area {
-    width: 80%;
-    padding: 1rem;
-    position: relative;
-    margin-top: 1rem;
-    min-height: 8rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--black);
-    border-radius: 1rem;
-    color: var(--primary);
-    cursor: pointer;
-    height: 8rem;
-}
-
-
-.table>:not(caption)>*>* {
-    background-color: var(--lite--);
-    width: 1rem;
-
-}
-
-
-button .tab-btn {
-    font-size: 0.7rem;
-    width: 8rem;
-    margin: 0.2rem;
-}
-
-
-tr {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-}
-
-
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    left: 0;
-}
-
-
-}
-
-/* 
-@media only screen and (max-width: 360px) {
-
-    .abas {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-
-    }
-
-
-    h1 {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    #buscar {
-        align-items: center;
-        flex-direction: center;
-        font-size: 0.6rem;
-    }
-
-
-
     .info {
-        display: flex;
-        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+
     }
 
 
-    #seguranca {
-        display: flex;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        justify-content: center;
-        flex-direction: column;
+    body.modo-escuro .info {
+        padding-left: 0px;
+        padding-right: 0px;
+
     }
 
-    #seguranca input .form-control {
-        height: 3rem;
-    }
-
-
-    .tabela {
-        display: flex;
+    #editar-excluir a{
         width: 100%;
-        justify-content: center;
-
     }
 
 
-    #receitas {
+    .dropzone-box{
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .dropzone-area {
+        width: 80%;
+        padding: 1rem;
+        position: relative;
+        margin-top: 1rem;
+        min-height: 8rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 2px;
+        border: 1px solid var(--black);
+        border-radius: 1rem;
+        color: var(--primary);
+        cursor: pointer;
+        height: 8rem;
+    }
+
+
+    .table>:not(caption)>*>* {
+        background-color: var(--lite--);
+        width: 4rem;
 
     }
 
 
     button .tab-btn {
         font-size: 0.7rem;
-        margin: 0;
-        width: 7rem;
-    }
-
-
-    .tab-btn {
-        font-size: 0.7rem;
         width: 8rem;
         margin: 0.2rem;
     }
 
 
-    .tab-btn {
-        font-size: 0.7rem;
-        width: 5rem;
-        margin: 0.2rem;
-
-    }
-
-
-    .input-group-text {
-        font-size: 0.6rem;
-        width: 5rem;
-    }
-
-
-    
     tr {
         display: flex;
         justify-content: center;
         flex-direction: row;
         width: 100%;
-        gap: 1rem;
+        
     }
 
-
-
-    td {
+    
+    td.nome-receita {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 0.7rem;
-    }
-
-
-
-    th, td {
-        font-size: 0.7rem;
-    }
-
-    .nome-receita{
-        width: 15rem;
-    }
-
-
-    .menu-table {
-        display: flex;
-        flex-direction: row;
-
-    }
-
-
-
-
-    .table {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding: none;
-
-    }
-
-    tbody {
-        display: flex;
-        flex-direction: column;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        box-sizing: border-box;
-        font-size: 2px;
-        justify-content: left;
-        justify-content: space-between;
-
-    }
-
-
-    .table>thead{
-        justify-content: space-between;
-    }
-
-    #editar-excluir {
-        cursor: pointer;
-        width: 3.5rem;
-        border: none;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.6rem;
-        outline: none;
-        height: 2rem;
-        text-align: center;
-    }
-
-    #editar-excluir:hover {
-        background-color: #a33f37;
-    }
-
-    .nome-receita {
         text-align: left;
+        width: 10rem;
     }
 
-
-    #dadosnome {
-        width: 12rem;
-        height: 2.5rem;
-    }
-
-    #dadoscpf {
-        width: 12rem;
-        height: 2.5rem;
-    }
-
-    .info {
-        padding: none;
-    }
-
-    .input-group {
-        padding-left: 1px;
-        padding-right: 1px;
-    }
-
-    #addon-wrapping {
-        font-size: 0.6rem;
-    }
-
-
-
+ 
 
 
     footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
         text-align: center;
@@ -1407,28 +1221,4 @@ footer {
     }
 
 
-
-
-    footer p {
-        font-size: 0.6rem;
-    }
-
-
-    ::-webkit-scrollbar {
-        width: 7px;
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 5px;
-        background-color: rgb(0, 0, 0);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 8px;
-        background-color: var(--primary-color);
-    }
-
-
-
-
-}  */
+}

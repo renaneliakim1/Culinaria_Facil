@@ -169,6 +169,10 @@ body.modo-escuro #acesso {
 }
 
 
+body.modo-escuro a{
+    color:var(--primary-color)
+}
+
 
 
 body.modo-escuro svg {
@@ -352,7 +356,6 @@ button.navbar-toggler {
     border: none;
     align-items: center;
     justify-content: center;
-    background-color: var(--lite--);
     border: 1px solid var(--check--);
   }
   
@@ -504,7 +507,7 @@ h3 {
 
 }
 
- .card {
+.card {
     width: 13em;
     height: 25rem;
 
@@ -643,7 +646,7 @@ p{
     text-align: center;
 }
 
-
+/* 
 #myBtn {
     display: inline-block;
     vertical-align: middle;
@@ -664,7 +667,7 @@ p{
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-}
+} */
 
 
 
@@ -755,6 +758,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+
+    #pesquisa_input{
+        height: 1.7rem;
+    }
 
 
     #resultados {

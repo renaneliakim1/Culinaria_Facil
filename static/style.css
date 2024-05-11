@@ -579,7 +579,7 @@ h1 {
     text-align: center;
 
     color: black;
-    -webkit-text-stroke: 1px rgb(121, 75, 75, 0.2);
+    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
 
 
 
@@ -601,7 +601,7 @@ h1 {
 
     color: black;
 
-    -webkit-text-stroke: 1px rgb(121, 75, 75, 0.2);
+    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
 
 }
 
@@ -682,6 +682,11 @@ label {
 
 
 } */
+
+
+h3 {
+    font-size: 1rem;
+}
 
 
 #filtro {
@@ -1215,7 +1220,7 @@ footer p {
 
     body.modo-escuro .todas_receitas a {
 
-        color: var(--white);
+        color: var(--primary-color);
 
     }
 

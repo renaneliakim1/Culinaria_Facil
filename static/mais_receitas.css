@@ -865,6 +865,11 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 
+    
+#pesquisa_input{
+    height: 1.7rem;
+}
+
   
     
 

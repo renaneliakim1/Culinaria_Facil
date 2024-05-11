@@ -30,6 +30,8 @@
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
     --lite--:#f4e1c4;
+    --pesquisa_input--:#fff7eb
+
 
 
 
@@ -345,17 +347,6 @@ svg {
 
 }
 
-#pesquisa_input {
-    display: flex;
-    align-items: center;
-    height: 1.5rem;
-    background-color: var(--lite--);
-    font-size: 0.7rem;
-    border-radius: 8px;
-    width: 13rem;
-    border: 1px solid var(--check--);
-
-}
 
 
 
@@ -406,7 +397,7 @@ input.form-control.me-2 {
 
 input.form-control.me-2 {
     font-size: 0.7rem;
-    background-color: var(--lite--);
+    background-color: var(--pesquisa_input--);
     border-color: var(--card--);
     width: 100%;
 
@@ -469,16 +460,6 @@ input #titulo_receita label {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-#pesquisa_input {
-    height: 1.5rem;
-    font-size: 0.7rem;
-    border-radius: 8px;
-    width: 100%;
-    background-color: var(--lite--);
-
-
 }
 
 
@@ -989,7 +970,7 @@ footer p {
 
     .container {
         width: 95%;
-        background-color: var(--card--);
+        background-color: var(--form--);
         border-radius: 8px;
         border-radius: 4px;
         max-width: none;
@@ -1101,7 +1082,7 @@ footer p {
 @media only screen and (max-width: 490px) {
     .container {
         width: 100%;
-        background-color: var(--card--);
+        background-color: var(--form--);
         border-radius: 8px;
         border-radius: 4px;
 

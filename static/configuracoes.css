@@ -29,6 +29,8 @@
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
     --lite--:#f4e1c4;
+    --pesquisa_input--:#fff7eb
+
 
 
 
@@ -542,6 +544,24 @@ input .input-group {
 #addon-wrapping {
     width: 5rem;
 }
+
+#registro_nome,
+#registro_email,
+#registro_cpf,
+#registro_senha,
+#senha_confirmar{
+    background-color: var(--pesquisa_input--);
+}
+
+
+
+
+
+
+
+
+
+
 
 #dadosnome {
     width: 14rem;

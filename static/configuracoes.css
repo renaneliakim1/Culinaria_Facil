@@ -208,13 +208,15 @@ body.modo-escuro h1 {
 
 
 body.modo-escuro .dropzone-area {
-    background-color: var(--lite--);
+    background-color: var(--dark--);
+    border: 1px solid var(--lite--);
+    
 
 }
 
 
 body.modo-escuro .dropzone-area label {
-    color: var(--black);
+    color: var(--white);
 }
 
 

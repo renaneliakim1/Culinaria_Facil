@@ -458,14 +458,12 @@ section h1 {
 
 #saibamais{
     font-size: 0.6rem;
-    
+    color: var(--white);
     display: flex;
     justify-content: center;
     background: var(--primary-color);
     border: var(--primary-color);
 
-
-  
 }
     
 #saibamais:hover{

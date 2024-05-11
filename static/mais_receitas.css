@@ -168,7 +168,7 @@ body.modo-escuro #acesso {
 
 body.modo-escuro #flexSwitchCheckDefault{
     border-color: #000000;
-    background-color: var(--lite--);
+    background-color: var(--white);
 }
 
 
@@ -240,6 +240,13 @@ body.modo-escuro #barra_pesquisa{
  
     background-color: var(--dark--);
 }
+
+
+#flexSwitchCheckDefault{
+    border-color: #000000;
+    background-color: var(--white);
+}
+
   
 
 

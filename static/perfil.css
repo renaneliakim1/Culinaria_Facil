@@ -642,6 +642,7 @@ p{
 
 #opcao_mais_rececitas {
     text-align: center;
+    
 }
 
 /* 
@@ -787,6 +788,10 @@ footer {
     
     }
 
+    
+    #opcao_mais_rececitas {
+        font-size: 0.8rem;
+    }
 
 }
 

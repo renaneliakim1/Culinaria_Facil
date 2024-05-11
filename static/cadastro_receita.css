@@ -348,6 +348,11 @@ svg {
 }
 
 
+.form-switch  {
+    margin-left: 1rem;
+}
+  
+
  
 
 input.form-control.me-2 {
@@ -372,6 +377,8 @@ input.form-control.me-2 {
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
+    margin: 0px;
+
 
 }
 

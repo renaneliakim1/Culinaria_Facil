@@ -343,6 +343,11 @@ button.navbar-toggler {
 }
 
 
+.form-switch {
+  margin-left: -0.5em;
+}
+
+
 #barra_pesquisa{
   display: flex;
   align-items: center;

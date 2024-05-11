@@ -65,7 +65,7 @@ class FormularioReceita(FlaskForm):
 
 
 class FormularioComentario(FlaskForm):
-    comentario_receita = TextAreaField('Comentário', validators=[validators.DataRequired()])
+    comentario_receita = TextAreaField('Comentário', validators=[validators.DataRequired()], render_kw={"placeholder": " Descreva sua experiência com esta receita"})
     submit_receita = SubmitField('Comentar_receita')
 
 

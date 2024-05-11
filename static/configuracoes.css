@@ -426,6 +426,11 @@ svg {
 
 }
 
+.form-switch  {
+    margin-left: -0.5em;
+}
+
+
 /* color label*/
 .form-control {
     height: 1.5rem;
@@ -1134,6 +1139,13 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+    .tabela{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .info {
         padding-left: 0px;
         padding-right: 0px;

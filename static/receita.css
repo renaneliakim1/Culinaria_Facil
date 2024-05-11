@@ -482,6 +482,10 @@ svg {
   margin-left: -1.5em;
 }
 
+.form-switch  {
+  margin-left: -0.5em;
+}
+
 
 
 
@@ -558,7 +562,6 @@ svg {
   justify-content: column;
   flex-direction: column;
 }
-
 
 
 

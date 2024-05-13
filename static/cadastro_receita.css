@@ -349,7 +349,7 @@ svg {
 
 
 .form-switch  {
-    margin-left: 1rem;
+    margin-left: 2.5rem;
 }
   
 
@@ -371,13 +371,15 @@ input.form-control.me-2 {
 
 /* key for dark mode */
 
+
+
 #toggle-mode {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
-    margin: 0px;
+    margin: 11px;
 
 
 }

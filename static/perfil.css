@@ -27,44 +27,42 @@
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f4e1c4;
-    --pesquisa_input--:#fff7eb
-
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
 
-#barra_pesquisa{
+#barra_pesquisa {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 
-  }
-
-.pesquisa_input{
-display: flex;
-flex-direction: row;
-align-items: center;
 }
-  
+
+.pesquisa_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #pesquisa_input {
-height: 1.5rem;
-font-size: 0.7rem;
-border-radius: 8px;
-width: 100%;
-background-color: var(--pesquisa_input--);
-border: 1px solid var(--check--);
+    height: 1.5rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    width: 100%;
+    background-color: var(--pesquisa_input--);
+    border: 1px solid var(--check--);
 }
 
 
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
-body{
+body {
     width: 100%;
     height: 100%;
-    --bs-body-bg: var(--lite--); /* bug, just change the background color with this property  */
+    --bs-body-bg: var(--lite--);
+    /* bug, just change the background color with this property  */
 }
 
 body.modo-escuro {
@@ -92,9 +90,9 @@ body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
 
-body.modo-escuro #barra_pesquisa{
+body.modo-escuro #barra_pesquisa {
     background-color: var(--dark--);
-   }
+}
 
 body.modo-escuro .container-fluid {
     display: flex;
@@ -147,11 +145,11 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
+body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -169,8 +167,8 @@ body.modo-escuro #acesso {
 }
 
 
-body.modo-escuro a{
-    color:var(--primary-color)
+body.modo-escuro a {
+    color: var(--primary-color)
 }
 
 
@@ -219,13 +217,13 @@ body.modo-escuro #buscar {
 
 
 body.modo-escuro h1 {
-  color: var(--white);
+    color: var(--white);
 
 }
 
 
 
-.navbar-nav.me-auto.mb-2.mb-lg-0{
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
@@ -234,14 +232,14 @@ body.modo-escuro h1 {
 }
 
 
-section{
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section img{
+section img {
     border-radius: 50%;
     width: 10rem;
     height: 10 rem;
@@ -266,7 +264,8 @@ body.modo-escuro footer p {
 #logo img {
     display: flex;
     width: 5rem;
-    height: 4rem;;
+    height: 4rem;
+    ;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -334,7 +333,7 @@ button.navbar-toggler {
 }
 
 
-.form-control.me-2{
+.form-control.me-2 {
     border: 1px solid var(--check--);
 
 }
@@ -343,7 +342,7 @@ button.navbar-toggler {
 #buscar {
     display: flex;
     width: 11rem;
-  
+
     cursor: pointer;
     color: var(--black);
     font-size: 0.9rem;
@@ -357,8 +356,8 @@ button.navbar-toggler {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
-  }
-  
+}
+
 
 
 #buscar:hover {
@@ -388,6 +387,7 @@ svg {
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
+    padding-left: 2.8em;
 
 }
 
@@ -395,15 +395,10 @@ svg {
     font-size: 0.9rem;
 }
 
-
-
-
-.form-switch .form-check-input{
-    margin-left: -3em;
+.form-switch .form-check-input {
     --bs-form-check-bg: var(--white);
 
 }
-
 
 
 
@@ -421,7 +416,7 @@ svg {
     font-size: 0.7rem;
 }
 
-input.form-control.me-2{
+input.form-control.me-2 {
     font-size: 0.7rem;
 }
 
@@ -456,7 +451,7 @@ section h1 {
 }
 
 
-#saibamais{
+#saibamais {
     font-size: 0.6rem;
     color: var(--white);
     display: flex;
@@ -465,9 +460,9 @@ section h1 {
     border: var(--primary-color);
 
 }
-    
-#saibamais:hover{
-    background-color: #a33f37; 
+
+#saibamais:hover {
+    background-color: #a33f37;
 }
 
 
@@ -518,12 +513,12 @@ h3 {
 
 }
 
-.card-text{
+.card-text {
     height: 6rem;
 
 }
 
-.card-body{
+.card-body {
     background: var(--card--);
 }
 
@@ -566,11 +561,11 @@ h5 {
     height: 2.7rem;
 }
 
-p{
+p {
     text-align: center;
 }
 
-.mais_receitas{
+.mais_receitas {
     display: flex;
     padding-top: 1rem;
     margin-left: 5%;
@@ -580,13 +575,13 @@ p{
 
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--primary-color);
     border: var(--primary-color);
 }
 
 
-.input-container{
+.input-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -594,7 +589,7 @@ p{
 
 }
 
-.error-message{ 
+.error-message {
     color: red;
     font-size: 0.8rem;
 }
@@ -628,21 +623,21 @@ p{
 
 
 
-.date{
+.date {
     display: flex;
     justify-content: left;
     align-items: flex-start;
 }
 
-.date p{
-   font-size: 0.6rem;
+.date p {
+    font-size: 0.6rem;
 }
 
 
 
 #opcao_mais_rececitas {
     text-align: center;
-    
+
 }
 
 /* 
@@ -715,12 +710,12 @@ footer {
     text-align: center;
     left: 0;
     margin-top: 5rem;
-  }
-  
-  footer p {
+}
+
+footer p {
     font-size: 0.8rem;
-  }
-  
+}
+
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -750,16 +745,27 @@ footer {
         margin-top: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
-    
-    
+
+
     }
 
 }
 
 @media only screen and (max-width: 768px) {
 
-    #pesquisa_input{
+    #pesquisa_input {
         height: 1.7rem;
+    }
+
+
+    #toggle-mode {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: left;
+        font-size: 0.8rem;
+        margin: 0px;
+
     }
 
 
@@ -772,23 +778,23 @@ footer {
         align-items: center;
         margin-top: 1.5rem;
         padding: 40px;
-    
-    
+
+
     }
 
     .card {
         width: 16em;
-    
-    
-    
-    }
-    
-    .card-img-top {
-        height: 9rem;
-    
+
+
+
     }
 
-    
+    .card-img-top {
+        height: 9rem;
+
+    }
+
+
     #opcao_mais_rececitas {
         font-size: 0.8rem;
     }

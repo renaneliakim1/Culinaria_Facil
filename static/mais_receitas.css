@@ -20,20 +20,20 @@
 }
 
 .pagina_container a {
-    color: inherit; 
-    text-decoration: inherit; 
+    color: inherit;
+    text-decoration: inherit;
     width: 25px;
     background-color: #d57119;
     margin: 5px;
     border-radius: 8px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     color: white;
 }
 
 .pagina_container a:hover {
-    background-color:#ac2020 ;
+    background-color: #ac2020;
 }
 
 
@@ -51,19 +51,17 @@
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f4e1c4;
-    --pesquisa_input--:#fff7eb
-
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
-body{
+body {
     width: 100%;
     height: 100%;
-    --bs-body-bg: var(--lite--); /* bug, just change the background color with this property  */
+    --bs-body-bg: var(--lite--);
+    /* bug, just change the background color with this property  */
 }
 
 body.modo-escuro {
@@ -144,11 +142,11 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
+body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -165,13 +163,38 @@ body.modo-escuro #acesso {
 
 }
 
+/*  #flexSwitchCheck {
+    border-color :white;
+    background-color: var(--white--);
 
-body.modo-escuro #flexSwitchCheckDefault{
-    border-color: #000000;
+} */
+
+/* 
+body.modo-escuro #flexSwitchCheck{
+    border-color :none;
     background-color: var(--white);
+
+}
+ */
+
+/* body.modo-escuro #flexSwitchCheckDefault {
+    border-color :none;
+    background-color: var(--white);
+} */
+
+
+
+/* #flexSwitchCheckDefault{
+    border-color: #000000;
+    background-color:var(--lite--);
 }
 
-
+ 
+body.modo-escuro .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+ */
 
 
 body.modo-escuro svg {
@@ -212,7 +235,7 @@ body.modo-escuro #buscar {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
-    gap:10px;
+    gap: 10px;
 
 
 
@@ -220,13 +243,13 @@ body.modo-escuro #buscar {
 
 
 body.modo-escuro h1 {
-  color: var(--white);
+    color: var(--white);
 
 }
 
 
 
-.navbar-nav.me-auto.mb-2.mb-lg-0{
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
@@ -236,21 +259,37 @@ body.modo-escuro h1 {
 
 
 
-body.modo-escuro #barra_pesquisa{
- 
+body.modo-escuro #barra_pesquisa {
+
     background-color: var(--dark--);
 }
 
 
-#flexSwitchCheckDefault{
-    border-color: #000000;
+#flexSwitchCheckDefault {
+    border-color: #ffffff;
     background-color: var(--white);
 }
 
-  
+
+body.modo-escuro #flexSwitchCheckDefault {
+    border-color: #000000;
+}
 
 
-section{
+#flexSwitchCheckDefault:checked {
+    border-color: #000000;
+    background-color: var(--lite--);
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--white);
+}
+
+
+
+
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,12 +297,13 @@ section{
 
 }
 
-section img{
-/*     border-radius: 50%; */
+section img {
+    /*     border-radius: 50%; */
     width: 10rem;
     height: 10 rem;
 
 }
+
 .card {
     background-color: #ac2020;
     color: #000000;
@@ -288,7 +328,8 @@ body.modo-escuro footer p {
 #logo img {
     display: flex;
     width: 5rem;
-    height: 4rem;;
+    height: 4rem;
+    ;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -374,7 +415,7 @@ button.navbar-toggler {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
-    gap:10px;
+    gap: 10px;
 
 
 
@@ -417,7 +458,7 @@ svg {
 }
 
 
-.form-switch .form-check-input{
+.form-switch .form-check-input {
     margin-left: -3em;
 }
 
@@ -438,7 +479,7 @@ svg {
     font-size: 0.7rem;
 }
 
-input.form-control.me-2{
+input.form-control.me-2 {
     font-size: 0.7rem;
 }
 
@@ -463,14 +504,14 @@ input.form-control.me-2{
 
 
 
-.pesquisa_input{
+.pesquisa_input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:10px;
-    
+    gap: 10px;
+
 }
-  
+
 #pesquisa_input {
     height: 1.5rem;
     font-size: 0.7rem;
@@ -483,7 +524,7 @@ input.form-control.me-2{
 }
 
 
-#barra_pesquisa{
+#barra_pesquisa {
 
     display: flex;
     justify-content: right;
@@ -505,20 +546,20 @@ section h1 {
 }
 
 
-#saibamais{
+#saibamais {
     font-size: 0.6rem;
-    
+
     display: flex;
     justify-content: center;
     background: var(--primary-color);
     border: var(--primary-color);
 
 
-  
+
 }
-    
-#saibamais:hover{
-    background-color: #a33f37; 
+
+#saibamais:hover {
+    background-color: #a33f37;
 }
 
 
@@ -527,7 +568,7 @@ section h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin-left: 15px;
 }
 
 
@@ -540,11 +581,11 @@ section h1 {
 }
 
 
-h1{
+h1 {
     text-align: center;
 }
 
-h1{
+h1 {
     font-size: 1.5rem;
 }
 
@@ -561,6 +602,7 @@ h1{
     padding-bottom: 2rem;
     gap: 1.5rem;
 }
+
 /* 
 
 .card {
@@ -650,7 +692,7 @@ h1{
     color: #ffa723;
   }
    */
-  
+
 
 
 
@@ -665,7 +707,7 @@ h1{
 }
  */
 
-.mais_receitas{
+.mais_receitas {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
@@ -674,7 +716,7 @@ h1{
 
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--primary-color);
     border: var(--primary-color);
 }
@@ -711,7 +753,8 @@ h1{
     width: 13em;
     height: 25rem;
 }
-.card-body{
+
+.card-body {
     background: var(--card--);
 }
 
@@ -720,7 +763,7 @@ h1{
 
 }
 
-.card-text{
+.card-text {
     height: 6rem;
 
 }
@@ -757,14 +800,14 @@ h5 {
 
 
 
-.date{
+.date {
     display: flex;
     justify-content: left;
     align-items: flex-start;
 }
 
-.date p{
-   font-size: 0.6rem;
+.date p {
+    font-size: 0.6rem;
 }
 
 
@@ -871,27 +914,32 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+    .form-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
 
-    
-#pesquisa_input{
-    height: 1.7rem;
-}
+    #pesquisa_input {
+        height: 1.7rem;
+    }
 
-  
-    
 
-footer {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    padding-top: 8rem;
-}
+
+    footer {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        padding-top: 8rem;
+    }
 
 }
 
@@ -914,15 +962,15 @@ footer {
 }
 
 
- 
+
 
 @media only screen and (max-width: 380px) {
 
-    .mb-3{
+    .mb-3 {
         width: 100%;
     }
 
-    input.form-control.me-2{
+    input.form-control.me-2 {
         font-size: 0.7rem;
         background-color: var(--white);
         height: 3rem;
@@ -936,7 +984,7 @@ footer {
         justify-content: space-between;
     }
 
-  
+
 
     #filtro {
         display: grid;
@@ -955,9 +1003,3 @@ footer {
     }
 
 }
-
-
-
-
-
- 

@@ -483,7 +483,7 @@ svg {
 }
 
 .form-switch  {
-  margin-left: -0.5em;
+  margin-left: -0.1em;
 }
 
 
@@ -1058,6 +1058,34 @@ footer p {
 
 @media only screen and (max-width: 940px) {
 
+  #toggle-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+    font-size: 0.8rem;
+  
+  }
+  
+  #toggle-mode label {
+    font-size: 0.9rem;
+  }
+  
+  
+  .form-check-input {
+    --bs-form-check-bg: var(--bs-body-bg);
+  
+  }
+  
+  .form-switch .form-check-input {
+    margin-left: -1.5em;
+  }
+  
+  .form-switch  {
+    margin-left: -0.1em;
+  }
+  
+
   main{
     padding-left: 5%;
     padding-right: 5%;
@@ -1166,6 +1194,34 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 
+  #toggle-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+    font-size: 0.8rem;
+  
+  }
+  
+  #toggle-mode label {
+    font-size: 0.9rem;
+  }
+  
+  
+  .form-check-input {
+    --bs-form-check-bg: var(--bs-body-bg);
+  
+  }
+  
+  .form-switch .form-check-input {
+    margin-left: -1.5em;
+  }
+  
+  .form-switch  {
+    margin-left: -0.5em;
+  }
+  
+
 
   #pesquisa_input {
     height: 1.7rem;
@@ -1200,8 +1256,8 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 8px;
+    margin-left: 8px;
   
     background-color: var(--lite--);
     gap: 10px;
@@ -1338,13 +1394,13 @@ footer p {
     padding-right: 10%;
     height: 15rem;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
   }
 
   video {
     width: 20rem;
-    height: 15rem;
+    height: 11rem;
   }
 
 

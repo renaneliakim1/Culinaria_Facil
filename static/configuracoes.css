@@ -415,8 +415,8 @@ svg {
 
 
 .form-switch .form-check-input {
-    margin-left: -1.5em;
-    background-color: var(--white);
+/*     margin-left: -1.5em;
+ */    background-color: var(--white);
 }
 
 .btn-outline-success {
@@ -427,7 +427,7 @@ svg {
 }
 
 .form-switch  {
-    margin-left: -0.5em;
+    margin-left: 1.2em;
 }
 
 
@@ -1139,6 +1139,12 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+
+    .form-switch  {
+        margin-left: 0.5em;
+    }
+
+
     .tabela{
         display: flex;
         flex-direction: column;

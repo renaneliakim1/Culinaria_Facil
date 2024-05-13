@@ -867,6 +867,13 @@ footer p {
         width: 100%;
         margin-bottom: 20px;
     }
+
+    .dropzone-box h2 {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+    }
+    
     
         
     footer {

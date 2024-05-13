@@ -577,14 +577,9 @@ h1 {
     font-weight: 700;
     font-size: 2.5rem;
     text-align: center;
-
     color: black;
-    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
-
-
-
-
-    
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+ 
 }
 
 
@@ -598,10 +593,8 @@ h1 {
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
-
     color: black;
-
-    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -1152,6 +1145,9 @@ footer p {
         background-color: var(--lite--);
     }
 
+
+
+
     body.modo-escuro .dropdown-menu.show{
         background-color: var(--dark--);
     }
@@ -1160,12 +1156,33 @@ footer p {
     
     .titulosite {
 
-        font-size: 2rem;
-    }
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
+ 
+}
 
-    .slogan{
-        font-size:  1.5rem;
-    }
+
+
+.slogan {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
+
+}
 
 
     body.modo-escuro svg {

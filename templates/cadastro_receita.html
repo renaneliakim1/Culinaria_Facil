@@ -19,10 +19,7 @@
 
 </head>
 
-
 <body>
-
-
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -76,15 +73,7 @@
                                         d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
                                 </svg>Home</a>
                         </li>
-                     <!--    <li class="nav-item">
-                            <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
-                                href="/cadastro_receita"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
-                                </svg>cadastrar Receita</a>
-                        </li> -->
-
+                    
                         <li class="nav-item">
                             <a class="nav-link active" id="acesso" id="cadastrar-receita" aria-current="page"
                                 href="/dicas"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -179,65 +168,6 @@
 
 
             <div class="titulo">
-                <!--    <di class="input-img">
-                    <div>
-                        {{ form.imagem_receita.label }}: {{ form.imagem_receita() }}
-                        {% for error in form.imagem_receita.errors %}
-                        <div class="error-message">{{ error }}</div>
-                        {% endfor %}
-                    </div>
-                    <div>
-                        {{ form.video_receita.label }}: {{ form.video_receita() }}
-                        {% for error in form.video_receita.errors %}
-                        <div class="error-message">{{ error }}</div>
-                        {% endfor %}
-                    </div>
-                </di -->
-
-
-
-
-              <!--   <div class="dropzone">
-                    <div class="dropzone-box">
-                        <h2>Carregar imagem da Receita</h2>
-                        <div class="dropzone-area">
-                            <div class="file-upload-icon">
-                                <img src="/static/imgs/foto.svg"  width="50px" height="50px"  alt="">
-                            </div>
-                            <p>Clique para fazer upload <br>formatos jpg, png, jpeg</p> -->
-                           <!--  {{ form.imagem_receita.label }} --> <!-- {{ form.imagem_receita() }}
-                            {% for error in form.imagem_receita.errors %}
-                            <div class="error-message">{{ error }}</div>
-                            {% endfor %}
-                            <p id="file-name" class="message">Nenhum arquivo selecionado </p>
-                        </div>
-
-                    </div> -->
-
-
-
-                  <!--   <div class="dropzone-box">
-                        <h2>Carregar vídeo da Receita</h2>
-                        <div class="dropzone-area">
-                            <div class="file-upload-icon">
-                                 <img src="/static/imgs/video.svg" width="50px" height="50px" alt="">    
-                            </div>
-                            <p>Clique para fazer upload <br> formatos mp4, avi, mkv, mov, wmv, flv, webm, mpeg
-                            </p> -->
-                            <!-- {{ form.video_receita.label }} --> <!-- {{ form.video_receita() }}
-                            {% for error in form.video_receita.errors %}
-                            <div class="error-message">{{ error }}</div>
-                            {% endfor %}
-                            <p id="file-name" class="message">Nenhum arquivo selecionado <br>
-                                Grave na horizontal </p>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-
-
                 <div class="dropzone">
                     <div class="dropzone-box">
                         <h2>Carregar imagem da Receita</h2>
@@ -272,10 +202,6 @@
                     </div>
                 </div>
 
-                
-
-
-                
 
                 <div class="nome">
 
@@ -302,20 +228,6 @@
                 </div>
             </div>
 
-
-
-            <!-- 
-            <div id="gerar_senha_tamanho">
-                {{ form.tempo_preparo.label }} <br>
-                {% for error in form.tempo_preparo.errors %}
-                <div class="error-message">{{ error }}</div>
-                {% endfor %}
-                <output for="tempo_preparo" id="tempo_selecionado">{{ form.tempo_preparo.data }}</output>
-            </div>-->
-
-
-
-
             <div id="gerar_senha_tamanho">
                 {{ form.tempo_preparo.label }} <br>
                 {% for error in form.tempo_preparo.errors %}
@@ -327,9 +239,6 @@
                 <input type="range" class="form-range" id="tempo_preparo" name="tempo_preparo" min="2" max="240"
                     value="{{ form.tempo_preparo.data }}" oninput="outputUpdate(value)">
             </div>
-
-
-
 
             <div class="dificuldade">
                 <div class="textdificuldade">
@@ -352,9 +261,6 @@
                 </div>
             </div>
 
-
-
-
             <p class="escolhacatedoria">Escolha a categoria:</p>
 
             <div id="filtro">
@@ -362,19 +268,10 @@
                 <label for="categoria_receita">Categoria</label>: <select id="categoria_receita" name="categoria_receita" required=""><option value="Vegano">Vegano</option><option value="Sem Glútem">Sem Glútem</option><option value="Massas">Massas</option><option value="Doces e Sobremesas">Doces e Sobremesas</option><option value="Bebidas e Drinks">Bebidas e Drinks</option><option value="Carnes">Carnes</option><option style="display: none;" value="todas">Todas as categorias</option></select>
                 
             </div>
-<!-- 
-            <div id="filtro">
 
-                {{ form.categoria_receita.label }}: {{ form.categoria_receita }}
-                {% for error in form.categoria_receita.errors %}
-                <div class="error-message">{{ error }}</div>
-                {% endfor %}
-            </div> -->
 
             <div id="cadastrar">
                 <input type="submit" value="Cadastrar Receita">
-                <!--                 <input type="submit" value="Limpar" onclick="limparCampos()" id="cancelar">
- -->
             </div>
         </div>
     </form>
@@ -383,18 +280,9 @@
         <p>Biblioteca de Receitas Culinárias &copy; 2024 - Todos os direitos reservados</p>
     </footer>
 
-
-
-
-
-
-
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-    <script type="text/javascript" src="{{ url_for('static', filename='tempo_receita.js') }}"></script>
-
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/tempo_receita.js') }}"></script>
 
     <script type="text/javascript" src="{{ url_for('static', filename='/js/modo.-escuro.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='/js/topFunction.js') }}"></script>

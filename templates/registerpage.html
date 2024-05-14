@@ -20,10 +20,6 @@
 
   <link rel="stylesheet" href="/static/cadastro_usuario.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
- -->
-
-
 </head>
 
 <body>
@@ -190,7 +186,6 @@
               </div>
               <p>Clique para fazer upload png, jpg ou jpeg</p>
               {{ form.imagem_perfil() }}
-<!--               <input type="file" id="upload-file" accept=".jpg, .jpeg, .png, .jfif" /> -->       
              {% for error in form.imagem_perfil.errors %}
               <div class="error-message">{{ error }}</div>
               {% endfor %}
@@ -211,47 +206,11 @@
             });
           });
         </script>
-        
-
-       <!--  <script>
-          const inputElement = document.getElementById("upload-file");
-
-          inputElement.addEventListener("change", (e) => {
-            const file = e.target.files[0];
-            updateDropzoneFileList(file);
-          });
-
-          const updateDropzoneFileList = (file) => {
-            const allowedExtensions = ["jpg", "jpeg", "png", "jfif"];
-            const fileExtension = file.name.split('.').pop().toLowerCase();
-
-            const dropzoneFileMessage = document.getElementById("file-name");
-
-            if (allowedExtensions.includes(fileExtension)) {
-              dropzoneFileMessage.textContent = file.name;
-            } else {
-              dropzoneFileMessage.textContent = "Nenhum arquivo selecionado";
-              alert("Por favor, selecione apenas arquivos de imagem nos formatos JPG, JPEG, PNG ou JFIF.");
-              // Limpar o input de arquivo para remover o arquivo inválido selecionado
-              inputElement.value = "";
-            }
-          };
-        </script> 
- -->
-
-
-
-
-
 
         <button type="submit" class="submit">
           Cadastrar
         </button>
       </form>
-
-
-
-
 
 
       <p class="signup-link">

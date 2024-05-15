@@ -6,8 +6,10 @@ Projeto desenvolvido durante o curso de administrador de banco de dados - SENAC-
 
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-ferramentas">Ferramentas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalacao">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#-">Aprendizado</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#-aprendizado">Aprendizado</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -37,7 +39,26 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🚀 Ferramentas
 - MySQL
 - Xampp
--Trello
+- Trello
+
+## 💻 Instalação
+
+- No terminal VSCode instale:
+
+- • $ pip install -U Flask
+- • $ pip install Bcrypt-Flask
+- • $ pip install mysql-connector
+
+- Dentro do Xampp inicie o "MySQL" 
+<p align="center">
+  <img alt="" src=".github/xammp.gif" width="50%">
+</p>
+
+- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponivel em Culinaria_Facil\banco_de_dados\banco_de_dados.sql" 
+
+<p align="center">
+  <img alt="" src=".github/db.gif" width="50%">
+</p>
 
 
 ## 💻 Projeto

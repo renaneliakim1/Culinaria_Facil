@@ -23,12 +23,15 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #fcdeae;
+    --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
+    --pesquisa_input--:#fff7eb
+
 
 
 
@@ -105,11 +108,11 @@ body.modo-escuro .navbar-toggler-icon {
 
 
 body.modo-escuro .container {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 body.modo-escuro .form {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 
@@ -118,11 +121,11 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
+body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -131,9 +134,9 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -143,7 +146,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -159,11 +162,12 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-    width: 9rem;
+    display: flex;
+    width: 12rem;
 
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -175,12 +179,13 @@ body.modo-escuro #buscar {
     justify-content: center;
     background-color: var(--dark--);
     border: 1px solid var(--check--);
+    padding: 0px;
 
 }
 
 
 body.modo-escuro h1 {
-  color: var(--white);
+    color: var(--white);
 
 }
 
@@ -204,29 +209,30 @@ body.modo-escuro .form-check-input:checked {
 
 
 
-.navbar-nav.me-auto.mb-2.mb-lg-0{
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin: 0px;
     padding: 0px;
 
 }
 
 
-section{
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section img{
+section img {
     border-radius: 50%;
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
 
 }
+
 .card {
     background-color: #ac2020;
     color: #000000;
@@ -234,7 +240,7 @@ section img{
 
 
 body.modo-escuro #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     color: var(--white);
 }
 
@@ -299,9 +305,9 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
@@ -325,40 +331,13 @@ button.navbar-toggler {
 }
 
 
-#buscar {
-    width: 9rem;
-
-    cursor: pointer;
-    color: var(--black);
-    font-size: 0.6rem;
-    outline: none;
-    height: 1.7rem;
-    text-align: center;
-    border-radius: 8px;
-    border-radius: .5rem;
-    border-color: var(--black);
-    border: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border: 1px solid var(--check--);
-
-
-
-
-}
-
-
-#buscar:hover {
-    background-color: var(--check--);
-}
 
 
 
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -368,7 +347,31 @@ svg {
 
 }
 
+
+.form-switch  {
+    margin-left: 2.5rem;
+}
+  
+
+ 
+
+input.form-control.me-2 {
+    font-size: 0.7rem;
+}
+
+
+#barra_pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* key for dark mode */
+
+
 
 #toggle-mode {
     display: flex;
@@ -376,22 +379,15 @@ svg {
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
+    margin: 11px;
+
 
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     color: var(--black);
 }
-
-
-
-
-
-
-
-
-
 
 .btn-outline-success {
     background-color: var(--primary-color);
@@ -407,9 +403,12 @@ svg {
     font-size: 0.7rem;
 }
 
-input.form-control.me-2{
+input.form-control.me-2 {
     font-size: 0.7rem;
-    background-color: var(--white);
+    background-color: var(--pesquisa_input--);
+    border-color: var(--card--);
+    width: 100%;
+
 }
 
 
@@ -422,7 +421,54 @@ input.form-control.me-2{
 
 }
 
+#titulo_receita {
+    background-color: var(--form--);
+    font-size: 0.8rem;
 
+}
+
+input #titulo_receita label {
+    font-size: 0.8rem;
+    background-color: var(--lite--);
+
+}
+
+
+
+#buscar {
+    display: flex;
+    width: 11rem;
+
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.9rem;
+    outline: none;
+    height: 1.7rem;
+    text-align: center;
+    border-radius: 8px;
+    border-radius: .5rem;
+    border-color: var(--black);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lite--);
+    border: 1px solid var(--check--);
+}
+
+
+#buscar:hover {
+    background-color: var(--check--);
+}
+
+
+
+
+
+.pesquisa_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 
 
@@ -433,10 +479,10 @@ h1 {
 
 
 .container {
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--card--);
+    background-color: var(--form--);
     border-radius: 8px;
     border-radius: 4px;
     padding-left: 5%;
@@ -444,7 +490,7 @@ h1 {
 
 }
 
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -463,7 +509,7 @@ h1 {
 
 textarea {
     resize: none;
-    background-color: var(--card--);
+    background-color: var(--form--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
 
@@ -474,7 +520,6 @@ textarea {
 input[type="text"], textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -497,6 +542,13 @@ input[type="submit"] {
 
 }
 
+#descricao_receita,
+#ingredientes_receita,
+#instrucoes_receita{
+    height: 4rem;
+
+}
+
 
 #cadastrar {
     display: flex;
@@ -515,7 +567,7 @@ input[type="submit"]:hover {
 }
 
 label {
-    font-size: 1rem;
+    font-size: 1em;
     color: var(--black);
 
 
@@ -537,7 +589,7 @@ label {
     margin: 5px 0;
 }
 
-.dificuldade{
+.dificuldade {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -545,6 +597,56 @@ label {
 }
 
 
+#gerar_senha_tamanho {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+#tempo_preparo {
+    width: 100%;
+}
+
+
+.escolhacatedoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-img {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dificuldade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+#dificuldade_receita {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
 
 .radio-inputs {
     position: relative;
@@ -557,18 +659,18 @@ label {
     padding: 0.25rem;
     width: 100%;
     font-size: 14px;
-  }
-  
-  .radio-inputs .radio {
+}
+
+.radio-inputs .radio {
     flex: 1 1 auto;
     text-align: center;
-  }
-  
-  .radio-inputs .radio input {
+}
+
+.radio-inputs .radio input {
     display: none;
-  }
-  
-  .radio-inputs .radio .name {
+}
+
+.radio-inputs .radio .name {
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -578,18 +680,18 @@ label {
     padding: .5rem 0;
     color: rgba(51, 65, 85, 1);
     transition: all .15s ease-in-out;
-    
-  }
-  
-  .radio-inputs .radio input:checked + .name {
+
+}
+
+.radio-inputs .radio input:checked+.name {
     background-color: var(--primary-color);
     font-weight: 600;
 
-  }
+}
 
-  .radio-inputs .name{
+.radio-inputs .name {
     font-size: 0.8rem;
-  }
+}
 
 
 
@@ -605,64 +707,81 @@ label {
 
 }
 
+
+
+select#categoria_receita {
+    background-color: var(--card--);
+    font-size: 1rem;
+}
+
+select#categoria_receita option {
+    background-color: var(--card--);
+    font-size: 1rem;
+}
+
+
+
 .form-check {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 15px;
     gap: 15px;
+
+    font-size: 0.8rem;
+
 }
 
 
-h2, p{
-    font-size: 1rem;
+h2, p {
+    font-size: 0.8rem;
     text-align: center;
 }
 
 p, .message {
     font-size: 0.6rem;
-  
+
 }
 
-.textdificuldade p{
+.textdificuldade p {
     font-size: 1rem;
 
 }
 
 
-.escolhacatedoria{
+.escolhacatedoria {
     padding-top: 1rem;
     text-align: center;
     font-size: 1rem;
 }
 
-#temporizador{
+#temporizador {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-#temporizador label{
-    
+#temporizador label {
+
     justify-content: center;
     width: 100%;
 }
 
 
-#temporizador input{
+#temporizador input {
     justify-content: center;
     width: 100%;
 }
 
 
-.dropzone{
+.dropzone {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: center;
-    
-    
+
+
 
 }
 
@@ -671,8 +790,8 @@ p, .message {
 
 .dropzone-box {
     border-radius: 8px;
-/*  padding: 2rem;*/
-/*  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /*  padding: 2rem;*/
+    /*  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -689,7 +808,7 @@ p, .message {
 
 .dropzone-area {
     width: 100%;
-/*     padding: 1rem;*/ 
+    /*     padding: 1rem;*/
     position: relative;
     /* margin-top: 1rem; */
     min-height: 9rem;
@@ -702,7 +821,7 @@ p, .message {
     border-radius: 1rem;
     color: var(--primary);
     cursor: pointer;
-    height: 12rem;
+    height: 10rem;
 }
 
 .dropzone-area [type="file"] {
@@ -714,7 +833,7 @@ p, .message {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 12rem;
+    height: 10rem;
 }
 
 .dropzone-area .file-upload-icon svg {
@@ -723,7 +842,7 @@ p, .message {
     stroke: var(--primary);
 }
 
-.dropzone-area .file-upload-icon p{
+.dropzone-area .file-upload-icon p {
     font-size: 0.5rem;
 }
 
@@ -775,8 +894,19 @@ p, .message {
 }
 
 
-  
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+}
 
 /* 
 .dropzone-area{
@@ -828,7 +958,7 @@ footer p {
     background-color: var(--primary-color);
 }
 
-@media only screen and (max-width: 1568px) {
+/* @media only screen and (max-width: 1568px) {
     .container {
         width: 80%;
         background-color: var(--card--);
@@ -838,34 +968,33 @@ footer p {
     }
 
  
-    #filtro {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        justify-content: left;
-        align-items: center;
-    }
 
-    
-    .form-check {
-        margin: none;
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        
-
-    }
-
-}
+} */
 
 
 
 
 @media only screen and (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        background-color: var(--form--);
+        border-radius: 8px;
+        border-radius: 4px;
+        max-width: none;
+
+
+    }
+
+
+
+    input.form-control.me-2 {
+        height: 1.7rem;
+    }
+
     .dropzone-area {
         width: 100%;
-    /*     padding: 1rem;*/ 
         position: relative;
-        /* margin-top: 1rem; */
         min-height: 9rem;
         display: flex;
         text-align: center;
@@ -879,55 +1008,14 @@ footer p {
         height: 6rem;
     }
 
-    
-    .titulo{
+
+    .titulo {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #filtro {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 2rem);
-        padding: 1rem;
-        justify-content: center;
 
-    }
-
-    .form-check {
-        margin: none;
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        
-
-    }
-
-    .form-check label {
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        font-size: 0.8rem;
-        padding: 0;
-
-    }
-
-  
-  /*   header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-
-    } 
- */
-
-    
     .container-fluid {
         display: flex;
         align-items: center;
@@ -950,15 +1038,18 @@ footer p {
         flex-wrap: inherit;
         align-items: center;
         justify-content: center;
-      }
+
+    }
 
 
-      body.modo-escuro .d-flex {
+
+
+    body.modo-escuro .d-flex {
         background-color: var(--dark--);
     }
 
-   
-    .btn-outline-success{
+
+    .btn-outline-success {
         justify-content: right;
     }
 
@@ -970,7 +1061,7 @@ footer p {
         flex-direction: row;
     }
 
-    .modo-escuro .btn-outline-success{
+    .modo-escuro .btn-outline-success {
         justify-content: right;
     }
 
@@ -986,7 +1077,17 @@ footer p {
         flex-wrap: inherit;
         align-items: center;
         justify-content: center;
-      }
+    }
+
+    #ingredientes_receita,
+    #instrucoes_receita,
+    #descricao_receita{
+        height: 5rem;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
 
 
 
@@ -994,31 +1095,15 @@ footer p {
 
 @media only screen and (max-width: 490px) {
     .container {
-        width: 90%;
-        background-color: var(--card--);
+        width: 100%;
+        background-color: var(--form--);
         border-radius: 8px;
         border-radius: 4px;
-    
-    }
-
- 
-    #filtro {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        justify-content: left;
-        align-items: center;
-    }
-
-    
-    .form-check {
-        margin: none;
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        
 
     }
-    
+
+
+
     footer {
 
         position: relative;
@@ -1027,23 +1112,14 @@ footer p {
         text-align: center;
         left: 0;
     }
-    
-    
-    
+
+
+
     footer p {
         font-size: 0.8rem;
         text-align: center;
     }
-    
+
 
 
 }
-
-
-
-
-
-
-
-
- 

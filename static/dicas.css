@@ -23,13 +23,12 @@
   --white: #ffffff;
   --gray: #969696;
   --gray-2: #d3d3d3;
-  --card--: #ffc975;
+  --card--: #fcdeae;
   --check--: #fac08d;
   --dark--: #222;
   --darkform--: #5c5c5c;
-  --lite--:#f5ecde;
-
-
+  --lite--: #f4e1c4;
+  --pesquisa_input--: #fff7eb
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -123,7 +122,7 @@ body.modo-escuro .dropdown-menu.show {
   background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: var(--lite--);
 }
 
@@ -131,9 +130,9 @@ body.modo-escuro .dropdown-menu.show {
 body.modo-escuro #acesso {
   cursor: pointer;
   color: var(--white);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
-  height: 2rem;
+  height: 2.5rem;
   text-align: left;
   border-radius: 8px;
 
@@ -146,7 +145,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
   color: var(--white);
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 
@@ -165,11 +164,11 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-  width: 9rem;
-
+  display: flex;
+  width: 11rem;
   cursor: pointer;
   color: var(--white);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
   height: 1.7rem;
   text-align: center;
@@ -206,6 +205,11 @@ body.modo-escuro .higiene h2 {
 body.modo-escuro h1 {
   color: var(--white);
 
+}
+
+
+body.modo-escuro #barra_pesquisa {
+  background-color: var(--dark--);
 }
 
 
@@ -304,9 +308,9 @@ body.modo-escuro footer p {
 #acesso {
   cursor: pointer;
   color: var(--black);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
-  height: 2rem;
+  height: 2.5rem;
   text-align: left;
   border-radius: 8px;
 }
@@ -331,17 +335,31 @@ button.navbar-toggler {
 
 
 
-.form-switch .form-check-input{
-  margin-left: -1.5em;
+.form-switch .form-check-input {
+  margin-left: -1rem;
 }
 
 
+.form-switch {
+  margin-left: -0.5em;
+}
+
+
+#barra_pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
 #buscar {
-  width: 9rem;
+  display: flex;
+  width: 11rem;
 
   cursor: pointer;
   color: var(--black);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   outline: none;
   height: 1.7rem;
   text-align: center;
@@ -351,12 +369,8 @@ button.navbar-toggler {
   border: none;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--lite--);
   border: 1px solid var(--check--);
-
-
-
-
 }
 
 
@@ -365,21 +379,23 @@ button.navbar-toggler {
 }
 
 
-#saibamais{
+
+
+#saibamais {
   font-size: 0.6rem;
   display: flex;
   justify-content: center;
 }
-  
-#saibamais:hover{
-      background-color: #a33f37; 
+
+#saibamais:hover {
+  background-color: #a33f37;
 }
 
 
 /* button teeth icon */
 svg {
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 .bntacesso {
@@ -401,7 +417,7 @@ svg {
 }
 
 #toggle-mode label {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 
@@ -415,10 +431,19 @@ svg {
 }
 
 /* color label*/
-.form-control {
+#pesquisa_input {
   height: 1.5rem;
+  background-color: var(--pesquisa_input--);
   font-size: 0.7rem;
+  border-radius: 8px;
+  width: 13rem;
+  border: 1px solid var(--check--);
+  width: 100%;
+
 }
+
+
+
 
 input.form-control.me-2 {
   font-size: 0.7rem;
@@ -453,7 +478,7 @@ input.form-control.me-2 {
 
 svg {
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 .bntacesso {
@@ -701,6 +726,18 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 
+  .form-switch .form-check-input {
+    margin-left: -1rem;
+  }
+
+
+  .form-switch {
+    margin-left: -0.8em;
+  }
+
+  #pesquisa_input {
+    height: 1.7rem;
+  }
 
   .higiene img {
     display: flex;
@@ -718,6 +755,19 @@ footer p {
     gap: 2rem;
 
   }
+
+
+  #barra_pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+  }
+
+
+
 
 
 }

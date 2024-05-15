@@ -16,6 +16,22 @@
 
 /* color palettes */
 
+
+.alert-messege {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(255, 138, 138);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    max-width: 64%;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
+
+
+
 :root {
     --primary-color: #d57119;
     --secondary-color: #57B894;
@@ -24,11 +40,13 @@
     --gray: #969696;
     --gray-2: #d3d3d3;
     --form--: #ffc975;
-    --card--: #ffc975;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
+    --pesquisa_input--:#fff7eb
+
 
 
 }
@@ -76,10 +94,6 @@ body.modo-escuro .container-fluid {
     flex-direction: row;
 }
 
-body.modo-escuro .container {
-    background-color: var(--darkform--);
-
-}
 
 body.modo-escuro .bg-body-tertiary {
     --bs-bg-opacity: 0;
@@ -105,13 +119,8 @@ body.modo-escuro .navbar-toggler-icon {
 }
 
 
-
-body.modo-escuro .container {
-    background: var(--dark--);
-}
-
 body.modo-escuro .form {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 
@@ -128,9 +137,9 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -143,7 +152,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -242,7 +251,7 @@ section img{
 
 body.modo-escuro .container {
    
-    background-color: var(--card--);
+    background-color: var(--form--);
 
 }
 
@@ -306,9 +315,9 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
@@ -365,7 +374,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -387,7 +396,7 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
@@ -447,7 +456,7 @@ input.form-control.me-2{
 
 svg {
   width: 40px;
-  height: 25px;
+  height: 30px;
 }
 
 .bntacesso {
@@ -508,7 +517,7 @@ svg {
 
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -560,7 +569,7 @@ svg {
 
 
 .form {
-    background-color: var(--card--);
+    background-color: var(--form--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -605,6 +614,7 @@ svg {
     display: flex;
     justify-content: right;
     align-items: center;
+    flex-direction: column;
 }
 
 .input-container input, .form button {
@@ -612,6 +622,7 @@ svg {
     border: 1px solid #595b5d;
     margin: 8px 0;
 }
+
 
 .input-container input {
     background-color: var(--card--);
@@ -664,6 +675,20 @@ svg {
 }
 
 
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
+}
+
+.error-message{ 
+    color: red;
+    font-size: 0.8rem;
+}
+
 footer {
 
     position: absolute;
@@ -671,6 +696,7 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
+    padding-top: 1rem;
 }
 
 
@@ -754,14 +780,31 @@ footer p {
 
 */
 
+
+@media only screen and (max-width: 1366px) {   /* note15" */
+    footer {
+
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    
+
+
+}
+
+
+
 @media only screen and (max-width: 768px) {
 
-    header{
+  /*   header{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-
+ */
   
 
     .container {
@@ -770,18 +813,33 @@ footer p {
         align-items: center;
         flex-direction: column-reverse;
         background-color: var(--card--);
-        width: 91%;
+        width: 100%;
         border-radius: 8px;
-        margin-left: 4%;
-        margin-right: 4%;
+        background-color: var(--form--);
+
+  
     }
 
     .formulario {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
         height: 70%;
+    }
+
+
+    .form {
+        background-color: var(--form--);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        max-width: 30rem;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        width: 100%;
+        height: 22rem;
+        gap: 1rem;
     }
 
     .form-title {
@@ -792,10 +850,14 @@ footer p {
         color: #000;
     }
 
-    .submit{
+    .form .submit{
         font-size: 0.8rem;
+    
     }
 
+    .input-container input, .form button{
+        height: 2.5rem;
+    }
     
    
 
@@ -806,6 +868,9 @@ footer p {
 
     p {
         margin-top: 0;
+    }
+    .alert-messege {
+        max-width: 100%;
     }
 
 
@@ -832,3 +897,17 @@ footer p {
 
 
 } 
+
+@media only screen and (max-width: 450px) {
+
+
+    footer {
+
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+
+}

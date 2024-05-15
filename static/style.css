@@ -23,15 +23,59 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #ffc975;
     --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
+
+
+/* #categoria_receita li:last-child {
+    display: none;
+}
+
+#categoria_receita {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#categoria_receita li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+} */
+
+
+/* Estilizando os checkboxes */
+/* input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.3s;
+    margin-right: 5px;
+    background-color: white;
+} */
+
+input[type="radio"]:checked {
+    background-color: #2717de;
+}
+
+
+
+
+
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
@@ -47,11 +91,11 @@ body.modo-escuro {
     color: #fff;
 }
 
-
+/* 
 body.modo-escuro label {
     color: var(--card--);
 
-}
+} */
 
 
 body.modo-escuro form {
@@ -59,10 +103,10 @@ body.modo-escuro form {
 }
 
 
-body.modo-escuro p {
+/* body.modo-escuro p {
     color: var(--white--);
 }
-
+ */
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
@@ -121,43 +165,35 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
-    background-color: var(--dark--);
+body.modo-escuro .dropdown-menu.show {
+    background-color: transparent;
 }
 
 
-body.modo-escuro #acesso {
+/* body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
 }
-
+ */
 
 
 
 
 body.modo-escuro svg {
-    color: var(--white);
+    /*     color: var(--white);
+ */
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
 
-.svg-branco path,
-.svg-branco rect,
-.svg-branco circle,
-.svg-branco polygon,
-.svg-branco polyline,
-.svg-branco line {
-    fill: var(--white) !important;
-    stroke: var(--white) !important;
-}
 
 
 
@@ -185,20 +221,20 @@ body.modo-escuro #buscar {
 
 
 body.modo-escuro h1 {
-  color: var(--white);
+    color: var(--white);
 
 }
 
-body.modo-escuro h3 {
+/* body.modo-escuro h3 {
     color: var(--white);
-}
-body.modo-escuro p {
+} */
+/* body.modo-escuro p {
     color: var(--white);
-}
-body.modo-escuro label {
+} */
+/* body.modo-escuro label {
     color: #fbfbfb;
 }
-
+ */
 
 body.modo-escuro p.card-text {
     color: var(--black);
@@ -209,18 +245,31 @@ body.modo-escuro .date p {
     color: var(--black);
 }
 
-body.modo-escuro #resultados{
+body.modo-escuro #resultados {
     background-color: transparent;
 }
 
 
+body.modo-escuro #toggle-mode label {
+    display: flex;
+    justify-content: left;
+    font-size: 0.9rem;
+    color: var(--white);
+}
 
-header{display: flex;
-    justify-content: space-between;
+/* body.modo-escuro .todas_receitas a{
+
+    color: var(--white);
+
+} */
+
+header {
+    display: flex;
+    /*     justify-content: space-between; */
     flex-wrap: wrap;
 }
 
-.navbar-nav.me-auto.mb-2.mb-lg-0{
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
@@ -229,26 +278,27 @@ header{display: flex;
 }
 
 
-section{
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section img{
+section img {
     border-radius: 50%;
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
 
 }
- .card {
+
+.card {
     background-color: var(--card--);
 }
 
 
-body.modo-escuro #toggle-mode label {
+/* body.modo-escuro #toggle-mode label {
     font-size: 0.6rem;
     color: var(--white);
 }
@@ -257,7 +307,7 @@ body.modo-escuro #toggle-mode label {
 body.modo-escuro footer p {
     color: #fff;
 
-}
+} */
 
 
 /* end of dark mode */
@@ -295,13 +345,13 @@ body.modo-escuro footer p {
 
 
 
- .navbar>.container-fluid {
+.navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-  }
-  
+}
+
 
 /* make navbar transparent */
 .bg-body-tertiary {
@@ -311,16 +361,22 @@ body.modo-escuro footer p {
 }
 
 
+.dropdown-menu.show {
+    background-color: var(--lite--);
+}
+
 /* defines characteristics of buttons */
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
+
+
 
 #acesso:hover {
     background-color: var(--check--);
@@ -340,6 +396,19 @@ button.navbar-toggler {
 
 }
 
+
+.alert-messege {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(255, 138, 138);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    max-width: 80%;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
 
 #buscar {
     width: 9rem;
@@ -373,7 +442,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -385,23 +454,26 @@ svg {
 
 /* key for dark mode */
 
+
+
 #toggle-mode {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     justify-content: left;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    margin-left: 8px;
 
 }
 
 #toggle-mode label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--black);
 }
 
 
 .form-check-input:checked {
-    background-color: #010a18;
+    background-color: #0961ee;
     border-color: #ffffff;
 }
 
@@ -421,9 +493,38 @@ svg {
     font-size: 0.7rem;
 } */
 
-input.form-control.me-2{
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.form-label {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+
+
+#pesquisa_input {
+    font-size: 0.7rem;
+    background-color: var(--pesquisa_input--);
+    height: 2rem;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+
+
+input.form-control.me-2 {
     font-size: 0.7rem;
     background-color: var(--white);
+    height: 3rem;
 }
 
 
@@ -438,7 +539,7 @@ input.form-control.me-2{
 
 
 
-.navbar>.container-fluid{
+.navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
@@ -459,9 +560,10 @@ main video {
     position: absolute;
     object-fit: cover;
     width: 100%;
-    height: 65rem;
+    height: 66rem;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.9;
+
 }
 
 
@@ -478,6 +580,35 @@ h1 {
 
 }
 
+.titulosite {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.slogan {
+
+    background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+
+}
 
 .mb-3 {
     display: flex;
@@ -486,10 +617,11 @@ h1 {
     flex-direction: column;
     margin: 20px;
     gap: 20px;
-    width: 40%;
+    width: 100%;
 }
 
-label {
+.mb-3 label {
+    font-size: 1rem;
 
     margin: 10px;
 
@@ -518,6 +650,11 @@ label {
 }
 
 
+#mais {
+    display: none;
+}
+
+
 label {
     font-size: 1rem;
 
@@ -528,7 +665,7 @@ label {
     height: 3rem;
 } */
 
-.filtroCategoria {
+/* .filtroCategoria {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -542,21 +679,45 @@ label {
 
 
 #filtro {
-    display: flex;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
     margin-top: 0.5rem;
+    align-items: center;
 
 
+} */
+
+
+h3 {
+    font-size: 1rem;
 }
+
+
+#filtro {
+    display: flex;
+    flex-direction: row;
+    /*    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 2rem); */
+    justify-content: center;
+}
+
 
 .form-check {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
+    gap: 10px;
 }
 
+
+.form-check-input[type=checkbox] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000000 solid 0.1px;
+}
 
 
 #resultados {
@@ -565,29 +726,63 @@ label {
     width: 90%;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5rem;
+
 
 }
 
 
 
-#saibamais{
+#saibamais {
     font-size: 0.6rem;
     display: flex;
     justify-content: center;
+    position: relative;
+    width: 100%;
 }
-    
-#saibamais:hover{
-        background-color: #a33f37; 
+
+#saibamais:hover {
+    background-color: #a33f37;
 }
-    
+
+
+.todas_receitas {
+    text-align: center;
+    margin: 2rem;
+}
+
 
 .card {
-    width: 15rem;
+    width: 13em;
+    height: 25rem;
 
 
 
 }
 
+
+.card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: var(--bs-card-title-color);
+    height: 3rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* .card a img {
+    height: 6rem;
+
+}
+ */
+.card-img-top {
+    height: 9rem;
+
+}
+
+.card-text {
+    height: 6rem;
+
+}
 
 .text {
 
@@ -614,66 +809,25 @@ label {
 
 
 
-.date{
+.date {
     display: flex;
     justify-content: left;
     align-items: flex-start;
 }
 
-.date p{
-   font-size: 0.6rem;
+.date p {
+    font-size: 0.6rem;
 }
 
 
-
-.rating:not(:checked) > input {
-    position: absolute;
-    appearance: none;
-  }
-  
-  .rating:not(:checked) > label {
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    color: #666;
-  }
-  
-  .rating:not(:checked) > label:before {
-    content: '★';
-  }
-  
-  .rating > input:checked + label:hover,
-  .rating > input:checked + label:hover ~ label,
-  .rating > input:checked ~ label:hover,
-  .rating > input:checked ~ label:hover ~ label,
-  .rating > label:hover ~ input:checked ~ label {
-    color: #e58e09;
-  }
-  
-  .rating:not(:checked) > label:hover,
-  .rating:not(:checked) > label:hover ~ label {
-    color: #ff9e0b;
-  }
-  
-  .rating > input:checked ~ label {
-    color: #ffa723;
-  }
-  
-  .rating{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    width: 80%;
+.todas_receitas {
+    text-align: center;
+    color: #000000;
 }
 
-
-.rating label{
-    margin: 0px;
+.todas_receitas a {
+    color: #000000;
 }
-  
-
-  
-  
 
 
 
@@ -689,7 +843,9 @@ h5 {
     height: 2.7rem;
 }
 
-
+ul .navbar-nav.me-auto.mb-2.mb-lg-0 {
+    margin: none;
+}
 
 
 
@@ -787,7 +943,7 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 7rem;
+
 }
 
 
@@ -812,14 +968,64 @@ footer p {
     background-color: var(--primary-color);
 }
 
+/* @media only screen and (max-width: 2560px) {
+    main {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 50rem;
+        z-index: -1;
+        opacity: 0.6;
+    }
 
+} */
 
 @media only screen and (max-width: 1200px) {
 
-    .mb-3{
+
+
+    main {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 72rem;
+        z-index: -1;
+        opacity: 0.9;
+
+    }
+
+    .titulosite {
+
+        font-size: 2.2rem;
+    }
+
+    .slogan {
+        font-size: 1.8rem;
+    }
+
+
+    .mb-3 {
         width: 70%;
     }
-  
+
 
     #filtro {
         display: flex;
@@ -845,13 +1051,45 @@ footer p {
         margin: none;
 
     }
+
 }
 
 
 @media only screen and (max-width: 1040px) {
-    
-    
-    .mb-3{
+
+
+    main {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    main video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 70rem;
+        z-index: -1;
+        opacity: 0.9;
+
+    }
+
+
+
+    .titulosite {
+
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1.7rem;
+    }
+
+
+    .mb-3 {
         width: 70%;
     }
 
@@ -894,78 +1132,227 @@ footer p {
 
     }
 
-    
-   
-
-}
-
-
-/* 
-@media only screen and (max-width: 998px) {
-    .mb-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-
-    }
-
-    .form-control {
-
-        width: 80%;
-        height: 3rem;
-    }
-
-
-    #filtro {
-        display: flex;
-        grid-template-columns: 2fr 1fr;
-        justify-content: center;
-
-
-    }
-
-        
-    #resultados {
-
-        display: flex;
-        margin: 20px;
-        justify-content: center;
-
-    }
-
-
     footer {
 
 
         bottom: 0;
-        position: fixed;
         width: 90%;
         text-align: center;
         left: 0;
+        width: 100%;
 
     }
 
     footer p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+
     }
+
+
+
 
 }
- */
- 
-@media only screen and (max-width: 768px) {
 
-    header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: var(--lite--);
+    }
+
+
+
+
+    body.modo-escuro .dropdown-menu.show {
+        background-color: var(--dark--);
+    }
+
+
+
+    .titulosite {
+
+        background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+        color: black;
+        -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
 
     }
 
-    .mb-3{
-        width: 70%;
+
+
+    .slogan {
+
+        background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        color: black;
+        -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
+
+    }
+
+
+    body.modo-escuro svg {
+        color: var(--white);
+    }
+
+    body.modo-escuro label {
+        color: var(--card--);
+
+    }
+
+
+    body.modo-escuro p {
+        color: var(--white--);
+    }
+
+
+    body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: var(--white--);
+    }
+
+
+    body.modo-escuro #acesso {
+        cursor: pointer;
+        color: var(--white);
+        font-size: 0.9rem;
+        outline: none;
+        height: 2.5rem;
+        text-align: left;
+        border-radius: 8px;
+
+    }
+
+
+    body.modo-escuro h1 {
+        color: var(--white);
+
+    }
+
+    body.modo-escuro h3 {
+        color: var(--white);
+    }
+
+    body.modo-escuro p {
+        color: var(--white);
+    }
+
+    body.modo-escuro label {
+        color: #fbfbfb;
+    }
+
+
+    body.modo-escuro .todas_receitas a {
+
+        color: var(--primary-color);
+
+    }
+
+
+    body.modo-escuro #toggle-mode label {
+        font-size: 0.9rem;
+        color: var(--white);
+    }
+
+
+    body.modo-escuro footer p {
+        color: #fff;
+
+    }
+
+    .svg-branco path,
+    .svg-branco rect,
+    .svg-branco circle,
+    .svg-branco polygon,
+    .svg-branco polyline,
+    .svg-branco line {
+        fill: var(--white) !important;
+        stroke: var(--white) !important;
+    }
+
+
+
+
+    #mais {
+        display: block;
+        /* Mostrar o elemento */
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: center;
+        width: 50%;
+    }
+
+
+    .nav-link.dropdown-toggle.show {
+        width: 30%;
+    }
+
+
+
+    #toggle-mode {
+        display: block;
+        /* Mostrar o elemento */
+        align-items: center;
+        gap: 10px;
+        justify-content: left;
+        font-size: 0.7rem;
+        margin-left: 8px;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 0.8rem;
+
+    }
+
+
+
+    #toggle-mode label {
+
+        font-size: 0.9rem;
+
+    }
+
+
+
+
+
+
+    #flexCheckDefault {
+        border-color: black;
+    }
+
+    .todas_receitas a {
+        color: #000000;
+        font-size: 0.8rem;
+    }
+
+    .mb-3 {
+        width: 80%;
+    }
+
+    input.form-control.me-2 {
+        font-size: 0.7rem;
+        background-color: var(--white);
+        height: 3rem;
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
+    }
+
+    .mb-3 {
+        width: 80%;
     }
 
 
@@ -978,11 +1365,11 @@ footer p {
 
 
     main video {
-       display: none;
+        display: none;
 
     }
 
-    
+
 
     #filtro {
         display: grid;
@@ -1011,7 +1398,7 @@ footer p {
     }
 
     .card {
-        width: 15rem;
+        width: 19rem;
 
 
 
@@ -1025,18 +1412,24 @@ footer p {
 
     }
 
-    
-    
-
-
-
 
 }
 
- 
+
 
 @media only screen and (max-width: 365px) {
 
+    .mb-3 {
+        width: 100%;
+    }
+
+    input.form-control.me-2 {
+        font-size: 0.7rem;
+        background-color: var(--white);
+        height: 3rem;
+        width: 80%;
+    }
+
     .navbar>.container-fluid {
         display: flex;
         flex-wrap: inherit;
@@ -1044,7 +1437,7 @@ footer p {
         justify-content: space-between;
     }
 
-  
+
 
     #filtro {
         display: grid;
@@ -1057,57 +1450,25 @@ footer p {
 
     }
 
-
-  /*  
-    main video {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 55rem;
-    z-index: -1;
-    opacity: 0.6;
-}
-
-
-    #filtro {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        margin-left: 10%;
-        margin-right: 10%;
-        justify-items: start;
+    #toggle-mode {
+        display: block;
+        /* Mostrar o elemento */
         align-items: center;
-        margin-bottom: 8rem ;
-
-
-
-    }
-
-
-    footer {
-        margin-top: 8rem;
-
-
-        bottom: 0;
-        position: relative;
-        width: 90%;
-        text-align: center;
-        left: 0;
-
-    }
-
-    footer p {
+        gap: 10px;
+        justify-content: left;
+        font-size: 0.7rem;
+        margin-left: 8px;
+        margin-top: 10px;
+        width: 100%;
         font-size: 0.9rem;
+
     }
 
 
- */
 
+
+    .card {
+        width: 15rem;
+    }
 
 }
-
-
-
-
-
- 

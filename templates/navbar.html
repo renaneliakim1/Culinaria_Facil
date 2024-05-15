@@ -1,0 +1,11 @@
+
+<a href="/receitas/1">Receitas</a>
+{% if user %}
+<a href="/cadastro_receita">Cadastrar Receita</a>
+<a href="/minhas_receitas/1">Minhas Receitas</a>
+<a href="/logout">Sair</a>
+<a href="/perfil/{{ user[0] }}"><img src="/static/uploads\{{ user[4] }}" alt="Imagem Perfil"></a>
+{% else %}
+<a href="/login">Login</a>
+<a href="/cadastro">Registrar</a>
+{% endif %}

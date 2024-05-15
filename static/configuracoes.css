@@ -23,15 +23,13 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
     --btn--excluir: #DB4437;
-    --lite--:#f5ecde;
-
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -125,7 +123,7 @@ body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -133,9 +131,9 @@ body.modo-escuro .dropdown-menu.show {
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -148,7 +146,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -208,6 +206,20 @@ body.modo-escuro h1 {
 }
 
 
+
+body.modo-escuro .dropzone-area {
+    background-color: var(--dark--);
+    border: 1px solid var(--lite--);
+
+
+}
+
+
+body.modo-escuro .dropzone-area label {
+    color: var(--white);
+}
+
+
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
@@ -215,6 +227,8 @@ body.modo-escuro h1 {
     padding: 0px;
 
 }
+
+
 
 
 section {
@@ -318,9 +332,9 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
@@ -374,7 +388,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -396,12 +410,13 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
-.form-switch .form-check-input{
-    margin-left: -1.5em;
+.form-switch .form-check-input {
+    /*     margin-left: -1.5em;
+ */
     background-color: var(--white);
 }
 
@@ -412,10 +427,16 @@ svg {
 
 }
 
+.form-switch {
+    margin-left: 1.2em;
+}
+
+
 /* color label*/
 .form-control {
     height: 1.5rem;
     font-size: 0.7rem;
+    background-color: var(--lite--);
 }
 
 input.form-control.me-2 {
@@ -435,6 +456,8 @@ input.form-control.me-2 {
 
 
 #editar-excluir {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     width: 3.5rem;
     border: none;
@@ -445,6 +468,9 @@ input.form-control.me-2 {
     outline: none;
     height: 2rem;
     text-align: center;
+    text-decoration: none;
+    align-items: center;
+
 }
 
 #editar-excluir:hover {
@@ -522,6 +548,24 @@ input .input-group {
 #addon-wrapping {
     width: 5rem;
 }
+
+#registro_nome,
+#registro_email,
+#registro_cpf,
+#registro_senha,
+#senha_confirmar {
+    background-color: var(--pesquisa_input--);
+}
+
+
+
+
+
+
+
+
+
+
 
 #dadosnome {
     width: 14rem;
@@ -654,11 +698,17 @@ input .input-group {
 }
 
 
+label {
+    font-size: 0.7rem;
+
+}
+
 #receitas {
     display: flex;
     flex-direction: row;
     padding-left: 8rem;
     padding-right: 8rem;
+    width: 100%;
 }
 
 
@@ -667,7 +717,6 @@ input .input-group {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-
 }
 
 
@@ -683,7 +732,9 @@ input .input-group {
 td {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: left;
+    font-size: 0.7rem;
+
 
 }
 
@@ -693,6 +744,14 @@ tr {
     justify-content: center;
     flex-direction: row;
     width: 100%;
+    font-size: 0.7rem;
+
+}
+
+th {
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
 
 }
 
@@ -700,6 +759,8 @@ tr {
 
 .table>:not(caption)>*>* {
     background-color: var(--lite--);
+    width: 15rem;
+
 }
 
 
@@ -746,13 +807,12 @@ tr {
 .dropzone-box {
     border-radius: 8px;
     padding: 2rem;
-/*     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
-    
+
 
 
 }
@@ -857,10 +917,19 @@ tr {
     align-items: center;
     flex-direction: column;
     width: 100%;
-  
+
 
 }
 
+
+#registro_senha {
+    width: 17rem;
+}
+
+#senha_confirmar {
+    width: 17rem;
+
+}
 
 /* .dropzone-area{
     background-image: url(/imgs/Imagem1cadastre-se.png);
@@ -871,9 +940,16 @@ tr {
 }
  */
 
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 footer {
 
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -1033,18 +1109,12 @@ footer p {
         text-align: left;
     }
 
-
-
-
-
-
     footer {
         position: relative;
         bottom: 0;
         width: 100%;
         text-align: center;
         left: 0;
-        margin-top: 9rem;
 
     }
 
@@ -1076,209 +1146,96 @@ footer p {
 }
 
 
-
-
-
 @media only screen and (max-width: 768px) {
 
-
-.dropzone-area {
-    width: 80%;
-    padding: 1rem;
-    position: relative;
-    margin-top: 1rem;
-    min-height: 8rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--black);
-    border-radius: 1rem;
-    color: var(--primary);
-    cursor: pointer;
-    height: 8rem;
-}
-
-
-}
-
-
-@media only screen and (max-width: 360px) {
-
-    .abas {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-
-    }
-
-
-    h1 {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    #buscar {
-        align-items: center;
-        flex-direction: center;
-        font-size: 0.6rem;
-    }
-
-
-
-    .info {
-        display: flex;
-        justify-content: center;
-    }
-
-
-    #seguranca {
-        display: flex;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    #seguranca input .form-control {
-        height: 3rem;
+    .form-switch {
+        margin-left: 0.5em;
     }
 
 
     .tabela {
         display: flex;
-        width: 100%;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        padding-left: 0px;
+        padding-right: 0px;
 
     }
 
 
-    #receitas {
+    body.modo-escuro .info {
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+
+    #editar-excluir a {
+        width: 100%;
+    }
+
+
+    .dropzone-box {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .dropzone-area {
+        width: 80%;
+        padding: 1rem;
+        position: relative;
+        margin-top: 1rem;
+        min-height: 8rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 2px;
+        border: 1px solid var(--black);
+        border-radius: 1rem;
+        color: var(--primary);
+        cursor: pointer;
+        height: 8rem;
+    }
+
+
+    .table>:not(caption)>*>* {
+        background-color: var(--lite--);
+        width: 4rem;
 
     }
 
 
     button .tab-btn {
         font-size: 0.7rem;
-        margin: 0;
-    }
-
-
-    .tab-btn {
-        font-size: 0.7rem;
-        width: 5rem;
+        width: 8rem;
         margin: 0.2rem;
-
     }
 
-
-    .input-group-text {
-        font-size: 0.6rem;
-        width: 5rem;
-    }
-
-
-    td {
-        font-size: 0.8rem;
-        margin: none;
-
-
-    }
 
     tr {
         display: flex;
         justify-content: center;
         flex-direction: row;
         width: 100%;
+
     }
 
 
-    th, td {
-        font-size: 0.6rem;
-    }
-
-
-    .menu-table {
+    td.nome-receita {
         display: flex;
-        flex-direction: row;
-
-    }
-
-
-
-
-    .table {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding: none;
-
-    }
-
-    tbody {
-        display: flex;
-        flex-direction: column;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        box-sizing: border-box;
-        font-size: 2px;
-        justify-content: left;
-
-    }
-
-    #editar-excluir {
-        cursor: pointer;
-        width: 3.5rem;
-        border: none;
-        border-radius: .5rem;
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 0.6rem;
-        outline: none;
-        height: 2rem;
-        text-align: center;
-    }
-
-    #editar-excluir:hover {
-        background-color: #a33f37;
-    }
-
-    .nome-receita {
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
         text-align: left;
+        width: 10rem;
     }
-
-
-    #dadosnome {
-        width: 12rem;
-        height: 2.5rem;
-    }
-
-    #dadoscpf {
-        width: 12rem;
-        height: 2.5rem;
-    }
-
-    .info {
-        padding: none;
-    }
-
-    .input-group {
-        padding-left: 1px;
-        padding-right: 1px;
-    }
-
-    #addon-wrapping {
-        font-size: 0.6rem;
-    }
-
 
 
 
@@ -1289,32 +1246,7 @@ footer p {
         width: 100%;
         text-align: center;
         left: 0;
-        margin-top: 10rem;
     }
-
-
-
-
-    footer p {
-        font-size: 0.6rem;
-    }
-
-
-    ::-webkit-scrollbar {
-        width: 7px;
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 5px;
-        background-color: rgb(0, 0, 0);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 8px;
-        background-color: var(--primary-color);
-    }
-
-
 
 
 }

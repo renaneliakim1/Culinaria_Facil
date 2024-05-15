@@ -2,7 +2,6 @@
 
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,31 @@
 
 }
 
+.pagina_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina_container a {
+    color: inherit;
+    text-decoration: inherit;
+    width: 25px;
+    background-color: #d57119;
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.pagina_container a:hover {
+    background-color: #ac2020;
+}
+
+
+
 /* color palettes */
 
 :root {
@@ -23,21 +47,21 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #f8dfb8;
+    --card--: #fcdeae;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
-
-
+    --lite--: #f4e1c4;
+    --pesquisa_input--: #fff7eb
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
-body{
+body {
     width: 100%;
     height: 100%;
-    --bs-body-bg: var(--lite--); /* bug, just change the background color with this property  */
+    --bs-body-bg: var(--lite--);
+    /* bug, just change the background color with this property  */
 }
 
 body.modo-escuro {
@@ -53,7 +77,7 @@ body.modo-escuro label {
 
 
 body.modo-escuro form {
-    background-color: var(--darkform--);
+    background-color: var(--dark--);
 }
 
 
@@ -118,11 +142,11 @@ body.modo-escuro .navbar-toggler {
 }
 
 
-body.modo-escuro .dropdown-menu.show{
+body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--lite--);
 }
 
@@ -131,27 +155,52 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
 }
 
+/*  #flexSwitchCheck {
+    border-color :white;
+    background-color: var(--white--);
 
-body.modo-escuro #flexSwitchCheckDefault{
+} */
+
+/* 
+body.modo-escuro #flexSwitchCheck{
+    border-color :none;
+    background-color: var(--white);
+
+}
+ */
+
+/* body.modo-escuro #flexSwitchCheckDefault {
+    border-color :none;
+    background-color: var(--white);
+} */
+
+
+
+/* #flexSwitchCheckDefault{
     border-color: #000000;
-    background-color: var(--lite--);
+    background-color:var(--lite--);
 }
 
-
+ 
+body.modo-escuro .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+ */
 
 
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -170,11 +219,12 @@ body.modo-escuro svg {
 
 
 body.modo-escuro #buscar {
-    width: 9rem;
+    display: flex;
+    width: 10rem;
 
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -185,6 +235,7 @@ body.modo-escuro #buscar {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
+    gap: 10px;
 
 
 
@@ -192,13 +243,13 @@ body.modo-escuro #buscar {
 
 
 body.modo-escuro h1 {
-  color: var(--white);
+    color: var(--white);
 
 }
 
 
 
-.navbar-nav.me-auto.mb-2.mb-lg-0{
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
@@ -207,19 +258,52 @@ body.modo-escuro h1 {
 }
 
 
-section{
+
+body.modo-escuro #barra_pesquisa {
+
+    background-color: var(--dark--);
+}
+
+
+#flexSwitchCheckDefault {
+    border-color: #ffffff;
+    background-color: var(--white);
+}
+
+
+body.modo-escuro #flexSwitchCheckDefault {
+    border-color: #000000;
+}
+
+
+#flexSwitchCheckDefault:checked {
+    border-color: #000000;
+    background-color: var(--lite--);
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--white);
+}
+
+
+
+
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
-section img{
-    border-radius: 50%;
+section img {
+    /*     border-radius: 50%; */
     width: 10rem;
     height: 10 rem;
 
 }
+
 .card {
     background-color: #ac2020;
     color: #000000;
@@ -244,7 +328,8 @@ body.modo-escuro footer p {
 #logo img {
     display: flex;
     width: 5rem;
-    height: 4rem;;
+    height: 4rem;
+    ;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -286,9 +371,9 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
@@ -312,12 +397,14 @@ button.navbar-toggler {
 }
 
 
+
 #buscar {
-    width: 9rem;
+    display: flex;
+    width: 10rem;
 
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
     height: 1.7rem;
     text-align: center;
@@ -328,6 +415,7 @@ button.navbar-toggler {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--check--);
+    gap: 10px;
 
 
 
@@ -344,7 +432,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -353,6 +441,8 @@ svg {
     flex-direction: row;
 
 }
+
+
 
 /* key for dark mode */
 
@@ -366,16 +456,27 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
-.form-switch .form-check-input{
+.form-switch .form-check-input {
     margin-left: -3em;
 }
 
 
-
+.alert-messege {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(255, 138, 138);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
 
 .btn-outline-success {
     background-color: var(--primary-color);
@@ -391,7 +492,7 @@ svg {
     font-size: 0.7rem;
 }
 
-input.form-control.me-2{
+input.form-control.me-2 {
     font-size: 0.7rem;
 }
 
@@ -416,6 +517,37 @@ input.form-control.me-2{
 
 
 
+.pesquisa_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#pesquisa_input {
+    height: 1.5rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    background-color: var(--pesquisa_input--);
+    width: 100%;
+    border: 1px solid var(--check--);
+    width: 100%;
+
+}
+
+
+#barra_pesquisa {
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+
+}
+
 section h1 {
     display: flex;
     text-align: center;
@@ -427,20 +559,20 @@ section h1 {
 }
 
 
-#saibamais{
+#saibamais {
     font-size: 0.6rem;
-    
+
     display: flex;
     justify-content: center;
     background: var(--primary-color);
     border: var(--primary-color);
 
 
-  
+
 }
-    
-#saibamais:hover{
-    background-color: #a33f37; 
+
+#saibamais:hover {
+    background-color: #a33f37;
 }
 
 
@@ -449,7 +581,7 @@ section h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin-left: 15px;
 }
 
 
@@ -458,14 +590,18 @@ section h1 {
 }
 
 .form-check-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 
-h1{
+h1 {
     text-align: center;
+}
+
+h1 {
     font-size: 1.5rem;
 }
+
 
 
 #resultados {
@@ -477,8 +613,10 @@ h1{
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 2rem;
+    gap: 1.5rem;
 }
 
+/* 
 
 .card {
 
@@ -511,7 +649,7 @@ h1{
 .card:hover {
     transform: scale(1.1);
 }
-
+ */
 
 .btn-primary {
     background: var(--primary-color);
@@ -520,7 +658,7 @@ h1{
 
 
 
-
+/* 
 .rating{
     display: flex;
     flex-direction: row-reverse;
@@ -566,12 +704,12 @@ h1{
   .rating > input:checked ~ label {
     color: #ffa723;
   }
-  
-  
+   */
 
 
 
-.date{
+
+/* .date{
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -580,9 +718,9 @@ h1{
 .date p{
    font-size: 0.6rem;
 }
+ */
 
-
-.mais_receitas{
+.mais_receitas {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
@@ -591,7 +729,7 @@ h1{
 
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--primary-color);
     border: var(--primary-color);
 }
@@ -622,6 +760,68 @@ h1{
 
 }
 
+
+
+.card {
+    width: 13em;
+    height: 25rem;
+}
+
+.card-body {
+    background: var(--card--);
+}
+
+.card-img-top {
+    height: 9rem;
+
+}
+
+.card-text {
+    height: 6rem;
+
+}
+
+.text {
+
+    text-align: center;
+
+
+}
+
+
+.card-text {
+    font-size: 0.8rem;
+    text-align: justify;
+
+}
+
+.card {
+    transition: 500ms linear;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+
+h5 {
+    display: block;
+    height: 2.7rem;
+}
+
+
+
+.date {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.date p {
+    font-size: 0.6rem;
+}
 
 
 
@@ -700,7 +900,7 @@ footer {
     width: 100%;
     text-align: center;
     left: 0;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 
@@ -722,4 +922,102 @@ footer p {
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--primary-color);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .form-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
+
+    #pesquisa_input {
+        height: 1.7rem;
+    }
+
+    .alert-messege {
+        max-width: 100%;
+    }
+
+
+
+
+
+    footer {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        padding-top: 8rem;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .card {
+        width: 17rem;
+
+
+
+    }
+
+    .card-img-top {
+        height: 9rem;
+
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 380px) {
+
+    .mb-3 {
+        width: 100%;
+    }
+
+    input.form-control.me-2 {
+        font-size: 0.7rem;
+        background-color: var(--white);
+        height: 3rem;
+        width: 80%;
+    }
+
+    .navbar>.container-fluid {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    #filtro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 2rem);
+        padding: 1rem;
+        justify-content: center;
+        gap: 20px;
+
+
+    }
+
+
+    .card {
+        width: 14rem;
+    }
+
 }

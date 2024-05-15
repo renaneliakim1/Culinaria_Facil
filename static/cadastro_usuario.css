@@ -14,7 +14,23 @@
 
 }
 
+.alert-messege {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(255, 138, 138);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    max-width: 92%;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
+
+
+
 /* color palettes */
+
 
 :root {
     --primary-color: #d57119;
@@ -23,12 +39,14 @@
     --white: #ffffff;
     --gray: #969696;
     --gray-2: #d3d3d3;
-    --card--: #ffc975;
+    --card--: #fcdeae;
     --form--: #ffc975;
     --check--: #fac08d;
     --dark--: #222;
     --darkform--: #5c5c5c;
-    --lite--:#f5ecde;
+    --lite--:#f4e1c4;
+    --pesquisa_input--:#fff7eb
+
 
 
 }
@@ -107,11 +125,11 @@ body.modo-escuro .navbar-toggler-icon {
 
 
 body.modo-escuro .container {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 body.modo-escuro .form {
-    background: var(--card--);
+    background: var(--form--);
 }
 
 
@@ -133,9 +151,9 @@ body.modo-escuro .dropdown-menu.show{
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 
@@ -148,7 +166,7 @@ body.modo-escuro #acesso {
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 
@@ -285,9 +303,9 @@ body.modo-escuro footer p {
 #acesso {
     cursor: pointer;
     color: var(--black);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     text-align: left;
     border-radius: 8px;
 }
@@ -344,7 +362,7 @@ button.navbar-toggler {
 /* button teeth icon */
 svg {
     width: 40px;
-    height: 25px;
+    height: 30px;
 }
 
 .bntacesso {
@@ -366,7 +384,7 @@ svg {
 }
 
 #toggle-mode label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
@@ -435,7 +453,7 @@ input.form-control.me-2{
     border-radius: 8px;
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     border-radius: 4px;
-    height: 50%;
+    height: 100%;
     align-items: center;
     border-radius: 8px;
 
@@ -470,6 +488,7 @@ h1 {
 .formulario {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     align-items: center;
@@ -478,16 +497,15 @@ h1 {
 
 
 .form {
-    background-color: var(--card--);
+    background-color: var(--form--);
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    max-width: 30rem;
     border-radius: 0.5rem;
     /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     margin-top: 1rem;
     width: 100%;
-    height: 32rem;
+    height: 45rem;
     gap: 1rem;
 }
 
@@ -516,12 +534,13 @@ h1 {
     padding-right: 3rem;
     font-size: 0.8rem;
     line-height: 1.25rem;
-    width: 300px;
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     width: 100%;
     height: 2rem;
 }
+
+
 
 
 .submit {
@@ -564,6 +583,7 @@ h1 {
     width: 100%;
 }
 
+
 .fa{
     position: fixed;
     margin: 10px;
@@ -585,13 +605,139 @@ h1 {
     align-items: center;
 }
 
-.input-container input, .form button {
-    outline: none;
-    border: 1px solid #595b5d;
-    margin: 8px 0;
+
+
+
+.dropzone-box {
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dropzone h2,
+.dropzone p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.dropzone-box h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 4rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    height: 8rem;
+}
+
+.dropzone-area [type="file"] {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 7rem;
+}
+
+.dropzone-area .file-upload-icon svg {
+    height: 1rem;
+    width: 1rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary);
+}
+
+.dropzone--over {
+    border-style: solid;
+    background-color: var(--black);
+}
+
+.dropzone-actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--black);
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.dropzone-actions button {
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+.dropzone-actions button:hover {
+    text-decoration: underline;
+}
+
+.dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-actions button[type='submit'] {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10rem;
+
+
+}
+
+#foto{
+    width: 50px;
+    height: 50px;
 }
 
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
+}
+
+.error-message{ 
+    color: red;
+    font-size: 0.8rem;
+}
 
 footer {
 
@@ -626,20 +772,26 @@ footer p {
 
 
 
+
+
 @media only screen and (max-width: 768px) {
+
+
 
     
     .container {
         display: flex;
         flex-direction: column-reverse;
-        width: 91%;
+        width: 93%;
         margin: 20px auto;
         padding: 20px;
-        background-color: var(--card--);
+        background-color: var(--form--);
         border-radius: 8px;
-        /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
         border-radius: 4px;
 
+    }
+    .alert-messege {
+        max-width: 100%;
     }
 
     .imagem {
@@ -662,20 +814,16 @@ footer p {
 
 
 
-
     .form {
-        background-color: var(--card--);
+        background-color: var(--form--);
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        max-width: 30rem;
         border-radius: 0.5rem;
-        /*         box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
-        width: 90%;
-        height: 28rem;
+        width: 100%;
+        height: 45rem;
         gap: 1rem;
     }
-
 
     .submit{
         font-size: 0.8rem;
@@ -709,6 +857,23 @@ footer p {
         margin-top: 0px;
         font-size: 0.8rem;
     }
+
+    .dropzone-box {
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dropzone-box h2 {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+    }
+    
     
         
     footer {
@@ -726,6 +891,63 @@ footer p {
         font-size: 0.8rem;
     }
 
+
+
+
+
+} 
+
+@media only screen and (max-width: 380px) {
+
+   
+
+    .dropzone-box {
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+     
+        padding: 20px;
+        margin: 20px 20px;
+
+    }
+
+        
+    .submit {
+        cursor: pointer;
+        width: 15.5rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 1rem;
+        outline: none;
+        height: 3rem;
+        margin: 20px;
+
+        text-align: center;
+        width: 100%;
+
+
+    }
+
+    .submit:hover {
+        background-color: #a33f37;
+    }
+
+    footer {
+
+
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    
+
+   
 
 
 

@@ -1,7 +1,7 @@
 <h1 align="center"> Culinária Fácil </h1>
 <p align="center">
 Projeto desenvolvido durante o curso de administrador de banco de dados - SENAC-MA.
-<p align="center">
+<p align="justify">
 
 
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -54,7 +54,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <img alt="" src=".github/xammp.gif" width="50%">
 </p>
 
-- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponivel em Culinaria_Facil\banco_de_dados\banco_de_dados.sql" 
+- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponível em Culinaria_Facil\banco_de_dados\banco_de_dados.sql" 
 
 <p align="center">
   <img alt="" src=".github/db.gif" width="50%">

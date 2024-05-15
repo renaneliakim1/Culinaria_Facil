@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Instalação
 
  No terminal VSCode instale:
-<b><i>
+
 - <b><i> $ pip install -U Flask </b></i>
 - <b><i>$ pip install Bcrypt-Flask</b></i>
 - <b><i>$ pip install mysql-connector</b></i>

@@ -1,7 +1,7 @@
 <h1 align="center"> Culinária Fácil </h1>
 <p align="center">
 Projeto desenvolvido durante o curso de administrador de banco de dados - SENAC-MA.
-<p align="justify">
+<p align="inline">
 
 
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -44,17 +44,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Instalação
 
  No terminal VSCode instale:
-
-- $ pip install -U Flask
-- $ pip install Bcrypt-Flask
-- $ pip install mysql-connector
+<b><i>
+- <b><i> $ pip install -U Flask </b></em>
+- <b><i>$ pip install Bcrypt-Flask</b></em>
+- <b><i>$ pip install mysql-connector</b></em>
 
 - Dentro do Xampp inicie o "MySQL" 
 <p align="center">
   <img alt="" src=".github/xammp.gif" width="50%">
 </p>
 
-- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponível em Culinaria_Facil\banco_de_dados\banco_de_dados.sql" 
+- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponível em <b><i> Culinaria_Facil\banco_de_dados\banco_de_dados.sql" </b></em>
 
 <p align="center">
   <img alt="" src=".github/db.gif" width="50%">

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 /* color palettes */
@@ -71,10 +67,6 @@
 input[type="radio"]:checked {
     background-color: #2717de;
 }
-
-
-
-
 
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -169,34 +161,12 @@ body.modo-escuro .dropdown-menu.show {
     background-color: transparent;
 }
 
-
-/* body.modo-escuro #acesso {
-    cursor: pointer;
-    color: var(--white);
-    font-size: 0.9rem;
-    outline: none;
-    height: 2.5rem;
-    text-align: left;
-    border-radius: 8px;
-
-}
- */
-
-
-
-
 body.modo-escuro svg {
     /*     color: var(--white);
  */
     width: 40px;
     height: 30px;
 }
-
-
-
-
-
-
 
 body.modo-escuro #buscar {
     width: 9rem;
@@ -215,8 +185,6 @@ body.modo-escuro #buscar {
     justify-content: center;
     background-color: var(--dark--);
 
-
-
 }
 
 
@@ -224,17 +192,6 @@ body.modo-escuro h1 {
     color: var(--white);
 
 }
-
-/* body.modo-escuro h3 {
-    color: var(--white);
-} */
-/* body.modo-escuro p {
-    color: var(--white);
-} */
-/* body.modo-escuro label {
-    color: #fbfbfb;
-}
- */
 
 body.modo-escuro p.card-text {
     color: var(--black);
@@ -257,15 +214,8 @@ body.modo-escuro #toggle-mode label {
     color: var(--white);
 }
 
-/* body.modo-escuro .todas_receitas a{
-
-    color: var(--white);
-
-} */
-
 header {
     display: flex;
-    /*     justify-content: space-between; */
     flex-wrap: wrap;
 }
 
@@ -297,19 +247,6 @@ section img {
     background-color: var(--card--);
 }
 
-
-/* body.modo-escuro #toggle-mode label {
-    font-size: 0.6rem;
-    color: var(--white);
-}
-
-
-body.modo-escuro footer p {
-    color: #fff;
-
-} */
-
-
 /* end of dark mode */
 
 
@@ -333,17 +270,6 @@ body.modo-escuro footer p {
     display: flex;
     justify-content: left;
 }
-
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
-
-
 
 .navbar>.container-fluid {
     display: flex;
@@ -376,14 +302,9 @@ body.modo-escuro footer p {
     border-radius: 8px;
 }
 
-
-
 #acesso:hover {
     background-color: var(--check--);
 }
-
-
-
 
 /* define with the collapse button */
 
@@ -395,7 +316,6 @@ button.navbar-toggler {
     background-color: var(--primary-color);
 
 }
-
 
 .alert-messege {
     display: flex;
@@ -427,17 +347,12 @@ button.navbar-toggler {
     justify-content: center;
     background-color: var(--white);
 
-
-
-
 }
 
 
 #buscar:hover {
     background-color: var(--check--);
 }
-
-
 
 /* button teeth icon */
 svg {
@@ -453,8 +368,6 @@ svg {
 }
 
 /* key for dark mode */
-
-
 
 #toggle-mode {
     display: none;
@@ -486,22 +399,12 @@ svg {
 
 }
 
-/* color label*/
-/* .form-control {
-    height: 1.5rem;
-    background-color: var(--check--);
-    font-size: 0.7rem;
-} */
-
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 .form-label {
     text-align: center;
@@ -519,8 +422,6 @@ form {
 
 }
 
-
-
 input.form-control.me-2 {
     font-size: 0.7rem;
     background-color: var(--white);
@@ -536,8 +437,6 @@ input.form-control.me-2 {
     align-items: center;
 
 }
-
-
 
 .navbar>.container-fluid {
     display: flex;
@@ -563,10 +462,7 @@ main video {
     height: 66rem;
     z-index: -1;
     opacity: 0.9;
-
 }
-
-
 
 
 h1 {
@@ -575,9 +471,6 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-
-
-
 }
 
 .titulosite {
@@ -593,8 +486,6 @@ h1 {
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 
 }
-
-
 
 .slogan {
 
@@ -627,9 +518,6 @@ h1 {
 
 }
 
-
-
-
 #pesquisa {
     cursor: pointer;
     width: 8.5rem;
@@ -641,7 +529,6 @@ h1 {
     font-size: 1rem;
     outline: none;
     height: 2.5rem;
-
 }
 
 #pesquisa:hover {
@@ -649,45 +536,14 @@ h1 {
 
 }
 
-
 #mais {
     display: none;
 }
-
 
 label {
     font-size: 1rem;
 
 }
-
-/* .form-control {
-    width: 100%;
-    height: 3rem;
-} */
-
-/* .filtroCategoria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    width: 100%;
-}
-
-.filtroCategoria h3 {
-    font-size: 1.2rem;
-}
-
-
-#filtro {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-content: center;
-    margin-top: 0.5rem;
-    align-items: center;
-
-
-} */
-
 
 h3 {
     font-size: 1rem;
@@ -697,8 +553,6 @@ h3 {
 #filtro {
     display: flex;
     flex-direction: row;
-    /*    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 2rem); */
     justify-content: center;
 }
 
@@ -728,7 +582,6 @@ h3 {
     align-items: center;
     margin-top: 1.5rem;
 
-
 }
 
 
@@ -755,9 +608,6 @@ h3 {
 .card {
     width: 13em;
     height: 25rem;
-
-
-
 }
 
 
@@ -769,11 +619,6 @@ h3 {
     font-size: 1rem;
 }
 
-/* .card a img {
-    height: 6rem;
-
-}
- */
 .card-img-top {
     height: 9rem;
 
@@ -785,17 +630,13 @@ h3 {
 }
 
 .text {
-
     text-align: center;
-
-
 }
 
 
 .card-text {
     font-size: 0.8rem;
     text-align: justify;
-
 }
 
 .card {
@@ -847,8 +688,6 @@ ul .navbar-nav.me-auto.mb-2.mb-lg-0 {
     margin: none;
 }
 
-
-
 #myBtn {
     display: flex;
     position: fixed;
@@ -858,18 +697,7 @@ ul .navbar-nav.me-auto.mb-2.mb-lg-0 {
     border: none;
     outline: none;
     background: none;
-    /*     background: var(--check--); ativar penas para teste */
-
-    /*  color: white; */
     cursor: pointer;
-    /*     border-radius: 10px; */
-
-
-    /* 
-    box-shadow:  0 0 0 0 var(--check--);
-    border-radius: 50%;
-    animation: alerta 1.5s infinite;
-    transition: background, padding 500ms ease-in-out;   */
 
 }
 
@@ -968,27 +796,6 @@ footer p {
     background-color: var(--primary-color);
 }
 
-/* @media only screen and (max-width: 2560px) {
-    main {
-        display: flex;
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-    
-    main video {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 50rem;
-        z-index: -1;
-        opacity: 0.6;
-    }
-
-} */
-
 @media only screen and (max-width: 1200px) {
 
 
@@ -1054,7 +861,6 @@ footer p {
 
 }
 
-
 @media only screen and (max-width: 1040px) {
 
 
@@ -1076,8 +882,6 @@ footer p {
         opacity: 0.9;
 
     }
-
-
 
     .titulosite {
 
@@ -1147,10 +951,6 @@ footer p {
         font-size: 0.8rem;
 
     }
-
-
-
-
 }
 
 
@@ -1159,14 +959,9 @@ footer p {
         background-color: var(--lite--);
     }
 
-
-
-
     body.modo-escuro .dropdown-menu.show {
         background-color: var(--dark--);
     }
-
-
 
     .titulosite {
 
@@ -1181,9 +976,6 @@ footer p {
         -webkit-text-stroke: 2px rgba(120, 5, 5, 0.2);
 
     }
-
-
-
     .slogan {
 
         background-image: linear-gradient(to bottom, var(--primary-color), #f07d0a, #f06203);
@@ -1205,19 +997,14 @@ footer p {
 
     body.modo-escuro label {
         color: var(--card--);
-
     }
-
-
     body.modo-escuro p {
         color: var(--white--);
     }
 
-
     body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
         color: var(--white--);
     }
-
 
     body.modo-escuro #acesso {
         cursor: pointer;
@@ -1295,8 +1082,6 @@ footer p {
         width: 30%;
     }
 
-
-
     #toggle-mode {
         display: block;
         /* Mostrar o elemento */
@@ -1318,11 +1103,6 @@ footer p {
         font-size: 0.9rem;
 
     }
-
-
-
-
-
 
     #flexCheckDefault {
         border-color: black;
@@ -1369,16 +1149,12 @@ footer p {
 
     }
 
-
-
     #filtro {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 2rem);
         padding: 1rem;
         justify-content: center;
-
-
     }
 
     .form-check {
@@ -1399,9 +1175,6 @@ footer p {
 
     .card {
         width: 19rem;
-
-
-
     }
 
     .form-check {
@@ -1446,8 +1219,6 @@ footer p {
         padding: 1rem;
         justify-content: center;
         gap: 20px;
-
-
     }
 
     #toggle-mode {
@@ -1461,12 +1232,8 @@ footer p {
         margin-top: 10px;
         width: 100%;
         font-size: 0.9rem;
-
     }
-
-
-
-
+    
     .card {
         width: 15rem;
     }

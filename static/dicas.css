@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -45,17 +42,14 @@ body.modo-escuro {
   color: #fff;
 }
 
-
 body.modo-escuro label {
   color: var(--white);
 
 }
 
-
 body.modo-escuro form {
   background-color: var(--darkform--);
 }
-
 
 body.modo-escuro p {
   color: var(--white--);
@@ -64,8 +58,6 @@ body.modo-escuro p {
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color: var(--white--);
 }
-
-
 
 body.modo-escuro .container-fluid {
   display: flex;
@@ -86,23 +78,16 @@ body.modo-escuro .bg-body-tertiary {
 
 body.modo-escuro .d-flex {
   background-color: var(--dark--);
-
 }
 
-
-
 body.modo-escuro header {
-
   text-align: center;
-
 }
 
 
 body.modo-escuro .navbar-toggler-icon {
   color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
   background: var(--dark--);
@@ -111,7 +96,6 @@ body.modo-escuro .container {
 body.modo-escuro .form {
   background: var(--card--);
 }
-
 
 body.modo-escuro .navbar-toggler {
   background-color: var(--primary-color);
@@ -138,17 +122,11 @@ body.modo-escuro #acesso {
 
 }
 
-
-
-
-
 body.modo-escuro svg {
   color: var(--white);
   width: 40px;
   height: 30px;
 }
-
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -159,9 +137,6 @@ body.modo-escuro svg {
   fill: var(--white) !important;
   stroke: var(--white) !important;
 }
-
-
-
 
 body.modo-escuro #buscar {
   display: flex;
@@ -180,9 +155,6 @@ body.modo-escuro #buscar {
   justify-content: center;
   background-color: var(--dark--);
   border: 1px solid var(--check--);
-
-
-
 }
 
 
@@ -206,7 +178,6 @@ body.modo-escuro h1 {
   color: var(--white);
 
 }
-
 
 body.modo-escuro #barra_pesquisa {
   background-color: var(--dark--);
@@ -254,7 +225,6 @@ body.modo-escuro footer p {
 
 }
 
-
 /* end of dark mode */
 
 
@@ -279,14 +249,6 @@ body.modo-escuro footer p {
   justify-content: left;
 }
 
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
 .container-fluid {
   display: flex;
   align-items: center;
@@ -296,13 +258,11 @@ body.modo-escuro footer p {
   flex-direction: row;
 }
 
-
 /* make navbar transparent */
 .bg-body-tertiary {
   --bs-bg-opacity: 0;
   --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
-
 
 /* defines characteristics of buttons */
 #acesso {
@@ -319,9 +279,6 @@ body.modo-escuro footer p {
   background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -332,8 +289,6 @@ button.navbar-toggler {
   background-color: var(--primary-color);
 
 }
-
-
 
 .form-switch .form-check-input {
   margin-left: -1rem;
@@ -378,9 +333,6 @@ button.navbar-toggler {
   background-color: var(--check--);
 }
 
-
-
-
 #saibamais {
   font-size: 0.6rem;
   display: flex;
@@ -390,7 +342,6 @@ button.navbar-toggler {
 #saibamais:hover {
   background-color: #a33f37;
 }
-
 
 /* button teeth icon */
 svg {
@@ -420,14 +371,10 @@ svg {
   font-size: 0.9rem;
 }
 
-
-
-
 .btn-outline-success {
   background-color: var(--primary-color);
   color: var(--white);
   border-color: var(--primary-color);
-
 }
 
 /* color label*/
@@ -442,13 +389,9 @@ svg {
 
 }
 
-
-
-
 input.form-control.me-2 {
   font-size: 0.7rem;
 }
-
 
 /* search bar position */
 
@@ -456,7 +399,6 @@ input.form-control.me-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 
@@ -465,12 +407,8 @@ input.form-control.me-2 {
   align-items: center;
   flex-wrap: inherit;
   justify-content: space-between;
-
   flex-direction: row;
 }
-
-
-
 
 .bg-body-tertiary {
   --bs-bg-opacity: 0
@@ -494,11 +432,6 @@ svg {
   flex-direction: column;
 }
 
-
-
-
-
-
 .navbar>.container-fluid {
   display: flex;
   flex-wrap: inherit;
@@ -513,8 +446,6 @@ svg {
   align-items: center;
 }
 
-
-
 h1 {
   justify-content: center;
   text-align: center;
@@ -526,9 +457,6 @@ h2 {
   text-align: center;
   margin: 1.25rem;
 }
-
-
-
 
 .higiene img {
   display: flex;

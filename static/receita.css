@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -29,8 +26,6 @@
   --darkform--: #5c5c5c;
   --lite--:#f4e1c4;
   --pesquisa_input--:#fff7eb
-
-
 
 }
 
@@ -86,13 +81,10 @@ body.modo-escuro .bg-body-tertiary {
   --bs-bg-opacity: 0;
 }
 
-
 body.modo-escuro .d-flex {
   background-color: var(--dark--);
 
 }
-
-
 
 body.modo-escuro header {
 
@@ -100,12 +92,9 @@ body.modo-escuro header {
 
 }
 
-
 body.modo-escuro .navbar-toggler-icon {
   color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
   background: var(--dark--);
@@ -115,16 +104,13 @@ body.modo-escuro .form {
   background: var(--card--);
 }
 
-
 body.modo-escuro .navbar-toggler {
   background-color: var(--primary-color);
 }
 
-
 body.modo-escuro .dropdown-menu.show {
   background-color: var(--dark--);
 }
-
 
 .dropdown-menu {
   background-color: var(--lite--);
@@ -142,17 +128,11 @@ body.modo-escuro #acesso {
 
 }
 
-
-
-
-
 body.modo-escuro svg {
   color: var(--white);
   width: 40px;
   height: 30px;
 }
-
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -164,12 +144,8 @@ body.modo-escuro svg {
   stroke: var(--white) !important;
 }
 
-
-
-
 body.modo-escuro #buscar {
   width: 9rem;
-
   cursor: pointer;
   color: var(--white);
   font-size: 0.6rem;
@@ -189,22 +165,6 @@ body.modo-escuro #buscar {
 
 }
 
-
-/* body.modo-escuro .higiene {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--dark--);
-}
-
-body.modo-escuro .higiene li {
-  color: var(--white);
-}
-
-body.modo-escuro .higiene h2 {
-  color: var(--white);
-} */
 
 body.modo-escuro h1 {
   color: var(--white);
@@ -229,7 +189,6 @@ body.modo-escuro .ingredientes li {
   color: var(--white);
 
 }
-
 
 body.modo-escuro #comentario{
 
@@ -331,7 +290,6 @@ body.modo-escuro footer p {
 
 /* end of dark mode */
 
-
 .logotipo {
   display: flex;
   justify-content: center;
@@ -346,20 +304,12 @@ body.modo-escuro footer p {
   margin-top: 10px;
 }
 
-
 /* navbar */
 .nav-item {
   display: flex;
   justify-content: left;
 }
 
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
 
 .container-fluid {
   display: flex;
@@ -393,9 +343,6 @@ body.modo-escuro footer p {
   background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -404,9 +351,7 @@ button.navbar-toggler {
 
 .navbar-toggler-icon {
   background-color: var(--primary-color);
-
 }
-
 
 #buscar {
   width: 7.5rem;
@@ -429,11 +374,9 @@ button.navbar-toggler {
 
 }
 
-
 #buscar:hover {
   background-color: var(--check--);
 }
-
 
 form {
   display: flex;
@@ -442,7 +385,6 @@ form {
   align-items: center;
   gap: 15px;
 }
-
 
 /* button teeth icon */
 svg {
@@ -472,12 +414,10 @@ svg {
   font-size: 0.9rem;
 }
 
-
 .form-check-input {
   --bs-form-check-bg: var(--bs-body-bg);
 
 }
-
 .form-switch .form-check-input {
   margin-left: -1.5em;
 }
@@ -485,10 +425,6 @@ svg {
 .form-switch  {
   margin-left: -0.1em;
 }
-
-
-
-
 
 .btn-outline-success {
   background-color: var(--primary-color);
@@ -510,14 +446,11 @@ svg {
   width: 100%;
   background-color: var(--pesquisa_input--);
   border: 1px solid var(--check--);
-
-
 }
 
 input.form-control.me-2 {
   font-size: 0.7rem;
 }
-
 
 /* search bar position */
 
@@ -528,7 +461,6 @@ input.form-control.me-2 {
 
 }
 
-
 .container-fluid {
   display: flex;
   align-items: center;
@@ -537,9 +469,6 @@ input.form-control.me-2 {
 
   flex-direction: row;
 }
-
-
-
 
 .bg-body-tertiary {
   --bs-bg-opacity: 0
@@ -563,17 +492,12 @@ svg {
   flex-direction: column;
 }
 
-
-
-
-
 .navbar>.container-fluid {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
 }
-
 
 h1 {
   text-align: center;
@@ -597,15 +521,12 @@ section {
   align-items: flex-start;
   flex-direction: row;
   padding-top: 2rem;
-  /* padding-left: 15%;
-  padding-right: 15%; */
 }
 
 .d-block {
   width: 24rem;
   height: 24rem;
 }
-
 
 .carousel-inner {
   position: relative;
@@ -620,8 +541,6 @@ section {
   margin-top: 2%;
   flex-direction: column;
   align-items: center;
-
-
 }
 
 .carousel-item.active{
@@ -629,12 +548,6 @@ section {
   width: 24rem;
   height: 24rem
 }
-
-/* 
-img.d-block.w-100{
-  width: 150px;
-  height: 150px;
-} */
 
 
 .idusuario {
@@ -651,9 +564,6 @@ h6 a {
 
 }
 
-
-
-
 .ingredientes {
   display: flex;
   justify-content: center;
@@ -661,7 +571,6 @@ h6 a {
   text-align: center;
   padding-bottom: 5rem;
   width: 40%;
-
 }
 
 .ingredientes li {
@@ -676,8 +585,6 @@ h6 a {
 }
 
 .categoria {
-  /* margin-left: 15%;
-  margin-right: 15%; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -702,13 +609,9 @@ h6 a {
   justify-content: center;
   text-align: left;
   flex-direction: row;
-  /* padding-left: 27%;
-  padding-right: 27%; */
   font-size: 0.8rem;
   align-items: center;
 }
-
-
 
 .preparo li {
   padding: 0.5rem;
@@ -716,9 +619,6 @@ h6 a {
   list-style-type: none;
 
 }
-
-
-
 
 .video {
   display: flex;
@@ -752,19 +652,13 @@ video {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-/*   margin-left: 20%;
-  margin-right: 20%; */
   font-size: 0.8rem;
   padding-top: 2rem;
-
-
-
 }
 
 h3 {
   text-align: center;
 }
-
 
 #comentario {
   display: flex;
@@ -775,9 +669,6 @@ h3 {
   margin-bottom: 20px;
   font-size: 0.8rem;
 }
-
-
-
 
 textarea {
   padding: 10px;
@@ -790,10 +681,7 @@ textarea {
   height: 5rem;
   resize: none;
   font-size: 0.8rem;
-
-
 }
-
 
 .botoes {
   display: flex;
@@ -813,8 +701,6 @@ textarea {
 
 }
 
-
-
 #comentar {
   display: flex;
   justify-content: center;
@@ -827,7 +713,6 @@ textarea {
   outline: none;
   height: 1.7rem;
 }
-
 
 .coment {
   display: flex;
@@ -846,10 +731,7 @@ textarea {
 
 .ultimos-comentarios {
   text-align: center;
-
 }
-
-
 .comentarios {
   display: flex;
   justify-content: center;
@@ -858,7 +740,6 @@ textarea {
   margin-right: 15%;
   background-color: var(--lite--);
   gap: 10px;
-
 }
 
 .comentarios p b {
@@ -871,8 +752,6 @@ textarea {
   width: 80%;
 
 }
-
-
 .comentario-postados {
   display: flex;
   flex-direction: column;
@@ -882,21 +761,13 @@ textarea {
   width: 10rem;
   height: 10rem;
   text-align: left;
-
-
-
 }
 
 
 .comentario-postados p {
   font-size: 0.8rem;
   text-align: left;
-
-
 }
-
-
-
 .comentarios img {
   width: 50px;
   height: 60px;
@@ -906,20 +777,17 @@ textarea {
   text-align: center;
 }
 
-
 .input-container{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-
 }
 
 .error-message{ 
   color: red;
   font-size: 0.8rem;
 }
-
 
 #myBtn {
   display: flex;
@@ -930,24 +798,9 @@ textarea {
   border: none;
   outline: none;
   background: none;
-  /*     background: var(--check--); ativar penas para teste */
-
-  /*  color: white; */
   cursor: pointer;
-  /*     border-radius: 10px; */
-
-
-  /* 
-    box-shadow:  0 0 0 0 var(--check--);
-    border-radius: 50%;
-    animation: alerta 1.5s infinite;
-    transition: background, padding 500ms ease-in-out;   */
 
 }
-
-
-
-
 
 
 #myBtn {
@@ -1052,10 +905,6 @@ footer p {
 
 }
 
-
-
-
-
 @media only screen and (max-width: 940px) {
 
   #toggle-mode {
@@ -1104,12 +953,7 @@ footer p {
     width: 10rem;
     height: 10rem;
     text-align: left;
-
-
-
   }
-
-
 
   .comentarios {
     display: flex;
@@ -1119,9 +963,6 @@ footer p {
     margin-right: 15%;
     background-color: var(--lite--);
     gap: 10px;
-
-
-
   }
 
   .comentarios p {
@@ -1129,8 +970,6 @@ footer p {
     width: 100%;
     text-align: justify;
   }
-
-
 
   section {
     display: flex;
@@ -1250,20 +1089,14 @@ footer p {
 
   }
 
-
-
   .comentarios {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 8px;
     margin-left: 8px;
-  
     background-color: var(--lite--);
     gap: 10px;
-
-
-
   }
 
   .comentarios p {
@@ -1271,8 +1104,6 @@ footer p {
     width: 100%;
     text-align: justify;
   }
-
-
 
   section {
     display: flex;
@@ -1282,7 +1113,6 @@ footer p {
     padding-left: 10%;
     padding-right: 10%;
   }
-
 
   .preparo {
     display: flex;
@@ -1307,14 +1137,10 @@ footer p {
 
   }
 
-
-
   #carouselExample {
     width: 100%;
 
   }
-
-
   .carousel-item.active{
     display: flex;
     width: 16rem;
@@ -1328,8 +1154,6 @@ footer p {
 
   .preparo {
     flex-direction: column;
-
-
   }
 
   .preparo img {
@@ -1340,8 +1164,6 @@ footer p {
     height: 10rem;
     margin-left: auto;
     margin-right: auto;
-
-
   }
 
   .ingredientes {
@@ -1353,15 +1175,11 @@ footer p {
     gap: 10px;
 
   }
-
-
   .categoria h3 {
     justify-content: center;
     width: 100%;
     padding: 0px;
   }
-
-
   .video {
     display: flex;
     justify-content: center;
@@ -1370,7 +1188,6 @@ footer p {
     height: 12rem;
     margin-top: 2rem;
     width: 100%;
-
   }
 
   .tempo {
@@ -1382,7 +1199,6 @@ footer p {
     margin-right: 20%;
     font-size: 0.8rem;
     padding-top: 2rem;
-
   }
 
 
@@ -1435,8 +1251,6 @@ footer p {
     height: 5rem;
     resize: none;
     font-size: 0.8rem;
-
-
   }
 
 
@@ -1447,9 +1261,6 @@ footer p {
     gap: 20px;
     text-align: center;
   }
-
-
-
   #comentar {
     display: flex;
     justify-content: center;
@@ -1469,10 +1280,7 @@ footer p {
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
-
   }
-
-
 
   .post-list {
     display: flex;
@@ -1490,18 +1298,7 @@ footer p {
     font-size: 0.8rem;
     text-align: justify;
   }
-
-
-
-
 }
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 450px) {
   main{
@@ -1529,9 +1326,6 @@ footer p {
     width: 10rem;
     height: 10rem;
     text-align: left;
-
-
-
   }
 
 
@@ -1543,9 +1337,6 @@ footer p {
  
     background-color: var(--lite--);
     gap: 10px;
-
-
-
   }
 
   .comentarios p {

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 /* color palettes */
@@ -31,10 +27,6 @@
     --btn--excluir: #DB4437;
     --lite--:#f4e1c4;
     --pesquisa_input--:#fff7eb
-
-
-
-
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -51,17 +43,14 @@ body.modo-escuro {
     color: #fff;
 }
 
-
 body.modo-escuro label {
     color: var(--card--);
 
 }
 
-
 body.modo-escuro form {
     background-color: var(--check---);
 }
-
 
 body.modo-escuro p {
     color: var(--white--);
@@ -70,8 +59,6 @@ body.modo-escuro p {
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
-
-
 
 body.modo-escuro .container-fluid {
     display: flex;
@@ -89,23 +76,17 @@ body.modo-escuro .bg-body-tertiary {
     --bs-bg-opacity: 0;
 }
 
-
 body.modo-escuro .d-flex {
     background-color: var(--dark--);
-
 }
 
 body.modo-escuro header {
-
     text-align: center;
-
 }
 
 body.modo-escuro .navbar-toggler-icon {
     color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
     background: var(--form--);
@@ -115,12 +96,9 @@ body.modo-escuro .form {
     background: var(--form--);
 }
 
-
 body.modo-escuro .navbar-toggler {
     background-color: var(--primary-color);
 }
-
-
 body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
 }
@@ -128,8 +106,6 @@ body.modo-escuro .dropdown-menu.show {
 .dropdown-menu {
     background-color: var(--lite--);
 }
-
-
 
 body.modo-escuro #acesso {
     cursor: pointer;
@@ -139,7 +115,6 @@ body.modo-escuro #acesso {
     height: 2.5rem;
     text-align: left;
     border-radius: 8px;
-
 }
 
 
@@ -148,7 +123,6 @@ body.modo-escuro svg {
     width: 40px;
     height: 30px;
 }
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -160,11 +134,9 @@ body.modo-escuro svg {
     stroke: var(--white) !important;
 }
 
-
 body.modo-escuro #buscar {
     display: flex;
     width: 12rem;
-
     cursor: pointer;
     color: var(--white);
     font-size: 0.9rem;
@@ -180,13 +152,11 @@ body.modo-escuro #buscar {
     background-color: var(--dark--);
     border: 1px solid var(--check--);
     padding: 0px;
-
 }
 
 
 body.modo-escuro h1 {
     color: var(--white);
-
 }
 
 
@@ -194,27 +164,15 @@ body.modo-escuro label {
     color: var(--black);
 }
 
-/* header{display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-} */
-
-
 body.modo-escuro .form-check-input:checked {
     border-color: #ffffff;
 }
-
-
-
-
-
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
     padding: 0px;
-
 }
 
 
@@ -230,7 +188,6 @@ section img {
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
-
 }
 
 .card {
@@ -244,12 +201,9 @@ body.modo-escuro #toggle-mode label {
     color: var(--white);
 }
 
-
 body.modo-escuro footer p {
     color: #fff;
-
 }
-
 
 /* end of dark mode */
 
@@ -267,23 +221,11 @@ body.modo-escuro footer p {
     justify-content: center;
     margin-top: 10px;
 }
-
-
 /* navbar */
 .nav-item {
     display: flex;
     justify-content: left;
 }
-
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
-
 
 .navbar>.container-fluid {
     display: flex;
@@ -292,14 +234,11 @@ body.modo-escuro footer p {
     justify-content: space-between;
 }
 
-
-
 /* make navbar transparent */
 .bg-body-tertiary {
     --bs-bg-opacity: 0;
     --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
-
 
 /* defines characteristics of buttons */
 #acesso {
@@ -316,9 +255,6 @@ body.modo-escuro footer p {
     background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -329,10 +265,6 @@ button.navbar-toggler {
     background-color: var(--primary-color);
 
 }
-
-
-
-
 
 /* button teeth icon */
 svg {
@@ -347,18 +279,13 @@ svg {
 
 }
 
-
 .form-switch  {
     margin-left: 2.5rem;
 }
   
-
- 
-
 input.form-control.me-2 {
     font-size: 0.7rem;
 }
-
 
 #barra_pesquisa {
     display: flex;
@@ -371,8 +298,6 @@ input.form-control.me-2 {
 
 /* key for dark mode */
 
-
-
 #toggle-mode {
     display: flex;
     align-items: center;
@@ -380,8 +305,6 @@ input.form-control.me-2 {
     justify-content: left;
     font-size: 0.8rem;
     margin: 11px;
-
-
 }
 
 #toggle-mode label {
@@ -393,7 +316,6 @@ input.form-control.me-2 {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
-
 }
 
 /* color label*/
@@ -408,9 +330,7 @@ input.form-control.me-2 {
     background-color: var(--pesquisa_input--);
     border-color: var(--card--);
     width: 100%;
-
 }
-
 
 /* search bar position */
 
@@ -418,27 +338,21 @@ input.form-control.me-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #titulo_receita {
     background-color: var(--form--);
     font-size: 0.8rem;
-
 }
 
 input #titulo_receita label {
     font-size: 0.8rem;
     background-color: var(--lite--);
-
 }
-
-
 
 #buscar {
     display: flex;
     width: 11rem;
-
     cursor: pointer;
     color: var(--black);
     font-size: 0.9rem;
@@ -455,14 +369,9 @@ input #titulo_receita label {
     border: 1px solid var(--check--);
 }
 
-
 #buscar:hover {
     background-color: var(--check--);
 }
-
-
-
-
 
 .pesquisa_input {
     display: flex;
@@ -470,13 +379,10 @@ input #titulo_receita label {
     align-items: center;
 }
 
-
-
 h1 {
     text-align: center;
     font-size: 1.5rem;
 }
-
 
 .container {
     width: 70%;
@@ -497,14 +403,10 @@ h1 {
     gap: 1rem;
 }
 
-
-
 #nome {
     background-color: var(--card--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
-
-
 }
 
 textarea {
@@ -512,8 +414,6 @@ textarea {
     background-color: var(--form--);
     border: #000000 solid 0.5px;
     font-size: 0.8rem;
-
-
 }
 
 
@@ -538,15 +438,12 @@ input[type="submit"] {
     font-size: 0.8rem;
     outline: none;
     height: 2.5rem;
-
-
 }
 
 #descricao_receita,
 #ingredientes_receita,
 #instrucoes_receita{
     height: 4rem;
-
 }
 
 
@@ -559,9 +456,7 @@ input[type="submit"] {
 
 #cancelar:hover {
     background-color: var(--btn--excluir);
-
 }
-
 input[type="submit"]:hover {
     background-color: var(--secondary-color);
 }
@@ -569,8 +464,6 @@ input[type="submit"]:hover {
 label {
     font-size: 1em;
     color: var(--black);
-
-
 }
 
 .receita {
@@ -596,26 +489,22 @@ label {
     align-items: center;
 }
 
-
 #gerar_senha_tamanho {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-
 }
 
 #tempo_preparo {
     width: 100%;
 }
 
-
 .escolhacatedoria {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .input-img {
@@ -639,7 +528,6 @@ label {
     flex-direction: row;
     width: 100%;
 }
-
 
 ul {
     display: flex;
@@ -693,21 +581,12 @@ ul {
     font-size: 0.8rem;
 }
 
-
-
-
-
-
 #filtro {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 1rem;
-
-
 }
-
-
 
 select#categoria_receita {
     background-color: var(--card--);
@@ -719,17 +598,13 @@ select#categoria_receita option {
     font-size: 1rem;
 }
 
-
-
 .form-check {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px;
     gap: 15px;
-
     font-size: 0.8rem;
-
 }
 
 
@@ -740,12 +615,10 @@ h2, p {
 
 p, .message {
     font-size: 0.6rem;
-
 }
 
 .textdificuldade p {
     font-size: 1rem;
-
 }
 
 
@@ -773,32 +646,22 @@ p, .message {
     width: 100%;
 }
 
-
 .dropzone {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: center;
-
-
-
 }
-
-
-
 
 .dropzone-box {
     border-radius: 8px;
-    /*  padding: 2rem;*/
-    /*  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
     font-size: 0.5rem;
-
 }
 
 .dropzone-box h2 {
@@ -808,9 +671,7 @@ p, .message {
 
 .dropzone-area {
     width: 100%;
-    /*     padding: 1rem;*/
     position: relative;
-    /* margin-top: 1rem; */
     min-height: 9rem;
     display: flex;
     text-align: center;
@@ -846,8 +707,6 @@ p, .message {
     font-size: 0.5rem;
 }
 
-
-
 .dropzone--over {
     border-style: solid;
     background-color: var(--black);
@@ -862,7 +721,6 @@ p, .message {
     gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
-
 }
 
 .dropzone-actions button {
@@ -892,40 +750,17 @@ p, .message {
     color: var(--white);
     cursor: pointer;
 }
-
-
-
 .input-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
-
 }
 
 .error-message {
     color: red;
     font-size: 0.8rem;
 }
-
-/* 
-.dropzone-area{
-    background-image: url(/imgs/camera14.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-
-
-#dropzone-area-video{
-    background-image: url(/imgs/filmadora.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-
 
 footer {
 
@@ -936,13 +771,10 @@ footer {
     left: 0;
 }
 
-
-
 footer p {
     font-size: 0.8rem;
     text-align: center;
 }
-
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -958,22 +790,6 @@ footer p {
     background-color: var(--primary-color);
 }
 
-/* @media only screen and (max-width: 1568px) {
-    .container {
-        width: 80%;
-        background-color: var(--card--);
-        border-radius: 8px;
-        border-radius: 4px;
-    
-    }
-
- 
-
-} */
-
-
-
-
 @media only screen and (max-width: 768px) {
 
     .container {
@@ -982,11 +798,7 @@ footer p {
         border-radius: 8px;
         border-radius: 4px;
         max-width: none;
-
-
     }
-
-
 
     input.form-control.me-2 {
         height: 1.7rem;
@@ -1007,15 +819,11 @@ footer p {
         cursor: pointer;
         height: 6rem;
     }
-
-
     .titulo {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-
     .container-fluid {
         display: flex;
         align-items: center;
@@ -1030,9 +838,6 @@ footer p {
         background-color: var(--dark--);
         flex-direction: column;
     }
-
-
-
     .container-flex-properties {
         display: flex;
         flex-wrap: inherit;
@@ -1041,13 +846,9 @@ footer p {
 
     }
 
-
-
-
     body.modo-escuro .d-flex {
         background-color: var(--dark--);
     }
-
 
     .btn-outline-success {
         justify-content: right;
@@ -1088,9 +889,6 @@ footer p {
     footer {
         margin-top: 4rem;
     }
-
-
-
 }
 
 @media only screen and (max-width: 490px) {
@@ -1099,10 +897,7 @@ footer p {
         background-color: var(--form--);
         border-radius: 8px;
         border-radius: 4px;
-
     }
-
-
 
     footer {
 
@@ -1113,13 +908,9 @@ footer p {
         left: 0;
     }
 
-
-
     footer p {
         font-size: 0.8rem;
         text-align: center;
     }
-
-
 
 }

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 /* color palettes */
@@ -36,7 +32,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
 }
 
 .pesquisa_input {
@@ -53,8 +48,6 @@
     background-color: var(--pesquisa_input--);
     border: 1px solid var(--check--);
 }
-
-
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
 
@@ -73,14 +66,11 @@ body.modo-escuro {
 
 body.modo-escuro label {
     color: var(--white);
-
 }
-
 
 body.modo-escuro form {
     background-color: var(--darkform--);
 }
-
 
 body.modo-escuro p {
     color: var(--white--);
@@ -116,20 +106,13 @@ body.modo-escuro .d-flex {
 
 }
 
-
-
 body.modo-escuro header {
-
     text-align: center;
-
 }
-
 
 body.modo-escuro .navbar-toggler-icon {
     color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
     background: var(--card--);
@@ -138,7 +121,6 @@ body.modo-escuro .container {
 body.modo-escuro .form {
     background: var(--card--);
 }
-
 
 body.modo-escuro .navbar-toggler {
     background-color: var(--primary-color);
@@ -153,8 +135,6 @@ body.modo-escuro .dropdown-menu.show {
     background-color: var(--lite--);
 }
 
-
-
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
@@ -166,20 +146,15 @@ body.modo-escuro #acesso {
 
 }
 
-
 body.modo-escuro a {
     color: var(--primary-color)
 }
-
-
 
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
     height: 30px;
 }
-
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -191,12 +166,8 @@ body.modo-escuro svg {
     stroke: var(--white) !important;
 }
 
-
-
-
 body.modo-escuro #buscar {
     width: 10rem;
-
     cursor: pointer;
     color: var(--white);
     font-size: 0.9rem;
@@ -211,27 +182,18 @@ body.modo-escuro #buscar {
     justify-content: center;
     border: 1px solid var(--check--);
 
-
-
 }
-
 
 body.modo-escuro h1 {
     color: var(--white);
-
 }
-
-
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
     padding: 0px;
-
 }
-
-
 section {
     display: flex;
     flex-direction: column;
@@ -244,7 +206,6 @@ section img {
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
-
 }
 
 body.modo-escuro footer p {
@@ -252,9 +213,7 @@ body.modo-escuro footer p {
 
 }
 
-
 /* end of dark mode */
-
 
 .logotipo {
     display: flex;
@@ -318,9 +277,6 @@ body.modo-escuro footer p {
     background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -329,20 +285,15 @@ button.navbar-toggler {
 
 .navbar-toggler-icon {
     background-color: var(--primary-color);
-
 }
-
 
 .form-control.me-2 {
     border: 1px solid var(--check--);
-
 }
-
 
 #buscar {
     display: flex;
     width: 11rem;
-
     cursor: pointer;
     color: var(--black);
     font-size: 0.9rem;
@@ -358,13 +309,9 @@ button.navbar-toggler {
     border: 1px solid var(--check--);
 }
 
-
-
 #buscar:hover {
     background-color: var(--check--);
 }
-
-
 
 /* button teeth icon */
 svg {
@@ -373,7 +320,6 @@ svg {
 }
 
 .bntacesso {
-
     display: flex;
     flex-direction: row;
 
@@ -397,17 +343,12 @@ svg {
 
 .form-switch .form-check-input {
     --bs-form-check-bg: var(--white);
-
 }
-
-
-
 
 .btn-outline-success {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
-
 }
 
 .form-control {
@@ -420,14 +361,12 @@ input.form-control.me-2 {
     font-size: 0.7rem;
 }
 
-
 /* search bar position */
 
 .d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .navbar>.container-fluid {
@@ -437,17 +376,12 @@ input.form-control.me-2 {
     justify-content: space-between;
 }
 
-
-
-
-
 section h1 {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-
 }
 
 
@@ -458,14 +392,11 @@ section h1 {
     justify-content: center;
     background: var(--primary-color);
     border: var(--primary-color);
-
 }
 
 #saibamais:hover {
     background-color: #a33f37;
 }
-
-
 
 .form-check {
     display: flex;
@@ -473,7 +404,6 @@ section h1 {
     align-items: center;
     margin: 10px;
 }
-
 
 #flexCheckDefault {
     border: 1px solid var(--black);
@@ -488,7 +418,6 @@ h3 {
     text-align: center;
 }
 
-
 #resultados {
     display: flex;
     gap: 30px;
@@ -496,21 +425,15 @@ h3 {
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
-
-
 }
 
 .card {
     width: 13em;
     height: 25rem;
-
-
-
 }
 
 .card-img-top {
     height: 9rem;
-
 }
 
 .card-text {
@@ -523,38 +446,27 @@ h3 {
 }
 
 .text {
-
     text-align: center;
-
-
 }
 
 
 .card-text {
     font-size: 0.8rem;
     text-align: justify;
-
 }
 
 .card {
     transition: 500ms linear;
-
 }
 
 .card:hover {
     transform: scale(1.1);
 }
 
-
-
-
-
 .btn-primary {
     background: var(--primary-color);
     border: var(--primary-color);
 }
-
-
 
 h5 {
     display: block;
@@ -594,9 +506,6 @@ p {
     font-size: 0.8rem;
 }
 
-
-
-
 #myBtn {
     display: flex;
     position: fixed;
@@ -606,19 +515,7 @@ p {
     border: none;
     outline: none;
     background: none;
-    /*     background: var(--check--); ativar penas para teste */
-
-    /*  color: white; */
     cursor: pointer;
-    /*     border-radius: 10px; */
-
-
-    /* 
-    box-shadow:  0 0 0 0 var(--check--);
-    border-radius: 50%;
-    animation: alerta 1.5s infinite;
-    transition: background, padding 500ms ease-in-out;   */
-
 }
 
 
@@ -632,8 +529,6 @@ p {
 .date p {
     font-size: 0.6rem;
 }
-
-
 
 #opcao_mais_rececitas {
     text-align: center;
@@ -699,9 +594,6 @@ p {
     }
 }
 
-
-
-
 footer {
 
 
@@ -745,8 +637,6 @@ footer p {
         margin-top: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
-
-
     }
 
 }
@@ -757,7 +647,6 @@ footer p {
         height: 1.7rem;
     }
 
-
     #toggle-mode {
         display: flex;
         align-items: center;
@@ -765,10 +654,7 @@ footer p {
         justify-content: left;
         font-size: 0.8rem;
         margin: 0px;
-
     }
-
-
     #resultados {
         display: flex;
         flex-direction: column;
@@ -778,20 +664,14 @@ footer p {
         align-items: center;
         margin-top: 1.5rem;
         padding: 40px;
-
-
     }
 
     .card {
         width: 16em;
-
-
-
     }
 
     .card-img-top {
         height: 9rem;
-
     }
 
 
@@ -801,22 +681,14 @@ footer p {
 
 }
 
-
-
 @media only screen and (max-width: 450px) {
     .card {
         width: 17rem;
-
-
-
     }
 
     .card-img-top {
         height: 9rem;
-
     }
-
-
 }
 
 
@@ -824,15 +696,9 @@ footer p {
 @media only screen and (max-width: 380px) {
     .card {
         width: 17rem;
-
-
-
     }
 
     .card-img-top {
         height: 9rem;
-
     }
-
-
 }

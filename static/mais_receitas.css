@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 .pagina_container {
@@ -35,8 +32,6 @@
 .pagina_container a:hover {
     background-color: #ac2020;
 }
-
-
 
 /* color palettes */
 
@@ -69,17 +64,13 @@ body.modo-escuro {
     color: #fff;
 }
 
-
 body.modo-escuro label {
     color: var(--white);
-
 }
-
 
 body.modo-escuro form {
     background-color: var(--dark--);
 }
-
 
 body.modo-escuro p {
     color: var(--white--);
@@ -88,8 +79,6 @@ body.modo-escuro p {
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
-
-
 
 body.modo-escuro .container-fluid {
     display: flex;
@@ -110,23 +99,15 @@ body.modo-escuro .bg-body-tertiary {
 
 body.modo-escuro .d-flex {
     background-color: var(--dark--);
-
 }
-
-
 
 body.modo-escuro header {
-
     text-align: center;
-
 }
-
 
 body.modo-escuro .navbar-toggler-icon {
     color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
     background: var(--card--);
@@ -136,11 +117,9 @@ body.modo-escuro .form {
     background: var(--card--);
 }
 
-
 body.modo-escuro .navbar-toggler {
     background-color: var(--primary-color);
 }
-
 
 body.modo-escuro .dropdown-menu.show {
     background-color: var(--dark--);
@@ -149,8 +128,6 @@ body.modo-escuro .dropdown-menu.show {
 .dropdown-menu {
     background-color: var(--lite--);
 }
-
-
 
 body.modo-escuro #acesso {
     cursor: pointer;
@@ -163,47 +140,11 @@ body.modo-escuro #acesso {
 
 }
 
-/*  #flexSwitchCheck {
-    border-color :white;
-    background-color: var(--white--);
-
-} */
-
-/* 
-body.modo-escuro #flexSwitchCheck{
-    border-color :none;
-    background-color: var(--white);
-
-}
- */
-
-/* body.modo-escuro #flexSwitchCheckDefault {
-    border-color :none;
-    background-color: var(--white);
-} */
-
-
-
-/* #flexSwitchCheckDefault{
-    border-color: #000000;
-    background-color:var(--lite--);
-}
-
- 
-body.modo-escuro .form-check-input:checked {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-}
- */
-
-
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
     height: 30px;
 }
-
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -215,13 +156,9 @@ body.modo-escuro svg {
     stroke: var(--white) !important;
 }
 
-
-
-
 body.modo-escuro #buscar {
     display: flex;
     width: 10rem;
-
     cursor: pointer;
     color: var(--white);
     font-size: 0.9rem;
@@ -237,27 +174,19 @@ body.modo-escuro #buscar {
     border: 1px solid var(--check--);
     gap: 10px;
 
-
-
 }
 
 
 body.modo-escuro h1 {
     color: var(--white);
-
 }
-
-
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
     justify-content: left;
     margin: 0px;
     padding: 0px;
-
 }
-
-
 
 body.modo-escuro #barra_pesquisa {
 
@@ -269,7 +198,6 @@ body.modo-escuro #barra_pesquisa {
     border-color: #ffffff;
     background-color: var(--white);
 }
-
 
 body.modo-escuro #flexSwitchCheckDefault {
     border-color: #000000;
@@ -285,16 +213,11 @@ body.modo-escuro #flexSwitchCheckDefault {
     background-color: var(--white);
 }
 
-
-
-
-
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 section img {
@@ -310,15 +233,11 @@ section img {
 
 }
 
-
 body.modo-escuro footer p {
     color: #fff;
-
 }
 
-
 /* end of dark mode */
-
 
 .logotipo {
     display: flex;
@@ -335,37 +254,25 @@ body.modo-escuro footer p {
     margin-top: 10px;
 }
 
-
 /* navbar */
 .nav-item {
     display: flex;
     justify-content: left;
 }
 
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
 .container-fluid {
     display: flex;
     align-items: center;
     flex-wrap: inherit;
     justify-content: space-between;
-
     flex-direction: row;
 }
-
 
 /* make navbar transparent */
 .bg-body-tertiary {
     --bs-bg-opacity: 0;
     --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
-
 
 /* defines characteristics of buttons */
 #acesso {
@@ -382,9 +289,6 @@ body.modo-escuro footer p {
     background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -396,12 +300,9 @@ button.navbar-toggler {
 
 }
 
-
-
 #buscar {
     display: flex;
     width: 10rem;
-
     cursor: pointer;
     color: var(--black);
     font-size: 0.9rem;
@@ -416,18 +317,12 @@ button.navbar-toggler {
     justify-content: center;
     border: 1px solid var(--check--);
     gap: 10px;
-
-
-
-
 }
 
 
 #buscar:hover {
     background-color: var(--check--);
 }
-
-
 
 /* button teeth icon */
 svg {
@@ -436,13 +331,9 @@ svg {
 }
 
 .bntacesso {
-
     display: flex;
     flex-direction: row;
-
 }
-
-
 
 /* key for dark mode */
 
@@ -452,7 +343,6 @@ svg {
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
-
 }
 
 #toggle-mode label {
@@ -463,7 +353,6 @@ svg {
 .form-switch .form-check-input {
     margin-left: -3em;
 }
-
 
 .alert-messege {
     display: flex;
@@ -513,16 +402,11 @@ input.form-control.me-2 {
     justify-content: space-between;
 }
 
-
-
-
-
 .pesquisa_input {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
 }
 
 #pesquisa_input {
@@ -533,19 +417,15 @@ input.form-control.me-2 {
     width: 100%;
     border: 1px solid var(--check--);
     width: 100%;
-
 }
 
 
 #barra_pesquisa {
-
     display: flex;
     justify-content: right;
     align-items: center;
     padding: 0px;
     gap: 10px;
-
-
 }
 
 section h1 {
@@ -554,28 +434,20 @@ section h1 {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-
-
 }
 
 
 #saibamais {
     font-size: 0.6rem;
-
     display: flex;
     justify-content: center;
     background: var(--primary-color);
     border: var(--primary-color);
-
-
-
 }
 
 #saibamais:hover {
     background-color: #a33f37;
 }
-
-
 
 .form-check {
     display: flex;
@@ -583,7 +455,6 @@ section h1 {
     align-items: center;
     margin-left: 15px;
 }
-
 
 #flexCheckDefault {
     border: 1px solid var(--black);
@@ -593,7 +464,6 @@ section h1 {
     font-size: 0.9rem;
 }
 
-
 h1 {
     text-align: center;
 }
@@ -601,8 +471,6 @@ h1 {
 h1 {
     font-size: 1.5rem;
 }
-
-
 
 #resultados {
 
@@ -616,109 +484,10 @@ h1 {
     gap: 1.5rem;
 }
 
-/* 
-
-.card {
-
-    margin: 1rem;
-    background: var(--check--);
-    width: 15rem;
-
-
-}
-
-.card-text {
-    font-size: 0.8rem;
-    text-align: justify;
-
-}
-
-.card {
-    transition: 500ms linear;
-
-}
-
-
-.card-body {
-    background-color: var(--card--);
-    flex: 1 1 auto;
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-    color: var(--bs-card-color);
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
- */
-
 .btn-primary {
     background: var(--primary-color);
     border: var(--primary-color);
 }
-
-
-
-/* 
-.rating{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    width: 80%;
-}
-
-
-.rating label{
-    margin: 0px;
-}
-
-
-.rating:not(:checked) > input {
-    position: absolute;
-    appearance: none;
-  }
-  
-  .rating:not(:checked) > label {
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
-    color: #666;
-  }
-  
-  .rating:not(:checked) > label:before {
-    content: '★';
-  }
-  
-  .rating > input:checked + label:hover,
-  .rating > input:checked + label:hover ~ label,
-  .rating > input:checked ~ label:hover,
-  .rating > input:checked ~ label:hover ~ label,
-  .rating > label:hover ~ input:checked ~ label {
-    color: #e58e09;
-  }
-  
-  .rating:not(:checked) > label:hover,
-  .rating:not(:checked) > label:hover ~ label {
-    color: #ff9e0b;
-  }
-  
-  .rating > input:checked ~ label {
-    color: #ffa723;
-  }
-   */
-
-
-
-
-/* .date{
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-}
-
-.date p{
-   font-size: 0.6rem;
-}
- */
 
 .mais_receitas {
     display: flex;
@@ -734,8 +503,6 @@ h1 {
     border: var(--primary-color);
 }
 
-
-
 #myBtn {
     display: flex;
     position: fixed;
@@ -745,22 +512,8 @@ h1 {
     border: none;
     outline: none;
     background: none;
-    /*     background: var(--check--); ativar penas para teste */
-
-    /*  color: white; */
     cursor: pointer;
-    /*     border-radius: 10px; */
-
-
-    /* 
-    box-shadow:  0 0 0 0 var(--check--);
-    border-radius: 50%;
-    animation: alerta 1.5s infinite;
-    transition: background, padding 500ms ease-in-out;   */
-
 }
-
-
 
 .card {
     width: 13em;
@@ -782,36 +535,26 @@ h1 {
 }
 
 .text {
-
     text-align: center;
-
-
 }
-
 
 .card-text {
     font-size: 0.8rem;
     text-align: justify;
-
 }
 
 .card {
     transition: 500ms linear;
-
 }
 
 .card:hover {
     transform: scale(1.1);
 }
 
-
-
 h5 {
     display: block;
     height: 2.7rem;
 }
-
-
 
 .date {
     display: flex;
@@ -823,10 +566,6 @@ h5 {
     font-size: 0.6rem;
 }
 
-
-
-
-
 #myBtn {
     display: inline-block;
     vertical-align: middle;
@@ -836,9 +575,6 @@ h5 {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
-
-
-
     -webkit-animation-name: btn-pulsando;
     animation-name: btn-pulsando;
     -webkit-animation-duration: 1.5s;
@@ -848,7 +584,6 @@ h5 {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
-
 
 
 @-webkit-keyframes btn-pulsando {
@@ -885,11 +620,6 @@ h5 {
     }
 }
 
-
-
-
-
-
 footer {
 
     display: flex;
@@ -902,8 +632,6 @@ footer {
     left: 0;
     padding-top: 7rem;
 }
-
-
 
 footer p {
     font-size: 0.8rem;
@@ -924,8 +652,6 @@ footer p {
     background-color: var(--primary-color);
 }
 
-
-
 @media only screen and (max-width: 768px) {
     .form-check {
         display: flex;
@@ -941,10 +667,6 @@ footer p {
     .alert-messege {
         max-width: 100%;
     }
-
-
-
-
 
     footer {
 
@@ -966,21 +688,13 @@ footer p {
 @media only screen and (max-width: 450px) {
     .card {
         width: 17rem;
-
-
-
     }
 
     .card-img-top {
         height: 9rem;
-
     }
 
-
 }
-
-
-
 
 @media only screen and (max-width: 380px) {
 
@@ -1002,8 +716,6 @@ footer p {
         justify-content: space-between;
     }
 
-
-
     #filtro {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1011,10 +723,7 @@ footer p {
         padding: 1rem;
         justify-content: center;
         gap: 20px;
-
-
     }
-
 
     .card {
         width: 14rem;

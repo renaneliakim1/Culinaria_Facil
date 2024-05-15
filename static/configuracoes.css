@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 /* color palettes */
@@ -38,7 +34,6 @@ body {
     width: 100%;
     height: 100%;
     background: var(--lite--);
-
 }
 
 body.modo-escuro {
@@ -49,7 +44,6 @@ body.modo-escuro {
 
 body.modo-escuro label {
     color: var(--white);
-
 }
 
 
@@ -65,8 +59,6 @@ body.modo-escuro p {
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
-
-
 
 body.modo-escuro .container-fluid {
     display: flex;
@@ -84,26 +76,18 @@ body.modo-escuro .bg-body-tertiary {
     --bs-bg-opacity: 0;
 }
 
-
 body.modo-escuro .d-flex {
     background-color: var(--dark--);
-
 }
 
-
-
 body.modo-escuro header {
-
     text-align: center;
-
 }
 
 
 body.modo-escuro .navbar-toggler-icon {
     color: #1DA1F2;
 }
-
-
 
 body.modo-escuro .container {
     background: var(--card--);
@@ -136,12 +120,7 @@ body.modo-escuro #acesso {
     height: 2.5rem;
     text-align: left;
     border-radius: 8px;
-
 }
-
-
-
-
 
 body.modo-escuro svg {
     color: var(--white);
@@ -158,7 +137,6 @@ body.modo-escuro td {
     color: var(--white);
 }
 
-
 body.modo-escuro .table>:not(caption)>*>* {
     background-color: var(--dark---);
 }
@@ -174,12 +152,8 @@ body.modo-escuro .table>:not(caption)>*>* {
     stroke: var(--white) !important;
 }
 
-
-
-
 body.modo-escuro #buscar {
     width: 9rem;
-
     cursor: pointer;
     color: var(--white);
     font-size: 0.6rem;
@@ -194,31 +168,22 @@ body.modo-escuro #buscar {
     justify-content: center;
     background-color: var(--dark--);
     border: 1px solid var(--check--);
-
-
-
 }
 
 
 body.modo-escuro h1 {
     color: var(--white);
-
 }
-
-
 
 body.modo-escuro .dropzone-area {
     background-color: var(--dark--);
     border: 1px solid var(--lite--);
-
-
 }
 
 
 body.modo-escuro .dropzone-area label {
     color: var(--white);
 }
-
 
 .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
@@ -227,9 +192,6 @@ body.modo-escuro .dropzone-area label {
     padding: 0px;
 
 }
-
-
-
 
 section {
     display: flex;
@@ -243,7 +205,6 @@ section img {
     width: 10rem;
     height: 10 rem;
     margin-top: 10px;
-
 }
 
 .card {
@@ -258,12 +219,9 @@ body.modo-escuro .info {
     background-color: var(--dark--);
 }
 
-
-
 body.modo-escuro .table {
     --bs-table-bg: var(--dark--);
     color: var(--white--);
-
 }
 
 body.modo-escuro h2,
@@ -274,12 +232,9 @@ body.modo-escuro p {
 
 body.modo-escuro footer p {
     color: #fff;
-
 }
 
-
 /* end of dark mode */
-
 
 .logotipo {
     display: flex;
@@ -302,14 +257,6 @@ body.modo-escuro footer p {
     justify-content: left;
 }
 
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
 .container-fluid {
     display: flex;
     align-items: center;
@@ -317,9 +264,6 @@ body.modo-escuro footer p {
     justify-content: space-between;
     flex-direction: row;
 }
-
-
-
 
 /* make navbar transparent */
 .bg-body-tertiary {
@@ -343,9 +287,6 @@ body.modo-escuro footer p {
     background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -354,13 +295,10 @@ button.navbar-toggler {
 
 .navbar-toggler-icon {
     background-color: var(--primary-color);
-
 }
-
 
 #buscar {
     width: 9rem;
-
     cursor: pointer;
     color: var(--black);
     font-size: 0.6rem;
@@ -383,8 +321,6 @@ button.navbar-toggler {
     background-color: var(--check--);
 }
 
-
-
 /* button teeth icon */
 svg {
     width: 40px;
@@ -392,7 +328,6 @@ svg {
 }
 
 .bntacesso {
-
     display: flex;
     flex-direction: row;
 
@@ -406,13 +341,11 @@ svg {
     gap: 10px;
     justify-content: left;
     font-size: 0.8rem;
-
 }
 
 #toggle-mode label {
     font-size: 0.9rem;
 }
-
 
 .form-switch .form-check-input {
     /*     margin-left: -1.5em;
@@ -431,7 +364,6 @@ svg {
     margin-left: 1.2em;
 }
 
-
 /* color label*/
 .form-control {
     height: 1.5rem;
@@ -443,7 +375,6 @@ input.form-control.me-2 {
     font-size: 0.7rem;
 }
 
-
 /* search bar position */
 
 .d-flex {
@@ -452,8 +383,6 @@ input.form-control.me-2 {
     align-items: center;
 
 }
-
-
 
 #editar-excluir {
     display: flex;
@@ -476,9 +405,6 @@ input.form-control.me-2 {
 #editar-excluir:hover {
     background-color: #a33f37;
 }
-
-
-
 
 #editar-excluir-red {
     cursor: pointer;
@@ -524,8 +450,6 @@ h1 {
     justify-content: center;
 }
 
-
-
 .input-group {
     display: flex;
     justify-content: right;
@@ -533,17 +457,12 @@ h1 {
     width: 100%;
 }
 
-
-
-
 input .input-group {
     display: flex;
     justify-content: center;
     padding: 1rem;
     width: 8rem;
 }
-
-
 
 #addon-wrapping {
     width: 5rem;
@@ -557,16 +476,6 @@ input .input-group {
     background-color: var(--pesquisa_input--);
 }
 
-
-
-
-
-
-
-
-
-
-
 #dadosnome {
     width: 14rem;
     height: 2.5rem;
@@ -577,12 +486,10 @@ input .input-group {
     height: 2.5rem;
 }
 
-
 .opcao {
     display: flex;
     justify-content: center;
     margin: 0.5rem;
-
 }
 
 .opcao button {
@@ -597,15 +504,12 @@ input .input-group {
     height: 2rem;
     margin: 15px;
     text-align: center;
-
 }
 
 
 .opcao button:hover {
     background-color: #a33f37;
 }
-
-
 
 #editar-excluir-red {
 
@@ -619,15 +523,11 @@ input .input-group {
     outline: none;
     height: 2rem;
     text-align: center;
-
-
 }
 
 #editar-excluir-red:hover {
     background-color: #a33f37;
 }
-
-
 
 
 #seguranca {
@@ -694,13 +594,10 @@ input .input-group {
     border: 1px solid #595b5d;
     margin: 8px 0;
     justify-content: right;
-
 }
-
 
 label {
     font-size: 0.7rem;
-
 }
 
 #receitas {
@@ -711,15 +608,12 @@ label {
     width: 100%;
 }
 
-
 .tabela {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
 }
-
-
 
 .table {
     display: flex;
@@ -734,8 +628,6 @@ td {
     align-items: center;
     justify-content: left;
     font-size: 0.7rem;
-
-
 }
 
 
@@ -763,8 +655,6 @@ th {
 
 }
 
-
-
 .input-group-text {
     font-size: 0.9rem;
     width: 5rem;
@@ -782,7 +672,6 @@ th {
 
 
 .tab-btn {
-
     cursor: pointer;
     width: 10.5rem;
     border: none;
@@ -802,8 +691,6 @@ th {
     background-color: #a33f37;
 }
 
-
-
 .dropzone-box {
     border-radius: 8px;
     padding: 2rem;
@@ -812,9 +699,6 @@ th {
     flex-direction: column;
     max-width: 36rem;
     width: 100%;
-
-
-
 }
 
 
@@ -880,7 +764,6 @@ th {
     gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
-
 }
 
 .dropzone-actions button {
@@ -917,8 +800,6 @@ th {
     align-items: center;
     flex-direction: column;
     width: 100%;
-
-
 }
 
 
@@ -930,16 +811,6 @@ th {
     width: 17rem;
 
 }
-
-/* .dropzone-area{
-    background-image: url(/imgs/Imagem1cadastre-se.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
- */
-
 
 .error-message {
     color: red;
@@ -956,9 +827,6 @@ footer {
     left: 0;
     padding-top: 5rem;
 }
-
-
-
 
 footer p {
     font-size: 0.8rem;
@@ -979,13 +847,7 @@ footer p {
     background-color: var(--primary-color);
 }
 
-
-
-
 @media only screen and (max-width: 1200px) {
-
-
-
     .info {
         display: flex;
         justify-content: center;
@@ -1042,9 +904,6 @@ footer p {
 
     }
 
-
-
-
     .table {
         display: flex;
         width: 100%;
@@ -1081,9 +940,6 @@ footer p {
         background-color: #a33f37;
     }
 
-
-
-
     #editar-excluir-red {
         cursor: pointer;
         width: 3.5rem;
@@ -1100,11 +956,6 @@ footer p {
     #editar-excluir-red:hover {
         background-color: #a33f37;
     }
-
-
-
-
-
     .nome-receita {
         text-align: left;
     }
@@ -1117,9 +968,6 @@ footer p {
         left: 0;
 
     }
-
-
-
 
     footer p {
         font-size: 0.8rem;
@@ -1139,10 +987,6 @@ footer p {
         border-radius: 8px;
         background-color: var(--primary-color);
     }
-
-
-
-
 }
 
 
@@ -1183,9 +1027,6 @@ footer p {
         justify-content: center;
         align-items: center;
     }
-
-
-
     .dropzone-area {
         width: 80%;
         padding: 1rem;
@@ -1203,7 +1044,6 @@ footer p {
         cursor: pointer;
         height: 8rem;
     }
-
 
     .table>:not(caption)>*>* {
         background-color: var(--lite--);
@@ -1226,8 +1066,6 @@ footer p {
         width: 100%;
 
     }
-
-
     td.nome-receita {
         display: flex;
         align-items: center;
@@ -1236,10 +1074,6 @@ footer p {
         text-align: left;
         width: 10rem;
     }
-
-
-
-
     footer {
         position: relative;
         bottom: 0;
@@ -1247,6 +1081,4 @@ footer p {
         text-align: center;
         left: 0;
     }
-
-
 }

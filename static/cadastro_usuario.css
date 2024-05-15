@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-
 }
 
 .alert-messege {
@@ -26,9 +22,6 @@
     margin: 0 auto 10px;
     border-radius: 8px;
 }
-
-
-
 /* color palettes */
 
 
@@ -46,9 +39,6 @@
     --darkform--: #5c5c5c;
     --lite--:#f4e1c4;
     --pesquisa_input--:#fff7eb
-
-
-
 }
 
 /* call "body.mode" followed by the class or id to activate dark mode   */
@@ -65,17 +55,13 @@ body.modo-escuro {
     color: #fff;
 }
 
-
 body.modo-escuro label {
     color: var(--white);
-
 }
-
 
 body.modo-escuro form {
     background-color: var(--darkform--);
 }
-
 
 body.modo-escuro p {
     color: var(--white--);
@@ -84,8 +70,6 @@ body.modo-escuro p {
 body.modo-escuro .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: var(--white--);
 }
-
-
 
 body.modo-escuro .container-fluid {
     display: flex;
@@ -96,20 +80,16 @@ body.modo-escuro .container-fluid {
 
 body.modo-escuro .container {
     background-color: var(--darkform--);
-
 }
 
 body.modo-escuro .bg-body-tertiary {
     --bs-bg-opacity: 0;
 }
 
-
 body.modo-escuro .d-flex {
     background-color: var(--dark--);
 
 }
-
-
 
 body.modo-escuro header {
 
@@ -146,8 +126,6 @@ body.modo-escuro .dropdown-menu.show{
     background-color: var(--lite--);
 }
 
-
-
 body.modo-escuro #acesso {
     cursor: pointer;
     color: var(--white);
@@ -156,20 +134,13 @@ body.modo-escuro #acesso {
     height: 2.5rem;
     text-align: left;
     border-radius: 8px;
-
 }
-
-
-
-
 
 body.modo-escuro svg {
     color: var(--white);
     width: 40px;
     height: 30px;
 }
-
-
 
 .svg-branco path,
 .svg-branco rect,
@@ -181,12 +152,8 @@ body.modo-escuro svg {
     stroke: var(--white) !important;
 }
 
-
-
-
 body.modo-escuro #buscar {
     width: 9rem;
-
     cursor: pointer;
     color: var(--white);
     font-size: 0.6rem;
@@ -201,9 +168,6 @@ body.modo-escuro #buscar {
     justify-content: center;
     background-color: var(--dark--);
     border: 1px solid var(--check--);
-
-
-
 }
 
 
@@ -212,11 +176,6 @@ body.modo-escuro h1 {
 
 }
 
-/* header{display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-} */
-
 .navbar-nav.me-auto.mb-2.mb-lg-0{
     display: flex;
     justify-content: left;
@@ -224,7 +183,6 @@ body.modo-escuro h1 {
     padding: 0px;
 
 }
-
 
 section{
     display: flex;
@@ -250,8 +208,6 @@ body.modo-escuro footer p {
     color: #fff;
 
 }
-
-
 /* end of dark mode */
 
 
@@ -276,15 +232,6 @@ body.modo-escuro footer p {
     justify-content: left;
 }
 
-/* option #menu dessabled */
-/*#menu {
-    display: flex;
-    justify-content: right;
-
-}
- */
-
-
 .navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
@@ -297,7 +244,6 @@ body.modo-escuro footer p {
     --bs-bg-opacity: 0;
     --bs-tertiary-bg-rgb: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
-
 
 /* defines characteristics of buttons */
 #acesso {
@@ -314,9 +260,6 @@ body.modo-escuro footer p {
     background-color: var(--check--);
 }
 
-
-
-
 /* define with the collapse button */
 
 button.navbar-toggler {
@@ -325,13 +268,10 @@ button.navbar-toggler {
 
 .navbar-toggler-icon {
     background-color: var(--primary-color);
-
 }
-
 
 #buscar {
     width: 9rem;
-
     cursor: pointer;
     color: var(--black);
     font-size: 0.6rem;
@@ -346,18 +286,12 @@ button.navbar-toggler {
     justify-content: center;
     background-color: var(--white);
     border: 1px solid var(--check--);
-
-
-
-
 }
 
 
 #buscar:hover {
     background-color: var(--check--);
 }
-
-
 
 /* button teeth icon */
 svg {
@@ -366,10 +300,8 @@ svg {
 }
 
 .bntacesso {
-
     display: flex;
     flex-direction: row;
-
 }
 
 /* key for dark mode */
@@ -387,28 +319,15 @@ svg {
     font-size: 0.9rem;
 }
 
-
-
-
-
-
-
-
-
-
 .form-switch .form-check-input{
     margin-left: -1.5em;
     
 }
 
-
-
-
 .btn-outline-success {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
-
 }
 
 /* color label*/
@@ -421,7 +340,6 @@ input.form-control.me-2{
     font-size: 0.7rem;
 }
 
-
 /* search bar position */
 
 .d-flex {
@@ -431,18 +349,12 @@ input.form-control.me-2{
 
 }
 
-
-
-
-
 .navbar>.container-fluid {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 .container {
     display: flex;
@@ -474,7 +386,6 @@ input.form-control.me-2{
     padding-bottom: 10%;
     justify-content: center;
     height: 100%;
-
 }
 
 
@@ -502,7 +413,6 @@ h1 {
     flex-direction: column;
     padding: 1rem;
     border-radius: 0.5rem;
-    /*     box-shadow: 5px 10px 15px -3px rgba(0, 0, 0.2, 0.4), 0 4px 6px -2px rgba(0, 0.1, 0.6, 0.08); */
     margin-top: 1rem;
     width: 100%;
     height: 45rem;
@@ -540,9 +450,6 @@ h1 {
     height: 2rem;
 }
 
-
-
-
 .submit {
     cursor: pointer;
     width: 15.5rem;
@@ -554,11 +461,8 @@ h1 {
     outline: none;
     height: 2.5rem;
     margin: 15px;
-
     text-align: center;
     width: 100%;
-
-
 }
 
 .submit:hover {
@@ -575,7 +479,6 @@ h1 {
 .signup-link a {
     text-decoration: underline;
     font-size: 1rem;
-
 }
 
 
@@ -588,7 +491,6 @@ h1 {
     position: fixed;
     margin: 10px;
 }
-
 
 #eye {
     position: absolute;
@@ -604,9 +506,6 @@ h1 {
     justify-content: right;
     align-items: center;
 }
-
-
-
 
 .dropzone-box {
     border-radius: 8px;
@@ -749,8 +648,6 @@ footer {
     padding-top: 9rem;
 }
 
-
-
 footer p {
     font-size: 0.8rem;
 }
@@ -770,15 +667,7 @@ footer p {
     background-color: var(--primary-color);
 }
 
-
-
-
-
 @media only screen and (max-width: 768px) {
-
-
-
-    
     .container {
         display: flex;
         flex-direction: column-reverse;
@@ -809,11 +698,6 @@ footer p {
         height: 50%;
 
     }
-
-
-
-
-
     .form {
         background-color: var(--form--);
         display: flex;
@@ -874,8 +758,6 @@ footer p {
         margin-top: 1rem;
     }
     
-    
-        
     footer {
 
         position: relative;
@@ -884,23 +766,12 @@ footer p {
         text-align: center;
         left: 0;
     }
-
-
-
     footer p {
         font-size: 0.8rem;
     }
-
-
-
-
-
 } 
 
 @media only screen and (max-width: 380px) {
-
-   
-
     .dropzone-box {
         border-radius: 8px;
         padding: 1rem;
@@ -908,7 +779,6 @@ footer p {
         justify-content: center;
         flex-direction: column;
         width: 100%;
-     
         padding: 20px;
         margin: 20px 20px;
 
@@ -926,11 +796,8 @@ footer p {
         outline: none;
         height: 3rem;
         margin: 20px;
-
         text-align: center;
         width: 100%;
-
-
     }
 
     .submit:hover {
@@ -938,18 +805,9 @@ footer p {
     }
 
     footer {
-
-
         bottom: 0;
         width: 100%;
         text-align: center;
         left: 0;
     }
-    
-
-   
-
-
-
-
 }

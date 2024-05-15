@@ -52,9 +52,9 @@ select * from usuario;
 select * from comentarios;
 
 insert into categorias(categorianome, descricao) values
-('Vegano', 'Ajuda os animais'),
-('Sem Glútem', 'Ajuda os animais'),
-('Massas', 'Ajuda os animais'),
-('Doces e Sobremesas', 'Ajuda os animais'),
-('Bebidas e Drinks', 'Ajuda os animais'),
-('Carnes', 'Ajuda os animais');
+('Vegano', 'Descrição da categoria'),
+('Sem Glútem', 'Descrição da categoria'),
+('Massas', 'Descrição da categoria'),
+('Doces e Sobremesas', 'Descrição da categoria'),
+('Bebidas e Drinks', 'Descrição da categoria'),
+('Carnes', 'Descrição da categoria');

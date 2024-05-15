@@ -63,22 +63,29 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-- •Biblioteca Digital de Receitas Culinárias 
+- <b>•Biblioteca Digital de Receitas Culinárias</b> 
 
 
-- •Público-Alvo:
-Amantes da culinária, chefs amadores, entusiastas de comida, pessoas interessadas em aprender novas receitas e técnicas culinárias.
+- Público-Alvo: 
 
-- •Objetivo do Projeto: Por meio de um banco de dados fornecer uma ampla coleção de receitas, sobre técnicas culinárias, dicas de cozinha e inspiração para pessoas que gostam de cozinhar e experimentar novos pratos.
+- Amantes da culinária, chefs amadores, entusiastas de comida, pessoas interessadas em aprender novas receitas e técnicas culinárias.
 
-- •Recursos Principais: <br>
+- Objetivo do Projeto:
+
+- Por meio de um banco de dados fornecer uma ampla coleção de receitas, sobre técnicas culinárias, dicas de cozinha e inspiração para pessoas que gostam de cozinhar e experimentar novos pratos.
+
+- Recursos Principais: <br>
 
 - Receitas Categorizadas: Organização por categoria ( Sem glúten, doces, 
 sobremesas, vegano, massas, carnes, bebidas e drinks).
 
-- Pesquisa Avançada: Funcionalidade de pesquisa por ingredientes, tempo de preparo, nível de dificuldade, etc.
+- Pesquisa Avançada: 
 
-- Perfil do Usuário: Funcionalidade de pesquisa por ingredientes, tempo de preparo, nível de dificuldade, etc.
+- Funcionalidade de pesquisa por ingredientes, tempo de preparo, nível de dificuldade, etc.
+
+- Perfil do Usuário: 
+
+- Funcionalidade de pesquisa por ingredientes, tempo de preparo, nível de dificuldade, etc.
 
 
 

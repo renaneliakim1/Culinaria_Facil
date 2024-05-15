@@ -45,16 +45,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
  No terminal VSCode instale:
 <b><i>
-- <b><i> $ pip install -U Flask </b></em>
-- <b><i>$ pip install Bcrypt-Flask</b></em>
-- <b><i>$ pip install mysql-connector</b></em>
+- <b><i> $ pip install -U Flask </b></i>
+- <b><i>$ pip install Bcrypt-Flask</b></i>
+- <b><i>$ pip install mysql-connector</b></i>
 
 - Dentro do Xampp inicie o "MySQL" 
 <p align="center">
   <img alt="" src=".github/xammp.gif" width="50%">
 </p>
 
-- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponível em <b><i> Culinaria_Facil\banco_de_dados\banco_de_dados.sql" </b></em>
+- No Sistema de gerenciamento de banco de dados cole o script do arquivo "banco_de_dados" disponível em <b><i> Culinaria_Facil\banco_de_dados\banco_de_dados.sql" </b></i>
 
 <p align="center">
   <img alt="" src=".github/db.gif" width="50%">
